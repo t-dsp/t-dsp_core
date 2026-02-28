@@ -1,0 +1,276 @@
+(footprint "Tactile_Switch_4.54.5MM"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "TL3305BF160QG-1-1")
+	(tags "Switch")
+	(property "Reference" "REF**"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(uuid "27e52ca5-84c7-4e2c-bf29-c1dd3c3964a3")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Value" "TL1105WF160Q - 3.15mm actuator"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "672f32a8-f8ec-4f21-ab60-0d1cad07579f")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Datasheet" "~"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e4a916f8-8347-479b-a7dd-75561b270413")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "27712140-7e68-4df2-9c73-da3706e59e92")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -5 1.6)
+		(end -5 1.6)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "19fc46b8-8c64-4464-b4dd-66200182c8e4")
+	)
+	(fp_line
+		(start -4.8 1.6)
+		(end -4.8 1.6)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "73247bb7-89f3-4948-8e3c-435d57181277")
+	)
+	(fp_line
+		(start -2.25 -2.25)
+		(end 2.25 -2.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "dc92e5e1-1250-48b7-aba1-a5a61a575244")
+	)
+	(fp_line
+		(start -2.25 2.25)
+		(end -2.25 -2.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "77e5fb37-a46e-4fff-b893-f1dd21aa8370")
+	)
+	(fp_line
+		(start 2.25 -2.25)
+		(end 2.25 2.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "55a916ca-02b9-48b0-a059-a6b35c04e857")
+	)
+	(fp_line
+		(start 2.25 2.25)
+		(end -2.25 2.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "a8ea63ff-2214-4114-9a0c-cdea5465b0c9")
+	)
+	(fp_arc
+		(start -5 1.6)
+		(mid -4.9 1.5)
+		(end -4.8 1.6)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "34ebfa9a-1289-4d22-99ba-0159d70cb89b")
+	)
+	(fp_arc
+		(start -4.8 1.6)
+		(mid -4.9 1.7)
+		(end -5 1.6)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "74f72cd9-a834-4c94-91d4-00ae7c702399")
+	)
+	(fp_line
+		(start -5.4 -3.25)
+		(end 5.4 -3.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "241ea04e-4db6-4352-82fa-0176d42dd4d3")
+	)
+	(fp_line
+		(start -5.4 3.25)
+		(end -5.4 -3.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "1188d52c-8cf0-4ecb-8bd9-08cf7cc7b3d2")
+	)
+	(fp_line
+		(start 5.4 -3.25)
+		(end 5.4 3.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "427007de-5513-470a-88f1-16888a08c732")
+	)
+	(fp_line
+		(start 5.4 3.25)
+		(end -5.4 3.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "ae57df13-7cf6-49fb-bcae-68ccbaab03c0")
+	)
+	(fp_line
+		(start -2.25 -2.25)
+		(end 2.25 -2.25)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "a28b3f1c-5d14-45a3-8959-96b103389486")
+	)
+	(fp_line
+		(start -2.25 2.25)
+		(end -2.25 -2.25)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "b9383103-4909-46c4-b928-d4d93cbfa1c0")
+	)
+	(fp_line
+		(start 2.25 -2.25)
+		(end 2.25 2.25)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "f71def38-9f52-4579-ab01-8ee428d817ae")
+	)
+	(fp_line
+		(start 2.25 2.25)
+		(end -2.25 2.25)
+		(stroke
+			(width 0.2)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "eac5c95d-bd88-4742-a8ce-3e2157d750a4")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "21b076e7-0ced-42a5-9913-5ed1ba3eac9c")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -3.6 1.5 90)
+		(size 1.4 1.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "b0f6e21e-9fe9-4e70-98a8-db0a5eb16a69")
+	)
+	(pad "2" smd rect
+		(at 3.6 1.5 90)
+		(size 1.4 1.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "3a58a67f-c3f6-4249-a993-e4c816bc76cf")
+	)
+	(pad "3" smd rect
+		(at -3.6 -1.5 90)
+		(size 1.4 1.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "876413af-9da0-4963-a86d-e5a0aac44dd4")
+	)
+	(pad "4" smd rect
+		(at 3.6 -1.5 90)
+		(size 1.4 1.6)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "f087965b-d061-4689-940e-c0f4b5afc3a4")
+	)
+	(embedded_fonts no)
+	(model "TL3305BF100QG.stp"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 0 0)
+		)
+	)
+	(model "${KIPRJMOD}/3d_models/Tactile_Switch_4.54.5MM.stp"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 0 0)
+		)
+	)
+)

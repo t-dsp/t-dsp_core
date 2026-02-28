@@ -1,0 +1,53 @@
+# For PCBs designed using KiCad: https://www.kicad.org/
+# Format documentation: https://kicad.org/help/file-formats/
+
+# Temporary files
+*.000
+*.bak
+*.bck
+*.kicad_pcb-bak
+*.kicad_sch-bak
+*-backups
+*.kicad_prl
+*.sch-bak
+*~
+_autosave-*
+*.tmp
+*-save.pro
+*-save.kicad_pcb
+fp-info-cache
+
+# Netlist files (exported from Eeschema)
+*.net
+
+# Autorouter files (exported from Pcbnew)
+*.dsn
+*.ses
+
+# Exported BOM files
+*.xml
+*.csv
+*.lck
+*.pro
+
+# Reference materials (third-party datasheets, service manuals, etc.)
+documentation/_reference/
+
+# Downloaded component libraries (raw third-party downloads)
+lib_dl/
+
+# Unused 3D models (dev board bundles, zip archives, etc.)
+3d_models/_unused/
+
+# KiBot local manufacturing output (generated via Docker)
+manufacturing/
+
+# Local tool configs
+.claude/
+ibom.config.ini
+
+# KiCad project backups
+*.kicad_pro-bak
+
+# Windows artifacts
+nul
