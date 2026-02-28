@@ -1,6 +1,6 @@
 # KiBot configuration for JLCPCB manufacturing outputs
-# Project: T-DSP Desktop Pro
-# Board: 8-layer (F.Cu, In1.Cu, In2.Cu, In3.Cu, In4.Cu, In5.Cu, In6.Cu, B.Cu)
+# Project: T-DSP Core
+# Board: 4-layer (F.Cu, In1.Cu, In2.Cu, B.Cu)
 
 kibot:
   version: 1
@@ -46,7 +46,7 @@ outputs:
   - name: JLCPCB_gerbers
     comment: Gerbers compatible with JLCPCB
     type: gerber
-    dir: t-dsp_desktop_pro
+    dir: t-dsp_core
     options:
       exclude_edge_layer: true
       exclude_pads_from_silkscreen: true
@@ -69,10 +69,6 @@ outputs:
       - B.Cu
       - In1.Cu
       - In2.Cu
-      - In3.Cu
-      - In4.Cu
-      - In5.Cu
-      - In6.Cu
       - F.SilkS
       - B.SilkS
       - F.Mask
@@ -84,7 +80,7 @@ outputs:
   - name: JLCPCB_drill
     comment: Drill files compatible with JLCPCB
     type: excellon
-    dir: t-dsp_desktop_pro
+    dir: t-dsp_core
     options:
       pth_and_npth_single_file: false
       pth_id: '-PTH'
@@ -97,7 +93,7 @@ outputs:
   - name: JLCPCB_position
     comment: Pick and place file, JLCPCB style
     type: position
-    dir: t-dsp_desktop_pro
+    dir: t-dsp_core
     options:
       variant: rotated
       output: '%f_cpl.%x'
@@ -122,7 +118,7 @@ outputs:
   - name: JLCPCB_bom
     comment: BoM for JLCPCB
     type: bom
-    dir: t-dsp_desktop_pro
+    dir: t-dsp_core
     options:
       output: '%f_bom_JLCPCB.%x'
       exclude_filter: 'only_jlc_parts'
@@ -143,7 +139,7 @@ outputs:
   - name: generic_bom
     comment: Full BoM for general use (PCBWay, etc.)
     type: bom
-    dir: t-dsp_desktop_pro
+    dir: t-dsp_core
     options:
       output: '%f_bom_generic.%x'
       ref_separator: ','
@@ -174,14 +170,14 @@ outputs:
   - name: schematic_pdf
     comment: Schematic PDF for reference
     type: pdf_sch_print
-    dir: t-dsp_desktop_pro
+    dir: t-dsp_core
     options:
       output: '%f_schematic.%x'
 
   - name: pcb_pdf
     comment: PCB layout PDF for reference
     type: pcb_print
-    dir: t-dsp_desktop_pro
+    dir: t-dsp_core
     options:
       output: '%f_pcb.%x'
       pages:
@@ -201,22 +197,6 @@ outputs:
             - layer: Edge.Cuts
           sheet: 'Inner 2'
         - layers:
-            - layer: In3.Cu
-            - layer: Edge.Cuts
-          sheet: 'Inner 3'
-        - layers:
-            - layer: In4.Cu
-            - layer: Edge.Cuts
-          sheet: 'Inner 4'
-        - layers:
-            - layer: In5.Cu
-            - layer: Edge.Cuts
-          sheet: 'Inner 5'
-        - layers:
-            - layer: In6.Cu
-            - layer: Edge.Cuts
-          sheet: 'Inner 6'
-        - layers:
             - layer: B.Cu
               plot_footprint_refs: false
             - layer: B.SilkS
@@ -227,14 +207,14 @@ outputs:
   - name: interactive_bom
     comment: Interactive HTML BOM
     type: ibom
-    dir: t-dsp_desktop_pro
+    dir: t-dsp_core
     options:
       output: '%f_ibom.%x'
 
   - name: 3d_renders
     comment: 3D renders with all components (through-hole + SMD)
     type: blender_export
-    dir: t-dsp_desktop_pro
+    dir: t-dsp_core
     options:
       pcb3d:
         download: true
@@ -272,7 +252,7 @@ outputs:
   - name: 3d_renders_smd
     comment: 3D renders without through-hole components
     type: blender_export
-    dir: t-dsp_desktop_pro
+    dir: t-dsp_core
     options:
       pcb3d:
         download: true
@@ -303,7 +283,7 @@ outputs:
   - name: pcb_spec
     comment: PCB specifications and layer stackup for manufacturer
     type: report
-    dir: t-dsp_desktop_pro
+    dir: t-dsp_core
     options:
       template: simple
       output: '%f_pcb_spec.%x'
@@ -311,7 +291,7 @@ outputs:
   - name: manufacturing_zip
     comment: ZIP file with all manufacturing files
     type: compress
-    dir: t-dsp_desktop_pro
+    dir: t-dsp_core
     options:
       output: '%f-manufacturing.%x'
       files:

@@ -29,8 +29,8 @@ jobs:
       - uses: INTI-CMNB/KiBot@v2_k9
         with:
           config: .kibot.yaml
-          board: t-dsp_desktop_pro.kicad_pcb
-          schema: t-dsp_desktop_pro.kicad_sch
+          board: t-dsp_core.kicad_pcb
+          schema: t-dsp_core.kicad_sch
           dir: manufacturing
           targets: JLCPCB_gerbers JLCPCB_drill JLCPCB_position JLCPCB_bom generic_bom schematic_pdf pcb_pdf interactive_bom pcb_spec
           verbose: 2
@@ -38,14 +38,14 @@ jobs:
       - name: Generate 3D renders
         uses: docker://ghcr.io/inti-cmnb/kicad9_auto_full:latest
         with:
-          args: kibot -c .kibot.yaml -b t-dsp_desktop_pro.kicad_pcb -e t-dsp_desktop_pro.kicad_sch -d manufacturing 3d_renders 3d_renders_smd
+          args: kibot -c .kibot.yaml -b t-dsp_core.kicad_pcb -e t-dsp_core.kicad_sch -d manufacturing 3d_renders 3d_renders_smd
 
       - name: Generate manufacturing ZIP
         uses: INTI-CMNB/KiBot@v2_k9
         with:
           config: .kibot.yaml
-          board: t-dsp_desktop_pro.kicad_pcb
-          schema: t-dsp_desktop_pro.kicad_sch
+          board: t-dsp_core.kicad_pcb
+          schema: t-dsp_core.kicad_sch
           dir: manufacturing
           targets: manufacturing_zip
           verbose: 2
@@ -53,14 +53,14 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: manufacturing-files
-          path: manufacturing/t-dsp_desktop_pro/
+          path: manufacturing/t-dsp_core/
           if-no-files-found: error
 
       - name: Prepare GitHub Pages content
         run: |
           mkdir -p _site/renders
-          cp manufacturing/t-dsp_desktop_pro/*_ibom.html _site/ibom.html
-          cp manufacturing/t-dsp_desktop_pro/*3D_blender*.png _site/renders/
+          cp manufacturing/t-dsp_core/*_ibom.html _site/ibom.html
+          cp manufacturing/t-dsp_core/*3D_blender*.png _site/renders/
           cp pages/gallery.html _site/gallery.html
 
       - uses: actions/upload-pages-artifact@v3
@@ -87,14 +87,14 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           name: manufacturing-files
-          path: manufacturing/t-dsp_desktop_pro/
+          path: manufacturing/t-dsp_core/
 
       - name: Rename ZIP with tag version
         id: find_files
         run: |
           TAG="${{ github.ref_name }}"
-          SRC=$(ls manufacturing/t-dsp_desktop_pro/*.zip 2>/dev/null | head -1)
-          DEST="manufacturing/t-dsp_desktop_pro/t-dsp_desktop_pro-manufacturing-${TAG}.zip"
+          SRC=$(ls manufacturing/t-dsp_core/*.zip 2>/dev/null | head -1)
+          DEST="manufacturing/t-dsp_core/t-dsp_core-manufacturing-${TAG}.zip"
           mv "$SRC" "$DEST"
           echo "zip_path=$DEST" >> "$GITHUB_OUTPUT"
 
