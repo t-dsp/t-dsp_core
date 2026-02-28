@@ -4,6 +4,15 @@
 
 A compact 4-layer digital backplane for the T-DSP modular ecosystem. Hosts a Teensy 4.1 and ESP32 with USB Audio, MIDI, Ethernet, and TDM expansion headers for connecting T-DSP audio modules.
 
+[![T-DSP Core - Top Isometric](https://t-dsp.github.io/t-dsp_core/renders/t-dsp_core-3D_blender_th_top_iso.png)](https://t-dsp.github.io/t-dsp_core/gallery.html)
+
+| | |
+|:---:|:---:|
+| [![Top](https://t-dsp.github.io/t-dsp_core/renders/t-dsp_core-3D_blender_th_top.png)](https://t-dsp.github.io/t-dsp_core/gallery.html) | [![Bottom](https://t-dsp.github.io/t-dsp_core/renders/t-dsp_core-3D_blender_th_bottom.png)](https://t-dsp.github.io/t-dsp_core/gallery.html) |
+| [![Front](https://t-dsp.github.io/t-dsp_core/renders/t-dsp_core-3D_blender_th_front.png)](https://t-dsp.github.io/t-dsp_core/gallery.html) | [![Rear](https://t-dsp.github.io/t-dsp_core/renders/t-dsp_core-3D_blender_th_rear.png)](https://t-dsp.github.io/t-dsp_core/gallery.html) |
+
+**[View 3D Render Gallery](https://t-dsp.github.io/t-dsp_core/gallery.html)** -- interactive slideshow of all board views
+
 ## About T-DSP
 
 T-DSP is an open modular audio platform designed for musicians, engineers, and developers who want powerful digital signal processing in a flexible, hackable format. Built around the [Teensy](https://www.pjrc.com/teensy/) microcontroller and the [Teensy Audio Library](https://www.pjrc.com/teensy/td_libs_Audio.html), T-DSP combines studio-quality audio with a growing library of open-source modules.
