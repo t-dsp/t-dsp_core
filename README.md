@@ -2,7 +2,7 @@
 
 **Part of the [T-DSP](https://t-dsp.com) open modular audio platform.**
 
-A compact 4-layer audio backplane for the T-DSP modular ecosystem. Hosts a Teensy 4.1, ESP32, and T-DSP TAC5212 pro audio codec module — delivering the full T-DSP feature set at a lower cost and simpler stackup than the Desktop Pro.
+A compact 4-layer digital backplane for the T-DSP modular ecosystem. Hosts a Teensy 4.1 and ESP32 with USB Audio, MIDI, Ethernet, and TDM expansion headers for connecting T-DSP audio modules.
 
 ## About T-DSP
 
@@ -12,13 +12,12 @@ Learn more at [t-dsp.com](https://t-dsp.com).
 
 ## Overview
 
-The T-DSP Core is a **4-layer backplane PCB** that hosts a Teensy 4.1, ESP32, and T-DSP codec module alongside supporting ICs. It provides audio I/O, USB, MIDI, Ethernet, and expansion headers for the full T-DSP module ecosystem — in a more accessible and cost-effective form factor than the 8-layer Desktop Pro.
+The T-DSP Core is a **4-layer digital backplane PCB** hosting a Teensy 4.1 and ESP32 alongside supporting ICs. It provides USB Audio, MIDI, Ethernet, and TDM expansion headers for connecting T-DSP audio modules -- in a more accessible and cost-effective form factor than the 8-layer Desktop Pro.
 
 ## Processing
 
 - **Teensy 4.1** -- ARM Cortex-M7 running the Teensy Audio Library for real-time DSP (mixing, effects, synthesis, routing). Also receives USB Audio.
 - **ESP32** -- UI controller, WiFi/Bluetooth. Drives the display, buttons, and encoder, and sends commands to the Teensy over serial.
-- **T-DSP TAC5212 Module** -- Professional stereo audio codec (ADC + DAC) with mic preamp, line, and instrument inputs.
 
 ## Connectivity
 
