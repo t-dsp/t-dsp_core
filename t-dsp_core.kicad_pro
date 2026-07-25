@@ -1109,7 +1109,7 @@
       {
         "filename": "t-dsp_core.kicad_sch",
         "name": "t-dsp_core",
-        "uuid": "00000000-0000-0000-0000-000000000000"
+        "uuid": "6a0ff39d-771d-410f-9e7c-006586d81d16"
       }
     ],
     "used_designators": "",
@@ -1118,7 +1118,7 @@
   "sheets": [
     [
       "6a0ff39d-771d-410f-9e7c-006586d81d16",
-      "Root"
+      "t-dsp_core"
     ]
   ],
   "text_variables": {
