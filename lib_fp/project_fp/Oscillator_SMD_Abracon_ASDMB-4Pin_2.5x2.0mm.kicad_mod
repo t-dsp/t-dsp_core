@@ -1,0 +1,206 @@
+(footprint "Oscillator_SMD_Abracon_ASDMB-4Pin_2.5x2.0mm"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "Miniature Crystal Clock Oscillator Abracon ASDMB series, 2.5x2.0mm package, http://www.abracon.com/Oscillators/ASDMB.pdf")
+	(tags "SMD SMT crystal oscillator")
+	(property "Reference" "REF**"
+		(at 0 -2.45 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "d5f36dd2-9d52-4dc7-b852-b22e2457657a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "audio clock"
+		(at 0 2.45 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6da99001-c01e-46a4-9bbc-96bf9cfd18b5")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b9b38518-203c-47f5-b7cf-05c6d95b4fe7")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "55df3044-36a3-483a-8a98-0350e0874189")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -1.35 0)
+		(end -1.35 1.14)
+		(stroke
+			(width 0.12)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "409b40f1-4030-4944-8fc9-f7ee5d06837f")
+	)
+	(fp_line
+		(start -1.5 -1.45)
+		(end -1.5 1.45)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "f2ac91ec-5ab2-4596-8231-268bcda4187b")
+	)
+	(fp_line
+		(start -1.5 1.45)
+		(end 1.5 1.45)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "f1b50e82-40ab-4270-997f-d66db3cb670f")
+	)
+	(fp_line
+		(start 1.5 -1.45)
+		(end -1.5 -1.45)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "ee43c096-cd51-4746-8439-7b9c1dac271d")
+	)
+	(fp_line
+		(start 1.5 1.45)
+		(end 1.5 -1.45)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "b2814e76-2bb7-4ab6-9949-df0a00d7022d")
+	)
+	(fp_line
+		(start -1.25 -1)
+		(end 1.25 -1)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "e5fb7a2a-06d4-4abf-aad3-2088b59729d2")
+	)
+	(fp_line
+		(start -1.25 0.5)
+		(end -1.25 -1)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d58e8f3f-1bcb-428c-9be2-616eff12fa2b")
+	)
+	(fp_line
+		(start -1.25 0.5)
+		(end -0.75 1)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "e988620a-6706-4c79-8bd6-fcafd66f3aa7")
+	)
+	(fp_line
+		(start 1.25 -1)
+		(end 1.25 1)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "4dcf4b6f-8f37-452c-a2dd-d23d018109a3")
+	)
+	(fp_line
+		(start 1.25 1)
+		(end -0.75 1)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "a9b94613-2d7f-45f7-a2d4-c6488195769a")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "c024576b-ceec-4e3e-9f7f-f92d662f7881")
+		(effects
+			(font
+				(size 0.6 0.6)
+				(thickness 0.105)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -0.825 0.775)
+		(size 0.65 0.85)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "693dcb14-b40d-42f9-b75a-7bd8f8df2545")
+	)
+	(pad "2" smd rect
+		(at 0.825 0.775)
+		(size 0.65 0.85)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "21bda2e0-7a1c-4776-8a67-7807a7733144")
+	)
+	(pad "3" smd rect
+		(at 0.825 -0.775)
+		(size 0.65 0.85)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "b9c44ed5-2cb2-49d5-9f2d-9c4f6cb4d332")
+	)
+	(pad "4" smd rect
+		(at -0.825 -0.775)
+		(size 0.65 0.85)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "a2058aa8-c5de-45ea-a57e-11b78ec0db76")
+	)
+	(embedded_fonts no)
+	(model "${KICAD9_3DMODEL_DIR}/Oscillator.3dshapes/Oscillator_SMD_Abracon_ASDMB-4Pin_2.5x2.0mm.step"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

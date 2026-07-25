@@ -5,11 +5,11 @@
 	(layer "F.Cu")
 	(descr "DPY (R-PX1SON-N2)")
 	(tags "TVS Diode (Bi-directional)")
-	(property "Reference" "D**"
+	(property "Reference" "REF**"
 		(at 0.3 -1.6 0)
 		(layer "F.SilkS")
 		(hide yes)
-		(uuid "c20b662a-4be0-40ef-aede-d3142dee0cf9")
+		(uuid "13fabd15-d0bf-4347-9898-bc9f3742bf8a")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -17,11 +17,11 @@
 			)
 		)
 	)
-	(property "Value" "DPY(R-PX1SON-N2)"
+	(property "Value" "TPD1E10B06DPYT"
 		(at 0 0 0)
 		(layer "F.SilkS")
 		(hide yes)
-		(uuid "e8714a4c-fac8-4ea0-ab92-394a8f49e03d")
+		(uuid "27641aff-bdc6-4a62-a90a-5f4a20e90864")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -29,11 +29,11 @@
 			)
 		)
 	)
-	(property "Datasheet" ""
+	(property "Datasheet" "http://www.ti.com/lit/ds/symlink/tpd1e10b06.pdf"
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "a4102bf2-8994-4469-8000-caa73fa4b0f5")
+		(uuid "cfcb5af3-7f5c-4dd1-85cc-fdf6621a00c2")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -41,14 +41,92 @@
 			)
 		)
 	)
-	(property "Description" ""
+	(property "Description" "12.5VC Clamp ESD DIODE DFN1006-2"
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "02ef842c-b4dd-437e-88ac-4e9969c82f00")
+		(uuid "bb2f3b4b-6df4-4ad0-ae5b-92e213997c4c")
 		(effects
 			(font
 				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Height" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "dcc39863-9b26-4086-ab27-6dc759f28d7f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC" "C5155810"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5b925234-ffef-40f4-b264-a24bcb0ebfa0")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC_MPN" "TPD1E10B06DPYT"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ee134be1-4165-4be9-b4c5-45aabad11559")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC_Manufacturer" "Leiditech"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3b253a0f-05c6-4826-a380-67e767b8f191")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Package / Case" "DFN1006-2"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ed3d986b-5722-44a6-8ca3-077d436a96d6")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC TYPE" "SMD"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "cce9c84b-6fa9-431a-8a29-01789946499c")
+		(effects
+			(font
+				(size 1 1)
 				(thickness 0.15)
 			)
 		)
@@ -62,7 +140,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "e2ce8e68-fb4f-4f98-b293-8eda0052ca8e")
+		(uuid "28b6e210-58e8-4e5e-bfac-1bc8b2021ff4")
 	)
 	(fp_line
 		(start -0.55 0.35)
@@ -72,7 +150,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "6e713616-f431-445d-abe4-ca39f7b7ea36")
+		(uuid "ee670a83-16c6-4aff-9164-5a88f93652d7")
 	)
 	(fp_line
 		(start -0.55 -0.35)
@@ -82,7 +160,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "6cdb165f-4ad3-4e55-ae70-c8532cf9e2c0")
+		(uuid "d3c7355b-8198-4042-a341-4d58a8adbcc7")
 	)
 	(fp_line
 		(start -0.55 0.35)
@@ -92,7 +170,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "3aa4565d-b258-48ce-89dc-ee9d3a1085fe")
+		(uuid "9300f8c5-d2dd-4722-8000-4e86ba4275e4")
 	)
 	(fp_line
 		(start 0.55 -0.35)
@@ -102,7 +180,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "ee2e2eba-72ac-41bc-91ac-b617c96b9fed")
+		(uuid "a49d04e6-8215-4b4a-9e50-f77001838023")
 	)
 	(fp_line
 		(start 0.55 0.35)
@@ -112,12 +190,12 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "625a110b-aee0-45a3-bc5e-30bce0c8f086")
+		(uuid "130a0eac-a6dc-4be9-bf58-4654a4c163e2")
 	)
 	(fp_text user "${REFERENCE}"
 		(at 0.1 -1.4 0)
 		(layer "F.Fab")
-		(uuid "e271eb74-fcd1-4b05-bafa-5aeee7d89cef")
+		(uuid "25616e44-1fdd-4db0-ac72-356cbeb40c88")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -129,13 +207,13 @@
 		(at -0.5 0 90)
 		(size 0.5 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "b6159c11-8f95-44de-b049-f8d47e3f1c25")
+		(uuid "9e2a5e2b-8d5d-4b69-928b-1fa39d61db3b")
 	)
 	(pad "2" smd rect
 		(at 0.5 0 90)
 		(size 0.5 0.6)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "a867381b-5784-4f95-9264-7f30644cbae2")
+		(uuid "655e821e-3acf-4b95-b934-1a862e1f97f7")
 	)
 	(embedded_fonts no)
 	(model "${KIPRJMOD}/3d_models/TPD1E10B06DPYT.stp"

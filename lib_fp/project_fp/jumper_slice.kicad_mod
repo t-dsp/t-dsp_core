@@ -8,7 +8,8 @@
 	(property "Reference" "REF**"
 		(at 0.575 -0.925 0)
 		(layer "F.SilkS")
-		(uuid "7d7fc4b3-8423-457d-a262-7bd2ee280ea5")
+		(hide yes)
+		(uuid "430917be-df5c-46e8-96bc-10b73c64a6fb")
 		(effects
 			(font
 				(size 0.8 0.8)
@@ -16,10 +17,11 @@
 			)
 		)
 	)
-	(property "Value" "jumper_slice"
+	(property "Value" "jumper"
 		(at 0.5 -2.5 0)
 		(layer "F.Fab")
-		(uuid "9daa99a0-bd6c-416c-ba0c-633e504247e5")
+		(hide yes)
+		(uuid "41972865-945b-4986-abf5-3edd10f7d99a")
 		(effects
 			(font
 				(size 1 1)
@@ -27,11 +29,11 @@
 			)
 		)
 	)
-	(property "Datasheet" ""
+	(property "Datasheet" "~"
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "ce426501-6920-4e1f-a8a4-1fdd42d4125d")
+		(uuid "7fabd708-a5e1-45b4-818e-95de8413b43a")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -39,11 +41,11 @@
 			)
 		)
 	)
-	(property "Description" ""
+	(property "Description" "Net tie, 2 pins"
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "3485a747-e03b-48df-adc5-5d5209155c77")
+		(uuid "d2def70d-5f0a-48a1-a922-2c4ef8bd70f6")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -51,7 +53,59 @@
 			)
 		)
 	)
-	(attr smd allow_soldermask_bridges)
+	(property "Label" "G"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c98e6d15-f751-4372-bea0-0525bbf125ce")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Package / Case" "DNP"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b9ea106c-7e67-4135-b62a-8e64299bf4bb")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "TAC5212EVM" "n/a"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b44369f7-4b17-4a4b-9624-24c7deee386c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "fa501aa3-8ac9-43be-9196-e116af171f58")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd exclude_from_bom dnp allow_soldermask_bridges)
 	(net_tie_pad_groups "1, 2")
 	(fp_poly
 		(pts
@@ -63,7 +117,7 @@
 		)
 		(fill yes)
 		(layer "F.Cu")
-		(uuid "87ead61e-2b82-4caf-b5b2-fd7f98061cb5")
+		(uuid "5295634d-10aa-410f-a2b2-bba7c2635f3d")
 	)
 	(fp_poly
 		(pts
@@ -75,19 +129,19 @@
 		)
 		(fill yes)
 		(layer "F.Mask")
-		(uuid "891542a1-7d2d-494c-90f9-4200e239b55d")
+		(uuid "eca72314-a370-474d-baf0-5c614f1c12e0")
 	)
 	(pad "1" smd rect
 		(at -0.5 0 180)
 		(size 0.508 0.508)
 		(layers "F.Cu" "F.Mask")
-		(uuid "545d02f8-246c-4422-bdcb-7e06adcfc89f")
+		(uuid "e0a1d48b-6af3-44c1-ad71-6807f7818d81")
 	)
 	(pad "2" smd rect
 		(at 0.5 0 180)
 		(size 0.508 0.508)
 		(layers "F.Cu" "F.Mask")
-		(uuid "3d8a6cf8-2b53-4981-9032-733e586436a4")
+		(uuid "48cff12c-c792-4a23-bcfb-9d23e7f89e8a")
 	)
 	(embedded_fonts no)
 )

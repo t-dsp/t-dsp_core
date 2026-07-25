@@ -5,11 +5,11 @@
 	(layer "F.Cu")
 	(descr "DMG2307L-7")
 	(tags "MOSFET (P-Channel)")
-	(property "Reference" "Q**"
+	(property "Reference" "REF**"
 		(at 0 0 0)
 		(layer "F.SilkS")
 		(hide yes)
-		(uuid "3fa054e1-301f-4319-b841-dec929453bb2")
+		(uuid "c7f9014f-3758-45b6-9d4c-1fe93f9223eb")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -17,11 +17,11 @@
 			)
 		)
 	)
-	(property "Value" "SOT96P240X110-3N"
+	(property "Value" "DMG2307L-7"
 		(at 0 0 0)
 		(layer "F.SilkS")
 		(hide yes)
-		(uuid "86011a9d-e9e2-4d8f-ab60-13b72c830627")
+		(uuid "ef6c4c23-6fc0-43a1-84a5-a2ab3b915674")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -29,11 +29,11 @@
 			)
 		)
 	)
-	(property "Datasheet" ""
+	(property "Datasheet" "https://www.diodes.com//assets/Datasheets/products_inactive_data/DMG2307L.pdf"
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "70e7a681-cf59-406f-a546-dc54aac434a6")
+		(uuid "a09db443-db38-47d9-a63d-17bae2e7f4be")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -41,14 +41,92 @@
 			)
 		)
 	)
-	(property "Description" ""
+	(property "Description" "P-Channel Enhancement MOSFET SOT-23 Diodes Inc DMG2307L-7 P-channel MOSFET Transistor, -2 A, -30 V, 3-Pin SOT23"
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "c8e3a00b-2baa-468d-9095-c9e2e7bbb623")
+		(uuid "db5dc0b6-7825-468e-8a9e-1c57ad92685a")
 		(effects
 			(font
 				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Height" "1.1"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "55ce578a-4344-4d22-8de7-6811f2f56dd2")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC" "C102620"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0c108b86-1063-456c-bd9b-5903f9df4106")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC TYPE" "SMD"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "cedfec64-5bcb-486b-aaf3-3fb856d6ebb4")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC_MPN" "DMG2307L-7"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "af441086-1e46-476a-9de4-58b265c645ec")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC_Manufacturer" "DIODES"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e8ae1d89-ad1c-4778-828e-39d5e8acf02e")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Package / Case" "SOT-23"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ea9c7290-8ab3-4425-aeff-8dbecd7761fb")
+		(effects
+			(font
+				(size 1 1)
 				(thickness 0.15)
 			)
 		)
@@ -62,7 +140,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "db49d00e-599f-4a31-8c9b-8304327d08d2")
+		(uuid "73bdb185-270f-4259-83f9-61c95fbae0ed")
 	)
 	(fp_line
 		(start -0.15 -1.45)
@@ -72,7 +150,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "b9850ed8-cae5-46bf-a0cd-7be926db7d48")
+		(uuid "4cbbb46b-5619-4556-a251-4fb6def37a69")
 	)
 	(fp_line
 		(start -0.15 1.45)
@@ -82,7 +160,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "e462d4d5-6913-454b-b15f-63cdc6395afb")
+		(uuid "90ff320e-5b9f-489e-8588-5dae30871091")
 	)
 	(fp_line
 		(start 0.15 -1.45)
@@ -92,7 +170,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "55d2843e-e1f9-4b57-9baf-e11816480c8a")
+		(uuid "22849411-a378-44c2-a3c3-67662723070e")
 	)
 	(fp_line
 		(start 0.15 1.45)
@@ -102,7 +180,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "0ce14fdf-9711-4123-af80-ee32543a5d1e")
+		(uuid "2df1f5da-cb3f-40b3-aab0-d4325a36b0bf")
 	)
 	(fp_line
 		(start -1.85 -1.75)
@@ -112,7 +190,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "3d31a070-0b0d-472c-b706-a51f050cc1d3")
+		(uuid "5a40c430-b265-491b-bcbc-2e47c9cd590e")
 	)
 	(fp_line
 		(start -1.85 1.75)
@@ -122,7 +200,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "5015f383-1ec3-4576-a95a-3d38ebde214e")
+		(uuid "ae03ee57-449c-4b74-b8f3-02ea32d051a7")
 	)
 	(fp_line
 		(start 1.85 -1.75)
@@ -132,7 +210,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "23ed05f0-9473-4b2b-94fb-fa9b24caaebe")
+		(uuid "d8168a5e-0c91-42ea-82d8-de7bfb911875")
 	)
 	(fp_line
 		(start 1.85 1.75)
@@ -142,7 +220,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "b1daf626-bfbe-4edb-84a3-2f54d8997bf9")
+		(uuid "0f92e97b-071b-46f2-877a-7bfdfd676cd4")
 	)
 	(fp_line
 		(start -0.65 -1.45)
@@ -152,7 +230,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "4d443c7b-7a65-41b6-a5d8-65a73599aae8")
+		(uuid "b493b187-df96-4e16-a1fb-dbca9a99448f")
 	)
 	(fp_line
 		(start -0.65 -0.49)
@@ -162,7 +240,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "b3569dde-fd21-4bb1-9c0c-7ac7892499b6")
+		(uuid "c4b07c3a-f8a9-4184-912f-4ab164da7a98")
 	)
 	(fp_line
 		(start -0.65 1.45)
@@ -172,7 +250,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "24b3f114-3d5b-4b6a-ba7a-9caa49a43c66")
+		(uuid "2327a937-d969-4b08-a384-ba69444dd5ea")
 	)
 	(fp_line
 		(start 0.65 -1.45)
@@ -182,7 +260,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "b5469e72-c786-46c3-97bf-e8386676ebee")
+		(uuid "25dcf99f-633e-47ae-bfbd-0facd546580f")
 	)
 	(fp_line
 		(start 0.65 1.45)
@@ -192,12 +270,12 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "fa8fcb12-f2c9-421e-bb16-f17f9cfc4916")
+		(uuid "4a046ee9-918a-4e59-9fb1-fa0b30b4a3ed")
 	)
 	(fp_text user "${REFERENCE}"
 		(at 0.8 -2.8 0)
 		(layer "F.Fab")
-		(uuid "8daef6b3-f959-48d7-9d1d-c85cb9d7b75c")
+		(uuid "b4b39dcc-df15-4ea9-a9a8-7d26d6c40c26")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -209,19 +287,19 @@
 		(at -1.05 -0.96 90)
 		(size 0.65 1.1)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "5a62feea-d896-426f-9522-4048b10cd9d3")
+		(uuid "6da4ff69-913e-48b2-ba1a-47810bf2f914")
 	)
 	(pad "2" smd rect
 		(at -1.05 0.96 90)
 		(size 0.65 1.1)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "16fd6eda-01ea-4f4a-9fa4-4592e6654d78")
+		(uuid "54c58e06-d42d-4a60-8b7c-e6896fcfd530")
 	)
 	(pad "3" smd rect
 		(at 1.05 0 90)
 		(size 0.65 1.1)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "c9a96abd-70e4-4ce1-bcd0-4180d403981b")
+		(uuid "e2211c26-02d1-48a1-8073-48c3ed14ee97")
 	)
 	(embedded_fonts no)
 	(model "${KIPRJMOD}/3d_models/DMG2307L-7.stp"

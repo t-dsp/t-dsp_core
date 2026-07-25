@@ -6,7 +6,8 @@
 	(property "Reference" "REF**"
 		(at -0.175 2.885 180)
 		(layer "F.SilkS")
-		(uuid "7bfeeab9-d366-4732-9143-497458bfcb1a")
+		(hide yes)
+		(uuid "aaf66f8c-2d3a-4dfc-ac5b-88e58a6462ed")
 		(effects
 			(font
 				(size 1 1)
@@ -14,10 +15,11 @@
 			)
 		)
 	)
-	(property "Value" "SK6812-32228SMD-Reverse-Mount_mod"
+	(property "Value" "Side Light LED - SK6812"
 		(at -2.08 -1.115 180)
 		(layer "F.Fab")
-		(uuid "b64cbc4a-46dc-40f4-ab3e-d511fbdb452f")
+		(hide yes)
+		(uuid "e98cd64e-9267-4ab6-8863-a7ba349261a9")
 		(effects
 			(font
 				(size 1 1)
@@ -29,7 +31,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "44f8c034-6b52-41ca-aadd-b903a5fbe0a2")
+		(uuid "18d66fc3-c29a-4b02-a854-5a774b00e7b7")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -37,14 +39,92 @@
 			)
 		)
 	)
-	(property "Description" ""
+	(property "Description" "4.0x2.0x1.6 mm, 0.2 W intelligent externally controlled surface-mount SMD side-emitting LED"
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "2f6ae2b8-6c14-42a1-a31a-2652f7681b03")
+		(uuid "ebefe8d0-f79b-498c-b7f3-da5ebfe9c731")
 		(effects
 			(font
 				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Label" "SK6812_4020_SIDE_LED"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "e5797739-95f6-46d0-8363-f28693a2d46d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Package / Case" "SK6812-32228SMD"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "7ba9494f-2c54-48c6-b3d2-260e16cf1985")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC" "C5378721"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "8d36884e-b839-4c99-98ef-652adaca2354")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC TYPE" "SMD"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "4a8f8f83-7dec-4bf9-ade7-dcf6e5bcc0d8")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC_MPN" "SK6812SIDE-A"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1d585ffb-de81-400d-b268-ea2181262636")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC_Manufacturer" "OPSCO Optoelectronics"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6980aaa4-0e37-476f-a5fe-366857d165bb")
+		(effects
+			(font
+				(size 1 1)
 				(thickness 0.15)
 			)
 		)
@@ -60,7 +140,7 @@
 		)
 		(fill yes)
 		(layer "F.Mask")
-		(uuid "8d73ffb4-cd13-48ee-9040-02128998f940")
+		(uuid "9189cc1e-a64e-448f-9f73-b0bd8ffecf0b")
 	)
 	(fp_line
 		(start -2 0)
@@ -70,7 +150,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "b058ae95-5512-4ad0-be8e-615befa3783b")
+		(uuid "5c53c278-4b78-4a11-8213-19439b59c558")
 	)
 	(fp_line
 		(start -2 0.455)
@@ -80,7 +160,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "a59d91f3-952b-4959-93aa-31302a961be0")
+		(uuid "eff92ede-17cd-4707-b2e3-649614a64baa")
 	)
 	(fp_line
 		(start 0 0)
@@ -90,7 +170,7 @@
 			(type default)
 		)
 		(layer "F.SilkS")
-		(uuid "dba7acbb-2793-4636-9baf-a0edfd6192e9")
+		(uuid "09d2fbf7-575a-4b5a-a121-44895a27e61b")
 	)
 	(fp_line
 		(start 2 0)
@@ -100,7 +180,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "ebd1d16c-9103-44c1-abc4-9967c9d4d723")
+		(uuid "72354c4b-3a21-4311-a845-4cedb581619b")
 	)
 	(fp_circle
 		(center 2.7 1.2)
@@ -111,7 +191,7 @@
 		)
 		(fill no)
 		(layer "F.SilkS")
-		(uuid "beeccd0d-1968-40d1-8a3e-4d94893cdc11")
+		(uuid "868bb2b9-cafe-48c3-b97d-629523eec43e")
 	)
 	(fp_line
 		(start -2.25 -0.25)
@@ -121,7 +201,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "d68c822a-d353-49be-9f1f-de5885a805e5")
+		(uuid "972e7e0c-c790-4f80-af1e-6343db12a84a")
 	)
 	(fp_line
 		(start -2.25 1.825)
@@ -131,7 +211,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "123d64c1-6b0a-4364-8309-fb848ce54362")
+		(uuid "d93f4d26-1dc3-410e-a4ba-521f0867c2b6")
 	)
 	(fp_line
 		(start 2.25 -0.25)
@@ -141,7 +221,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "34d808c0-e0bb-48fb-b4b2-6d0f40ea8124")
+		(uuid "bd8abe23-3869-4155-9d51-7c0d24dcc7a4")
 	)
 	(fp_line
 		(start 2.25 1.825)
@@ -151,7 +231,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "e0b2ba5e-1f8b-4501-8a7a-03d2849e2484")
+		(uuid "d2e9163c-7a92-4bfb-917f-3098ae1b734a")
 	)
 	(fp_line
 		(start -2 0)
@@ -161,7 +241,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "c2e9db19-0220-40ef-8228-2efc2d224a61")
+		(uuid "77a751c2-f1ef-46f2-a97b-b4d9a3bff9b3")
 	)
 	(fp_line
 		(start -2 1.5)
@@ -171,7 +251,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "20f19b79-bbf4-4ca5-b2da-dad1cccc15b9")
+		(uuid "865e053b-ca55-4530-af76-c59e823824b3")
 	)
 	(fp_line
 		(start 2 0)
@@ -181,7 +261,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "2fee0942-6bd3-49d8-904a-4c92167e8490")
+		(uuid "b10c2da7-790e-4332-a459-2695b3cb67ae")
 	)
 	(fp_line
 		(start 2 1.5)
@@ -191,7 +271,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "074e4c85-87f9-45a1-84b0-8d4936ed9ef9")
+		(uuid "eb474d5f-f88f-46f8-ad86-8b0dd11c30a2")
 	)
 	(fp_circle
 		(center 2.7 1.2)
@@ -202,43 +282,43 @@
 		)
 		(fill no)
 		(layer "F.Fab")
-		(uuid "6c1b31bc-2e20-477a-8096-29861dc468af")
+		(uuid "b156cb8a-fb14-4eb3-8af9-2369a6bf7328")
 	)
 	(pad "1" smd rect
 		(at 0.5 0.25 180)
 		(size 0.508 0.508)
 		(layers "F.Cu" "F.Mask")
-		(uuid "3096f4d7-8842-4b07-be1f-c69d678424d6")
+		(uuid "476267c1-5d07-4f4e-b0b5-d54aa5f4b192")
 	)
 	(pad "1" smd rect
 		(at 1.425 1.175 180)
 		(size 0.75 0.8)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "44378ea6-949a-473f-9ce2-336a04bde1be")
+		(uuid "00802b8b-0dba-4bff-bdbe-a0ccdc7e29e7")
 	)
 	(pad "2" smd rect
 		(at 0.3 1.175 180)
 		(size 0.6 0.8)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "1498e8c5-9d87-4c7a-b6fe-eb0a7de5dd9c")
+		(uuid "89ad32f9-8e2b-4d3f-a904-bd937760e8a3")
 	)
 	(pad "3" smd rect
 		(at -0.58 1.175 180)
 		(size 0.4 0.8)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "fae892ef-d9d8-405c-9f79-632004772fd1")
+		(uuid "3e04fa50-f60a-459a-b262-bfb09cc5a7b1")
 	)
 	(pad "3" smd rect
 		(at -0.5 0.25 180)
 		(size 0.508 0.508)
 		(layers "F.Cu" "F.Mask")
-		(uuid "b8f4018e-ca9c-4c0e-bcb8-e22b6fe52707")
+		(uuid "f1c3f4eb-a176-41a0-bca5-6f55ab12f490")
 	)
 	(pad "4" smd rect
 		(at -1.56 1.175 180)
 		(size 0.8 0.8)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "6c91cac8-272c-4a76-8bc4-d96551bcccb0")
+		(uuid "e13b37ed-7194-4dda-8447-c48a3b574a59")
 	)
 	(embedded_fonts no)
 	(model "${KIPRJMOD}/3d_models/4691.step"

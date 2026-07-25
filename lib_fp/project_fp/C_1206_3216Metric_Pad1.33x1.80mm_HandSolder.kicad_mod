@@ -8,7 +8,8 @@
 	(property "Reference" "REF**"
 		(at 0 -1.85 0)
 		(layer "F.SilkS")
-		(uuid "5006c1d5-ef60-4be8-930b-1afd26aaa13e")
+		(hide yes)
+		(uuid "f949f8e0-3f9b-42d5-816a-438a87eae821")
 		(effects
 			(font
 				(size 1 1)
@@ -16,10 +17,11 @@
 			)
 		)
 	)
-	(property "Value" "C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
+	(property "Value" "100 uF"
 		(at 0 1.85 0)
 		(layer "F.Fab")
-		(uuid "2c4ddb71-b9ed-41aa-b478-c94f0990cd41")
+		(hide yes)
+		(uuid "54634d0a-d8f2-4772-9208-455bee21b8e1")
 		(effects
 			(font
 				(size 1 1)
@@ -31,7 +33,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "610d746c-d320-422b-941b-c1449fe6ad2d")
+		(uuid "0fa59ccb-964e-4d59-8b69-59c3b48b6d71")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -39,14 +41,79 @@
 			)
 		)
 	)
-	(property "Description" ""
+	(property "Description" "100uF ±20% 6.3V Ceramic Capacitor X5R 1206"
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "47e09e36-4ec0-4d63-8cee-3fe1ea301ba9")
+		(uuid "27bd9b85-7009-4ef3-abd3-2496c98b2e60")
 		(effects
 			(font
 				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Package / Case" "C1206"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "2fca6b5a-548b-4da9-b897-9bc377442240")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC" "C15008"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b325d8cb-0fa5-4f46-a052-6414bd9d9288")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC TYPE" "SMD"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b8b6606e-31c9-4855-a988-d536023df6b5")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC_MPN" "CL31A107MQHNNNE"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "eeffb48b-6e3d-4c61-af58-c26843aee4c1")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC_Manufacturer" "Samsung Electro-Mechanics"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f8120a1b-b27f-43d3-906b-96c17b016717")
+		(effects
+			(font
+				(size 1 1)
 				(thickness 0.15)
 			)
 		)
@@ -60,7 +127,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "6a2b851f-3d77-4ec5-adb0-bb6953903a7f")
+		(uuid "b2147536-7059-4650-a200-f69e56ee4a50")
 	)
 	(fp_line
 		(start -0.711252 0.91)
@@ -70,7 +137,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "042cbd39-080f-4ed3-abac-da4fe9bce14b")
+		(uuid "3d64e4b6-2136-4cd9-b423-4fc25780753a")
 	)
 	(fp_line
 		(start -2.48 -1.15)
@@ -80,7 +147,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "94940820-2664-4cb2-a617-936c74f1bc79")
+		(uuid "611b731b-4385-46a2-bd43-052b04785114")
 	)
 	(fp_line
 		(start -2.48 1.15)
@@ -90,7 +157,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "468a7f4f-8d2f-4735-8a1f-1ad32c0eb44a")
+		(uuid "74ea527d-f5fc-4e94-9ca9-39957c34fc52")
 	)
 	(fp_line
 		(start 2.48 -1.15)
@@ -100,7 +167,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "5826aac6-298d-4b68-9e86-2b293692e189")
+		(uuid "52c9c28e-5ca4-4411-80ec-bd406bf8e2bc")
 	)
 	(fp_line
 		(start 2.48 1.15)
@@ -110,7 +177,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "8db81b09-1d9a-489a-945d-c56c51fd9114")
+		(uuid "43675957-6a70-4d5c-b9db-d6ebc121ecd5")
 	)
 	(fp_line
 		(start -1.6 -0.8)
@@ -120,7 +187,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "09229393-63c2-4307-8bdd-adf58863b07f")
+		(uuid "17a74e87-f723-45ce-aad6-31e5b4d283dd")
 	)
 	(fp_line
 		(start -1.6 0.8)
@@ -130,7 +197,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "05ee5b49-bedd-4909-8c34-fb61b146b7e1")
+		(uuid "4927392b-6831-4fe4-8aa4-2cb902464c2a")
 	)
 	(fp_line
 		(start 1.6 -0.8)
@@ -140,7 +207,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "3246c301-e2e4-499a-a6d0-7de77d59a592")
+		(uuid "470c1621-33db-4c3d-b252-4cc79f3a13e6")
 	)
 	(fp_line
 		(start 1.6 0.8)
@@ -150,12 +217,12 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "8ac4e567-ade9-422d-9541-2f88ee19fbdb")
+		(uuid "bc4819b9-c6ba-4abb-b721-af75ab5b281b")
 	)
 	(fp_text user "${REFERENCE}"
 		(at 0 0 0)
 		(layer "F.Fab")
-		(uuid "d5f4fdf6-dfe8-41ba-8539-5cc84aeeba35")
+		(uuid "4c7c4f70-bd6e-4d91-baad-f8e8d65ef6fd")
 		(effects
 			(font
 				(size 0.8 0.8)
@@ -168,14 +235,14 @@
 		(size 1.325 1.8)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(roundrect_rratio 0.188679)
-		(uuid "e5effd33-defc-4990-99aa-c56fdbb3230e")
+		(uuid "da14354c-7b76-4890-97ec-50f66aeac62b")
 	)
 	(pad "2" smd roundrect
 		(at 1.5625 0)
 		(size 1.325 1.8)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(roundrect_rratio 0.188679)
-		(uuid "7c95acc9-6888-49dd-9c27-2672fd8d178a")
+		(uuid "711197c9-e6cb-42b3-8196-3d318b96c0f3")
 	)
 	(embedded_fonts no)
 	(model "${KIPRJMOD}/3d_models/C_1206_3216Metric.step"

@@ -6,7 +6,8 @@
 	(property "Reference" "REF**"
 		(at -0.635 -6.985 0)
 		(layer "F.SilkS")
-		(uuid "66afd8a4-4b92-46f0-9315-9f65b398a224")
+		(hide yes)
+		(uuid "c8668a85-d9f8-4500-81bd-fd9995057eeb")
 		(effects
 			(font
 				(size 1 1)
@@ -14,10 +15,11 @@
 			)
 		)
 	)
-	(property "Value" "SPARKFUN_PRT-14417"
+	(property "Value" "PRT-14417"
 		(at 7.62 -5.08 0)
 		(layer "F.Fab")
-		(uuid "16b2fbf7-65b8-4de0-9fab-2dc74f6dd6fb")
+		(hide yes)
+		(uuid "4897a022-e84c-4fbf-85eb-aea32e703e38")
 		(effects
 			(font
 				(size 1 1)
@@ -29,7 +31,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "dcaca68c-1e4f-4834-9a74-2c829947d34f")
+		(uuid "1a9121b5-c0eb-4d47-ad19-941163c26bb4")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -41,10 +43,166 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "168fab79-050c-40c7-a7f2-d8e03bc28308")
+		(uuid "943648af-6682-48ce-b16a-098dafad0a12")
 		(effects
 			(font
 				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "MF" "SparkFun Electronics"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "f533586c-9858-4619-80dc-814b57d88c3c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "MAXIMUM_PACKAGE_HEIGHT" "2.9 mm"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "cf3112b0-0517-4899-8a18-a9c9feaa21e6")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Package" "None"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3bbaedd5-f029-4b12-a748-611cc6bd872c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Price" "None"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5a4c92c6-e4c7-4bfe-a9ae-2eebd3f625d8")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Check_prices" "https://www.snapeda.com/parts/PRT-14417/SparkFun/view-part/?ref=eda"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5d8680df-ac14-4baa-98f4-fc474ee27a63")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "STANDARD" "Manufacturer Recommendations"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5d740b4f-233e-4e84-abda-31a0a9561dcc")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "PARTREV" "NA"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "36ca4a86-f8ad-48dd-8ff9-b645c2c63155")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "SnapEDA_Link" "https://www.snapeda.com/parts/PRT-14417/SparkFun/view-part/?ref=snap"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "c1e6105c-0242-41df-a34e-ecc48883f209")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "MP" "PRT-14417"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6b315a63-9c4e-4073-817c-d25a834d77f7")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description_1" "QWIIC JST CONNECTOR - SMD 4-PIN"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "9e845d48-0030-484b-9c9c-3c532ceffdcf")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Availability" "In Stock"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "07554948-dfbd-4ac6-b7ce-34d2698629b0")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "MANUFACTURER" "SparkFun Electronics"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "735d0729-fc26-4479-ba7c-72457cea2532")
+		(effects
+			(font
+				(size 1 1)
 				(thickness 0.15)
 			)
 		)
@@ -58,7 +216,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "4ecbf288-60ce-4026-b537-dd310744b256")
+		(uuid "df3327e1-cd68-45cb-b460-ff9b4436de99")
 	)
 	(fp_line
 		(start -3 0.205)
@@ -68,7 +226,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "320fcfa2-069d-48f7-9f01-df13b7e20d50")
+		(uuid "22ccf0d2-8fca-4790-a00a-3c0b69cfcdba")
 	)
 	(fp_line
 		(start -1.88 2.125)
@@ -78,7 +236,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "10dc9a57-2709-481b-bb19-2cb1c081f4c1")
+		(uuid "099e8528-d63d-4214-b6f8-8d4edd7eb6d4")
 	)
 	(fp_line
 		(start 2.12 -2.125)
@@ -88,7 +246,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "72c36775-cf17-4953-8dbd-3016cfabd10b")
+		(uuid "a03619dc-e058-47cf-9075-435061c2a9db")
 	)
 	(fp_line
 		(start 3 -2.125)
@@ -98,7 +256,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "769e4192-3866-41b2-abe1-f495cc377611")
+		(uuid "0b3cf9a0-d051-473a-8bdb-353bc23b6af4")
 	)
 	(fp_circle
 		(center -1.5 -3.75)
@@ -109,7 +267,7 @@
 		)
 		(fill no)
 		(layer "F.SilkS")
-		(uuid "e8f988a8-f765-4254-834f-1cd2d86652f7")
+		(uuid "bf94f51a-57ae-4d53-9cda-311c02732e94")
 	)
 	(fp_line
 		(start -3.65 -3.475)
@@ -119,7 +277,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "c627e6b9-879b-461c-a825-318d91045511")
+		(uuid "b35a7449-9e78-4734-8609-5cee024a75c5")
 	)
 	(fp_line
 		(start -3.65 2.575)
@@ -129,7 +287,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "a6526b60-d52c-4f0b-8c9a-413ed8ec2655")
+		(uuid "b22817e8-4bd7-4a53-ba4c-9bd2a2129e5e")
 	)
 	(fp_line
 		(start 3.65 -3.475)
@@ -139,7 +297,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "da315619-30d4-4fbc-847b-96287057ff6f")
+		(uuid "b4213fb2-d746-4a85-b827-29e6bd669a3a")
 	)
 	(fp_line
 		(start 3.65 2.575)
@@ -149,7 +307,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "987ff278-502a-4d63-9372-0e4b5497caa7")
+		(uuid "66501712-f843-4166-b5d4-b17157449ebe")
 	)
 	(fp_line
 		(start -3 -2.125)
@@ -159,7 +317,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "d7960a14-bda7-458f-8d43-0b4dce79f06e")
+		(uuid "12d9710c-4a75-4d1e-8e67-ff6709c473de")
 	)
 	(fp_line
 		(start -3 2.125)
@@ -169,7 +327,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "1d150107-7718-41b8-9f23-b583cef7d0b2")
+		(uuid "9c644852-59d0-4c11-8cd6-747ce34ca65e")
 	)
 	(fp_line
 		(start 3 -2.125)
@@ -179,7 +337,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "695097b6-e1b4-43cc-a32d-b7e8b234891e")
+		(uuid "c93fc127-f437-463c-b018-3b8697eb0f3a")
 	)
 	(fp_line
 		(start 3 2.125)
@@ -189,7 +347,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "1a10352a-5df2-4e13-a5a2-711a90ec09ec")
+		(uuid "e719616e-c10b-4aba-819f-fa4e5da22fe2")
 	)
 	(fp_circle
 		(center -1.5 -3.75)
@@ -200,49 +358,49 @@
 		)
 		(fill no)
 		(layer "F.Fab")
-		(uuid "50d7e42d-3d7e-4cb9-8275-a65564a52c1b")
+		(uuid "8434b8b7-5632-4806-bf9f-4ac54bb5fd69")
 	)
 	(pad "1" smd rect
 		(at -1.5 -2.45)
 		(size 0.6 1.55)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(solder_mask_margin 0.102)
-		(uuid "a3533d5a-928a-42c6-acf1-b4695a15465f")
+		(uuid "1432d40f-4cf2-4061-a475-14e031d4887d")
 	)
 	(pad "2" smd rect
 		(at -0.5 -2.45)
 		(size 0.6 1.55)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(solder_mask_margin 0.102)
-		(uuid "66fca3b7-4f5a-46c8-9b0a-f2e81c858cb0")
+		(uuid "7c0a8ff1-dad9-42e7-aec5-6dd73860bfd1")
 	)
 	(pad "3" smd rect
 		(at 0.5 -2.45)
 		(size 0.6 1.55)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(solder_mask_margin 0.102)
-		(uuid "0ba74899-90e4-4e4f-9935-f5ac74018f36")
+		(uuid "12225818-4c48-46fe-94cd-8a661837f143")
 	)
 	(pad "4" smd rect
 		(at 1.5 -2.45)
 		(size 0.6 1.55)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(solder_mask_margin 0.102)
-		(uuid "f5bb8422-b382-4bfe-8939-4b78427baab4")
+		(uuid "a8eb162d-cfd4-45fe-b6c3-d29d7178cefe")
 	)
 	(pad "S1" smd rect
 		(at -2.8 1.425)
 		(size 1.2 1.8)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(solder_mask_margin 0.102)
-		(uuid "41698ade-8ae7-4f95-b8d7-fb90189efa60")
+		(uuid "ee965804-5da8-4d00-8bfe-f31cfc6ffa49")
 	)
 	(pad "S2" smd rect
 		(at 2.8 1.425)
 		(size 1.2 1.8)
 		(layers "F.Cu" "F.Mask" "F.Paste")
 		(solder_mask_margin 0.102)
-		(uuid "0a42d739-999a-4468-9836-09782d74372b")
+		(uuid "de5ee7f5-d90f-45ac-ab1e-0a7a01f19cf2")
 	)
 	(embedded_fonts no)
 	(model "${KIPRJMOD}/3d_models/PRT-14417.step"

@@ -8,7 +8,8 @@
 	(property "Reference" "REF**"
 		(at 0 -2 0)
 		(layer "F.SilkS")
-		(uuid "b1457523-767d-4c81-9453-8e5c6affbec1")
+		(hide yes)
+		(uuid "a7283acd-0c6b-477b-8b2e-038a110232ea")
 		(effects
 			(font
 				(size 1 1)
@@ -16,10 +17,11 @@
 			)
 		)
 	)
-	(property "Value" "Dual Buffer - 74HCT2G17GW,125 - SOT-363_SC-70-6"
+	(property "Value" "Dual Buffer - 74HCT2G17GW,125"
 		(at 0 2 180)
 		(layer "F.Fab")
-		(uuid "21ccd244-bac3-49e9-b44f-2a55cbd3c81a")
+		(hide yes)
+		(uuid "789c182a-26d5-4494-aaa0-defbf588180a")
 		(effects
 			(font
 				(size 1 1)
@@ -31,7 +33,7 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "deddbd50-e83f-4d01-bbf0-390f749210dd")
+		(uuid "c6e7ab9a-226d-46db-813d-dee73e0dd4cd")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -39,23 +41,11 @@
 			)
 		)
 	)
-	(property "Description" "Non-Inverting Schmidt 5v TTL"
+	(property "Description" "Schmitt trigger 4.5V~5.5V 1 2 21ns@4.5V,50pF 20uA TSSOP-6 Buffers, Drivers, Receivers, Transceivers RoHS"
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "5eb538fe-69ee-4a98-ac15-42de6a2e4978")
-		(effects
-			(font
-				(size 1.27 1.27)
-				(thickness 0.15)
-			)
-		)
-	)
-	(property "Manufacturer_Part_Number" "74HCT2G17GW,125"
-		(at 0 0 0)
-		(layer "F.Fab")
-		(hide yes)
-		(uuid "1a1be69b-125b-4c67-be03-2178d6887b94")
+		(uuid "9f3fa73c-4bd6-41df-bb47-ab47f384a1d8")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -67,10 +57,62 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "7a087987-28c4-40d7-8e2e-0c075a210e20")
+		(uuid "4c0a6f96-3c6d-4d59-9aed-b2998509f329")
 		(effects
 			(font
 				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC" "C547568"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ce319a82-baf0-46c5-9806-cfedb571a7ca")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC TYPE" "SMD"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a170f7a1-06a8-4c04-84e3-c949155db355")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC_MPN" "74HCT2G17GW,125"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0f75e799-433d-4f81-8b64-e27bb7f6483d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC_Manufacturer" "Nexperia"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "86bc73db-2eb7-4558-9f02-721927a8230d")
+		(effects
+			(font
+				(size 1 1)
 				(thickness 0.15)
 			)
 		)
@@ -84,7 +126,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "01cf0ac6-fdc7-414e-84ca-9ffbde939055")
+		(uuid "da07940e-757e-41e4-aee7-0bb57bdbb7a8")
 	)
 	(fp_line
 		(start 0.7 -1.16)
@@ -94,7 +136,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "ccbba41c-c73a-43d2-8bad-a88d0a6a2454")
+		(uuid "9dfaaad0-df60-4ff8-8963-593c83d9c2ba")
 	)
 	(fp_line
 		(start -1.6 -1.4)
@@ -104,7 +146,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "abc09c9f-075a-4f80-b07f-3324cd015d17")
+		(uuid "d434c2ba-8478-4da7-962a-eb89e97bb24b")
 	)
 	(fp_line
 		(start -1.6 -1.4)
@@ -114,7 +156,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "b2764963-5cc6-471d-921d-c27a653c08f2")
+		(uuid "54184eb6-273c-4914-9eb0-c81eef1b7e61")
 	)
 	(fp_line
 		(start -1.6 1.4)
@@ -124,7 +166,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "0cb6019b-f866-420f-82f5-59f55ddd49d1")
+		(uuid "e7b3aafa-3477-4291-8c1f-93721bad123e")
 	)
 	(fp_line
 		(start 1.6 1.4)
@@ -134,7 +176,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "4854754c-9325-4aa4-adee-a9f9edeed28e")
+		(uuid "d3ff9fc4-1801-4ab8-a422-6e0e067ec6e0")
 	)
 	(fp_line
 		(start -0.675 -0.6)
@@ -144,7 +186,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "929906f0-2036-4446-a43c-a1e8190f0ecc")
+		(uuid "d83b6523-fb62-434b-a5c7-d472401cadd5")
 	)
 	(fp_line
 		(start -0.175 -1.1)
@@ -154,7 +196,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "1b0a0765-3484-4a9c-8461-51303f849672")
+		(uuid "2081fbdf-7d3a-484a-bf41-7d0d8dc3595c")
 	)
 	(fp_line
 		(start 0.675 -1.1)
@@ -164,7 +206,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "169ac5cc-be50-4aa6-a393-53f97ec93576")
+		(uuid "d1824c7c-500c-494a-afc4-06b7de4c547b")
 	)
 	(fp_line
 		(start 0.675 -1.1)
@@ -174,7 +216,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "62c2511a-f6c4-4e2f-b3b8-eb2d30989a9d")
+		(uuid "535139a3-13b0-4289-9a83-27ad25010be6")
 	)
 	(fp_line
 		(start 0.675 1.1)
@@ -184,12 +226,12 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "700b2cc6-e628-4aea-980d-f22ee62cc422")
+		(uuid "cd523422-e8b4-480f-811d-23371a50c734")
 	)
 	(fp_text user "${REFERENCE}"
 		(at 0 0 90)
 		(layer "F.Fab")
-		(uuid "307c4106-c8cc-4fd5-ac19-7fa53f0cb6d0")
+		(uuid "862d89d1-d714-42af-a80e-3578db914b3b")
 		(effects
 			(font
 				(size 0.5 0.5)
@@ -201,37 +243,37 @@
 		(at -0.95 -0.65)
 		(size 0.65 0.4)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "ce28989d-9dc7-496a-a926-8733f2e97199")
+		(uuid "225bca40-29a0-4f2d-bf1d-526d25639d8b")
 	)
 	(pad "2" smd rect
 		(at -0.95 0)
 		(size 0.65 0.4)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "f5d93e0e-6519-4f8d-afec-f9885ccea926")
+		(uuid "abb5d285-7fda-47d3-9bf9-c0be093c54ed")
 	)
 	(pad "3" smd rect
 		(at -0.95 0.65)
 		(size 0.65 0.4)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "5d194df4-0b2c-4deb-a173-6ffe3c9f9e54")
+		(uuid "9e0ab4e5-aa1a-4f3a-9283-a207a702f29b")
 	)
 	(pad "4" smd rect
 		(at 0.95 0.65)
 		(size 0.65 0.4)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "5a2fc044-0fd8-4893-9149-30a00f50f969")
+		(uuid "8c1cb4dc-a0ec-4363-ae96-11f4477adcdd")
 	)
 	(pad "5" smd rect
 		(at 0.95 0)
 		(size 0.65 0.4)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "a1ac1e42-1551-4219-90fb-413e2feac00c")
+		(uuid "35cf2dfa-c647-4e40-b3e7-6a7f9e335d41")
 	)
 	(pad "6" smd rect
 		(at 0.95 -0.65)
 		(size 0.65 0.4)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "93623b7e-44e0-47c5-8e59-2ccbd00a3623")
+		(uuid "2c5dced4-1092-401e-a780-8b666c8c8d5d")
 	)
 	(embedded_fonts no)
 	(model "${KIPRJMOD}/3d_models/SOT-363_SC-70-6.wrl"

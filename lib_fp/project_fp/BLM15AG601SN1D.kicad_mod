@@ -1,0 +1,236 @@
+(footprint "BLM15AG601SN1D"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "BLM15 L=1.0 W=0.5 T=0.5")
+	(tags "Ferrite Bead")
+	(property "Reference" "REF**"
+		(at 0.22 -1.26 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "b1a9f019-e86d-46ed-975a-5489975b21ba")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.2)
+			)
+		)
+	)
+	(property "Value" "600Ω@100MHz"
+		(at 0 0 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "d0dd7b59-3e22-410b-bedb-fc8ed48420d6")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.254)
+			)
+		)
+	)
+	(property "Datasheet" "~"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "ab7d6e28-fcc8-4036-9856-13c7a2db68d8")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "600Ω@100MHz 1 Line Ferrite Bead 0402 300mA 520mΩ"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d90966c0-bdf4-4b3f-aab5-e956a840a273")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC" "C76884"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "00247c15-b646-4fcb-8c55-4bb6e41eaf4c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC TYPE" "SMD"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6421b6a9-0b9d-4e9a-a502-cecc8daba8bc")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC_MPN" "BLM15AG601SN1D"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "507e398a-0730-4986-a8a3-89d0f7f1eea0")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC_Manufacturer" "muRata"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a47ca45c-9322-4512-af6d-3b660ea1ad4c")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Package / Case" "0402"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "0242904f-c1e2-408e-99fa-a4088eb5cd6d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start 0 -0.15)
+		(end 0 0.15)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "778d6a7c-eb9e-4aeb-a802-46583b98ea2a")
+	)
+	(fp_line
+		(start -1.175 -0.7)
+		(end 1.175 -0.7)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "0f967ca8-a359-489b-9414-74686fb128e1")
+	)
+	(fp_line
+		(start -1.175 0.7)
+		(end -1.175 -0.7)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "98eb5149-959d-406b-b88a-563046be3306")
+	)
+	(fp_line
+		(start 1.175 -0.7)
+		(end 1.175 0.7)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "9923c0c8-e43b-41cc-95d0-f4408c8a929f")
+	)
+	(fp_line
+		(start 1.175 0.7)
+		(end -1.175 0.7)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "49f7dd65-b1ff-4b4d-b27c-7b67c05fe0d8")
+	)
+	(fp_line
+		(start -0.5 -0.25)
+		(end 0.5 -0.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "091e82a8-e6f3-437b-bfb7-fbcd8507be2e")
+	)
+	(fp_line
+		(start -0.5 0.25)
+		(end -0.5 -0.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "1cdbf1e5-4439-485b-ba7d-99add1edefe3")
+	)
+	(fp_line
+		(start 0.5 -0.25)
+		(end 0.5 0.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "e88d00ec-494e-4b1a-94e9-4984d4ad7170")
+	)
+	(fp_line
+		(start 0.5 0.25)
+		(end -0.5 0.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "ac67d4dd-bc94-4a74-bb34-b4e1b6416857")
+	)
+	(pad "1" smd rect
+		(at -0.4 0)
+		(size 0.4 0.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "6a21616b-79ed-4ba1-a6e8-9eb194524508")
+	)
+	(pad "2" smd rect
+		(at 0.4 0)
+		(size 0.4 0.5)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(uuid "32de8be3-6d50-4497-a064-701a018793e2")
+	)
+	(embedded_fonts no)
+	(model "${KIPRJMOD}/3d_models/BLM15AG601SN1D.stp"
+		(offset
+			(xyz 0.2499999962 0 0.2499999962)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 -90)
+		)
+	)
+)

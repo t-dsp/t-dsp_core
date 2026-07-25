@@ -51,3 +51,9 @@ ibom.config.ini
 
 # Windows artifacts
 nul
+
+# VS Code Local History
+.history/
+
+# KiCad autosave
+#auto_saved_files#

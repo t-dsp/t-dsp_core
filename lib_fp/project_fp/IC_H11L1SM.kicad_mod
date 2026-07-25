@@ -6,7 +6,8 @@
 	(property "Reference" "REF**"
 		(at -5.575 -4.15462 0)
 		(layer "F.SilkS")
-		(uuid "1b72a3b3-8de6-48ae-a87c-ca092dd8ac87")
+		(hide yes)
+		(uuid "05d45c85-5393-402b-89ae-1d67966fa8c1")
 		(effects
 			(font
 				(size 1 1)
@@ -17,7 +18,8 @@
 	(property "Value" "Optoisolators - H11L1SM - 6-SMD, Gull Wing"
 		(at 3.1 5.445 0)
 		(layer "F.Fab")
-		(uuid "1eac301c-74ec-408a-b689-0881bdec5bc7")
+		(hide yes)
+		(uuid "64643a36-12d5-4866-97e4-6f37ef4e8eea")
 		(effects
 			(font
 				(size 1 1)
@@ -25,11 +27,11 @@
 			)
 		)
 	)
-	(property "Datasheet" "https://www.onsemi.com/pub/Collateral/H11L3M-D.PDF"
+	(property "Datasheet" ""
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "6b339c30-9938-42e5-901b-ec5bd8740fa3")
+		(uuid "4e7216e1-8395-47b9-9334-7c1e21a06d0d")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -37,23 +39,11 @@
 			)
 		)
 	)
-	(property "Description" ""
+	(property "Description" "16V 50mA 6V 1.2V 3V~16V DC SOP-6-2.54mm Logic Output Optoisolators RoHS"
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "0145b97f-d9d6-47dd-ab1e-428af27dde54")
-		(effects
-			(font
-				(size 1.27 1.27)
-				(thickness 0.15)
-			)
-		)
-	)
-	(property "Manufacturer_Part_Number" "H11L1SM "
-		(at 0 0 0)
-		(layer "F.Fab")
-		(hide yes)
-		(uuid "6bdb42a0-ef09-4285-a81b-334f8d90780c")
+		(uuid "76852409-e572-4d21-bb37-ba7963472e9e")
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -65,10 +55,62 @@
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
-		(uuid "cae207bd-a479-4e25-9077-5cbc2af0773d")
+		(uuid "1f40a343-756d-4fa8-83b3-22f99ec8e039")
 		(effects
 			(font
 				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC" "C899473"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "1f0f5150-9ca8-429c-9db7-4a3c5638fb7a")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC TYPE" "SMD"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "5ae33b53-46b5-45ea-a6ba-338fe25b4422")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC_MPN" "H11L1SM"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "b907fc88-c657-4fa4-a7e2-9aabef80eb52")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "LCSC_Manufacturer" "onsemi"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "64f5f6d7-2781-4599-8ea0-f2ae3ccbf817")
+		(effects
+			(font
+				(size 1 1)
 				(thickness 0.15)
 			)
 		)
@@ -82,7 +124,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "1cd3e6fe-04f9-44dc-98c6-e3e9079a7da6")
+		(uuid "4d8f02ee-2e82-49e4-8e4f-eb6046e142b6")
 	)
 	(fp_line
 		(start -3.175 -4.255)
@@ -92,7 +134,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "b7275ee7-7325-4d99-aad2-52bce3d073e7")
+		(uuid "5df76072-6ba9-4bd7-8013-d6e1b124c808")
 	)
 	(fp_line
 		(start -3.175 4.255)
@@ -102,7 +144,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "cdd48ec4-ca34-47d1-9ee2-d0c4606794fd")
+		(uuid "11f862d5-1e05-4fd6-a3c5-c8b9880f2d10")
 	)
 	(fp_line
 		(start 3.175 -4.255)
@@ -112,7 +154,7 @@
 			(type solid)
 		)
 		(layer "F.SilkS")
-		(uuid "7959c79b-3aed-4c96-9529-66080855c5e5")
+		(uuid "b394b946-338c-481d-b1a4-35fe0bc8051e")
 	)
 	(fp_circle
 		(center -5.825 -2.54)
@@ -123,7 +165,7 @@
 		)
 		(fill no)
 		(layer "F.SilkS")
-		(uuid "463ec4d3-74e2-4f80-bb16-92002944d52c")
+		(uuid "47ca1ff2-5c47-48d2-94cd-fa70e4bdb96d")
 	)
 	(fp_line
 		(start -5.515 -4.505)
@@ -133,7 +175,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "db1138f4-5d4d-48c8-9613-15bd02acafc8")
+		(uuid "ba99a2a2-14f4-455e-8672-07d0334aea8e")
 	)
 	(fp_line
 		(start -5.515 -4.505)
@@ -143,7 +185,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "55842cd4-9e1e-4ad4-a280-8794355f407f")
+		(uuid "76699dea-0592-4be4-a140-00c5d0cfb2bb")
 	)
 	(fp_line
 		(start -5.515 4.505)
@@ -153,7 +195,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "76eac9d2-1604-44c7-8860-d2d371bde635")
+		(uuid "5cdb026a-172b-4c85-aede-f06703821d7a")
 	)
 	(fp_line
 		(start 5.515 -4.505)
@@ -163,7 +205,7 @@
 			(type solid)
 		)
 		(layer "F.CrtYd")
-		(uuid "4b67aaee-6b0b-41b8-a139-c921eddb476f")
+		(uuid "14461fca-c24f-4e6f-a2d6-eb81fc612b49")
 	)
 	(fp_line
 		(start -3.175 -4.255)
@@ -173,7 +215,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "5d81d92b-05ff-4f5b-b37e-2e8f1f190226")
+		(uuid "19a34db4-88d4-41ce-b035-60c4955a303c")
 	)
 	(fp_line
 		(start -3.175 -4.255)
@@ -183,7 +225,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "408a57ba-bafc-47de-8167-b16cfee37548")
+		(uuid "41afac62-53e0-4818-a6b8-3633564c092c")
 	)
 	(fp_line
 		(start -3.175 4.255)
@@ -193,7 +235,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "64549fe5-f012-4900-b510-27a39b5869eb")
+		(uuid "c3cf37b2-7566-43aa-bd1a-4dfef6dd94c6")
 	)
 	(fp_line
 		(start 3.175 -4.255)
@@ -203,7 +245,7 @@
 			(type solid)
 		)
 		(layer "F.Fab")
-		(uuid "274069c1-951d-4178-a985-9a71e3651a95")
+		(uuid "de24a484-2327-4341-984f-faa1fefe0643")
 	)
 	(fp_circle
 		(center -5.825 -2.54)
@@ -214,43 +256,43 @@
 		)
 		(fill no)
 		(layer "F.Fab")
-		(uuid "18721a4f-e29d-4fcd-a9e2-14046daddb78")
+		(uuid "845e49bd-caaa-4063-bb46-5ed1a47e8c86")
 	)
 	(pad "1" smd rect
 		(at -4.505 -2.54)
 		(size 1.52 1.78)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "7a2a44dc-8a28-4e6b-b6a4-dacedec2da55")
+		(uuid "6f4282d0-6c8f-48b5-a302-4fd3e3593308")
 	)
 	(pad "2" smd rect
 		(at -4.505 0)
 		(size 1.52 1.78)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "007544b0-c6c3-45ab-8b8e-6e0ad452374b")
+		(uuid "ecfa2dc7-033e-4957-a717-66799c3c7942")
 	)
 	(pad "3" smd rect
 		(at -4.505 2.54)
 		(size 1.52 1.78)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "f173faeb-e869-4f96-8bf8-4a8e3f58838d")
+		(uuid "cf565e3b-4703-494b-b64b-70f028f9c293")
 	)
 	(pad "4" smd rect
 		(at 4.505 2.54)
 		(size 1.52 1.78)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "66c98990-7622-409a-8672-ef8080f45604")
+		(uuid "67e140b9-9002-45c7-8654-d7692fe58d3a")
 	)
 	(pad "5" smd rect
 		(at 4.505 0)
 		(size 1.52 1.78)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "f2dfa852-f7c4-41a7-a2a2-59e8db752902")
+		(uuid "b5ce4714-6363-493e-b9c4-0210451f09bf")
 	)
 	(pad "6" smd rect
 		(at 4.505 -2.54)
 		(size 1.52 1.78)
 		(layers "F.Cu" "F.Mask" "F.Paste")
-		(uuid "9d3d934d-de34-4f88-aa79-947e240f1a64")
+		(uuid "893d8bca-8858-4a78-8faf-44d8c1d1e7fb")
 	)
 	(embedded_fonts no)
 	(model "${KIPRJMOD}/3d_models/H11L1SM.step"
