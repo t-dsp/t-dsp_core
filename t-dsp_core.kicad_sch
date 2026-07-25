@@ -10494,6 +10494,182 @@
               (font
                 (size 1.27 1.27))))))
       (embedded_fonts no))
+    (symbol "SPH0645LM4H_3"
+      (pin_names
+        (offset 0.254))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (in_pos_files yes)
+      (duplicate_pin_numbers_are_jumpers no)
+      (property "Reference" "MIC4"
+        (at 25.4 10.16 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (effects
+          (font
+            (size 1.524 1.524))))
+      (property "Value" "SPH0645LM4H"
+        (at 25.4 7.62 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (effects
+          (font
+            (size 1.524 1.524))))
+      (property "Footprint" "project_fp:SPH0655LM4H-1_KNO"
+        (at 21.844 15.494 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+            (italic yes))))
+      (property "Datasheet" "SPH0655LM4H-1"
+        (at 24.384 13.208 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27)
+            (italic yes))))
+      (property "Description" ""
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "ki_locked" ""
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "ki_keywords" "SPH0655LM4H-1"
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "ki_fp_filters" "SPH0655LM4H-1_KNO"
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (symbol "SPH0645LM4H_3_0_1"
+        (polyline
+          (pts
+            (xy 7.62 5.08)
+            (xy 7.62 -10.16))
+          (stroke
+            (width 0.127)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 7.62 -10.16)
+            (xy 43.18 -10.16))
+          (stroke
+            (width 0.127)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 43.18 5.08)
+            (xy 7.62 5.08))
+          (stroke
+            (width 0.127)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 43.18 -10.16)
+            (xy 43.18 5.08))
+          (stroke
+            (width 0.127)
+            (type default))
+          (fill
+            (type none)))
+        (pin output line
+          (at 0 0 0)
+          (length 7.62)
+          (name "DATA"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin input line
+          (at 0 -2.54 0)
+          (length 7.62)
+          (name "SELECT"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin power_out line
+          (at 50.8 -5.08 180)
+          (length 7.62)
+          (name "GROUND"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "3"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin power_in line
+          (at 50.8 0 180)
+          (length 7.62)
+          (name "VDD"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "5"
+            (effects
+              (font
+                (size 1.27 1.27))))))
+      (symbol "SPH0645LM4H_3_1_1"
+        (pin input line
+          (at 0 -5.08 0)
+          (length 7.62)
+          (name "BCLK-PDMCLK"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "4"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin input line
+          (at 0 -7.62 0)
+          (length 7.62)
+          (name "LRCLK-WS-FS"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "4"
+            (effects
+              (font
+                (size 1.27 1.27))))))
+      (embedded_fonts no))
     (symbol "SolderJumper_3_Bridged12_1"
       (pin_names
         (offset 0)
@@ -11165,6 +11341,139 @@
               (font
                 (size 1.27 1.27))))
           (number "1"
+            (effects
+              (font
+                (size 1.27 1.27))))))
+      (embedded_fonts no))
+    (symbol "TLV76733DRVR:TLV76733DRVR"
+      (pin_names
+        (offset 1.016))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (in_pos_files yes)
+      (duplicate_pin_numbers_are_jumpers no)
+      (property "Reference" "U"
+        (at 0 7.62 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "TLV76733DRVR"
+        (at 0 -7.62 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Description" ""
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (symbol "TLV76733DRVR_0_1"
+        (rectangle
+          (start -5.08 -5.08)
+          (end 5.08 5.08)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type background)))
+        (pin power_out line
+          (at 7.62 2.54 180)
+          (length 2.54)
+          (name "OUT"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin input line
+          (at 7.62 0 180)
+          (length 2.54)
+          (name "SNS"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin power_in line
+          (at 0 -7.62 90)
+          (length 2.54)
+          (name "GND"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "3"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin input line
+          (at -7.62 0 0)
+          (length 2.54)
+          (name "EN"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "4"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 2.54 -7.62 90)
+          (length 2.54)
+          (name "GND"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "5"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin power_in line
+          (at -7.62 2.54 0)
+          (length 2.54)
+          (name "IN"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "6"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at -2.54 -7.62 90)
+          (length 2.54)
+          (name "PAD"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "7"
             (effects
               (font
                 (size 1.27 1.27))))))
@@ -21435,6 +21744,15 @@
 
   (wire
     (pts
+      (xy -237.49 751.84)
+      (xy -237.49 755.65))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "0aff9a67-89db-40a2-8db9-7ff086d3d607"))
+
+  (wire
+    (pts
       (xy 1156.97 401.32)
       (xy 1150.62 401.32))
     (stroke
@@ -21795,6 +22113,15 @@
 
   (wire
     (pts
+      (xy -281.94 746.76)
+      (xy -281.94 742.95))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "17c69e2c-f745-4d83-870f-294f2ab2465d"))
+
+  (wire
+    (pts
       (xy 240.03 617.22)
       (xy 201.93 617.22))
     (stroke
@@ -22146,6 +22473,15 @@
 
   (wire
     (pts
+      (xy -227.33 746.76)
+      (xy -227.33 742.95))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "217ec9d6-1d9d-4935-ab00-dcf908935d2a"))
+
+  (wire
+    (pts
       (xy -270.51 623.57)
       (xy -275.59 623.57))
     (stroke
@@ -22494,6 +22830,15 @@
       (width 0)
       (type default))
     (uuid "2c798ebf-c498-4efb-bc22-620e0e1f9fce"))
+
+  (wire
+    (pts
+      (xy -287.02 726.44)
+      (xy -287.02 722.63))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "2c81c6ee-3e78-4e3f-a2d6-9337a1a1c850"))
 
   (wire
     (pts
@@ -23097,6 +23442,15 @@
       (width 0)
       (type default))
     (uuid "3e38b6f0-d940-47eb-a7de-cb1fd5626817"))
+
+  (wire
+    (pts
+      (xy -287.02 734.06)
+      (xy -287.02 737.87))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "3e5ba2ff-39c7-48b4-9dd1-38f54986b298"))
 
   (wire
     (pts
@@ -24126,6 +24480,15 @@
 
   (wire
     (pts
+      (xy -237.49 746.76)
+      (xy -237.49 742.95))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "6117a742-6f83-4cf8-a6ca-797dd1d09ff3"))
+
+  (wire
+    (pts
       (xy 624.84 1018.54)
       (xy 624.84 1014.73))
     (stroke
@@ -24645,6 +25008,15 @@
       (width 0)
       (type default))
     (uuid "7316f326-f5d1-4d17-a4e8-a59e6120ddb3"))
+
+  (wire
+    (pts
+      (xy -227.33 751.84)
+      (xy -227.33 755.65))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "731a752c-09ad-4976-9aa4-a48d3ddefa01"))
 
   (wire
     (pts
@@ -27897,6 +28269,15 @@
 
   (wire
     (pts
+      (xy -292.1 746.76)
+      (xy -292.1 742.95))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "dfa1a8eb-907e-430e-913b-f82e2b6604c3"))
+
+  (wire
+    (pts
       (xy 269.24 443.23)
       (xy 273.05 443.23))
     (stroke
@@ -27930,6 +28311,15 @@
       (width 0)
       (type default))
     (uuid "e14f1064-536f-4a18-8a28-b06de67dc181"))
+
+  (wire
+    (pts
+      (xy -292.1 751.84)
+      (xy -292.1 755.65))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "e175d40c-6aab-4086-b680-f1cc6032c167"))
 
   (wire
     (pts
@@ -28869,6 +29259,15 @@
 
   (wire
     (pts
+      (xy -281.94 751.84)
+      (xy -281.94 755.65))
+    (stroke
+      (width 0)
+      (type default))
+    (uuid "ff9a7505-0902-4358-8c73-ee6723fc48b2"))
+
+  (wire
+    (pts
       (xy 179.07 264.16)
       (xy 222.25 264.16))
     (stroke
@@ -28887,63 +29286,45 @@
 
   (wire
     (pts
-      (xy -292.1 746.76)
-      (xy -292.1 742.95))
-    (uuid "dfa1a8eb-907e-430e-913b-f82e2b6604c3"))
+      (xy -255.27 779.78)
+      (xy -251.46 779.78))
+    (uuid "513fbe59-3454-4722-b5c9-419fb3214e6f"))
 
   (wire
     (pts
-      (xy -292.1 751.84)
-      (xy -292.1 755.65))
-    (uuid "e175d40c-6aab-4086-b680-f1cc6032c167"))
+      (xy -255.27 782.32)
+      (xy -251.46 782.32))
+    (uuid "165079ab-220e-4d8e-b9c5-92b7982de043"))
 
   (wire
     (pts
-      (xy -281.94 746.76)
-      (xy -281.94 742.95))
-    (uuid "17c69e2c-f745-4d83-870f-294f2ab2465d"))
+      (xy -262.89 789.94)
+      (xy -262.89 793.75))
+    (uuid "3eb493ac-1a01-426a-91ad-734b626422ea"))
 
   (wire
     (pts
-      (xy -281.94 751.84)
-      (xy -281.94 755.65))
-    (uuid "ff9a7505-0902-4358-8c73-ee6723fc48b2"))
+      (xy -270.51 782.32)
+      (xy -274.32 782.32))
+    (uuid "78540ed5-bf9c-4057-84dd-839833404733"))
 
   (wire
     (pts
-      (xy -237.49 746.76)
-      (xy -237.49 742.95))
-    (uuid "6117a742-6f83-4cf8-a6ca-797dd1d09ff3"))
+      (xy -260.35 789.94)
+      (xy -260.35 793.75))
+    (uuid "b189c61d-6e4a-4f9f-8103-4db422f95824"))
 
   (wire
     (pts
-      (xy -237.49 751.84)
-      (xy -237.49 755.65))
-    (uuid "0aff9a67-89db-40a2-8db9-7ff086d3d607"))
+      (xy -270.51 779.78)
+      (xy -274.32 779.78))
+    (uuid "ea10bb03-5a5a-4691-b6a1-13223139fa20"))
 
   (wire
     (pts
-      (xy -227.33 746.76)
-      (xy -227.33 742.95))
-    (uuid "217ec9d6-1d9d-4935-ab00-dcf908935d2a"))
-
-  (wire
-    (pts
-      (xy -227.33 751.84)
-      (xy -227.33 755.65))
-    (uuid "731a752c-09ad-4976-9aa4-a48d3ddefa01"))
-
-  (wire
-    (pts
-      (xy -287.02 726.44)
-      (xy -287.02 722.63))
-    (uuid "2c81c6ee-3e78-4e3f-a2d6-9337a1a1c850"))
-
-  (wire
-    (pts
-      (xy -287.02 734.06)
-      (xy -287.02 737.87))
-    (uuid "3e5ba2ff-39c7-48b4-9dd1-38f54986b298"))
+      (xy -265.43 789.94)
+      (xy -265.43 793.75))
+    (uuid "43e84cb0-d642-4530-974d-c0d80b5776e1"))
 
   (text "MUST VERIFY LINES AND PADS"
     (at 260.096 708.406 0)
@@ -30828,6 +31209,23 @@
         (font
           (size 1.27 1.27)))))
 
+  (global_label "GND"
+    (shape input)
+    (at -237.49 755.65 90)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left))
+    (uuid "198f3547-92f3-4f0c-ade7-3f1d4338f943")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at -237.49 755.65 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27)))))
+
   (global_label "3.3V Teensy"
     (shape input)
     (at 237.49 689.61 180)
@@ -32574,6 +32972,23 @@
           (size 0.8 0.8))
         (justify right))))
 
+  (global_label "5V"
+    (shape input)
+    (at -287.02 722.63 90)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left))
+    (uuid "42d4335f-37d2-4f00-b4ba-1fb829dec016")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at -287.02 722.63 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27)))))
+
   (global_label "3.3V"
     (shape input)
     (at 510.54 800.1 180)
@@ -33593,6 +34008,23 @@
           (size 1.27 1.27))
         (justify right))))
 
+  (global_label "3.3V_DIG"
+    (shape input)
+    (at -255.27 598.17 0)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left))
+    (uuid "5da905fa-a114-42bb-9105-35aa9148d57f")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at -255.27 598.17 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27)))))
+
   (global_label "MIDI_THRU_5"
     (shape input)
     (at 965.2 803.91 0)
@@ -33603,6 +34035,23 @@
     (uuid "5eb1d434-f2cc-401e-8ea3-1aef92961af8")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 875.03 463.55 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27)))))
+
+  (global_label "3.3V_DIG"
+    (shape input)
+    (at -227.33 742.95 90)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left))
+    (uuid "5f6e8bff-a6dc-42df-a399-648f2993c447")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at -227.33 742.95 0)
       (hide yes)
       (show_name no)
       (do_not_autoplace no)
@@ -34732,6 +35181,23 @@
           (size 1.27 1.27))
         (justify right))))
 
+  (global_label "GND"
+    (shape input)
+    (at -292.1 755.65 90)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left))
+    (uuid "7fd93e98-b451-4e1c-a2d4-db240432fd17")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at -292.1 755.65 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27)))))
+
   (global_label "ESP32_EN"
     (shape input)
     (at 1181.1 734.06 0)
@@ -34964,6 +35430,23 @@
           (size 1.27 1.27))
         (justify right))))
 
+  (global_label "3.3V_DIG"
+    (shape input)
+    (at -237.49 742.95 90)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left))
+    (uuid "841a83e2-31af-4904-ade3-4065c7d42fe5")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at -237.49 742.95 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27)))))
+
   (global_label "GND"
     (shape input)
     (at 237.49 665.48 180)
@@ -35010,6 +35493,23 @@
     (uuid "85be3706-1ef8-4b94-b51b-1a874f03dfc7")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at 746.76 435.61 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27)))))
+
+  (global_label "GND"
+    (shape input)
+    (at -281.94 755.65 90)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left))
+    (uuid "86743354-4cad-48c9-b223-0b15cf5e2b30")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at -281.94 755.65 0)
       (hide yes)
       (show_name no)
       (do_not_autoplace no)
@@ -36709,6 +37209,23 @@
 
   (global_label "GND"
     (shape input)
+    (at -227.33 755.65 90)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left))
+    (uuid "b4a5032d-af51-4ea0-a178-80d39cf97dd1")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at -227.33 755.65 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27)))))
+
+  (global_label "GND"
+    (shape input)
     (at 643.89 795.02 0)
     (effects
       (font
@@ -36938,6 +37455,23 @@
         (font
           (size 1.27 1.27))
         (justify right))))
+
+  (global_label "5V"
+    (shape input)
+    (at -292.1 742.95 90)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left))
+    (uuid "bbdbc2b1-e7cc-47a8-96e7-da12abbdc152")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at -292.1 742.95 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27)))))
 
   (global_label "GND"
     (shape input)
@@ -37239,6 +37773,23 @@
           (size 1.27 1.27))
         (justify left))))
 
+  (global_label "EN_3V3_DIG"
+    (shape input)
+    (at -287.02 737.87 90)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left))
+    (uuid "c453f673-9bb4-44eb-8109-f2284453ae8a")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at -287.02 737.87 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27)))))
+
   (global_label "MIDI_OUT_5"
     (shape input)
     (at 882.65 786.13 0)
@@ -37273,6 +37824,23 @@
         (font
           (size 1.27 1.27))
         (justify left))))
+
+  (global_label "5V"
+    (shape input)
+    (at -281.94 742.95 90)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left))
+    (uuid "c67c40e9-9c24-4005-be9c-aacdb3bd5bf1")
+    (property "Intersheetrefs" "${INTERSHEET_REFS}"
+      (at -281.94 742.95 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27)))))
 
   (global_label "12V"
     (shape input)
@@ -39418,64 +39986,40 @@
         (font
           (size 1.27 1.27)))))
 
-  (global_label "5V"
+  (global_label "3.3V_DIG"
     (shape input)
-    (at -292.1 742.95 90)
-    (uuid "bbdbc2b1-e7cc-47a8-96e7-da12abbdc152"))
-
-  (global_label "GND"
-    (shape input)
-    (at -292.1 755.65 270)
-    (uuid "7fd93e98-b451-4e1c-a2d4-db240432fd17"))
-
-  (global_label "5V"
-    (shape input)
-    (at -281.94 742.95 90)
-    (uuid "c67c40e9-9c24-4005-be9c-aacdb3bd5bf1"))
-
-  (global_label "GND"
-    (shape input)
-    (at -281.94 755.65 270)
-    (uuid "86743354-4cad-48c9-b223-0b15cf5e2b30"))
+    (at -251.46 779.78 0)
+    (uuid "026429d2-8718-4b0c-bd08-cf6dcebb716c"))
 
   (global_label "3.3V_DIG"
     (shape input)
-    (at -237.49 742.95 90)
-    (uuid "841a83e2-31af-4904-ade3-4065c7d42fe5"))
+    (at -251.46 782.32 0)
+    (uuid "b1ca1323-23e1-44d9-9de0-8c04f8dd2ac0"))
 
   (global_label "GND"
     (shape input)
-    (at -237.49 755.65 270)
-    (uuid "198f3547-92f3-4f0c-ade7-3f1d4338f943"))
-
-  (global_label "3.3V_DIG"
-    (shape input)
-    (at -227.33 742.95 90)
-    (uuid "5f6e8bff-a6dc-42df-a399-648f2993c447"))
-
-  (global_label "GND"
-    (shape input)
-    (at -227.33 755.65 270)
-    (uuid "b4a5032d-af51-4ea0-a178-80d39cf97dd1"))
-
-  (global_label "5V"
-    (shape input)
-    (at -287.02 722.63 90)
-    (uuid "42d4335f-37d2-4f00-b4ba-1fb829dec016"))
+    (at -262.89 793.75 270)
+    (uuid "859d6cff-0add-41a1-866b-27979b927253"))
 
   (global_label "EN_3V3_DIG"
     (shape input)
-    (at -287.02 737.87 270)
-    (uuid "c453f673-9bb4-44eb-8109-f2284453ae8a"))
+    (at -274.32 782.32 180)
+    (uuid "123f6317-8a0c-4338-a95e-6043f894cf37"))
 
-  (global_label "3.3V_DIG"
+  (global_label "GND"
     (shape input)
-    (at -255.27 598.17 0)
-    (effects
-      (font
-        (size 1.27 1.27))
-      (justify left))
-    (uuid "5da905fa-a114-42bb-9105-35aa9148d57f"))
+    (at -260.35 793.75 270)
+    (uuid "0d428413-dbc3-41a0-bd08-da4605b6d331"))
+
+  (global_label "5V"
+    (shape input)
+    (at -274.32 779.78 180)
+    (uuid "b1c88ded-35e5-4062-b6b2-98679d94071e"))
+
+  (global_label "GND"
+    (shape input)
+    (at -265.43 793.75 270)
+    (uuid "0ec35066-5fa0-4caa-91f7-3bf990125e41"))
 
   (symbol
     (lib_id "NMJ6HCD3:AudioPlug3")
@@ -45303,6 +45847,73 @@
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
           (reference "#PWR020")
+          (unit 1)))))
+
+  (symbol
+    (lib_id "TLV76733DRVR:TLV76733DRVR")
+    (at -262.89 782.32 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (fields_autoplaced)
+    (uuid "290d63c8-0e8a-408e-939f-7fcab04c2643")
+    (property "Reference" "U12"
+      (at -262.89 772.16 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "TLV76733DRVR"
+      (at -262.89 774.7 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Package_SON:WSON-6-1EP_2x2mm_P0.65mm_EP1x1.6mm_ThermalVias"
+      (at -262.89 782.32 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Datasheet" "https://www.ti.com/lit/gpn/TLV767"
+      (at -262.89 782.32 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Description" ""
+      (at -262.89 782.32 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (pin "7"
+      (uuid "c90837fc-eec8-42f7-b696-788b701f942f"))
+    (pin "1"
+      (uuid "3fdf7e93-673a-409b-a901-e0578ff00275"))
+    (pin "2"
+      (uuid "48d7a600-adf9-4db7-8612-8d35905f17d5"))
+    (pin "3"
+      (uuid "dd089bc8-276c-4abc-a456-e49cbafa84ca"))
+    (pin "4"
+      (uuid "a42b28a8-3b39-4a46-b665-208b9d8bf906"))
+    (pin "6"
+      (uuid "718dd87b-fb0c-48cc-991b-b39e6c5998df"))
+    (pin "5"
+      (uuid "8dd3f664-d6d7-408e-80e2-ac27832e3105"))
+    (instances
+      (project "t-dsp_core"
+        (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
+          (reference "U12")
           (unit 1)))))
 
   (symbol
@@ -57913,6 +58524,61 @@
           (unit 1)))))
 
   (symbol
+    (lib_id "TEENSY_4.0_ESP32_AUDIO-rescue:C_Small-Device")
+    (at -292.1 749.3 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "8fa28dbb-e3a1-44e7-96e9-a086984f8f2e")
+    (property "Reference" "C130"
+      (at -292.1 745.49 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "10uF"
+      (at -292.1 753.11 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at -292.1 749.3 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Datasheet" ""
+      (at -292.1 749.3 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Description" ""
+      (at -292.1 749.3 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (pin "1"
+      (uuid "c3761c21-359f-4b6b-a1b3-5335b23332c3"))
+    (pin "2"
+      (uuid "bbc8bcca-2cf1-464d-985f-1bf38215751b"))
+    (instances
+      (project "t-dsp_core"
+        (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
+          (reference "C130")
+          (unit 1)))))
+
+  (symbol
     (lib_id "PJRAS2X1S01X:PJRAS2X1S01X")
     (at 340.36 556.26 0)
     (mirror y)
@@ -60350,6 +61016,61 @@
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
           (reference "D4")
+          (unit 1)))))
+
+  (symbol
+    (lib_id "Device:R")
+    (at -287.02 730.25 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "a5319a48-0137-4bb8-934a-159cbfac08be")
+    (property "Reference" "R66"
+      (at -287.02 726.44 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "100k"
+      (at -287.02 734.06 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at -287.02 730.25 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Datasheet" ""
+      (at -287.02 730.25 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Description" ""
+      (at -287.02 730.25 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (pin "2"
+      (uuid "01e02b15-ead4-4013-bc22-cb75b8ecd2ab"))
+    (pin "1"
+      (uuid "1d3020cc-4497-48b3-8938-ec7f03ecce35"))
+    (instances
+      (project "t-dsp_core"
+        (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
+          (reference "R66")
           (unit 1)))))
 
   (symbol
@@ -63063,6 +63784,61 @@
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
           (reference "C13")
+          (unit 1)))))
+
+  (symbol
+    (lib_id "TEENSY_4.0_ESP32_AUDIO-rescue:C_Small-Device")
+    (at -237.49 749.3 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "c8b00607-60cd-4936-965f-6dfcebccc3ed")
+    (property "Reference" "C132"
+      (at -237.49 745.49 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "22uF"
+      (at -237.49 753.11 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at -237.49 749.3 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Datasheet" ""
+      (at -237.49 749.3 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Description" ""
+      (at -237.49 749.3 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (pin "1"
+      (uuid "e60f26d6-4bf6-40f8-a561-af43c2c6eeab"))
+    (pin "2"
+      (uuid "cc0d3d8f-03ad-4069-8a73-aa65f5f9d8a5"))
+    (instances
+      (project "t-dsp_core"
+        (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
+          (reference "C132")
           (unit 1)))))
 
   (symbol
@@ -66936,6 +67712,61 @@
           (unit 1)))))
 
   (symbol
+    (lib_id "TEENSY_4.0_ESP32_AUDIO-rescue:C_Small-Device")
+    (at -281.94 749.3 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "e683702d-8485-4ddd-9300-3ede4f46bf9e")
+    (property "Reference" "C131"
+      (at -281.94 745.49 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "100nF"
+      (at -281.94 753.11 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at -281.94 749.3 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Datasheet" ""
+      (at -281.94 749.3 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Description" ""
+      (at -281.94 749.3 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (pin "1"
+      (uuid "279b1642-4ac0-4d46-9696-ef10c8b7e46b"))
+    (pin "2"
+      (uuid "42611a6f-530b-411d-b206-0faf42bb7c1c"))
+    (instances
+      (project "t-dsp_core"
+        (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
+          (reference "C131")
+          (unit 1)))))
+
+  (symbol
     (lib_id "proejct_lib:R_Small")
     (at 501.65 308.61 90)
     (unit 1)
@@ -67731,6 +68562,61 @@
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
           (reference "J19")
+          (unit 1)))))
+
+  (symbol
+    (lib_id "TEENSY_4.0_ESP32_AUDIO-rescue:C_Small-Device")
+    (at -227.33 749.3 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "eb38285b-e648-4c92-ade6-11cafb40e107")
+    (property "Reference" "C133"
+      (at -227.33 745.49 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "100nF"
+      (at -227.33 753.11 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" ""
+      (at -227.33 749.3 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Datasheet" ""
+      (at -227.33 749.3 0)
+      (hide yes)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Description" ""
+      (at -227.33 749.3 0)
+      (show_name no)
+      (do_not_autoplace no)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (pin "1"
+      (uuid "08fcaa36-8b5d-4092-b101-b6cd5345e20f"))
+    (pin "2"
+      (uuid "3e9eaaa8-966e-409c-9022-9b36f5b75390"))
+    (instances
+      (project "t-dsp_core"
+        (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
+          (reference "C133")
           (unit 1)))))
 
   (symbol
@@ -70337,186 +71223,6 @@
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
           (reference "#PWR051")
-          (unit 1)))))
-
-  (symbol
-    (lib_id "TEENSY_4.0_ESP32_AUDIO-rescue:C_Small-Device")
-    (at -292.1 749.3 0)
-    (unit 1)
-    (in_bom yes)
-    (on_board yes)
-    (dnp no)
-    (uuid "8fa28dbb-e3a1-44e7-96e9-a086984f8f2e")
-    (property "Reference" "C130"
-      (at -292.1 745.49 0)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Value" "10uF"
-      (at -292.1 753.11 0)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Footprint" ""
-      (at -292.1 749.3 0)
-      (effects
-        (font
-          (size 1.27 1.27))
-        (hide yes)))
-    (property "Datasheet" ""
-      (at -292.1 749.3 0)
-      (effects
-        (font
-          (size 1.27 1.27))
-        (hide yes)))
-    (instances
-      (project "t-dsp_core"
-        (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
-          (reference "C130")
-          (unit 1)))))
-
-  (symbol
-    (lib_id "TEENSY_4.0_ESP32_AUDIO-rescue:C_Small-Device")
-    (at -281.94 749.3 0)
-    (unit 1)
-    (in_bom yes)
-    (on_board yes)
-    (dnp no)
-    (uuid "e683702d-8485-4ddd-9300-3ede4f46bf9e")
-    (property "Reference" "C131"
-      (at -281.94 745.49 0)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Value" "100nF"
-      (at -281.94 753.11 0)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Footprint" ""
-      (at -281.94 749.3 0)
-      (effects
-        (font
-          (size 1.27 1.27))
-        (hide yes)))
-    (property "Datasheet" ""
-      (at -281.94 749.3 0)
-      (effects
-        (font
-          (size 1.27 1.27))
-        (hide yes)))
-    (instances
-      (project "t-dsp_core"
-        (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
-          (reference "C131")
-          (unit 1)))))
-
-  (symbol
-    (lib_id "TEENSY_4.0_ESP32_AUDIO-rescue:C_Small-Device")
-    (at -237.49 749.3 0)
-    (unit 1)
-    (in_bom yes)
-    (on_board yes)
-    (dnp no)
-    (uuid "c8b00607-60cd-4936-965f-6dfcebccc3ed")
-    (property "Reference" "C132"
-      (at -237.49 745.49 0)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Value" "22uF"
-      (at -237.49 753.11 0)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Footprint" ""
-      (at -237.49 749.3 0)
-      (effects
-        (font
-          (size 1.27 1.27))
-        (hide yes)))
-    (property "Datasheet" ""
-      (at -237.49 749.3 0)
-      (effects
-        (font
-          (size 1.27 1.27))
-        (hide yes)))
-    (instances
-      (project "t-dsp_core"
-        (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
-          (reference "C132")
-          (unit 1)))))
-
-  (symbol
-    (lib_id "TEENSY_4.0_ESP32_AUDIO-rescue:C_Small-Device")
-    (at -227.33 749.3 0)
-    (unit 1)
-    (in_bom yes)
-    (on_board yes)
-    (dnp no)
-    (uuid "eb38285b-e648-4c92-ade6-11cafb40e107")
-    (property "Reference" "C133"
-      (at -227.33 745.49 0)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Value" "100nF"
-      (at -227.33 753.11 0)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Footprint" ""
-      (at -227.33 749.3 0)
-      (effects
-        (font
-          (size 1.27 1.27))
-        (hide yes)))
-    (property "Datasheet" ""
-      (at -227.33 749.3 0)
-      (effects
-        (font
-          (size 1.27 1.27))
-        (hide yes)))
-    (instances
-      (project "t-dsp_core"
-        (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
-          (reference "C133")
-          (unit 1)))))
-
-  (symbol
-    (lib_id "Device:R")
-    (at -287.02 730.25 0)
-    (unit 1)
-    (in_bom yes)
-    (on_board yes)
-    (dnp no)
-    (uuid "a5319a48-0137-4bb8-934a-159cbfac08be")
-    (property "Reference" "R66"
-      (at -287.02 726.44 0)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Value" "100k"
-      (at -287.02 734.06 0)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Footprint" ""
-      (at -287.02 730.25 0)
-      (effects
-        (font
-          (size 1.27 1.27))
-        (hide yes)))
-    (property "Datasheet" ""
-      (at -287.02 730.25 0)
-      (effects
-        (font
-          (size 1.27 1.27))
-        (hide yes)))
-    (instances
-      (project "t-dsp_core"
-        (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
-          (reference "R66")
           (unit 1)))))
 
   (rectangle
