@@ -29,4 +29,6 @@
   (lib (name "73725-11A0BLF")(type "KiCad")(uri "${KIPRJMOD}/lib_sch/73725-11A0BLF.kicad_sym")(options "")(descr ""))
   (lib (name "73725-0110BLF")(type "KiCad")(uri "${KIPRJMOD}/lib_sch/73725-0110BLF.kicad_sym")(options "")(descr ""))
   (lib (name "BLM18BA121SN1D")(type "KiCad")(uri "${KIPRJMOD}/lib_sch/BLM18BA121SN1D.kicad_sym")(options "")(descr ""))
+
+  (lib (name "TLV76733DRVR") (type "KiCad") (uri "${KIPRJMOD}/lib_sch/TLV76733DRVR.kicad_sym") (options "") (descr ""))
 )
