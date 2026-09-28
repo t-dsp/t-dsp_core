@@ -523,7 +523,7 @@ pair, and GND at both ends of every header.
 | J5 | `J_MIDI` | 2x4 | MIDI opto/buffer U4/U9 | 8 | 2 |
 | J6 | `J_SPDIF` | 2x11 | SRC4382 U19 | 22 | 12 |
 | J7 | `J_AUX` | 2x5 | U23 aux mux | 10 | 6 |
-| J8 | `J_S3` | 2x15 | ESP32-S3 U13 | 30 | 11 |
+| J8 | `J_S3` | 2x15 | ESP32-S3 U13 | 30 | 8 |
 | J9 | `J_USB3` | 1x5 | ESP32-S3 U13 | 5 | 2 |
 | J10 | `J_DMX` | 1x5 | ISO7762 / RS-485 U16-U18 | 5 | 0 |
 | J11 | `J_LED` | 1x5 | SK6812 level shifter IC1 | 5 | 2 |
@@ -642,7 +642,7 @@ Aux I2S source into the mux (BCK, LRCK, DIN) and the S3-side out; clocks never a
 
 ### J8 - `J_S3` 2x15, next to ESP32-S3 U13
 
-S3 UART0 (also Teensy Serial7), EN/IO0, I2C, raw GPIO. IO35-37 are consumed by the octal PSRAM and are not on the header. Pins 20/21/22 (`T_40`, `T_39`, `T_38`) are **Teensy** pins 40/39/38 (A16/A15/A14), not S3 pins: the old shared encoder nets were cut on the S3 side (IO15/IO38/IO39 now NC) on 2026-09-28.
+S3 UART0 (also Teensy Serial7), EN/IO0, I2C, raw GPIO. IO35-37 are consumed by the octal PSRAM and are not on the header. Pins 20/21/22 (`T_40`, `T_39`, `T_38`) are **Teensy** pins 40/39/38 (A16/A15/A14); pins 23/24/28 (`S3_IO15`, `S3_IO38`, `S3_IO39`) are the S3 pins that used to share those nets. Split on 2026-09-28 so either MCU can own a control; a backplane may wire a Teensy pin and an S3 pin together if it wants the old shared behaviour.
 
 | odd | net | even | net |
 |---|---|---|---|
@@ -657,9 +657,9 @@ S3 UART0 (also Teensy Serial7), EN/IO0, I2C, raw GPIO. IO35-37 are consumed by t
 | 17 | `DC` | 18 | `RESET` |
 | 19 | `T_CS` | 20 | `T_40` |
 | 21 | `T_39` | 22 | `T_38` |
-| 23 | `GND` | 24 | `GND` |
+| 23 | `S3_IO15` | 24 | `S3_IO38` |
 | 25 | `GPIO34` | 26 | `GPIO35` |
-| 27 | `S3_IO45` | 28 | `GND` |
+| 27 | `S3_IO45` | 28 | `S3_IO39` |
 | 29 | `GND` | 30 | `GND` |
 
 ### J9 - `J_USB3` 1x5, next to ESP32-S3 U13

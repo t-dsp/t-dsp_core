@@ -38392,6 +38392,81 @@
     (diameter 0)
     (uuid "6b578323-073a-4839-95f6-88932a4b6593"))
 
+  (junction
+    (at 118.11 264.16)
+    (diameter 0)
+    (uuid "6760235d-802e-42a5-82ca-ce1e0130f06b"))
+
+  (junction
+    (at 104.14 266.7)
+    (diameter 0)
+    (uuid "72784d09-eebb-47ab-ab74-c2f46420c9a1"))
+
+  (junction
+    (at -247.65 822.96)
+    (diameter 0)
+    (uuid "b8c07cc4-c24a-44fa-a13b-c1c02ce77ccb"))
+
+  (junction
+    (at -227.33 822.96)
+    (diameter 0)
+    (uuid "dde2d935-24dd-4f48-b4da-4f6c848ef143"))
+
+  (junction
+    (at -210.82 822.96)
+    (diameter 0)
+    (uuid "cb1e7eea-2d4b-462e-a5f6-f84c45ce5868"))
+
+  (junction
+    (at 118.11 264.16)
+    (diameter 0)
+    (uuid "38e2cbc3-a584-4522-8eb6-704e5f6efa63"))
+
+  (junction
+    (at 104.14 266.7)
+    (diameter 0)
+    (uuid "d43032c1-d1bc-4e45-944c-24756352701f"))
+
+  (junction
+    (at -247.65 822.96)
+    (diameter 0)
+    (uuid "c3da368b-383d-440a-a694-9304b7f7caba"))
+
+  (junction
+    (at -227.33 822.96)
+    (diameter 0)
+    (uuid "c967f305-d70d-41fb-8eb8-f5640d8573b7"))
+
+  (junction
+    (at -210.82 822.96)
+    (diameter 0)
+    (uuid "4014a8e6-410a-4d08-b704-d14b2b881fd6"))
+
+  (junction
+    (at 118.11 264.16)
+    (diameter 0)
+    (uuid "08701435-6844-48e9-b8c0-9e2d0113241d"))
+
+  (junction
+    (at 104.14 266.7)
+    (diameter 0)
+    (uuid "845e0ac2-8d95-4e18-b47f-8ba9a86681ed"))
+
+  (junction
+    (at -247.65 822.96)
+    (diameter 0)
+    (uuid "b0373a41-d11a-45a3-95d8-236d51db2232"))
+
+  (junction
+    (at -227.33 822.96)
+    (diameter 0)
+    (uuid "e5dc19fb-1dc5-4f2d-8129-500caa25ca87"))
+
+  (junction
+    (at -210.82 822.96)
+    (diameter 0)
+    (uuid "f59f1b6b-ab48-4bbc-a8a6-c28f01ce321b"))
+
   (no_connect
     (at -229.87 916.94)
     (uuid "38beb287-cd9a-4082-a163-ef94b2f749a2"))
@@ -44464,6 +44539,24 @@
       (xy 1295.4 610.87))
     (uuid "795bba44-6cbe-4f9c-a4fd-8e56075726cc"))
 
+  (wire
+    (pts
+      (xy -270.51 651.51)
+      (xy -275.59 651.51))
+    (uuid "82c0a2ff-c077-4c37-9025-c6a7f3f7dfce"))
+
+  (wire
+    (pts
+      (xy -240.03 633.73)
+      (xy -234.95 633.73))
+    (uuid "7f13c5ba-41da-4d95-bba9-fa417484e73c"))
+
+  (wire
+    (pts
+      (xy -240.03 636.27)
+      (xy -234.95 636.27))
+    (uuid "af1bda3f-4ad4-4897-b248-0a7242bb1e73"))
+
   (text "https://electronics.stackexchange.com/questions/310899/midi-out-thru-circuit-questions"
     (at 819.15 852.17 0)
     (effects
@@ -44683,6 +44776,13 @@
       (font
         (size 1.27 1.27)))
     (uuid "da359bd1-499b-488b-9e1e-5490cdb21b8d"))
+
+  (text "Simple backplane controls (no extra parts on the core):\\n  Pot / volume knob: 10k linear between 3.3V (J1.9) and GND, wiper -> any T_ analog pin (T_22=A8, T_26=A12, T_27=A13, T_38=A14, T_39=A15, T_40=A16,\\n  T_BUTTON1=A10, T_BUTTON2=A11, 14_SPDIF_OUT=A0, 15_SPDIF_IN=A1) with 100 nF wiper-to-GND. analogRead(), average 8-16 samples.\\n  Switch / button: between a T_ pin and GND, pinMode(INPUT_PULLUP). More controls: 74HC4067 muxes on the analog pins,\\n  MCP23017 / TCA8418 on SDA1/SCL1 (J2), SK6812 chain on J11 for LEDs. T_38/T_39/T_40 are Teensy pins 38/39/40 on J8 pins 22/21/20."
+    (at -120.65 648.97 0)
+    (effects
+      (font
+        (size 1.27 1.27)))
+    (uuid "2d7efc5e-f22f-4252-a182-3b7072bd22f4"))
 
   (label "DMX_RO_ISO"
     (at -224.79 924.56 0)
@@ -51242,24 +51342,6 @@
       (justify right))
     (uuid "68946381-672a-491a-801c-cfdd5795ec46"))
 
-  (global_label "GND"
-    (shape bidirectional)
-    (at -107.95 629.92 180)
-    (effects
-      (font
-        (size 1.27 1.27))
-      (justify right))
-    (uuid "7e86332c-3b30-4fda-b6f6-b42cd1b916e3"))
-
-  (global_label "GND"
-    (shape bidirectional)
-    (at -90.17 629.92 0)
-    (effects
-      (font
-        (size 1.27 1.27))
-      (justify left))
-    (uuid "4e889de9-5c2a-457b-b0ae-512c83a219a2"))
-
   (global_label "GPIO34"
     (shape bidirectional)
     (at -107.95 632.46 180)
@@ -51422,15 +51504,6 @@
       (justify right))
     (uuid "1019e914-6470-4f22-802c-9a0d81ec6d75"))
 
-  (global_label "GND"
-    (shape bidirectional)
-    (at -90.17 635 0)
-    (effects
-      (font
-        (size 1.27 1.27))
-      (justify left))
-    (uuid "3e18271f-056f-42f2-8c57-72010f833c39"))
-
   (global_label "ETH_R+"
     (shape bidirectional)
     (at 532.13 307.34 180)
@@ -51583,6 +51656,60 @@
         (size 1.27 1.27))
       (justify left))
     (uuid "b8520aaf-9b24-4b90-b294-0a62c6b46209"))
+
+  (global_label "S3_IO15"
+    (shape bidirectional)
+    (at -275.59 651.51 180)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify right))
+    (uuid "44d00cb3-35fe-483c-adc5-7d5b27a4fe97"))
+
+  (global_label "S3_IO38"
+    (shape bidirectional)
+    (at -234.95 633.73 0)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left))
+    (uuid "969e71a3-47ec-4a03-ac8b-8427c9cba01a"))
+
+  (global_label "S3_IO39"
+    (shape bidirectional)
+    (at -234.95 636.27 0)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left))
+    (uuid "9cc9c643-209d-4c8e-80ef-2d17d205a1d1"))
+
+  (global_label "S3_IO15"
+    (shape bidirectional)
+    (at -107.95 629.92 180)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify right))
+    (uuid "402c8766-5797-45f7-abb9-d16224c26133"))
+
+  (global_label "S3_IO38"
+    (shape bidirectional)
+    (at -90.17 629.92 0)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left))
+    (uuid "f9dbf139-84df-4f2c-ab59-4dedb685b550"))
+
+  (global_label "S3_IO39"
+    (shape bidirectional)
+    (at -90.17 635 0)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left))
+    (uuid "2d0ee697-5847-4575-bb19-91fcb593b3bd"))
 
   (symbol
     (lib_id "Device:R")
@@ -68607,9 +68734,4 @@
   (sheet_instances
     (path "/"
       (page "1")))
-
-  (text "Simple backplane controls (no extra parts on the core):\\n  Pot / volume knob: 10k linear between 3.3V (J1.9) and GND, wiper -> any T_ analog pin (T_22=A8, T_26=A12, T_27=A13, T_38=A14, T_39=A15, T_40=A16,\\n  T_BUTTON1=A10, T_BUTTON2=A11, 14_SPDIF_OUT=A0, 15_SPDIF_IN=A1) with 100 nF wiper-to-GND. analogRead(), average 8-16 samples.\\n  Switch / button: between a T_ pin and GND, pinMode(INPUT_PULLUP). More controls: 74HC4067 muxes on the analog pins,\\n  MCP23017 / TCA8418 on SDA1/SCL1 (J2), SK6812 chain on J11 for LEDs. T_38/T_39/T_40 are Teensy pins 38/39/40 on J8 pins 22/21/20."
-    (at -120.65 648.97 0)
-    (effects (font (size 1.27 1.27)))
-    (uuid "2d7efc5e-f22f-4252-a182-3b7072bd22f4")
-  ))
+)
