@@ -466,23 +466,26 @@ DRC after placement: no shorts, no clearance errors, 499 unrouted connections (e
 | J2 J_TDM + U5-U8/U11 + R40-47/R55/56 + C17-20/C40 | left column X 1.5-13.5 | buffers 3 mm from the header rows |
 | J4 J_USBH, J12 J_ETH, J3 J_T | strip X 33.6-39.3 right of the Teensy, top to bottom | USB host and Ethernet opposite the Teensy's own pads |
 | C27-C30 | X 41, Y 3-17 | 3.3 V rail decoupling |
-| MIDI U4/U9/D2/R31-39/C16/C21 + J5 | X 44-75, Y 0.5-16 | J5 under U4 |
-| DMX U17/U18/U16/D6/R71/C134-139 + J10 | X 44-75, Y 8-28 | isolated side kept together; J10 at X 42-56 |
+| MIDI U4/U9/D2/C16/C21 + J5 | X 40.5-63.5, Y 48.5-61 (bottom-middle) | R31-R39 in two rows at X 54.5-63.4, Y 34-41.5 (kept out of the ESP32 antenna keep-out) |
+| DMX U17/U18/U16/D6/R71 + J10 | X 56-75, Y 8-28; C134-C139 in the strip above U17 (X 54-60.5, Y 0-8) | isolated side kept together; J10 at X 42-56 |
 | U13 ESP32-S3 | X 75.3-93.8, Y 0-26.5, antenna on the top edge | R67/R68/R73/PU_EN1 row at Y 28 |
 | J8 J_S3 | right edge X 94-99.5, Y 6.6-45 | |
 | U19 SRC4382 + C140-149 + U20 | X 68.7-86.4, Y 30-45 | |
 | U21/U23 mux + C146/C152 | X 87.6-93.6, Y 29-49.5 | |
 | J6 J_SPDIF, J7 J_AUX | X 39.5-68.4 / X 39.5-53.1, Y 28-40 | directly left of the SRC |
 | LED IC1/C1/C33/D3/D4/C22/C23 + J11 | X 40-64, Y 41-47.5 | D3/D4 are reverse-mount: add a 3 mm hole under each (not done) |
-| U22 IDC777 | X 40.3-63.8, bottom edge, antenna out, pads facing up | 61 mm from the S3 antenna |
+| U22 IDC777 | vertical, X 40.5-53.5, Y 0-23.5, rot 270, antenna end on the TOP edge | the IDC777 antenna is at the module's short end (keep-out pads 56/58 side), not along its long edge; antenna zone X 42.5-50.5, Y 0-5.1 must stay copper-free on all layers. ~24 mm from the S3 antenna along the same edge; use the u.FL build for RF-critical products |
 | J1 J_PWR | X 64.6-80.1, Y 41.6-46.9 | |
 | U3 TPS2116 + C12-15/C31/32/34/35 + R28-30 | row Y 49.5, X 64.5-91 | |
 | U24 buck + L1 + C153/154/R66/C130/131 + R57 | row Y 54, X 64-89 | |
 | U15 LT3045 + FL1 + C41-43/C132/133 + R58 | row Y 58.6, X 64-87 | |
 | J9 J_USB3 | X 91.6-94.4, Y 47-60 | |
-| H1-H4 | 3.2 mm NPTH, intended corners (3.5, 3.5) (96.5, 3.5) (3.5, 57.46) (96.5, 57.46) | **not yet on the PCB**: H1-H4 are in the schematic (Mechanical:MountingHole, footprint MountingHole_3.2mm_M3); run *Update PCB from Schematic* and drop them on those corners. Konnect's file-inserted holes were discarded by KiCad on load and its IPC placement was a no-op. |
+| H1-H4 | 3.2 mm NPTH at the corners (3.5, 3.5) (96.5, 3.5) (3.5, 57.46) (96.5, 57.46) | on the PCB after the user's re-sync; schematic footprint changed to `MountingHole:MountingHole_3.2mm` (3.7 mm courtyard) so the next sync clears the courtyard clashes with J2/J8/J9 |
 
-Known DRC leftovers: 14 courtyard overlaps against U13, all caused by the stock ESP32-S3-WROOM-1
+Antenna keep-outs (2026-09-28, second pass): nothing sits inside the ESP32 footprint's keep-out rectangle
+(X 60.5-100, Y 0-6.3) any more, and the IDC777 was turned so its antenna end faces the top edge. Both
+zones still need KiCad rule areas (no copper, all layers) before pouring ground.
+Known DRC leftovers: courtyard overlaps against U13 caused by the stock ESP32-S3-WROOM-1
 footprint's 15 mm antenna courtyard (the module body itself is clear); U13/U20 footprint-type
 attribute mismatches and the WSON thermal-via 0.2 mm drills, both inherited footprint properties.
 Konnect cannot flip footprints to B.Cu, so the board is single-sided as placed.
