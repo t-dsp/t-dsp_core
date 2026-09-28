@@ -32,7 +32,7 @@ mixing on the S3, no software resampler on the S3.
 | Ethernet jack, header | ETHERNET1, ETHERNET_J1 |
 | USB-A host, USB-B, USB-C device, USB ESD, USB pin headers | USBA1, USBB1, USBC1, U10, USB_HOST_1, USB_DEVICE_1, D5, CC1, CC2, RLED1, R27 |
 | 3.5 mm jacks, 6.35 mm phone jack, RCA/line | J22, J23, J_PHONE1, HPTRS1, HPTRS2, OUT1, INPUT1 |
-| MIDI jacks (opto, buffer, and jack-side parts stay only if the MIDI *logic* stays; see §4) | MIDI_IN_1, MIDI_OUT_1, MIDI_IO1, MIDI_OT1, MIDI_OT2 |
+| MIDI jacks only (opto U4, buffer U9 and passives **stay**) | MIDI_IN_1, MIDI_OUT_1, MIDI_IO1, MIDI_OT1, MIDI_OT2 |
 | Rotary encoder, tactile switches | SW1–SW10 (SW3/4/9/10 are the EN/IO0 buttons, see §6) |
 | JST power inputs and reverse-polarity FETs | J10, J11, Q1, Q2 |
 | Optical S/PDIF TX/RX | TT1, TT2, TR1, TR2, SPDIF1, SPDIF_IO1, SPDIF_IO2 |
@@ -151,9 +151,8 @@ UART TX to IO3 and leaves fewer header GPIOs. Also **[open]**: footprint is curr
 | 28/29 Serial7, 36/37 | S3 UART0 / IO0 / EN | unchanged — programming kit + FlasherX |
 | 53 PROGRAM, 54 ON_OFF | header 55/59 | unchanged |
 
-MIDI: MIDI_IN/OUT/THRU are on header pins 1–6 at the *jack* level. **[open]** whether
-the opto (U4), buffer (U9) and their passives stay on the core (jack-level MIDI on the
-header) or move to the backplane (raw Serial1 RX/TX on the header instead). Default: stay.
+MIDI: MIDI_IN/OUT/THRU are on header pins 1–6 at the *jack* level. **[decided]** the opto
+(U4), buffer (U9) and their passives stay on the core.
 
 Also **[open]**: `9_OUT1C_INPUT` feeds Teensy pin 9 as TDM2's data-in. Pin 9 is OUT1C; the
 audio library's inputs are IN1 (pin 8) and IN2 (pin 5). Confirm this is intentional or
@@ -181,12 +180,14 @@ backplane wires TFT, touch, encoder, buttons, LEDs, or nothing. Consequences:
   pull-ups (R22/R23/R64/R65), LED jumpers (ILI_LED1–4), and the duplicate UI headers all go.
 - **Teensy side:** every free Teensy pin is `T_nn`. The i.MX RT has *fixed* peripheral
   pins, so the header doc carries the Teensy pin-capability table (which pins are I2C,
-  SPI, UART, CAN, PWM, analog). MIDI opto (U4) and buffer (U9) move to the backplane; pins
-  0/1 go out raw as `T_0`/`T_1`.
+  SPI, UART, CAN, PWM, analog). **MIDI logic stays on the core** (opto U4, buffer U9, their
+  passives): the header carries MIDI IN/OUT/THRU at the *jack level* (existing pins 1–6);
+  only the DIN/TRS jacks themselves are on the backplane. Same for DMX: isolation and
+  transceiver on the core, the XLR on the backplane.
 - **Exceptions, still named, because the core transforms or owns them:** the two buffered
   TDM buses, `I2C0` (shared with the SRC, pull-ups on the core), SRC S/PDIF RX/TX pairs,
   aux I2S in/out, the three USB pairs, S3 `UART0` + `EN` + `IO0` (programming), Teensy
-  `PROGRAM`/`ON_OFF`, `VBAT`, and all power pins.
+  `PROGRAM`/`ON_OFF`, `VBAT`, **MIDI IN/OUT/THRU (jack level)**, **DMX A/B**, and all power pins.
 - **The reference backplane** (dev board + test jig) is where the opinionated wiring lives:
   TFT, encoder, buttons, MIDI jacks, codec. That is what makes the platform "easy to build
   something useful with", not the core.
@@ -321,7 +322,7 @@ Cost is a handful of jumpers.
 | 2 | ~~Board outline~~ **[decided 2026-09-28]: 100 × 60.96 mm**, see §11 | — |
 | 3 | MCLK1 driver: Y1 or Teensy pin 23 | Y1 (24.576 MHz = 512·fs), Teensy pin 23 via R7 removed |
 | 4 | 12 V: pass-through pin or drop | pass-through pin, no on-core parts |
-| 5 | ~~MIDI logic~~ **[decided]: backplane**; pins 0/1 raw on the header | — |
+| 5 | ~~MIDI logic~~ **[decided 2026-09-28]: stays on the core**, jack-level on the header (user: MIDI and DMX are core features of an audio device) | — |
 | 6 | LP5907 3.3V_A: keep or delete | delete (mics leave) |
 | 7 | `9_OUT1C_INPUT` intent | ask |
 
