@@ -486,6 +486,23 @@ DRC after placement: no shorts, no clearance errors, 499 unrouted connections (e
 Antenna keep-outs (2026-09-28, second pass): nothing sits inside the ESP32 footprint's keep-out rectangle
 (X 60.5-100, Y 0-6.3) any more, and the IDC777 was turned vertical on the bottom edge so its antenna end faces outward, opposite the S3. Both
 zones still need KiCad rule areas (no copper, all layers) before pouring ground.
+**IDC777 keep-out, to be added to the footprint (2026-09-28, datasheet IDC777-DTS-V003 p.8-9).** The
+"Ground Clearance Area" is 8.0 x 4.44 mm at the pad-free end of the module: no metal on any layer of the
+host PCB, extended to the board edge, ground vias along its boundary through all layers. In
+`project_fp:IDC777-1` it exists only as four `Dwgs.User` lines (local x -11.10..-6.66, y -4.0..+4.0) and a
+text note, which DRC ignores. To make it enforceable like the ESP32 footprint, open the footprint in the
+Footprint Editor and add:
+1. a **rule area** inside the footprint, rectangle local x -11.75..-6.66, y -4.0..+4.0 (from the module
+   end to the inner edge of the antenna), all copper layers, keep out copper pours, tracks, vias and
+   footprints;
+2. a **F.CrtYd** rectangle over the same area so courtyard DRC catches parts placed on it.
+Konnect cannot edit footprint graphics (its library toolset only creates pad layouts and edits pads).
+On this board (U22 at rot 90, origin X 46.5, Y 49.21) the area lands at **X 42.5..50.5, Y 55.87..60.96**;
+until the footprint carries it, draw a board rule area there (x 142.5..150.5, y 194.91..200.0 in KiCad
+coordinates) and stitch ground vias along X 42.5, X 50.5 and Y 55.5. The ESP32 keep-out is drawn as
+courtyard only, so it also needs a board rule area for copper: X 75.3..93.8, Y 0..6.3 (x 175.3..193.8,
+y 139.04..145.34).
+
 Known DRC leftovers: courtyard overlaps against U13 caused by the stock ESP32-S3-WROOM-1
 footprint's 15 mm antenna courtyard (the module body itself is clear); U13/U20 footprint-type
 attribute mismatches and the WSON thermal-via 0.2 mm drills, both inherited footprint properties.
