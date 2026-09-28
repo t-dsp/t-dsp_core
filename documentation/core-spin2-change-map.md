@@ -1,6 +1,8 @@
 # T-DSP Core spin 2 — change map
 
-Status: **decisions recorded 2026-09-28, schematic edits not yet started.** This document
+Status: **schematic edits done 2026-09-28 on branch `spin2/core-module`** (stages 2–5 of §12). Netlist
+verified after every stage; ERC is down to one residual (see §14). PCB not yet updated from the
+schematic. This document
 collects every decision made in the 2026-09-28 design review so the schematic work can be
 checked against it. It supersedes the architecture parts of `bt-asrc-block-netplan.md`
 where the two disagree (Port B routing, control-line assignments, the DIT). The netplan
@@ -557,3 +559,38 @@ raw-GPIO rename (T_nn / S3_IOnn) is a later cosmetic pass and does not change co
 | 39 | `DMX_A` | 40 | `DMX_B` |
 | 41 | `DMX_GND` | 42 | `5V_ISO` |
 | 43 | `GND` | 44 | `GND` |
+
+## 14. Status after the 2026-09-28 edit session
+
+Done (all verified with `kicad-cli sch export netlist` diffs, zero unexpected net changes):
+
+- §1 deletions: 129 backplane parts, old DevKitC, pseudo net-map symbols, dead branches.
+- §2 wireless block: Port B on Teensy I2S2, reverse path, GPO control lines, S/PDIF labels,
+  U23 aux mux cascade, R72 SYS_CTRL pulldown, R73 EN pull-up. **S3 IO46 drives the SK6812
+  chain (`ESP32_LED`)** because the old DevKitC GPIO5 went away; IO46 is therefore not on
+  the header (J4.35 is RESERVED).
+- §7 power: AP63203 buck (U24 + L1 + C153 + C154) replaces the TLV76733; LT3045 owns the
+  3.3V rail; Teensy 3V3 pins NC; VUSB → TPS2116 VIN2 (`5V_VUSB`); VIN1 = `5V_IN` from J1.
+  PWR_FLAGs on 3.3V_DIG, V_BAT, 5V_IN, the LT3045 input, U9 VCC, Y1 VDD, U4 pins 5/6.
+- §5/§13 headers: J1–J4 wired, 176 pins checked against the pin map.
+- Cleanups: SPI-link and I2S2 labels made global; C129 GND restored; no-connect flags on
+  every intentionally unused pin; C129/C48 footprints fixed; no symbol overlaps.
+
+Residual ERC (kicad-cli, all severities):
+
+| Count | Item | Meaning |
+|---|---|---|
+| 1 | `power_pin_not_driven` D3 pin 4 (GND) | ERC quirk; the netlist shows D3.4 on GND with 47 GND power symbols and the Teensy GND pins. A PWR_FLAG on GND collides with the Teensy symbol's GND pins being typed *Output* (`pin_to_pin`). Leave, or retype those pins in the Teensy symbol. |
+| 50 + 56 | `lib_symbol_issues` / `lib_symbol_mismatch` | cached symbols differ from the libraries; fix in eeschema with *Tools → Update Symbols from Library*. Not touchable through Konnect. |
+| 30 | `unconnected_wire_endpoint` | pre-existing wire overshoots past labels (cosmetic). |
+
+Not done / next:
+
+1. **MCLK1 decision** (§10 #3): kept as-is. Y1 and Teensy pin 23 both reach MCLK1 through
+   R61/R7; Y1's standby jumpers R59/R60 select which drives. Y1-master needs the SAI1
+   external-MCLK firmware (`IOMUXC_GPR_GPR1 SAI1_MCLK_DIR = 0`), which does not exist in the
+   software repo yet. Default build: populate R60 (Y1 standby), Teensy drives.
+2. Raw-GPIO renames (legacy names SWITCH/OUTPUTA/CS/… → S3_IOnn, T_nn) — cosmetic, later.
+3. Header footprints for the PCB, board outline holes, antenna keepouts, Konnect
+   `layer_count`, then *Update PCB from Schematic* in KiCad.
+4. Symbol library sync (see residual ERC).
