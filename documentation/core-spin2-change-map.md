@@ -163,8 +163,9 @@ re-purpose.
 
 ## 5. Edge headers
 
-**[decided]** 2.54 mm headers on the two **60.96 mm edges** (see §11 for the pin-budget
-options). With two 2-row headers per edge: **≈168–176 pins**. With one: ≈84–88.
+**[decided]** 2.54 mm headers, **two 2-row headers side by side near each 60.96 mm edge**
+(four rows per end, inboard by ~5 mm): **≈168–176 pins**. See §11 for placement and §11.2
+for the pin-assignment rules.
 
 **[consequence]** The `board_outline` symbol (lib_sch:t-dsp_core, 106 pins) is the header
 net map, but **no outline footprint has pads for it**. A real header footprint must be
@@ -329,7 +330,7 @@ total**, far short of the ~144 in §5. Options:
 | B. One 2-row header per edge + cuts | 84–88 | needs ~55 pins cut: TDM2 bus gone, TDM GND pins thinned, MIDI THRU, aux I2S, S3 spares, SRC RX3/RX4, duplicate power pins. Loses the second TDM bus, which a backplane can replace by chaining modules on one bus. |
 | C. 2.0 mm or 1.27 mm pitch | 100+ | rejected: 2.54 mm is a product requirement. |
 
-Decision needed on A vs B. Default: **A**.
+**[decided 2026-09-28]: option A**, two 2-row headers per short edge (four rows).
 
 **[consequence] Area.** With option A each short edge loses a 10.16 mm strip and the Teensy
 takes an 18 mm strip: usable top area ≈ 62 × 61 mm ≈ 3800 mm². Estimated courtyard after
@@ -343,6 +344,57 @@ layer: 8 mm along the edge × 4.44 mm inward for the IDC777, roughly 15 × 6 mm 
 PCB-antenna S3. Both go on the **100 mm edges**, in the 82 mm not occupied by the Teensy
 end, offset ≥ 6 mm from the corners so the header strips on the short edges are not cut
 into. One radio per long edge, or both on one long edge at opposite ends, ≥ 40 mm apart.
+
+**[decided] Headers sit inboard, not on the edge.** Outer row centreline ≈ 5 mm from the
+short edge (rows at x ≈ 5.0, 7.5, 10.1, 12.6 mm and mirrored at the other end). Nothing
+requires a mezzanine header to touch the edge, and inboard gives every row an escape
+channel on both sides, frees the true corners for mounting holes, and leaves a copper-free
+margin. Moving them further inboard than that buys nothing: the routing lever is *which*
+signals go to *which* header, set by the placement below.
+
+### 11.1 Placement plan (drawn for routing, X in mm from the left short edge)
+
+```
+ x:  0    5   13  15         33  35                                   85  87   95  100
+     |  [hdr L 4 rows] [  TEENSY  ]  [ S3 ]  [SRC][mux]   [DMX iso][pwr] [hdr R 4 rows]  |
+     |                  USB end @ y=0  ant@y=0                                            |
+     |                  SD end @ y=61  [IDC777 ant @ y=61]                                |
+     bottom side under the Teensy: 5 bus buffers, series Rs, Y1, TPS2116, input caps
+```
+
+- **Left header = Teensy domain.** TDM1 and TDM2 buses (from the buffers directly beneath
+  the Teensy on the bottom side, shortest possible path), MIDI, Teensy S/PDIF, CAN3,
+  Teensy spares (22/26/27/32/33), Teensy host USB, PROGRAM/ON_OFF, VBAT, 5V_IN, power outs.
+- **Right header = S3 / peripheral domain.** TFT SPI + touch, encoder, GPI, both I2C
+  buses, S3 USB, S3 UART0, EN/IO0, S3 spares, DMX A/B, SRC S/PDIF RX/TX, aux I2S in/out,
+  LED outs.
+- **Antennas on the long edges** in the 50 mm between the Teensy and the right header:
+  S3 PCB antenna on one long edge, IDC777 on the other, ≥ 40 mm apart.
+- **Teensy near the left header** so its left pin row (pins 0–12: MIDI, I2S2, TDM data,
+  SPI) is 2–3 mm from the header and the I2S2 pins face the SRC. Its right row (TDM
+  clocks 20/21/23, I2C, S3 control) reaches the buffers on the bottom side through vias.
+
+### 11.2 Header pin-assignment rules (for the pin map, not yet drawn)
+
+1. **Order pins along Y to match the physical order of their sources** (Teensy pin 0 at the
+   USB end ascending toward the SD end; S3 pins likewise) so traces do not cross.
+2. **Outer 2-row header = signals that arrive on the outer layers; inner header = signals
+   that arrive through the bottom side or In2.** Keeps layer changes near the pins.
+3. **One GND per ≤ 4 signals, and a GND adjacent to every clock and every differential pair.**
+   MCLK (24.576 MHz), BCLK, and the USB pairs get GND on both flanks.
+4. **Differential pairs on adjacent pins in the same row**, never across rows: Teensy host
+   USB, S3 USB, SRC RX1–RX4, SRC TX.
+5. **Power pins at the ends of each block** (5V_IN, 5 V, 3.3 V, 12 V pass-through, GND) so
+   wide copper stays out of the signal field.
+6. **All four TDM lines of a bus in one row, contiguous, with GND between**: MCLK, BCLK,
+   LRCK, DATA_OUT, DATA_IN.
+7. **Reserve ≥ 8 spare pins per block** at the inner end, labelled RESERVED, never repurposed
+   without a header-contract version bump.
+8. **Name every pin by function, not by MCU pin number** (the header is the product API;
+   a future core with a different MCU must fit the same backplane).
+
+Stackup for routing: F.Cu signal, In1.Cu solid GND, In2.Cu signal with 3.3 V / 5 V islands,
+B.Cu signal + bottom-side parts. Every header signal has In1 GND directly beneath it.
 
 **[open] Mounting.** Four M3 (or M2.5) holes for standoffs to the backplane, needed for
 header retention. Corners are the natural spot; each corner hole costs ~2 header positions
