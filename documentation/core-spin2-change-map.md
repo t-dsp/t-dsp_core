@@ -172,6 +172,25 @@ net map, but **no outline footprint has pads for it**. A real header footprint m
 built (this is the source of the six `footprint_link_issues` ERC errors). TDM1/TDM2 as
 separate 2x10 connectors are redundant with the T*/TT* header groups and leave the core.
 
+**[decided 2026-09-28] GPIO exposure policy: raw pins, not named UI functions.** The
+core does not decide what a backplane builds. Pins go to the header as plain GPIO and the
+backplane wires TFT, touch, encoder, buttons, LEDs, or nothing. Consequences:
+
+- **S3 side:** every free S3 pin is `S3_IOnn`. The S3's GPIO matrix maps SPI, I2C, UART,
+  PWM, and I2S to any pin, so nothing is lost by not naming them. The on-core TFT/touch
+  pull-ups (R22/R23/R64/R65), LED jumpers (ILI_LED1–4), and the duplicate UI headers all go.
+- **Teensy side:** every free Teensy pin is `T_nn`. The i.MX RT has *fixed* peripheral
+  pins, so the header doc carries the Teensy pin-capability table (which pins are I2C,
+  SPI, UART, CAN, PWM, analog). MIDI opto (U4) and buffer (U9) move to the backplane; pins
+  0/1 go out raw as `T_0`/`T_1`.
+- **Exceptions, still named, because the core transforms or owns them:** the two buffered
+  TDM buses, `I2C0` (shared with the SRC, pull-ups on the core), SRC S/PDIF RX/TX pairs,
+  aux I2S in/out, the three USB pairs, S3 `UART0` + `EN` + `IO0` (programming), Teensy
+  `PROGRAM`/`ON_OFF`, `VBAT`, and all power pins.
+- **The reference backplane** (dev board + test jig) is where the opinionated wiring lives:
+  TFT, encoder, buttons, MIDI jacks, codec. That is what makes the platform "easy to build
+  something useful with", not the core.
+
 Signals to **add** to the existing 106:
 
 | Group | Pins |
@@ -302,7 +321,7 @@ Cost is a handful of jumpers.
 | 2 | ~~Board outline~~ **[decided 2026-09-28]: 100 × 60.96 mm**, see §11 | — |
 | 3 | MCLK1 driver: Y1 or Teensy pin 23 | Y1 (24.576 MHz = 512·fs), Teensy pin 23 via R7 removed |
 | 4 | 12 V: pass-through pin or drop | pass-through pin, no on-core parts |
-| 5 | MIDI logic (opto/buffer) on core or backplane | core, jack-level on header |
+| 5 | ~~MIDI logic~~ **[decided]: backplane**; pins 0/1 raw on the header | — |
 | 6 | LP5907 3.3V_A: keep or delete | delete (mics leave) |
 | 7 | `9_OUT1C_INPUT` intent | ask |
 
