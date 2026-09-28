@@ -586,11 +586,74 @@ Residual ERC (kicad-cli, all severities):
 
 Not done / next:
 
-1. **MCLK1 decision** (§10 #3): kept as-is. Y1 and Teensy pin 23 both reach MCLK1 through
-   R61/R7; Y1's standby jumpers R59/R60 select which drives. Y1-master needs the SAI1
-   external-MCLK firmware (`IOMUXC_GPR_GPR1 SAI1_MCLK_DIR = 0`), which does not exist in the
-   software repo yet. Default build: populate R60 (Y1 standby), Teensy drives.
+1. **External MCLK (user wants it — §10 #3 decided):** the hardware is already right. Y1
+   (24.576 MHz = 512·fs) reaches MCLK1 through R61 (33 Ω); Teensy pin 23 reaches MCLK1
+   through R7 (49.9 Ω). Population rule, now printed on the schematic next to Y1:
+   - **External-MCLK build:** R59 populated (Y1 enabled), R60 DNP. Firmware must make the
+     Teensy's SAI1 MCLK pin an input: clear `SAI1_MCLK_DIR` in `IOMUXC_GPR_GPR1`, then
+     run SAI1 with MSEL = MCLK1 so BCLK/LRCK are divided from the external clock. The
+     Teensy audio library sets MCLK as output; this is a small patch in the SAI init
+     (`output_i2s.cpp` / the F32 TDM variant in `t-dsp_software/lib`). Not written yet.
+   - **Default build until then:** R60 populated (Y1 in standby, output high-Z), R59 DNP;
+     Teensy drives MCLK1 at 256·fs. Never populate both: two drivers through 33 Ω + 49.9 Ω.
+   - The SRC accepts either clock; the TDM codecs on the backplane must accept the chosen
+     MCLK ratio (512·fs with Y1, 256·fs with the Teensy).
 2. Raw-GPIO renames (legacy names SWITCH/OUTPUTA/CS/… → S3_IOnn, T_nn) — cosmetic, later.
 3. Header footprints for the PCB, board outline holes, antenna keepouts, Konnect
    `layer_count`, then *Update PCB from Schematic* in KiCad.
 4. Symbol library sync (see residual ERC).
+
+## 15. Sourcing for JLCPCB assembly (2026-09-28)
+
+Every symbol now carries an `LCSC` field (and `LCSC_MPN` where the manufacturer part
+number matters). Numbers were confirmed on lcsc.com / jlcpcb.com part pages, not guessed.
+
+Substitutions made so the board can be assembled from stock:
+
+| Ref | Was | Now | LCSC | Why |
+|---|---|---|---|---|
+| U17 | ISO7761DW | **ISO7762DW** | C2859648 | ISO7761 not stocked. 7762 = 4 fwd / 2 rev; DMX uses A, B fwd and F rev. Pin 6 (was INE→GND) is now NC; pin 11 becomes INE (unused input, left NC — tie to DMX_GND once the symbol is swapped in eeschema). |
+| U20 | TLV76718DRVR | **TLV75718PDRVR** | C2861386 | TLV767 DRV not stocked; TLV757P DRV pinout is identical (pin 2/5 NC instead of SNS/GND — both harmless as wired). |
+| Y1 | ASDMB-24.576MHZ | **ASE-24.576MHZ-LC-T** | C6159263 | ASDMB not stocked; ASE has the same 4-pin function (1 = standby, 2 GND, 3 OUT, 4 VDD) in 3.2×2.5 mm; footprint updated. |
+| U13 | WROOM-1U (u.FL) | **ESP32-S3-WROOM-1-N16R2** | C2913205 | PCB antenna per the product decision; footprint updated. |
+| L1 | NR4018T3R3M | **NRS4018T3R3MDGJ** | C92960 | same 4×4 mm 3.3 µH 2 A family, stocked. |
+| U24 | (new) | AP63203WU-7 | C780769 | buck, JLC stock |
+
+Consigned (not at LCSC; supplied to the assembler or hand-placed): **U19 SRC4382IPFBR**,
+**U22 IDC777-1**, **U1 Teensy 4.1**. Their `LCSC` field says `CONSIGN`.
+
+No LCSC number (no part or hand assembly): H1–H4 holes, T108–T111 panel tabs, PU_EN1
+solder jumper, **J1–J4 2×22 headers** (LCSC has 2×20 and 2×40 Boomele headers, C50980 /
+C2333; a 2×22 is a cut 2×40 or a hand-soldered THT part).
+
+Passive numbers used: 0805 100 nF C49678, 10 µF C15850, 22 µF C45783, 4.7 µF C1779, 1 µF
+C6119929, 0402 100 nF C1525; 0805 resistors 10k C17414, 100k C17407, 33k C17633, 300 Ω
+C17617, 33 Ω C17634, 120 Ω C17437 (R71, DNP), 49.9 Ω C17720, 2.21k C17520, 0 Ω C17477.
+
+## 16. Functional blocks on the sheet (for re-organising in eeschema)
+
+Each block now has a title text at its top-left. Konnect can move symbols but not their
+wires and labels as a group, so the actual tidy-up is a block-select + move in eeschema.
+Coordinates are sheet mm (x, y), symbol centres:
+
+| Block | x range | y range |
+|---|---|---|
+| TEENSY 4.1 + series terminations, SPI link pull-ups | 105 … 472 | 211 … 318 |
+| SK6812 status LEDs + 5V level shifter | 457 … 794 | 430 … 518 |
+| TDM bus buffers (I2S1 -> TDM1/TDM2 headers) | 492 … 639 | 681 … 883 |
+| MIDI in/out/thru (opto + buffer) | 777 … 880 | 775 … 838 |
+| 3.3V analog rail (LT3045) + 24.576 MHz MCLK oscillator | 596 … 1098 | 1002 … 1123 |
+| 5V input mux (TPS2116): header 5V_IN / Teensy VUSB | 1063 … 1146 | 276 … 406 |
+| 3.3V rail decoupling | 296 … 678 | 666 … 739 |
+| ESP32-S3 module + I2C pull-ups + EN pull-up | -298 … -193 | 597 … 655 |
+| 3.3V_DIG buck (AP63203) + 5V decoupling | -310 … -211 | 785 … 833 |
+| Isolated DMX / RS-485 | -279 … -124 | 879 … 1010 |
+| Bluetooth sink (IDC777) + SYS_CTRL pulldown | 1306 … 1360 | 389 … 615 |
+| SRC4382 ASRC + 1.8V LDO | 1458 … 1584 | 453 … 704 |
+| I2S source mux (BT / S3 / aux) | 1628 … 1669 | 574 … 660 |
+| Edge headers J1-J4 | 1346 … 1651 | 900 … 900 |
+| Mounting holes / panel tabs | 1032 … 1180 | 635 … 892 |
+
+Suggested target arrangement (left→right, top→bottom): power (5 V mux, buck, LT3045, MCLK)
+· Teensy + TDM buffers + MIDI + LEDs · S3 + DMX · BT + SRC + mux · headers. Keep every
+block's stub-and-label style; nothing crosses blocks except by global label.
