@@ -37,7 +37,7 @@ mixing on the S3, no software resampler on the S3.
 | JST power inputs and reverse-polarity FETs | J10, J11, Q1, Q2 |
 | Optical S/PDIF TX/RX | TT1, TT2, TR1, TR2, SPDIF1, SPDIF_IO1, SPDIF_IO2 |
 | MEMS microphones | MIC1, MIC2 |
-| SK6812 LEDs and LED header | D3, D4, J12 |
+| LED chain header only (the SK6812 status LEDs D3/D4 and their 5 V level shifter IC1 **stay**; the chain continues to the backplane via the LED_OUT header pins) | J12 |
 | TFT / GPI / encoder / I2C / programming header duplicates | ILI1, ILI2, GPI1, GPI2, ESP_R_ENC1, ESP_R_ENC2, ESP_I1, ESP_I2, ESP_PROG1, ESP_PROG2, T_PROG1 |
 | Old ESP32 DevKitC and TAC5212 module symbol | U2, board_outline1 |
 | Battery header/cell | BAT1, BAT2 |
@@ -187,7 +187,8 @@ backplane wires TFT, touch, encoder, buttons, LEDs, or nothing. Consequences:
 - **Exceptions, still named, because the core transforms or owns them:** the two buffered
   TDM buses, `I2C0` (shared with the SRC, pull-ups on the core), SRC S/PDIF RX/TX pairs,
   aux I2S in/out, the three USB pairs, S3 `UART0` + `EN` + `IO0` (programming), Teensy
-  `PROGRAM`/`ON_OFF`, `VBAT`, **MIDI IN/OUT/THRU (jack level)**, **DMX A/B**, and all power pins.
+  `PROGRAM`/`ON_OFF`, `VBAT`, **MIDI IN/OUT/THRU (jack level)**, **DMX A/B**,
+  **ESP32_LED_OUT / TEENSY_LED_OUT** (SK6812 chain continuation, 5 V level), and all power pins.
 - **The reference backplane** (dev board + test jig) is where the opinionated wiring lives:
   TFT, encoder, buttons, MIDI jacks, codec. That is what makes the platform "easy to build
   something useful with", not the core.
