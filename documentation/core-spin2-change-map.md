@@ -474,7 +474,7 @@ DRC after placement: no shorts, no clearance errors, 499 unrouted connections (e
 | U21/U23 mux + C146/C152 | X 87.6-93.6, Y 29-49.5 | |
 | J6 J_SPDIF | X 39.5-68.4, Y 27.5-34 | directly left of the SRC |
 | J7 J_AUX | top-middle X 47-53.1, Y 1.2-14.5 beside J5 | |
-| LED IC1/C1/C33/C22/C23 + J11 | top-middle: J11 at Y 16-19.3, IC1 and the four caps in a row at Y 21.5, X 41-55 | D3/D4 at X 54-64, Y 38.1-40.3; they are reverse-mount: add a 3 mm hole under each (not done) |
+| LED IC1/C1/C33/C22/C23 + J11 | top-middle: J11 at Y 16-19.3, IC1 and the four caps in a row at Y 21.5, X 41-55 | D3/D4 at X 54-64, Y 38.1-40.3, now top-emitting SK6812-EC20 (no board windows needed) |
 | U22 IDC777 + J13 u.FL (DNP) | vertical, X 40-53, Y 37.5-61, rot 90, antenna end on the BOTTOM edge; J13 at X 55.7, Y 59.4 with its RF pad toward the module, 3.5 mm from EXT_RF pad 57 (X 52.3, Y 56.8) | the IDC777 antenna is at the module's short end (keep-out pads 56/58 side), not along its long edge; antenna zone X 42.5-50.5, Y 55.9-61 must stay copper-free on all layers. Opposite edge from the S3 antenna, ~63 mm apart |
 | J1 J_PWR | X 64.6-80.1, Y 41.6-46.9 | |
 | U3 TPS2116 + C12-15/C31/32/34/35 + R28-30 | row Y 49.5, X 64.5-91 | |
@@ -832,6 +832,7 @@ Substitutions made so the board can be assembled from stock:
 | U13 | WROOM-1U (u.FL) | **ESP32-S3-WROOM-1-N16R8** | C2913202 | PCB antenna; 8 MB octal PSRAM for Spotify buffering (was N16R2 C2913205 for one commit). |
 | L1 | NR4018T3R3M | **NRS4018T3R3MDGJ** | C92960 | same 4×4 mm 3.3 µH 2 A family, stocked. |
 | U24 | (new) | AP63203WU-7 | C780769 | buck, JLC stock |
+| D3, D4 | SK6812 3.2x2.8 reverse-mount (MINI-E) | **SK6812-EC20** 2.0x2.0 top-emitting | C2909058 | Decided 2026-09-28: the LEDs sit mid-board, so a top emitter is visible without board windows. Footprint `project_fp:LED_SK6812-EC20_2.0x2.0mm` built from datasheet SPC/SK68XX-EC20 rev 04 (pads 0.8x0.7 on 1.3x1.2); pad numbers follow the project symbol (1 DIN, 2 VDD, 3 DOUT, 4 GND), which differs from the datasheet numbering (1 VDD, 2 DOUT, 3 GND, 4 DIN). SK6805-EC15 (C2890035) is the drop-in smaller/dimmer alternative with `LED_SK6812_EC15_1.5x1.5mm`. |
 
 Consigned (not at LCSC; supplied to the assembler or hand-placed): **U19 SRC4382IPFBR**,
 **U22 IDC777-1**, **U1 Teensy 4.1**. Their `LCSC` field says `CONSIGN`.
