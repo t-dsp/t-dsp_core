@@ -38632,6 +38632,18 @@
     (at -240.03 631.19)
     (uuid "66a5a53a-59c7-4964-b217-9f2ec44b65f5"))
 
+  (no_connect
+    (at -270.51 651.51)
+    (uuid "9f1ed0df-ce4b-4d65-82fa-e1ec6f81dda9"))
+
+  (no_connect
+    (at -240.03 633.73)
+    (uuid "93b00c01-edef-4d13-8900-8fae2ec0ee63"))
+
+  (no_connect
+    (at -240.03 636.27)
+    (uuid "1c3fab4c-6581-4689-8d60-2d622e9a2a28"))
+
   (wire
     (pts
       (xy 1054.1 273.05)
@@ -39558,15 +39570,6 @@
       (width 0)
       (type default))
     (uuid "3800cb67-f8cf-4272-868b-12e822562aa7"))
-
-  (wire
-    (pts
-      (xy -270.51 651.51)
-      (xy -275.59 651.51))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid "386c4634-afab-478b-987b-3340a3b5b528"))
 
   (wire
     (pts
@@ -41541,15 +41544,6 @@
 
   (wire
     (pts
-      (xy -240.03 633.73)
-      (xy -234.95 633.73))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid "aa795ea0-e85b-4cdc-afc3-087263ed5db9"))
-
-  (wire
-    (pts
       (xy 1070.61 1120.14)
       (xy 1087.12 1120.14))
     (stroke
@@ -42051,15 +42045,6 @@
       (width 0)
       (type default))
     (uuid "c7ceb66f-6aa2-4397-a640-8e0e05b0a14a"))
-
-  (wire
-    (pts
-      (xy -240.03 636.27)
-      (xy -234.95 636.27))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid "c7f7e874-a46d-413e-8088-04228376966a"))
 
   (wire
     (pts
@@ -44692,6 +44677,13 @@
         (size 1.27 1.27)))
     (uuid "b1497f7e-894b-4dcb-a1ac-5ffc9ad38527"))
 
+  (text "J13 u.FL: DNP with the IDC777-1 (chip antenna). Fit J13 and populate U22 as IDC767 (same 60-pad LGA, pad 57 = EXT_RF) for an external antenna.\\nPCB: 50 ohm CPW from pad 57 to J13, GND pads 56/58 either side, ground vias every 1-2 mm, keep it short, no matching network (IDC767-DTS-V003 p.8)."
+    (at 1280.16 618.49 0)
+    (effects
+      (font
+        (size 1.27 1.27)))
+    (uuid "da359bd1-499b-488b-9e1e-5490cdb21b8d"))
+
   (label "DMX_RO_ISO"
     (at -224.79 924.56 0)
     (effects
@@ -45052,23 +45044,6 @@
         (font
           (size 1.27 1.27)))))
 
-  (global_label "SWITCH"
-    (shape input)
-    (at -275.59 651.51 180)
-    (effects
-      (font
-        (size 1.27 1.27))
-      (justify right))
-    (uuid "07d664c1-37a8-4ceb-a252-b7b450ccfc13")
-    (property "Intersheetrefs" "${INTERSHEET_REFS}"
-      (at -275.59 651.51 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27)))))
-
   (global_label "GND"
     (shape input)
     (at 102.87 309.88 0)
@@ -45350,23 +45325,6 @@
         (font
           (size 1.27 1.27))
         (justify right))))
-
-  (global_label "OUTPUTA"
-    (shape input)
-    (at -234.95 633.73 0)
-    (effects
-      (font
-        (size 1.27 1.27))
-      (justify left))
-    (uuid "1853eb59-6721-4017-aed7-24fe0f6c75de")
-    (property "Intersheetrefs" "${INTERSHEET_REFS}"
-      (at -234.95 633.73 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27)))))
 
   (global_label "GND"
     (shape input)
@@ -46559,23 +46517,6 @@
     (uuid "5f6e8bff-a6dc-42df-a399-648f2993c447")
     (property "Intersheetrefs" "${INTERSHEET_REFS}"
       (at -223.52 781.05 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27)))))
-
-  (global_label "OUTPUTB"
-    (shape input)
-    (at -234.95 636.27 0)
-    (effects
-      (font
-        (size 1.27 1.27))
-      (justify left))
-    (uuid "5f913182-7184-4729-bd55-1e3aeab0cb14")
-    (property "Intersheetrefs" "${INTERSHEET_REFS}"
-      (at -234.95 636.27 0)
       (hide yes)
       (show_name no)
       (do_not_autoplace no)
@@ -50086,33 +50027,6 @@
       (justify right))
     (uuid "9bd00666-eb5f-47cc-b4f4-e623027f82b4"))
 
-  (global_label "SWITCH"
-    (shape bidirectional)
-    (at 203.2 256.54 180)
-    (effects
-      (font
-        (size 1.27 1.27))
-      (justify right))
-    (uuid "f98b25e4-eca0-44a3-9bae-406dc7384e82"))
-
-  (global_label "OUTPUTB"
-    (shape bidirectional)
-    (at 203.2 254 180)
-    (effects
-      (font
-        (size 1.27 1.27))
-      (justify right))
-    (uuid "647c60c9-15fe-4d76-b907-79711dbcdee4"))
-
-  (global_label "OUTPUTA"
-    (shape bidirectional)
-    (at 203.2 251.46 180)
-    (effects
-      (font
-        (size 1.27 1.27))
-      (justify right))
-    (uuid "347ee28a-eccd-4ac6-be3a-9b6047f355e2"))
-
   (global_label "ESP32_IO33_SPI_CS"
     (shape bidirectional)
     (at -234.95 613.41 0)
@@ -51328,33 +51242,6 @@
       (justify right))
     (uuid "68946381-672a-491a-801c-cfdd5795ec46"))
 
-  (global_label "OUTPUTA"
-    (shape bidirectional)
-    (at -90.17 624.84 0)
-    (effects
-      (font
-        (size 1.27 1.27))
-      (justify left))
-    (uuid "049b57c3-7d14-4d81-a719-b806b7d70018"))
-
-  (global_label "OUTPUTB"
-    (shape bidirectional)
-    (at -107.95 627.38 180)
-    (effects
-      (font
-        (size 1.27 1.27))
-      (justify right))
-    (uuid "d718dacb-4b06-408e-a37d-d664f5be8fce"))
-
-  (global_label "SWITCH"
-    (shape bidirectional)
-    (at -90.17 627.38 0)
-    (effects
-      (font
-        (size 1.27 1.27))
-      (justify left))
-    (uuid "d902f9fb-2167-433e-a587-9913e7e72488"))
-
   (global_label "GND"
     (shape bidirectional)
     (at -107.95 629.92 180)
@@ -51642,6 +51529,60 @@
         (size 1.27 1.27))
       (justify right))
     (uuid "782f4a1d-2b06-4652-9cb6-0de0029e7557"))
+
+  (global_label "T_38"
+    (shape bidirectional)
+    (at 203.2 256.54 180)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify right))
+    (uuid "64752258-a71a-42b5-bbab-cc4611adafb8"))
+
+  (global_label "T_39"
+    (shape bidirectional)
+    (at 203.2 254 180)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify right))
+    (uuid "e0e49637-4c48-41ad-9bb5-be8adf17059b"))
+
+  (global_label "T_40"
+    (shape bidirectional)
+    (at 203.2 251.46 180)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify right))
+    (uuid "a190c96c-9cd0-4300-9962-7dd4d8445fd9"))
+
+  (global_label "T_40"
+    (shape bidirectional)
+    (at -90.17 624.84 0)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left))
+    (uuid "d99ad9df-7639-42f7-bfe4-62d33ac97d1c"))
+
+  (global_label "T_39"
+    (shape bidirectional)
+    (at -107.95 627.38 180)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify right))
+    (uuid "5b3853d8-888a-4297-b180-9cfe5e53e8ac"))
+
+  (global_label "T_38"
+    (shape bidirectional)
+    (at -90.17 627.38 0)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left))
+    (uuid "b8520aaf-9b24-4b90-b294-0a62c6b46209"))
 
   (symbol
     (lib_id "Device:R")
@@ -68667,8 +68608,8 @@
     (path "/"
       (page "1")))
 
-  (text "J13 u.FL: DNP with the IDC777-1 (chip antenna). Fit J13 and populate U22 as IDC767 (same 60-pad LGA, pad 57 = EXT_RF) for an external antenna.\\nPCB: 50 ohm CPW from pad 57 to J13, GND pads 56/58 either side, ground vias every 1-2 mm, keep it short, no matching network (IDC767-DTS-V003 p.8)."
-    (at 1280.16 618.49 0)
+  (text "Simple backplane controls (no extra parts on the core):\\n  Pot / volume knob: 10k linear between 3.3V (J1.9) and GND, wiper -> any T_ analog pin (T_22=A8, T_26=A12, T_27=A13, T_38=A14, T_39=A15, T_40=A16,\\n  T_BUTTON1=A10, T_BUTTON2=A11, 14_SPDIF_OUT=A0, 15_SPDIF_IN=A1) with 100 nF wiper-to-GND. analogRead(), average 8-16 samples.\\n  Switch / button: between a T_ pin and GND, pinMode(INPUT_PULLUP). More controls: 74HC4067 muxes on the analog pins,\\n  MCP23017 / TCA8418 on SDA1/SCL1 (J2), SK6812 chain on J11 for LEDs. T_38/T_39/T_40 are Teensy pins 38/39/40 on J8 pins 22/21/20."
+    (at -120.65 648.97 0)
     (effects (font (size 1.27 1.27)))
-    (uuid "da359bd1-499b-488b-9e1e-5490cdb21b8d")
+    (uuid "2d7efc5e-f22f-4252-a182-3b7072bd22f4")
   ))

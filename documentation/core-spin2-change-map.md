@@ -642,7 +642,7 @@ Aux I2S source into the mux (BCK, LRCK, DIN) and the S3-side out; clocks never a
 
 ### J8 - `J_S3` 2x15, next to ESP32-S3 U13
 
-S3 UART0 (also Teensy Serial7), EN/IO0, I2C, raw GPIO. IO35-37 are consumed by the octal PSRAM and are not on the header.
+S3 UART0 (also Teensy Serial7), EN/IO0, I2C, raw GPIO. IO35-37 are consumed by the octal PSRAM and are not on the header. Pins 20/21/22 (`T_40`, `T_39`, `T_38`) are **Teensy** pins 40/39/38 (A16/A15/A14), not S3 pins: the old shared encoder nets were cut on the S3 side (IO15/IO38/IO39 now NC) on 2026-09-28.
 
 | odd | net | even | net |
 |---|---|---|---|
@@ -655,8 +655,8 @@ S3 UART0 (also Teensy Serial7), EN/IO0, I2C, raw GPIO. IO35-37 are consumed by t
 | 13 | `SDO` | 14 | `CS` |
 | 15 | `GND` | 16 | `GND` |
 | 17 | `DC` | 18 | `RESET` |
-| 19 | `T_CS` | 20 | `OUTPUTA` |
-| 21 | `OUTPUTB` | 22 | `SWITCH` |
+| 19 | `T_CS` | 20 | `T_40` |
+| 21 | `T_39` | 22 | `T_38` |
 | 23 | `GND` | 24 | `GND` |
 | 25 | `GPIO34` | 26 | `GPIO35` |
 | 27 | `S3_IO45` | 28 | `GND` |
@@ -708,6 +708,18 @@ Teensy 4.1 10/100 PHY pairs and link LED from pads 60-65 (needs the U1 symbol sw
 | 3 | `GND` | 4 | `GND` |
 | 5 | `ETH_T+` | 6 | `ETH_T-` |
 | 7 | `ETH_LED` | 8 | `GND` |
+
+### 13.1 Backplane controls and the GPIO budget (2026-09-28)
+
+Direct pins reachable from a backplane: Teensy 14, 15, 22, 24, 25, 26, 27, 30, 34, 35, 38, 39, 40
+(ten of them analog: A0, A1, A8, A10, A11, A12, A13, A14, A15, A16) plus the two I2C pairs; S3
+IO2, IO8, IO9, IO10, IO11, IO18, IO40, IO41, IO42, IO45 plus EN, IO0 and its I2C pair. A volume
+knob is a 10k pot from 3.3V (J1) to GND with the wiper on any Teensy analog pin and 100 nF to
+GND; a switch is any pin to GND with `INPUT_PULLUP`. Beyond ~20 controls use the panel-bus
+pattern: 74HC4067 analog muxes on the analog pins (16 pots each), MCP23017 or TCA8418 on
+SDA1/SCL1, SK6812 LEDs on J11. Links to a Pi: Serial8 UART (J3.9/10), I2C Wire/Wire1 (J2),
+S3 I2C (J8), Teensy USB host (J4), S3 USB OTG (J9), the Teensy's own USB jack (Pi as host),
+MIDI (J5), TDM2 (J2) for audio, Ethernet (J12) once the U1 symbol swap is done.
 
 ## 14. Status after the 2026-09-28 edit session
 
