@@ -564,8 +564,8 @@ Both TDM buses plus the two I2C buses for codec control. GND on both flanks of e
 | 15 | `7_OUT1A+` | 16 | `6_OUT1D+` |
 | 17 | `8_IN1` | 18 | `9_OUT1C_INPUT` |
 | 19 | `GND` | 20 | `GND` |
-| 21 | `SDA0` | 22 | `SDA1` |
-| 23 | `SCL0` | 24 | `SCL1` |
+| 21 | `T18_SDA0` | 22 | `T17_SDA1` |
+| 23 | `T19_SCL0` | 24 | `T16_SCL1` |
 | 25 | `GND` | 26 | `GND` |
 
 ### J3 - `J_T` 2x12, next to Teensy 4.1
@@ -575,16 +575,16 @@ Teensy S/PDIF, CAN3, Serial8, PROGRAM/ON_OFF, buttons, spare GPIO, MCLK2. GND ei
 | odd | net | even | net |
 |---|---|---|---|
 | 1 | `GND` | 2 | `GND` |
-| 3 | `14_SPDIF_OUT` | 4 | `15_SPDIF_IN` |
+| 3 | `T14_SPDIF_OUT` | 4 | `T15_SPDIF_IN` |
 | 5 | `GND` | 6 | `GND` |
-| 7 | `CRX3` | 8 | `TRX3` |
-| 9 | `35_TX8_RESET` | 10 | `34_RX8_RESET2` |
-| 11 | `53_T_PROG` | 12 | `54_ON_OFF` |
-| 13 | `T_BUTTON1` | 14 | `T_BUTTON2` |
+| 7 | `T30_CRX3` | 8 | `T31_CTX3` |
+| 9 | `T35_TX8` | 10 | `T34_RX8` |
+| 11 | `T_PROGRAM` | 12 | `T_ON_OFF` |
+| 13 | `T24` | 14 | `T25` |
 | 15 | `GND` | 16 | `GND` |
-| 17 | `T_22` | 18 | `T_26` |
-| 19 | `T_27` | 20 | `32_OUT1B` |
-| 21 | `GND` | 22 | `MCLK2` |
+| 17 | `T22` | 18 | `T26` |
+| 19 | `T27` | 20 | `T32_OUT1B` |
+| 21 | `GND` | 22 | `T33_MCLK2` |
 | 23 | `GND` | 24 | `GND` |
 
 ### J4 - `J_USBH` 1x5, next to Teensy USB host pads
@@ -642,23 +642,23 @@ Aux I2S source into the mux (BCK, LRCK, DIN) and the S3-side out; clocks never a
 
 ### J8 - `J_S3` 2x15, next to ESP32-S3 U13
 
-S3 UART0 (also Teensy Serial7), EN/IO0, I2C, raw GPIO. IO35-37 are consumed by the octal PSRAM and are not on the header. Pins 20/21/22 (`T_40`, `T_39`, `T_38`) are **Teensy** pins 40/39/38 (A16/A15/A14); pins 23/24/28 (`S3_IO15`, `S3_IO38`, `S3_IO39`) are the S3 pins that used to share those nets. Split on 2026-09-28 so either MCU can own a control; a backplane may wire a Teensy pin and an S3 pin together if it wants the old shared behaviour.
+S3 UART0 (also Teensy Serial7), EN/IO0, I2C, raw GPIO. IO35-37 are consumed by the octal PSRAM and are not on the header. Pins 20/21/22 (`T40`, `T39`, `T38`) are **Teensy** pins 40/39/38 (A16/A15/A14); pins 23/24/28 (`S3_IO15`, `S3_IO38`, `S3_IO39`) are the S3 pins that used to share those nets. Split on 2026-09-28 so either MCU can own a control; a backplane may wire a Teensy pin and an S3 pin together if it wants the old shared behaviour.
 
 | odd | net | even | net |
 |---|---|---|---|
 | 1 | `GND` | 2 | `GND` |
-| 3 | `ESP32_IO1` | 4 | `ESP32_IO3` |
-| 5 | `ESP32_EN` | 6 | `ESP32_IO0` |
+| 3 | `S3_IO43_TXD0` | 4 | `S3_IO44_RXD0` |
+| 5 | `S3_EN` | 6 | `S3_IO0_BOOT` |
 | 7 | `GND` | 8 | `GND` |
-| 9 | `ESP32_IO21_SDA` | 10 | `ESP32_IO22_SCL` |
-| 11 | `SCK` | 12 | `SDI` |
-| 13 | `SDO` | 14 | `CS` |
+| 9 | `S3_IO21_SDA` | 10 | `S3_IO47_SCL` |
+| 11 | `S3_IO18` | 12 | `S3_IO9` |
+| 13 | `S3_IO10` | 14 | `S3_IO11` |
 | 15 | `GND` | 16 | `GND` |
-| 17 | `DC` | 18 | `RESET` |
-| 19 | `T_CS` | 20 | `T_40` |
-| 21 | `T_39` | 22 | `T_38` |
+| 17 | `S3_IO2` | 18 | `S3_IO42` |
+| 19 | `S3_IO8` | 20 | `T40` |
+| 21 | `T39` | 22 | `T38` |
 | 23 | `S3_IO15` | 24 | `S3_IO38` |
-| 25 | `GPIO34` | 26 | `GPIO35` |
+| 25 | `S3_IO40` | 26 | `S3_IO41` |
 | 27 | `S3_IO45` | 28 | `S3_IO39` |
 | 29 | `GND` | 30 | `GND` |
 
@@ -714,12 +714,23 @@ Teensy 4.1 10/100 PHY pairs and link LED from pads 60-65 (needs the U1 symbol sw
 Direct pins reachable from a backplane: Teensy 14, 15, 22, 24, 25, 26, 27, 30, 34, 35, 38, 39, 40
 (ten of them analog: A0, A1, A8, A10, A11, A12, A13, A14, A15, A16) plus the two I2C pairs; S3
 IO2, IO8, IO9, IO10, IO11, IO18, IO40, IO41, IO42, IO45 plus EN, IO0 and its I2C pair. A volume
-knob is a 10k pot from 3.3V (J1) to GND with the wiper on any Teensy analog pin and 100 nF to
+knob is a 10k pot from 3.3V (J1) to GND with the wiper on any Teensy analog pin (T14, T15, T22, T24, T25, T26, T27, T38, T39, T40) and 100 nF to
 GND; a switch is any pin to GND with `INPUT_PULLUP`. Beyond ~20 controls use the panel-bus
 pattern: 74HC4067 analog muxes on the analog pins (16 pots each), MCP23017 or TCA8418 on
-SDA1/SCL1, SK6812 LEDs on J11. Links to a Pi: Serial8 UART (J3.9/10), I2C Wire/Wire1 (J2),
+T17_SDA1/T16_SCL1, SK6812 LEDs on J11. Links to a Pi: Serial8 UART (J3.9/10), I2C Wire/Wire1 (J2),
 S3 I2C (J8), Teensy USB host (J4), S3 USB OTG (J9), the Teensy's own USB jack (Pi as host),
 MIDI (J5), TDM2 (J2) for audio, Ethernet (J12) once the U1 symbol swap is done.
+
+### 13.2 Net-naming rule (2026-09-28)
+
+Functions keep function names (TDM buses, SPDIF, USB, MIDI, DMX, LED outs, power, ETH). Raw GPIO is
+named by MCU pin so a user with the MCU pinout in hand cannot mis-wire it: `T<n>` = Teensy 4.1 pin
+n, `S3_IO<n>` = ESP32-S3 GPIO n. A pin with an optional core-side function carries it as a suffix:
+`T14_SPDIF_OUT`, `T35_TX8`, `T18_SDA0`, `T33_MCLK2`, `S3_IO43_TXD0`, `S3_IO47_SCL`, `S3_IO0_BOOT`.
+Special Teensy pads are `T_PROGRAM`, `T_ON_OFF`, `V_BAT`. Renamed on 2026-09-28 (100 labels,
+netlist topology unchanged). The old DevKitC-era names were wrong in three places: `ESP32_IO1/IO3`
+were GPIO43/44, `ESP32_IO22_SCL` was IO47, `GPIO34/35` were IO40/41; the internal SPI CS is
+IO17, not IO33. The t-dsp_software pin tables must be updated to match.
 
 ## 14. Status after the 2026-09-28 edit session
 
