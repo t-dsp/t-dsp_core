@@ -657,3 +657,16 @@ Coordinates are sheet mm (x, y), symbol centres:
 Suggested target arrangement (left→right, top→bottom): power (5 V mux, buck, LT3045, MCLK)
 · Teensy + TDM buffers + MIDI + LEDs · S3 + DMX · BT + SRC + mux · headers. Keep every
 block's stub-and-label style; nothing crosses blocks except by global label.
+
+## 17. DNP / excluded-from-board audit (2026-09-28, after the user spotted X marks)
+
+- **C10, C11** (0.1 µF on the old Teensy 3V3 rail) were `dnp` + `on_board no` → deleted.
+- **H1–H4** mounting-hole symbols were `on_board no` → deleted; holes come from the outline
+  footprint / PCB (§11).
+- **R19, R53 (SPI-link pull-ups) and C4, C5 (EN / IO0 caps) were `on_board no`** — they would
+  have been missing from the PCB. Konnect cannot clear that flag, so they were deleted and
+  re-placed at the same coordinates (netlist unchanged), now on-board with LCSC numbers.
+- Intentionally DNP and kept: **U1 Teensy** (consigned, hand-placed — hence the X on the
+  schematic), T108–T111 panel tabs, PU_EN1 solder jumper.
+- 35 stale text notes from the backplane era (USB/optical/Ethernet/mic/switch labels,
+  8-layer stackup note, old titles) removed.

@@ -31732,21 +31732,9 @@
     (at 683.26 1009.65)
     (uuid "83a484b0-2fb7-49ac-8f9d-b97cb805da56"))
 
-  (no_connect
-    (at 1032.51 892.81)
-    (uuid "c6e94d3a-9030-45ca-b519-371a7a0e8c56"))
 
-  (no_connect
-    (at 1076.96 892.81)
-    (uuid "fd6c8408-0ed1-4e4d-a17a-f7f929e6f3be"))
 
-  (no_connect
-    (at 1112.52 890.27)
-    (uuid "e0062174-909e-4e27-8676-7dde48a01c1d"))
 
-  (no_connect
-    (at 1155.7 894.08)
-    (uuid "6e8d965d-1aa9-4c8f-9cf8-36beb800a590"))
 
   (no_connect
     (at 1330.96 549.91)
@@ -32159,7 +32147,6 @@
       (type default))
     (uuid "0ee9dffe-7051-4f25-8ad5-07deda8daf64"))
 
-
   (wire
     (pts
       (xy 96.52 309.88)
@@ -32394,7 +32381,6 @@
       (type default))
     (uuid "1d3f52cb-017d-426f-8485-e5e169e9253c"))
 
-
   (wire
     (pts
       (xy 784.86 646.43)
@@ -32556,7 +32542,6 @@
       (width 0)
       (type default))
     (uuid "257354cc-f013-4e79-8f43-f13b53875077"))
-
 
   (wire
     (pts
@@ -32737,7 +32722,6 @@
       (width 0)
       (type default))
     (uuid "32f165ff-d149-455a-8aa2-c8f40d6e9300"))
-
 
   (wire
     (pts
@@ -33594,7 +33578,6 @@
       (type default))
     (uuid "6285b9ee-05d9-4a66-bdd1-cd63d9807644"))
 
-
   (wire
     (pts
       (xy 1360.17 384.81)
@@ -33909,15 +33892,6 @@
       (width 0)
       (type default))
     (uuid "7817e878-3252-4831-b771-eac541b73a16"))
-
-  (wire
-    (pts
-      (xy 302.26 687.07)
-      (xy 295.91 687.07))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid "78b29609-190e-4283-8c0a-274943d2dc0f"))
 
   (wire
     (pts
@@ -34450,7 +34424,6 @@
       (type default))
     (uuid "93365b99-1a23-4d0c-b48c-65e2aa55d023"))
 
-
   (wire
     (pts
       (xy 368.3 199.39)
@@ -34928,7 +34901,6 @@
       (type default))
     (uuid "aefe1774-2fde-4ed4-885e-ae30511d3f5c"))
 
-
   (wire
     (pts
       (xy 662.94 1004.57)
@@ -35000,7 +34972,6 @@
       (width 0)
       (type default))
     (uuid "b458c029-1d5b-4609-9c3f-8807a96788dc"))
-
 
   (wire
     (pts
@@ -35398,7 +35369,6 @@
       (type default))
     (uuid "c8b1e360-4a65-43ec-bd98-ba4db4078eba"))
 
-
   (wire
     (pts
       (xy 96.52 243.84)
@@ -35464,24 +35434,6 @@
 
   (wire
     (pts
-      (xy 295.91 668.02)
-      (xy 295.91 670.56))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid "cb4b617e-bf57-4a63-83d2-29a84b7ffdfc"))
-
-  (wire
-    (pts
-      (xy 295.91 662.94)
-      (xy 302.26 662.94))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid "cb5047ef-9cc8-4d82-848b-2d6ca51844a4"))
-
-  (wire
-    (pts
       (xy 1558.29 466.09)
       (xy 1558.29 471.17))
     (stroke
@@ -35515,7 +35467,6 @@
       (width 0)
       (type default))
     (uuid "cd727a16-4bcc-4420-b48c-24e2f7decc2c"))
-
 
   (wire
     (pts
@@ -35570,7 +35521,6 @@
       (width 0)
       (type default))
     (uuid "d6888a8d-d352-43b2-ad2e-cece323aedd7"))
-
 
   (wire
     (pts
@@ -35970,15 +35920,6 @@
 
   (wire
     (pts
-      (xy 295.91 692.15)
-      (xy 295.91 694.69))
-    (stroke
-      (width 0)
-      (type default))
-    (uuid "f0cf03b6-2598-4fcb-b64a-18cc3895b793"))
-
-  (wire
-    (pts
       (xy 212.09 1164.59)
       (xy 212.09 1159.51))
     (stroke
@@ -36003,7 +35944,6 @@
       (width 0)
       (type default))
     (uuid "f323800f-6ede-4f15-a489-e7e2ef60fe18"))
-
 
   (wire
     (pts
@@ -37829,74 +37769,6 @@
       (type default))
     (uuid "c5870856-b7e4-4f9e-9025-1a2878ba7e5b"))
 
-
-  (text "MUST VERIFY LINES AND PADS"
-    (at 260.096 708.406 0)
-    (effects
-      (font
-        (size 1.27 1.27)
-        (thickness 0.254)
-        (bold yes)
-        (color 255 60 3 1)))
-    (uuid "0f73aff4-e33d-4e22-9a23-b1db924cd4b4"))
-
-  (text "PJRAS2X1S01X\nINSERT A (RED) RIGHT\niNSERT B (WHITE) LEFT"
-    (at 310.388 437.134 0)
-    (effects
-      (font
-        (size 1.27 1.27)))
-    (uuid "0faa8f95-fbeb-4f94-9a87-3ab06583eef2"))
-
-  (text "TL1105WF160Q = 3.15mm actuator = hidden behind side panel by 1.1mm\nTL1105XF160Q = 5.85mm actuator = petruding from side panel by 1.35mm\nACTUAL DISTANCE FROM EDGE = 4.25mm."
-    (at 71.12 345.44 0)
-    (effects
-      (font
-        (size 1.27 1.27))
-      (justify left bottom))
-    (uuid "13feeb90-7fec-4b2d-ae27-d8eb480131be"))
-
-  (text "USB B Option"
-    (at 631.19 208.28 0)
-    (effects
-      (font
-        (face "Arial")
-        (size 2.0066 2.0066)
-        (thickness 0.4013)
-        (bold yes))
-      (justify right bottom))
-    (uuid "1f717471-191e-43a7-ab21-e8535f5ebf91"))
-
-  (text "SWITCHES\n"
-    (at 142.24 861.06 0)
-    (effects
-      (font
-        (face "Arial")
-        (size 10 10)
-        (thickness 0.4013)
-        (bold yes))
-      (justify left bottom))
-    (uuid "2299eb9c-7c01-4239-9dca-b57a892dceb0"))
-
-  (text "3.3v DIGITAL RAIL"
-    (at 561.34 989.965 0)
-    (effects
-      (font
-        (face "Arial")
-        (size 10 10)
-        (thickness 0.4013)
-        (bold yes))
-      (justify left bottom))
-    (uuid "24c8beef-fb92-47e2-977b-e1dec6c6e5aa"))
-
-  (text "https://idyl.io/how-to-add-usb-type-c-micro-usb-replacement/?amp"
-    (at 707.263 213.36 0)
-    (effects
-      (font
-        (face "Arial")
-        (size 1.27 1.27))
-      (justify left bottom))
-    (uuid "279a05c2-9e37-4932-b375-386de11d1de5"))
-
   (text "https://electronics.stackexchange.com/questions/310899/midi-out-thru-circuit-questions"
     (at 819.15 852.17 0)
     (effects
@@ -37905,96 +37777,6 @@
         (size 1.27 1.27))
       (justify left bottom))
     (uuid "2883ebde-686c-4a8f-8299-3cd4c467b2d4"))
-
-  (text "ESP32"
-    (at 405.638 200.914 0)
-    (effects
-      (font
-        (face "Arial")
-        (size 10 10)
-        (thickness 0.4013)
-        (bold yes))
-      (justify left bottom))
-    (uuid "2b569dad-fbf6-4b32-9d52-c52e79594d2a"))
-
-  (text "w a0 0a 41 # Configure GPIO1 as PDMCLK with drive active high and low\nw a0 0d 02 # Configure GPI1 as input"
-    (at 175.514 655.32 0)
-    (effects
-      (font
-        (size 1.27 1.27)))
-    (uuid "2cccc0cb-abe9-43c7-aa4c-3717eafacb0e"))
-
-  (text "PJRAS2X1S01X\nINSERT A (RED) RIGHT\niNSERT B (WHITE) LEFT"
-    (at 368.554 560.324 0)
-    (effects
-      (font
-        (size 1.27 1.27)))
-    (uuid "3ef766d2-6eb5-4e4b-979b-4f9914a4805f"))
-
-  (text "USB POWER FILTER"
-    (at 1422.146 925.83 0)
-    (effects
-      (font
-        (size 5.08 5.08)
-        (thickness 0.4013)
-        (bold yes))
-      (justify left bottom))
-    (uuid "3f2db5a3-e65b-4642-a6c0-a54500f6a7d9"))
-
-  (text "OPTICAL / TOSLINK IO"
-    (at 759.841 586.486 0)
-    (effects
-      (font
-        (face "Arial")
-        (size 10 10)
-        (thickness 0.4013)
-        (bold yes))
-      (justify left bottom))
-    (uuid "41f4e642-9f10-4f31-bec6-fd7f21ce27a2"))
-
-  (text "USB IN HEADER"
-    (at 847.09 483.87 0)
-    (effects
-      (font
-        (face "Arial")
-        (size 2.0066 2.0066)
-        (thickness 0.4013)
-        (bold yes))
-      (justify right bottom))
-    (uuid "62ebddee-2010-4ea4-a8b5-3a4de97fdc33"))
-
-  (text "5V PRIORITY SWITCHOVER\n+ INRUSH LIMITING"
-    (at 1098.804 219.456 0)
-    (effects
-      (font
-        (face "Arial")
-        (size 10 10)
-        (thickness 0.2997)
-        (bold yes))
-      (justify bottom))
-    (uuid "68d91a8f-67d1-411b-9ea0-6110f49bda36"))
-
-  (text "T-DSP Desktop Soundcard"
-    (at 332.486 121.412 0)
-    (effects
-      (font
-        (face "Arial")
-        (size 30 30)
-        (thickness 1.0008)
-        (bold yes))
-      (justify left bottom))
-    (uuid "70ffc172-3ff6-47f2-b76b-25da0fccaaa7"))
-
-  (text "USB IN HEADER"
-    (at 849.63 245.11 0)
-    (effects
-      (font
-        (face "Arial")
-        (size 2.0066 2.0066)
-        (thickness 0.4013)
-        (bold yes))
-      (justify right bottom))
-    (uuid "711fd844-0333-42bd-9b97-1e6ab2959621"))
 
   (text "Low-Jitter Audio Clock"
     (at 1006.348 1013.968 0)
@@ -38006,50 +37788,6 @@
         (bold yes))
       (justify left bottom))
     (uuid "72ce8273-ee8c-47b7-bc19-f3fb7a761085"))
-
-  (text "ETHERNET"
-    (at 171.45 1132.84 0)
-    (effects
-      (font
-        (face "Arial")
-        (size 10 10)
-        (thickness 0.4013)
-        (bold yes))
-      (justify left bottom))
-    (uuid "791bcf36-5e48-4989-9fd2-45e25568509b"))
-
-  (text "HAT MOUNTING POINTS"
-    (at 1026.795 868.045 0)
-    (effects
-      (font
-        (face "Arial")
-        (size 10 10)
-        (thickness 0.4013)
-        (bold yes))
-      (justify left bottom))
-    (uuid "8104a1c9-2a2e-4106-8d2a-60f783d2f6a1"))
-
-  (text "MECHANICAL"
-    (at 1101.09 622.3 0)
-    (effects
-      (font
-        (face "Arial")
-        (size 10 10)
-        (thickness 0.4013)
-        (bold yes))
-      (justify left bottom))
-    (uuid "856a96db-125b-4878-920b-7322583021ce"))
-
-  (text "OPTICAL / TOSLINK IO"
-    (at 154.051 1022.096 0)
-    (effects
-      (font
-        (face "Arial")
-        (size 10 10)
-        (thickness 0.4013)
-        (bold yes))
-      (justify left bottom))
-    (uuid "8a4ebdd5-dcb7-4719-a35e-141afce26522"))
 
   (text "MIDI IN"
     (at 804.926 768.096 0)
@@ -38073,17 +37811,6 @@
       (justify right bottom))
     (uuid "998291b2-c80e-47d7-9bfe-f9881e1ab0a7"))
 
-  (text "AUDIO MODULE"
-    (at 229.362 418.338 0)
-    (effects
-      (font
-        (face "Arial")
-        (size 10 10)
-        (thickness 0.4013)
-        (bold yes))
-      (justify left bottom))
-    (uuid "9cb5b32c-6a97-4c5f-b2a3-98f5e3b82a28"))
-
   (text "MIDI"
     (at 872.49 764.54 0)
     (effects
@@ -38095,87 +37822,6 @@
       (justify right bottom))
     (uuid "a4360bc0-7077-4348-b746-9a857c49ac54"))
 
-  (text "https://www.pcbway.com/blog/PCB_Design_Tutorial/How_to_make_your_own_ESP32_breakout_board_with_minimal_circuit.html"
-    (at 116.84 337.82 0)
-    (effects
-      (font
-        (face "Arial")
-        (size 1.27 1.27))
-      (justify left bottom))
-    (uuid "a9b4d3fa-4ca9-416c-91c4-344b1974ef74"))
-
-  (text "TEENSY 4"
-    (at 134.62 186.69 0)
-    (effects
-      (font
-        (face "Arial")
-        (size 10 10)
-        (thickness 0.4013)
-        (bold yes))
-      (justify left bottom))
-    (uuid "b53a685a-adc3-4298-8b8d-8a078d76108f"))
-
-  (text "PLEASE CONFIRM LEFT/RIGHT PINS"
-    (at 329.946 469.646 0)
-    (effects
-      (font
-        (size 1.27 1.27)
-        (thickness 0.254)
-        (bold yes)
-        (color 255 0 26 1)))
-    (uuid "b5d5d191-de4e-47bc-a984-335cf70f4d99"))
-
-  (text "USB C Option"
-    (at 744.22 209.55 0)
-    (effects
-      (font
-        (face "Arial")
-        (size 2.0066 2.0066)
-        (thickness 0.4013)
-        (bold yes))
-      (justify right bottom))
-    (uuid "b9e2f0f9-0526-4e77-a7dd-7bb0053d83c9"))
-
-  (text "RGB LED + HEADER"
-    (at 471.17 423.418 0)
-    (effects
-      (font
-        (face "Arial")
-        (size 10 10)
-        (thickness 0.4013)
-        (bold yes))
-      (justify left bottom))
-    (uuid "c5935150-9af2-4fcc-9aef-d2936457fa5d"))
-
-  (text "3 PIN MIDI"
-    (at 939.8 763.27 0)
-    (effects
-      (font
-        (face "Arial")
-        (size 2.0066 2.0066)
-        (thickness 0.4013)
-        (bold yes))
-      (justify right bottom))
-    (uuid "c73a0ee5-5635-4612-b3a3-da98c85b3c11"))
-
-  (text "MIDI HEADER"
-    (at 808.99 824.23 0)
-    (effects
-      (font
-        (face "Arial")
-        (size 2.0066 2.0066)
-        (thickness 0.4013)
-        (bold yes))
-      (justify right bottom))
-    (uuid "ca53a5f1-f074-4f69-9713-dfae902499b4"))
-
-  (text "KiCad 8-Layer Stackup:\nF.Cu    - TOP: Components, ANALOG routes to jacks, ground fill\nIn1.Cu  - GND: Solid ground plane\nIn2.Cu  - SIG1: TDM/high-speed digital, ground fill\nIn3.Cu  - GND: Solid ground plane (isolation!)\nIn4.Cu  - SIG2: More TDM/digital signals, ground fill\nIn5.Cu  - PWR: Power planes (3.3V/5V)\nIn6.Cu  - GND: Solid ground plane\nB.Cu    - BOTTOM: Components, ANALOG routes to jacks, ground fill"
-    (at 331.216 1585.214 0)
-    (effects
-      (font
-        (size 7.62 7.62)))
-    (uuid "cb2342b2-9dcc-4c09-924a-7e876a805905"))
-
   (text "MIDI circuit from TeensyMIDIAudio project."
     (at 781.05 810.26 0)
     (effects
@@ -38184,17 +37830,6 @@
         (size 1.27 1.27))
       (justify left bottom))
     (uuid "ceedbf97-9796-4ab0-9397-246034698e12"))
-
-  (text "USB C DEVICE PORT"
-    (at 652.145 197.739 0)
-    (effects
-      (font
-        (face "Arial")
-        (size 10 10)
-        (thickness 0.2997)
-        (bold yes))
-      (justify left bottom))
-    (uuid "d391f469-f893-4421-936e-078abaa681f7"))
 
   (text "MIDI OUT"
     (at 867.41 768.35 0)
@@ -38207,58 +37842,124 @@
       (justify right bottom))
     (uuid "d889acc3-bbda-4edc-b62d-d298db301ad6"))
 
-  (text "Changed to  SPH0645LM4H-B for Target use: \nVoice/audio capture (speech, speakerphone, voice assistants, etc.)"
-    (at 268.732 645.414 0)
+  (text "TEENSY 4.1 - series terminations, SPI link to S3, CAN3, program lines"
+    (at 90 195 0)
     (effects
       (font
-        (size 1.27 1.27)
-        (thickness 0.254)
-        (bold yes)
-        (color 255 60 3 1)))
-    (uuid "e3a3ba0f-7f67-4f00-a1b2-02caa46b797e"))
+        (size 3 3)))
+    (uuid "1778f3fb-e106-4e3f-a633-9078aff30b6b"))
 
-  (text "POWER SUPPLY"
-    (at 1061.466 1104.9 0)
+  (text "SK6812 STATUS LEDs - 5V level shifter IC1, chain continues to header (TEENSY_LED_OUT / ESP32_LED_OUT)"
+    (at 440 425 0)
     (effects
       (font
-        (size 5.08 5.08)
-        (thickness 0.4013)
-        (bold yes))
-      (justify left bottom))
-    (uuid "e3fd1c4f-86ef-4880-ae44-43869913d78e"))
+        (size 3 3)))
+    (uuid "09e35d19-0edb-4dac-b7d6-d4e9c274be64"))
 
-  (text "USB A HOST PORT"
-    (at 767.08 415.29 0)
+  (text "TDM BUS BUFFERS - Teensy I2S1 -> TDM1 / TDM2 (74LVC2G125). Slave-clock option: buffer ~OE + bypass jumpers, see change-map section 8"
+    (at 480 668 0)
     (effects
       (font
-        (face "Arial")
-        (size 10 10)
-        (thickness 0.2997)
-        (bold yes))
-      (justify left bottom))
-    (uuid "e5519da9-f9c2-4caa-a3a5-8244b4d77412"))
+        (size 3 3)))
+    (uuid "9904b72e-34f9-414f-8746-f7af24888565"))
 
-  (text "ESP32 S3"
-    (at -254.762 556.514 0)
+  (text "MIDI IN / OUT / THRU - H11L1 opto + 74HCT2G17 buffer. Jack-level signals go to header J2 (MIDI_IN/OUT/THRU_4/5)"
+    (at 770 763 0)
     (effects
       (font
-        (face "Arial")
-        (size 10 10)
-        (thickness 0.4013)
-        (bold yes))
-      (justify left bottom))
-    (uuid "f20f9dc2-68d0-4235-83be-5c5c99f5d1d7"))
+        (size 3 3)))
+    (uuid "f08f7ffd-dd3c-4ed8-98e5-5b87b01b3a36"))
 
-  (text "I2S BUFFER + EXPANSION PORTS"
-    (at 433.07 624.586 0)
+  (text "3.3V ANALOG RAIL - LT3045 500 mA ultra-low-noise LDO (SET 33k = 3.3 V). Feeds buffers, pull-ups, header 3.3V pins. Teensy 3V3 is NOT connected to this rail."
+    (at 585 988 0)
     (effects
       (font
-        (face "Arial")
-        (size 10 10)
-        (thickness 0.4013)
-        (bold yes))
-      (justify left bottom))
-    (uuid "f52a099c-c611-49a5-b33f-1797851d35a2"))
+        (size 3 3)))
+    (uuid "d0d844b7-0934-4bbc-b7ec-03c5b47b094d"))
+
+  (text "MCLK SOURCE - Y1 24.576 MHz (512 fs) feeds MCLK1 via R61; Teensy pin 23 reaches MCLK1 via R7. EXTERNAL-MCLK BUILD: populate R59 (Y1 on), DNP R60; firmware must set IOMUXC_GPR_GPR1 SAI1_MCLK_DIR=0 so pin 23 is an input. DEFAULT BUILD (no firmware yet): populate R60 (Y1 standby), DNP R59; Teensy drives MCLK1. Never both."
+    (at 1005 1012 0)
+    (effects
+      (font
+        (size 2 2)))
+    (uuid "1651cdb1-1ccd-41e6-847b-e8753a76b9ee"))
+
+  (text "5V INPUT MUX - TPS2116: VIN1 = header 5V_IN (priority), VIN2 = Teensy VUSB (cut the VUSB-VIN pad on the Teensy). VOUT = 5V rail -> Teensy VIN, buck, LT3045"
+    (at 1050 260 0)
+    (effects
+      (font
+        (size 3 3)))
+    (uuid "10f89715-10bb-4090-ab4e-fd07117f64bb"))
+
+  (text "3.3V RAIL DECOUPLING"
+    (at 285 650 0)
+    (effects
+      (font
+        (size 3 3)))
+    (uuid "7b7f9b0b-c1bb-4c35-b48f-af31c8c971e6"))
+
+  (text "3.3V RAIL DECOUPLING"
+    (at 655 703 0)
+    (effects
+      (font
+        (size 3 3)))
+    (uuid "930747d3-579c-4d65-bef5-a1cc0e350641"))
+
+  (text "ESP32-S3 - WROOM-1-N16R2 (PCB antenna). IO4/6/7 = I2S master -> mux, IO16/IO35 = BT UART, IO46 = LED chain, IO19/20 = USB -> header, UART0 -> Teensy Serial7 + header"
+    (at -310 583 0)
+    (effects
+      (font
+        (size 3 3)))
+    (uuid "5ea7a89c-d933-4b41-a047-3d87620b56cf"))
+
+  (text "3.3V_DIG BUCK - AP63203 2 A (S3, BT, SRC, mux, isolator) + 5V input decoupling. EN pulled up by R66."
+    (at -320 770 0)
+    (effects
+      (font
+        (size 3 3)))
+    (uuid "8f8daa61-df1e-4ca0-8aaf-ed57ce6efa59"))
+
+  (text "ISOLATED DMX / RS-485 - ISO7762DW (A,B forward; F reverse; E unused) + THVD1450 + TEA1-0505 isolated 5V. DMX_A/B/GND/5V_ISO go to header J4; XLR on the backplane."
+    (at -290 863 0)
+    (effects
+      (font
+        (size 3 3)))
+    (uuid "e21a09e9-fcfe-4e48-9fc8-aa8907c1eb46"))
+
+  (text "BLUETOOTH SINK - IDC777-1 (CONSIGNED part). I2S master into mux U21. UART to S3, RST/SYS_CTRL from SRC GPO1/GPO2, R72 = SYS_CTRL pulldown. Antenna end at a 100 mm board edge, copper-free keepout all layers."
+    (at 1295 373 0)
+    (effects
+      (font
+        (size 3 3)))
+    (uuid "633dc3df-e7c4-4215-879c-c04579b5f89e"))
+
+  (text "SRC4382 ASRC (CONSIGNED part) + 1.8V LDO. Port A <- mux (slave). Port B <-> Teensy I2S2 (4_BCLK2/3_LRCLK2/5_IN2/2_OUT2). GPO1..4 = BT_RST, BT_SYS_CTRL, BT_S3_SEL, AUX_SEL. ~RST = ESP32_EN. RX1-4 / TX pairs -> header J3."
+    (at 1445 436 0)
+    (effects
+      (font
+        (size 3 3)))
+    (uuid "66264185-a624-4c16-aca4-93d97a470cc3"))
+
+  (text "I2S SOURCE MUX - U21: BT vs S3 (BT_S3_SEL). U23: U21 vs AUX header input (AUX_SEL) -> SRC Port A. One source at a time, no mixing."
+    (at 1598 558 0)
+    (effects
+      (font
+        (size 3 3)))
+    (uuid "c9b15b9b-877c-4b63-81bc-4e2f5c8025ff"))
+
+  (text "EDGE HEADERS - J1/J2 Teensy domain, J3/J4 S3 domain. Two 2x22 side by side per 60.96 mm edge. Pin map: documentation/core-spin2-change-map.md section 13. RESERVED pins carry no-connect flags."
+    (at 1330 858 0)
+    (effects
+      (font
+        (size 3 3)))
+    (uuid "ae9668ba-c44d-48d1-9455-98fb05c482c7"))
+
+  (text "MOUNTING HOLES / PANEL TABS"
+    (at 1020 618 0)
+    (effects
+      (font
+        (size 3 3)))
+    (uuid "f0852fd6-9a32-4866-9c33-8c1d5015310d"))
 
   (label "DMX_RO_ISO"
     (at -224.79 924.56 0)
@@ -43647,24 +43348,6 @@
 
   (global_label "3.3V"
     (shape passive)
-    (at 302.26 687.07 0)
-    (effects
-      (font
-        (size 1.27 1.27))
-      (justify left))
-    (uuid "84341510-f782-460d-9bb2-d271c4151d64"))
-
-  (global_label "3.3V"
-    (shape passive)
-    (at 302.26 662.94 0)
-    (effects
-      (font
-        (size 1.27 1.27))
-      (justify left))
-    (uuid "15ae4dd2-f688-4f19-a1a9-234d7ed94bbd"))
-
-  (global_label "3.3V"
-    (shape passive)
     (at 1055.37 1120.14 180)
     (effects
       (font
@@ -45256,7 +44939,6 @@
       (justify left))
     (uuid "0ccbf056-5737-4b3f-88bb-851bb8815a6b"))
 
-
   (symbol
     (lib_id "Device:R")
     (at 1066.8 1041.4 0)
@@ -45788,14 +45470,16 @@
       (effects
         (font
           (size 1.27 1.27))))
+    (property "LCSC" "C15850"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
     (pin "1"
       (uuid "9af3be07-1ed8-4fd3-9844-6fdc4cd2496f"))
     (pin "2"
       (uuid "11c5ddfd-78be-4348-8cd5-6aadaae0f4a0"))
-        (property "LCSC" "C15850"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
     (instances
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
@@ -46688,14 +46372,16 @@
       (effects
         (font
           (size 1.27 1.27))))
+    (property "LCSC" "C49678"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
     (pin "1"
       (uuid "ba37590f-6a15-4492-9ee7-5c420a802f11"))
     (pin "2"
       (uuid "7d347976-faa5-41ea-84e5-6894de6ec6fe"))
-        (property "LCSC" "C49678"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
     (instances
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
@@ -46749,6 +46435,18 @@
       (effects
         (font
           (size 1.27 1.27))))
+    (property "LCSC" "C6159263"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "LCSC_MPN" "ASE-24.576MHZ-LC-T"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
     (pin "4"
       (uuid "8b50f5ad-c812-4508-bee3-2606741ad8c6"))
     (pin "2"
@@ -46757,14 +46455,6 @@
       (uuid "9425f9a1-962f-40aa-bcfd-dcd084750b9d"))
     (pin "3"
       (uuid "e5c8ee0d-d377-4dab-813b-4a36d7c8bbfb"))
-        (property "LCSC" "C6159263"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-        (property "LCSC_MPN" "ASE-24.576MHZ-LC-T"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
     (instances
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
@@ -47130,103 +46820,6 @@
 
   (symbol
     (lib_id "Device:R")
-    (at 472.44 234.95 90)
-    (mirror x)
-    (unit 1)
-    (in_bom yes)
-    (on_board no)
-    (dnp no)
-    (uuid "22230e89-38f1-4c43-a6e1-75f08eb5fc80")
-    (property "Reference" "R53"
-      (at 486.41 234.95 90)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 0.9906 0.9906))))
-    (property "Value" "10k"
-      (at 490.855 234.95 90)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
-      (at 472.44 233.172 90)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Datasheet" ""
-      (at 472.44 234.95 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Description" "10kΩ ±1% 125mW 0805 Thick Film Resistor"
-      (at 472.44 234.95 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Package / Case" "R0805"
-      (at 472.44 234.95 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "LCSC" "C17414"
-      (at 472.44 234.95 90)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "LCSC TYPE" "SMD"
-      (at 472.44 234.95 90)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "LCSC_MPN" "0805W8F1002T5E"
-      (at 472.44 234.95 90)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "LCSC_Manufacturer" "UNI-ROYAL"
-      (at 472.44 234.95 90)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (pin "1"
-      (uuid "3f3d8ebd-e7b5-4b23-a110-999605d19591"))
-    (pin "2"
-      (uuid "4a4af4e5-1ef2-4c61-b712-27ff640c47b7"))
-    (instances
-      (project "t-dsp_core"
-        (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
-          (reference "R53")
-          (unit 1)))))
-
-  (symbol
-    (lib_id "Device:R")
     (at 191.77 226.06 90)
     (unit 1)
     (in_bom yes)
@@ -47466,18 +47059,22 @@
       (effects
         (font
           (size 1.27 1.27))))
+    (property "LCSC" "C113012"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "LCSC_MPN" "BLM18BA121SN1D"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
     (pin "2"
       (uuid "a062dc2a-1a9a-4f77-be27-ff146343511e"))
     (pin "1"
       (uuid "16c5d6e5-bd22-493b-b97c-5163dd19d0ab"))
-        (property "LCSC" "C113012"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-        (property "LCSC_MPN" "BLM18BA121SN1D"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
     (instances
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
@@ -48014,60 +47611,6 @@
           (reference "C3")
           (unit 1)))))
 
-  (symbol
-    (lib_id "TEENSY_4.0_PCM5242-rescue:GND-power")
-    (at 295.91 694.69 0)
-    (unit 1)
-    (in_bom no)
-    (on_board no)
-    (dnp yes)
-    (uuid "28c5df5a-bf22-47cc-987f-c4132320f351")
-    (property "Reference" "#PWR020"
-      (at 295.91 701.04 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Value" "GND"
-      (at 293.37 697.23 0)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Footprint" ""
-      (at 295.91 694.69 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Datasheet" ""
-      (at 295.91 694.69 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Description" ""
-      (at 295.91 694.69 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (pin "1"
-      (uuid "fcb70335-cde7-4e1f-88d9-7a6c671dc34c"))
-    (instances
-      (project "t-dsp_core"
-        (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
-          (reference "#PWR020")
-          (unit 1)))))
 
   (symbol
     (lib_id "power:GND")
@@ -48374,95 +47917,6 @@
           (unit 1)))))
 
   (symbol
-    (lib_id "Mechanical:MountingHole_Pad")
-    (at 1032.51 890.27 0)
-    (unit 1)
-    (in_bom no)
-    (on_board no)
-    (dnp yes)
-    (fields_autoplaced)
-    (uuid "37e62073-1e53-436f-bb41-4d0560dbf27a")
-    (property "Reference" "H1"
-      (at 1035.05 887.7299 0)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))
-        (justify left)))
-    (property "Value" "MountingHole_Pad"
-      (at 1035.05 890.2699 0)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))
-        (justify left)))
-    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad"
-      (at 1032.51 890.27 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Datasheet" ""
-      (at 1032.51 890.27 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Description" "Mounting Hole with connection"
-      (at 1032.51 890.27 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "LCSC TYPE" ""
-      (at 1032.51 890.27 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Package / Case" "HOLE"
-      (at 1032.51 890.27 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "LCSC_MPN" ""
-      (at 1032.51 890.27 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "LCSC_Manufacturer" ""
-      (at 1032.51 890.27 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (pin "1"
-      (uuid "dc81ca13-375b-4d4c-ab71-90d724d31a1d"))
-    (instances
-      (project "t-dsp_core"
-        (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
-          (reference "H1")
-          (unit 1)))))
-
-  (symbol
     (lib_id "Device:C")
     (at 1570.99 492.76 0)
     (unit 1)
@@ -48507,14 +47961,16 @@
       (effects
         (font
           (size 1.27 1.27))))
+    (property "LCSC" "C15850"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
     (pin "2"
       (uuid "f3e7725a-4ac0-4f6d-a955-e08250ecd99a"))
     (pin "1"
       (uuid "947ffb9a-384a-48fb-a7ac-7ff557f37f07"))
-        (property "LCSC" "C15850"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
     (instances
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
@@ -48566,6 +48022,18 @@
       (effects
         (font
           (size 1.27 1.27))))
+    (property "LCSC" "C2859648"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "LCSC_MPN" "ISO7762DW"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
     (pin "6"
       (uuid "88703376-1f01-4b4e-bcd4-4c3c556b40ad"))
     (pin "8"
@@ -48598,14 +48066,6 @@
       (uuid "579369cc-5019-483f-9514-5b9e5743f468"))
     (pin "9"
       (uuid "7b933879-9e1e-402b-96e8-07d19211fd71"))
-        (property "LCSC" "C2859648"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-        (property "LCSC_MPN" "ISO7762DW"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
     (instances
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
@@ -48710,102 +48170,6 @@
           (unit 1)))))
 
   (symbol
-    (lib_id "TEENSY_4.0_ESP32_AUDIO-rescue:C_Small-Device")
-    (at 295.91 689.61 0)
-    (unit 1)
-    (in_bom no)
-    (on_board no)
-    (dnp yes)
-    (uuid "38ee68cb-b257-4e8b-854f-806d04caf6dd")
-    (property "Reference" "C11"
-      (at 298.2468 688.4416 0)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))
-        (justify left)))
-    (property "Value" "0.1uF"
-      (at 298.2468 690.753 0)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))
-        (justify left)))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
-      (at 295.91 689.61 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Datasheet" ""
-      (at 295.91 689.61 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Description" ""
-      (at 295.91 689.61 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Package / Case" "C0805"
-      (at 295.91 689.61 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "LCSC TYPE" ""
-      (at 295.91 689.61 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "LCSC_MPN" ""
-      (at 295.91 689.61 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "LCSC_Manufacturer" ""
-      (at 295.91 689.61 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "LCSC" "C49678"
-      (at 0 0 0)
-      (effects
-        (font
-          (size 1.27 1.27))
-        (hide yes)))
-    (pin "1"
-      (uuid "d4585aff-07db-4b18-aa9a-f34fc3324317"))
-    (pin "2"
-      (uuid "e9d64e26-ccbd-4ea1-ad34-4441a787bd73"))
-    (instances
-      (project "t-dsp_core"
-        (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
-          (reference "C11")
-          (unit 1)))))
-
-  (symbol
     (lib_id "Device:C_Small")
     (at -271.78 1009.65 0)
     (unit 1)
@@ -48850,14 +48214,16 @@
       (effects
         (font
           (size 1.27 1.27))))
+    (property "LCSC" "C15850"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
     (pin "1"
       (uuid "181e9efe-632a-4a04-b3f3-dcde5c37e20f"))
     (pin "2"
       (uuid "27e3c964-f8ae-4caa-aad0-99fa3fe24c62"))
-        (property "LCSC" "C15850"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
     (instances
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
@@ -49520,6 +48886,18 @@
       (effects
         (font
           (size 1.27 1.27))))
+    (property "LCSC" "C6068"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "LCSC_MPN" "74LVC157APW,118"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
     (pin "11"
       (uuid "623d036c-2ddb-4c38-a599-0880d365ecac"))
     (pin "9"
@@ -49552,14 +48930,6 @@
       (uuid "dbd3055a-bd6f-4425-b616-c659f2c09547"))
     (pin "16"
       (uuid "75e970dc-1940-49bc-9ff0-d0389d277641"))
-        (property "LCSC" "C6068"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-        (property "LCSC_MPN" "74LVC157APW,118"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
     (instances
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
@@ -50414,14 +49784,16 @@
       (effects
         (font
           (size 1.27 1.27))))
+    (property "LCSC" "C15850"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
     (pin "2"
       (uuid "f3a0b927-2ce0-47e2-80d3-a1737f15576f"))
     (pin "1"
       (uuid "a1eeb0e6-2c79-4fc5-b771-043030d38caa"))
-        (property "LCSC" "C15850"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
     (instances
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
@@ -50473,20 +49845,24 @@
       (effects
         (font
           (size 1.27 1.27))))
+    (property "LCSC" "C172881"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "LCSC_MPN" "SM712-02HTG"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
     (pin "1"
       (uuid "69e8e3cc-20ce-477b-a22d-79a45a58d0b7"))
     (pin "2"
       (uuid "b4f76750-b0a0-4e7a-83fb-c3a42f08fcba"))
     (pin "3"
       (uuid "d30e7773-5d94-479f-b930-a419741ac2af"))
-        (property "LCSC" "C172881"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-        (property "LCSC_MPN" "SM712-02HTG"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
     (instances
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
@@ -51771,6 +51147,18 @@
       (effects
         (font
           (size 1.27 1.27))))
+    (property "LCSC" "C2913205"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "LCSC_MPN" "ESP32-S3-WROOM-1-N16R2"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
     (pin "5"
       (uuid "1d7ead8c-c7b5-49a1-b7b4-da31a9646bef"))
     (pin "9"
@@ -51853,14 +51241,6 @@
       (uuid "d2ac526d-7249-4a72-8529-815d0cb390ee"))
     (pin "25"
       (uuid "a89f2b64-9ab2-4ae6-ab8d-138750863afd"))
-        (property "LCSC" "C2913205"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-        (property "LCSC_MPN" "ESP32-S3-WROOM-1-N16R2"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
     (instances
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
@@ -51921,95 +51301,6 @@
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
           (reference "#PWR02")
-          (unit 1)))))
-
-  (symbol
-    (lib_id "Mechanical:MountingHole_Pad")
-    (at 1155.7 891.54 0)
-    (unit 1)
-    (in_bom no)
-    (on_board no)
-    (dnp yes)
-    (fields_autoplaced)
-    (uuid "73e856ce-cd09-490a-8ef0-cd7c1f3bc93d")
-    (property "Reference" "H4"
-      (at 1158.24 888.9999 0)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))
-        (justify left)))
-    (property "Value" "MountingHole_Pad"
-      (at 1158.24 891.5399 0)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))
-        (justify left)))
-    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad"
-      (at 1155.7 891.54 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Datasheet" ""
-      (at 1155.7 891.54 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Description" "Mounting Hole with connection"
-      (at 1155.7 891.54 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "LCSC TYPE" ""
-      (at 1155.7 891.54 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Package / Case" "HOLE"
-      (at 1155.7 891.54 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "LCSC_MPN" ""
-      (at 1155.7 891.54 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "LCSC_Manufacturer" ""
-      (at 1155.7 891.54 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (pin "1"
-      (uuid "39e156be-9a6e-43fb-a253-2baf683baf1e"))
-    (instances
-      (project "t-dsp_core"
-        (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
-          (reference "H4")
           (unit 1)))))
 
   (symbol
@@ -52630,6 +51921,12 @@
       (effects
         (font
           (size 1.27 1.27))))
+    (property "LCSC" "CONSIGN"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
     (pin "18"
       (uuid "18dee821-3558-404e-be26-b7849d1c23cd"))
     (pin "33"
@@ -52750,10 +52047,6 @@
       (uuid "83925a6e-f903-40e8-aaf7-925fa3d40794"))
     (pin "7"
       (uuid "ab1987b6-6053-4023-ae98-c4a3bbb3f371"))
-        (property "LCSC" "CONSIGN"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
     (instances
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
@@ -53014,14 +52307,16 @@
       (effects
         (font
           (size 1.27 1.27))))
+    (property "LCSC" "C15850"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
     (pin "1"
       (uuid "119422f9-7a8f-4f2e-906e-de7527c1deec"))
     (pin "2"
       (uuid "30018cb3-c0e3-47a5-b891-610f6c1aec8f"))
-        (property "LCSC" "C15850"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
     (instances
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
@@ -53075,6 +52370,18 @@
       (effects
         (font
           (size 1.27 1.27))))
+    (property "LCSC" "C666577"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "LCSC_MPN" "LT3045EMSE#TRPBF"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
     (pin "2"
       (uuid "c772df46-f216-4a56-8f4b-f1581879829e"))
     (pin "11"
@@ -53101,14 +52408,6 @@
       (uuid "e6d3b4ee-a0f8-42d7-bba9-5dff9d210d9a"))
     (pin "7"
       (uuid "34c91cd2-377d-442a-8853-6100f3c5c259"))
-        (property "LCSC" "C666577"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-        (property "LCSC_MPN" "LT3045EMSE#TRPBF"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
     (instances
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
@@ -53259,115 +52558,20 @@
       (effects
         (font
           (size 1.27 1.27))))
+    (property "LCSC" "C15850"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
     (pin "2"
       (uuid "bde60eec-5e0f-45b8-acd0-4a062d116022"))
     (pin "1"
       (uuid "c97caf2a-0fa5-40ad-90a1-99b780094f46"))
-        (property "LCSC" "C15850"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
     (instances
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
           (reference "C151")
-          (unit 1)))))
-
-  (symbol
-    (lib_id "TEENSY_4.0_ESP32_AUDIO-rescue:C_Small-Device")
-    (at 356.87 243.84 0)
-    (unit 1)
-    (in_bom yes)
-    (on_board no)
-    (dnp no)
-    (uuid "7eca0115-f2ec-4891-85fc-4b64b86fe1e8")
-    (property "Reference" "C5"
-      (at 359.2068 242.6716 0)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))
-        (justify left)))
-    (property "Value" "0.1 uF"
-      (at 359.2068 244.983 0)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))
-        (justify left)))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
-      (at 356.87 243.84 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Datasheet" ""
-      (at 356.87 243.84 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Description" "100nF ±10% 50V Ceramic Capacitor X7R 0805 (100nF = 0.1uF)"
-      (at 356.87 243.84 0)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Package / Case" "C0805"
-      (at 356.87 243.84 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "LCSC" "C49678"
-      (at 356.87 243.84 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "LCSC TYPE" "SMD"
-      (at 356.87 243.84 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "LCSC_MPN" "CC0805KRX7R9BB104"
-      (at 356.87 243.84 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "LCSC_Manufacturer" "YAGEO"
-      (at 356.87 243.84 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (pin "1"
-      (uuid "393f4d22-8ffb-4a4a-83f8-ea023244890c"))
-    (pin "2"
-      (uuid "d4bf077a-c830-4fc6-9851-ef1bf881646c"))
-    (instances
-      (project "t-dsp_core"
-        (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
-          (reference "C5")
           (unit 1)))))
 
   (symbol
@@ -53456,14 +52660,16 @@
       (effects
         (font
           (size 1.27 1.27))))
+    (property "LCSC" "C17617"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
     (pin "1"
       (uuid "e550401f-4c56-4366-a5da-61ed6e25c708"))
     (pin "2"
       (uuid "6917dd0f-2a13-4cfa-a38c-5aebd17e7f78"))
-        (property "LCSC" "C17617"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
     (instances
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
@@ -54473,6 +53679,18 @@
       (effects
         (font
           (size 1.27 1.27))))
+    (property "LCSC" "C2861386"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "LCSC_MPN" "TLV75718PDRVR"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
     (pin "3"
       (uuid "1f77fc49-ee17-4b39-b492-a46d70ecab61"))
     (pin "1"
@@ -54487,14 +53705,6 @@
       (uuid "bf98dcf2-a884-4cf1-b746-4ada19b6db63"))
     (pin "2"
       (uuid "6092a5bd-bfb0-441e-b89e-972e224da2fb"))
-        (property "LCSC" "C2861386"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-        (property "LCSC_MPN" "TLV75718PDRVR"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
     (instances
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
@@ -54645,14 +53855,16 @@
       (effects
         (font
           (size 1.27 1.27))))
+    (property "LCSC" "C15850"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
     (pin "1"
       (uuid "c3761c21-359f-4b6b-a1b3-5335b23332c3"))
     (pin "2"
       (uuid "bbc8bcca-2cf1-464d-985f-1bf38215751b"))
-        (property "LCSC" "C15850"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
     (instances
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
@@ -54905,14 +54117,16 @@
       (effects
         (font
           (size 1.27 1.27))))
+    (property "LCSC" "C49678"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
     (pin "1"
       (uuid "9dd0b867-bd91-4d13-9967-317d0f9ff65f"))
     (pin "2"
       (uuid "53d3f63b-8d48-4ad7-95a1-e95eff9a04ae"))
-        (property "LCSC" "C49678"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
     (instances
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
@@ -55062,14 +54276,16 @@
       (effects
         (font
           (size 1.27 1.27))))
+    (property "LCSC" "C49678"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
     (pin "2"
       (uuid "a9af1e6b-d8ac-4e73-9c86-5565347abb2f"))
     (pin "1"
       (uuid "190c782f-dd8e-4bca-921e-8cf3ee98ead1"))
-        (property "LCSC" "C49678"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
     (instances
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
@@ -55418,14 +54634,16 @@
       (effects
         (font
           (size 1.27 1.27))))
+    (property "LCSC" "C17634"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
     (pin "1"
       (uuid "31487d1e-1c6a-47d0-9358-b67bfdc14b08"))
     (pin "2"
       (uuid "518b3edf-f98b-4184-bb07-79c2bf3f2bc0"))
-        (property "LCSC" "C17634"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
     (instances
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
@@ -55683,14 +54901,16 @@
       (effects
         (font
           (size 1.27 1.27))))
+    (property "LCSC" "C49678"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
     (pin "1"
       (uuid "2efec011-e561-43a2-a391-327d11683c65"))
     (pin "2"
       (uuid "f59dd5c2-6dfa-44ee-b1e4-127b89e8cf84"))
-        (property "LCSC" "C49678"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
     (instances
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
@@ -56059,14 +55279,16 @@
       (effects
         (font
           (size 1.27 1.27))))
+    (property "LCSC" "C17407"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
     (pin "2"
       (uuid "01e02b15-ead4-4013-bc22-cb75b8ecd2ab"))
     (pin "1"
       (uuid "1d3020cc-4497-48b3-8938-ec7f03ecce35"))
-        (property "LCSC" "C17407"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
     (instances
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
@@ -56268,14 +55490,16 @@
       (effects
         (font
           (size 1.27 1.27))))
+    (property "LCSC" "C15850"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
     (pin "2"
       (uuid "e78d10d1-e853-44ff-8eb9-45f63de7f7a9"))
     (pin "1"
       (uuid "3d999112-287e-4e08-b2ae-f16b72610c92"))
-        (property "LCSC" "C15850"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
     (instances
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
@@ -56535,14 +55759,16 @@
       (effects
         (font
           (size 1.27 1.27))))
+    (property "LCSC" "C49678"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
     (pin "1"
       (uuid "88bcc67b-bbd8-4948-af4b-29db03034384"))
     (pin "2"
       (uuid "c75455bd-24a6-49a2-8b78-8d69363ede49"))
-        (property "LCSC" "C49678"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
     (instances
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
@@ -56594,14 +55820,16 @@
       (effects
         (font
           (size 1.27 1.27))))
+    (property "LCSC" "C17437"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
     (pin "1"
       (uuid "5c2b633c-36df-44b8-a9ee-48fb51a52979"))
     (pin "2"
       (uuid "1b8e1624-0269-4528-9ed0-897fc1d50276"))
-        (property "LCSC" "C17437"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
     (instances
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
@@ -56653,14 +55881,16 @@
       (effects
         (font
           (size 1.27 1.27))))
+    (property "LCSC" "C49678"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
     (pin "1"
       (uuid "25d5191f-7e03-4808-b10a-5db124809a33"))
     (pin "2"
       (uuid "d969acf0-9b92-4c83-93d3-4c6c8604da3b"))
-        (property "LCSC" "C49678"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
     (instances
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
@@ -56770,6 +56000,12 @@
       (effects
         (font
           (size 1.27 1.27))))
+    (property "LCSC" "CONSIGN"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
     (pin "9"
       (uuid "d4ef449e-de90-49da-88aa-e60beac89e3b"))
     (pin "23"
@@ -56866,10 +56102,6 @@
       (uuid "20cf6964-ac7f-4a17-ae86-87d6454a7b5f"))
     (pin "48"
       (uuid "8d9832d7-50c4-4523-ab9f-71794ffdf652"))
-        (property "LCSC" "CONSIGN"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
     (instances
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
@@ -56921,14 +56153,16 @@
       (effects
         (font
           (size 1.27 1.27))))
+    (property "LCSC" "C49678"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
     (pin "2"
       (uuid "0a38dc17-81e3-4173-947d-8bf825611ab4"))
     (pin "1"
       (uuid "da28ff5b-8e10-4b05-b2fe-1f00206d530d"))
-        (property "LCSC" "C49678"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
     (instances
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
@@ -57076,14 +56310,16 @@
       (effects
         (font
           (size 1.27 1.27))))
+    (property "LCSC" "C1779"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
     (pin "1"
       (uuid "fd0c608c-7003-47ea-b524-d3791dd3a034"))
     (pin "2"
       (uuid "a8293654-370d-4e7d-a85b-dd7d404b39a4"))
-        (property "LCSC" "C1779"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
     (instances
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
@@ -57238,95 +56474,6 @@
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
           (reference "R1")
-          (unit 1)))))
-
-  (symbol
-    (lib_id "Mechanical:MountingHole_Pad")
-    (at 1112.52 887.73 0)
-    (unit 1)
-    (in_bom no)
-    (on_board no)
-    (dnp yes)
-    (fields_autoplaced)
-    (uuid "bfe7f61e-af49-4e7e-a2e6-acd8891a9d24")
-    (property "Reference" "H3"
-      (at 1115.06 885.1899 0)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))
-        (justify left)))
-    (property "Value" "MountingHole_Pad"
-      (at 1115.06 887.7299 0)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))
-        (justify left)))
-    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad"
-      (at 1112.52 887.73 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Datasheet" ""
-      (at 1112.52 887.73 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Description" "Mounting Hole with connection"
-      (at 1112.52 887.73 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "LCSC TYPE" ""
-      (at 1112.52 887.73 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Package / Case" "HOLE"
-      (at 1112.52 887.73 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "LCSC_MPN" ""
-      (at 1112.52 887.73 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "LCSC_Manufacturer" ""
-      (at 1112.52 887.73 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (pin "1"
-      (uuid "eb1b757d-ee3a-4ca4-b0b9-00f46a56f3a9"))
-    (instances
-      (project "t-dsp_core"
-        (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
-          (reference "H3")
           (unit 1)))))
 
   (symbol
@@ -57506,6 +56653,12 @@
       (effects
         (font
           (size 1.27 1.27))))
+    (property "LCSC" "CONSIGN"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
     (pin "10"
       (uuid "9a2c953d-4a5a-4e1c-8327-c2f2e62b0950"))
     (pin "11"
@@ -57628,10 +56781,6 @@
       (uuid "3cafa2de-07a6-44bf-8c6d-72367466d161"))
     (pin "4"
       (uuid "5a26f653-4878-47af-aaef-bfb0c2dd0fe5"))
-        (property "LCSC" "CONSIGN"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
     (instances
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
@@ -57974,14 +57123,16 @@
       (effects
         (font
           (size 1.27 1.27))))
+    (property "LCSC" "C1525"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
     (pin "1"
       (uuid "77a36c02-e734-44c2-8ee7-9079664c12a1"))
     (pin "2"
       (uuid "c7df3388-be8c-4473-8f39-7bb464415a95"))
-        (property "LCSC" "C1525"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
     (instances
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
@@ -58033,6 +57184,18 @@
       (effects
         (font
           (size 1.27 1.27))))
+    (property "LCSC" "C6552364"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "LCSC_MPN" "TEA 1-0505HI"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
     (pin "1"
       (uuid "e715d71b-1612-4abd-a1be-4d0902c56c44"))
     (pin "2"
@@ -58041,14 +57204,6 @@
       (uuid "8ac1714e-43f8-4e01-8393-5e10c737cc9d"))
     (pin "7"
       (uuid "b5823af7-7285-43de-a044-061b99925d42"))
-        (property "LCSC" "C6552364"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-        (property "LCSC_MPN" "TEA 1-0505HI"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
     (instances
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
@@ -58197,14 +57352,16 @@
       (effects
         (font
           (size 1.27 1.27))))
+    (property "LCSC" "C45783"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
     (pin "1"
       (uuid "e60f26d6-4bf6-40f8-a561-af43c2c6eeab"))
     (pin "2"
       (uuid "cc0d3d8f-03ad-4069-8a73-aa65f5f9d8a5"))
-        (property "LCSC" "C45783"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
     (instances
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
@@ -58256,14 +57413,16 @@
       (effects
         (font
           (size 1.27 1.27))))
+    (property "LCSC" "C49678"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
     (pin "2"
       (uuid "0463b373-6491-4301-9efc-ea78245ce55e"))
     (pin "1"
       (uuid "fd6b7cff-bcef-443e-ad86-16e162d757ce"))
-        (property "LCSC" "C49678"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
     (instances
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
@@ -58566,14 +57725,16 @@
       (effects
         (font
           (size 1.27 1.27))))
+    (property "LCSC" "C6119929"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
     (pin "1"
       (uuid "4ec7880e-1002-4f1b-b60e-9b6a65f15193"))
     (pin "2"
       (uuid "67765208-9282-4eb8-94e0-a6a8c777885a"))
-        (property "LCSC" "C6119929"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
     (instances
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
@@ -59060,14 +58221,16 @@
       (effects
         (font
           (size 1.27 1.27))))
+    (property "LCSC" "C49678"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
     (pin "1"
       (uuid "3f951f40-1f8e-45a6-b532-48aeb02feae1"))
     (pin "2"
       (uuid "952284d8-78cf-4a24-81e7-684a2bfc81ac"))
-        (property "LCSC" "C49678"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
     (instances
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
@@ -59225,103 +58388,6 @@
           (unit 1)))))
 
   (symbol
-    (lib_id "Device:R")
-    (at 452.12 247.65 90)
-    (mirror x)
-    (unit 1)
-    (in_bom yes)
-    (on_board no)
-    (dnp no)
-    (uuid "d6a82d79-6222-4f5c-98d1-6e670c6a43de")
-    (property "Reference" "R19"
-      (at 466.09 247.65 90)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 0.9906 0.9906))))
-    (property "Value" "10k"
-      (at 470.535 247.65 90)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
-      (at 452.12 245.872 90)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Datasheet" ""
-      (at 452.12 247.65 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Description" "10kΩ ±1% 125mW 0805 Thick Film Resistor"
-      (at 452.12 247.65 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Package / Case" "R0805"
-      (at 452.12 247.65 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "LCSC" "C17414"
-      (at 452.12 247.65 90)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "LCSC TYPE" "SMD"
-      (at 452.12 247.65 90)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "LCSC_MPN" "0805W8F1002T5E"
-      (at 452.12 247.65 90)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "LCSC_Manufacturer" "UNI-ROYAL"
-      (at 452.12 247.65 90)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (pin "1"
-      (uuid "6b8aac9c-831f-4d0b-9af2-1fc86eb86b03"))
-    (pin "2"
-      (uuid "cb39f488-1b8d-4dd0-8c39-70d1dc0db30f"))
-    (instances
-      (project "t-dsp_core"
-        (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
-          (reference "R19")
-          (unit 1)))))
-
-  (symbol
     (lib_id "power:GND")
     (at 151.13 321.31 0)
     (unit 1)
@@ -59420,14 +58486,16 @@
       (effects
         (font
           (size 1.27 1.27))))
+    (property "LCSC" "C49678"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
     (pin "1"
       (uuid "160a5097-6921-40cf-b3db-cac6c4c53848"))
     (pin "2"
       (uuid "6a89437e-01b6-43dd-bc03-153e8e101de3"))
-        (property "LCSC" "C49678"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
     (instances
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
@@ -59529,95 +58597,6 @@
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
           (reference "C34")
-          (unit 1)))))
-
-  (symbol
-    (lib_id "Mechanical:MountingHole_Pad")
-    (at 1076.96 890.27 0)
-    (unit 1)
-    (in_bom no)
-    (on_board no)
-    (dnp yes)
-    (fields_autoplaced)
-    (uuid "df667a67-466f-44a1-956d-d0ce4cfd267a")
-    (property "Reference" "H2"
-      (at 1079.5 887.7299 0)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))
-        (justify left)))
-    (property "Value" "MountingHole_Pad"
-      (at 1079.5 890.2699 0)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))
-        (justify left)))
-    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3_DIN965_Pad"
-      (at 1076.96 890.27 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Datasheet" ""
-      (at 1076.96 890.27 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Description" "Mounting Hole with connection"
-      (at 1076.96 890.27 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "LCSC TYPE" ""
-      (at 1076.96 890.27 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Package / Case" "HOLE"
-      (at 1076.96 890.27 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "LCSC_MPN" ""
-      (at 1076.96 890.27 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "LCSC_Manufacturer" ""
-      (at 1076.96 890.27 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (pin "1"
-      (uuid "6ff2b09b-23a9-4e1d-96d0-52ab6040dd85"))
-    (instances
-      (project "t-dsp_core"
-        (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
-          (reference "H2")
           (unit 1)))))
 
   (symbol
@@ -59832,60 +58811,6 @@
           (reference "U9")
           (unit 1)))))
 
-  (symbol
-    (lib_id "TEENSY_4.0_PCM5242-rescue:GND-power")
-    (at 295.91 670.56 0)
-    (unit 1)
-    (in_bom no)
-    (on_board no)
-    (dnp yes)
-    (uuid "e67c7e39-e12f-4460-9983-61ab3e080f08")
-    (property "Reference" "#PWR019"
-      (at 295.91 676.91 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Value" "GND"
-      (at 293.37 673.1 0)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Footprint" ""
-      (at 295.91 670.56 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Datasheet" ""
-      (at 295.91 670.56 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Description" ""
-      (at 295.91 670.56 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (pin "1"
-      (uuid "0a3cca2f-3f5f-4750-b280-ae7bae0179d8"))
-    (instances
-      (project "t-dsp_core"
-        (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
-          (reference "#PWR019")
-          (unit 1)))))
 
   (symbol
     (lib_id "TEENSY_4.0_ESP32_AUDIO-rescue:C_Small-Device")
@@ -59932,14 +58857,16 @@
       (effects
         (font
           (size 1.27 1.27))))
+    (property "LCSC" "C49678"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
     (pin "1"
       (uuid "279b1642-4ac0-4d46-9696-ef10c8b7e46b"))
     (pin "2"
       (uuid "42611a6f-530b-411d-b206-0faf42bb7c1c"))
-        (property "LCSC" "C49678"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
     (instances
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
@@ -60184,14 +59111,16 @@
       (effects
         (font
           (size 1.27 1.27))))
+    (property "LCSC" "C49678"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
     (pin "1"
       (uuid "08fcaa36-8b5d-4092-b101-b6cd5345e20f"))
     (pin "2"
       (uuid "3e9eaaa8-966e-409c-9022-9b36f5b75390"))
-        (property "LCSC" "C49678"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
     (instances
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
@@ -60297,6 +59226,18 @@
       (effects
         (font
           (size 1.27 1.27))))
+    (property "LCSC" "C2671361"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "LCSC_MPN" "THVD1450DR"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
     (pin "3"
       (uuid "b4af7945-da5e-494c-9280-207fc0e21268"))
     (pin "6"
@@ -60313,14 +59254,6 @@
       (uuid "e9807c59-d4d0-4ff4-aa94-232fe8ee3502"))
     (pin "7"
       (uuid "201dbaa3-5e2f-4a9f-b430-7cafab130636"))
-        (property "LCSC" "C2671361"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-        (property "LCSC_MPN" "THVD1450DR"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
     (instances
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
@@ -60585,102 +59518,6 @@
           (unit 1)))))
 
   (symbol
-    (lib_id "TEENSY_4.0_ESP32_AUDIO-rescue:C_Small-Device")
-    (at 295.91 665.48 0)
-    (unit 1)
-    (in_bom no)
-    (on_board no)
-    (dnp yes)
-    (uuid "f628d9bf-b6da-4628-aa8b-c4ae97fc4f6b")
-    (property "Reference" "C10"
-      (at 298.2468 664.3116 0)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))
-        (justify left)))
-    (property "Value" "0.1uF"
-      (at 298.2468 666.623 0)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))
-        (justify left)))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
-      (at 295.91 665.48 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Datasheet" ""
-      (at 295.91 665.48 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Description" ""
-      (at 295.91 665.48 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Package / Case" "C0805"
-      (at 295.91 665.48 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "LCSC TYPE" ""
-      (at 295.91 665.48 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "LCSC_MPN" ""
-      (at 295.91 665.48 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "LCSC_Manufacturer" ""
-      (at 295.91 665.48 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "LCSC" "C49678"
-      (at 0 0 0)
-      (effects
-        (font
-          (size 1.27 1.27))
-        (hide yes)))
-    (pin "1"
-      (uuid "38f65d1d-7712-4043-9fc2-34d7f7cc565d"))
-    (pin "2"
-      (uuid "ca39d4d6-e1c0-476b-bfd0-2bb910666dad"))
-    (instances
-      (project "t-dsp_core"
-        (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
-          (reference "C10")
-          (unit 1)))))
-
-  (symbol
     (lib_id "SN74LVC2G125DCTR:SN74LVC2G125DCTR")
     (at 494.03 697.23 0)
     (unit 1)
@@ -60788,103 +59625,6 @@
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
           (reference "U6")
-          (unit 1)))))
-
-  (symbol
-    (lib_id "TEENSY_4.0_ESP32_AUDIO-rescue:C_Small-Device")
-    (at 356.87 210.82 0)
-    (unit 1)
-    (in_bom yes)
-    (on_board no)
-    (dnp no)
-    (uuid "f74c804c-da78-4c53-94a7-55c84957a751")
-    (property "Reference" "C4"
-      (at 359.2068 209.6516 0)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))
-        (justify left)))
-    (property "Value" "0.1 uF"
-      (at 359.2068 211.963 0)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))
-        (justify left)))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
-      (at 356.87 210.82 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Datasheet" ""
-      (at 356.87 210.82 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Description" "100nF ±10% 50V Ceramic Capacitor X7R 0805 (100nF = 0.1uF)"
-      (at 356.87 210.82 0)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "Package / Case" "C0805"
-      (at 356.87 210.82 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "LCSC" "C49678"
-      (at 356.87 210.82 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "LCSC TYPE" "SMD"
-      (at 356.87 210.82 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "LCSC_MPN" "CC0805KRX7R9BB104"
-      (at 356.87 210.82 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (property "LCSC_Manufacturer" "YAGEO"
-      (at 356.87 210.82 0)
-      (hide yes)
-      (show_name no)
-      (do_not_autoplace no)
-      (effects
-        (font
-          (size 1.27 1.27))))
-    (pin "1"
-      (uuid "db8149bc-8ec3-4feb-a2e9-03cc52b03108"))
-    (pin "2"
-      (uuid "a91b571c-fd5e-49fc-9ad1-eed000f9b894"))
-    (instances
-      (project "t-dsp_core"
-        (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
-          (reference "C4")
           (unit 1)))))
 
   (symbol
@@ -61139,14 +59879,16 @@
       (effects
         (font
           (size 1.27 1.27))))
+    (property "LCSC" "C17633"
+      (at 0 0 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
     (pin "1"
       (uuid "4fb78143-81b0-4163-81cf-3214f7d9c2cc"))
     (pin "2"
       (uuid "7380092a-b923-4178-bb2c-95008b2f1157"))
-        (property "LCSC" "C17633"
-      (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
     (instances
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
@@ -61622,14 +60364,18 @@
         (font
           (size 1.27 1.27))
         (hide yes)))
-        (property "LCSC" "C6068"
+    (property "LCSC" "C6068"
       (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-        (property "LCSC_MPN" "74LVC157APW,118"
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "LCSC_MPN" "74LVC157APW,118"
       (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
     (instances
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
@@ -61666,10 +60412,12 @@
         (font
           (size 1.27 1.27))
         (hide yes)))
-        (property "LCSC" "C49678"
+    (property "LCSC" "C49678"
       (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
     (instances
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
@@ -61706,10 +60454,12 @@
         (font
           (size 1.27 1.27))
         (hide yes)))
-        (property "LCSC" "C17407"
+    (property "LCSC" "C17407"
       (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
     (instances
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
@@ -61746,10 +60496,12 @@
         (font
           (size 1.27 1.27))
         (hide yes)))
-        (property "LCSC" "C17414"
+    (property "LCSC" "C17414"
       (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
     (instances
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
@@ -61786,14 +60538,18 @@
         (font
           (size 1.27 1.27))
         (hide yes)))
-        (property "LCSC" "C780769"
+    (property "LCSC" "C780769"
       (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-        (property "LCSC_MPN" "AP63203WU-7"
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "LCSC_MPN" "AP63203WU-7"
       (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
     (instances
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
@@ -61830,14 +60586,18 @@
         (font
           (size 1.27 1.27))
         (hide yes)))
-        (property "LCSC" "C92960"
+    (property "LCSC" "C92960"
       (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
-        (property "LCSC_MPN" "NRS4018T3R3MDGJ"
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "LCSC_MPN" "NRS4018T3R3MDGJ"
       (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
     (instances
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
@@ -61874,10 +60634,12 @@
         (font
           (size 1.27 1.27))
         (hide yes)))
-        (property "LCSC" "C49678"
+    (property "LCSC" "C49678"
       (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
     (instances
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
@@ -61914,10 +60676,12 @@
         (font
           (size 1.27 1.27))
         (hide yes)))
-        (property "LCSC" "C45783"
+    (property "LCSC" "C45783"
       (at 0 0 0)
-      (effects (font (size 1.27 1.27)) (hide yes))
-    )
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
     (instances
       (project "t-dsp_core"
         (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
@@ -62356,6 +61120,166 @@
           (reference "#FLG09")
           (unit 1)))))
 
+  (symbol
+    (lib_id "Device:R")
+    (at 452.12 247.65 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "a9934157-6260-4402-9846-cbbb82ab2fdc")
+    (property "Reference" "R19"
+      (at 452.12 243.84 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "10k"
+      (at 452.12 251.46 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+      (at 452.12 247.65 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 452.12 247.65 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+        (property "LCSC" "C17414"
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (hide yes))
+    )
+    (instances
+      (project "t-dsp_core"
+        (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
+          (reference "R19")
+          (unit 1)))))
+
+  (symbol
+    (lib_id "Device:R")
+    (at 472.44 234.95 90)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "fe75a629-3ff3-4624-85cf-65bf8c46fda8")
+    (property "Reference" "R53"
+      (at 472.44 231.14 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "10k"
+      (at 472.44 238.76 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+      (at 472.44 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 472.44 234.95 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+        (property "LCSC" "C17414"
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (hide yes))
+    )
+    (instances
+      (project "t-dsp_core"
+        (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
+          (reference "R53")
+          (unit 1)))))
+
+  (symbol
+    (lib_id "Device:C")
+    (at 356.87 210.82 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "e787ae1a-0c03-492c-82e0-c0132a8bed4a")
+    (property "Reference" "C4"
+      (at 356.87 207.01 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "0.1 uF"
+      (at 356.87 214.63 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+      (at 356.87 210.82 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 356.87 210.82 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+        (property "LCSC" "C49678"
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (hide yes))
+    )
+    (instances
+      (project "t-dsp_core"
+        (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
+          (reference "C4")
+          (unit 1)))))
+
+  (symbol
+    (lib_id "Device:C")
+    (at 356.87 243.84 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "35cc717e-3904-41c6-9852-13ba9a92be60")
+    (property "Reference" "C5"
+      (at 356.87 240.03 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "0.1 uF"
+      (at 356.87 247.65 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+      (at 356.87 243.84 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 356.87 243.84 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+        (property "LCSC" "C49678"
+      (at 0 0 0)
+      (effects (font (size 1.27 1.27)) (hide yes))
+    )
+    (instances
+      (project "t-dsp_core"
+        (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
+          (reference "C5")
+          (unit 1)))))
+
   (rectangle
     (start 1008.38 845.82)
     (end 1228.09 913.13)
@@ -62564,89 +61488,4 @@
   (sheet_instances
     (path "/"
       (page "1")))
-
-  (text "TEENSY 4.1 - series terminations, SPI link to S3, CAN3, program lines"
-    (at 90 195 0)
-    (effects (font (size 3 3)))
-    (uuid "1778f3fb-e106-4e3f-a633-9078aff30b6b")
-  )
-  (text "SK6812 STATUS LEDs - 5V level shifter IC1, chain continues to header (TEENSY_LED_OUT / ESP32_LED_OUT)"
-    (at 440 425 0)
-    (effects (font (size 3 3)))
-    (uuid "09e35d19-0edb-4dac-b7d6-d4e9c274be64")
-  )
-  (text "TDM BUS BUFFERS - Teensy I2S1 -> TDM1 / TDM2 (74LVC2G125). Slave-clock option: buffer ~OE + bypass jumpers, see change-map section 8"
-    (at 480 668 0)
-    (effects (font (size 3 3)))
-    (uuid "9904b72e-34f9-414f-8746-f7af24888565")
-  )
-  (text "MIDI IN / OUT / THRU - H11L1 opto + 74HCT2G17 buffer. Jack-level signals go to header J2 (MIDI_IN/OUT/THRU_4/5)"
-    (at 770 763 0)
-    (effects (font (size 3 3)))
-    (uuid "f08f7ffd-dd3c-4ed8-98e5-5b87b01b3a36")
-  )
-  (text "3.3V ANALOG RAIL - LT3045 500 mA ultra-low-noise LDO (SET 33k = 3.3 V). Feeds buffers, pull-ups, header 3.3V pins. Teensy 3V3 is NOT connected to this rail."
-    (at 585 988 0)
-    (effects (font (size 3 3)))
-    (uuid "d0d844b7-0934-4bbc-b7ec-03c5b47b094d")
-  )
-  (text "MCLK SOURCE - Y1 24.576 MHz (512 fs) feeds MCLK1 via R61; Teensy pin 23 reaches MCLK1 via R7. EXTERNAL-MCLK BUILD: populate R59 (Y1 on), DNP R60; firmware must set IOMUXC_GPR_GPR1 SAI1_MCLK_DIR=0 so pin 23 is an input. DEFAULT BUILD (no firmware yet): populate R60 (Y1 standby), DNP R59; Teensy drives MCLK1. Never both."
-    (at 1005 1012 0)
-    (effects (font (size 2 2)))
-    (uuid "1651cdb1-1ccd-41e6-847b-e8753a76b9ee")
-  )
-  (text "5V INPUT MUX - TPS2116: VIN1 = header 5V_IN (priority), VIN2 = Teensy VUSB (cut the VUSB-VIN pad on the Teensy). VOUT = 5V rail -> Teensy VIN, buck, LT3045"
-    (at 1050 260 0)
-    (effects (font (size 3 3)))
-    (uuid "10f89715-10bb-4090-ab4e-fd07117f64bb")
-  )
-  (text "3.3V RAIL DECOUPLING"
-    (at 285 650 0)
-    (effects (font (size 3 3)))
-    (uuid "7b7f9b0b-c1bb-4c35-b48f-af31c8c971e6")
-  )
-  (text "3.3V RAIL DECOUPLING"
-    (at 655 703 0)
-    (effects (font (size 3 3)))
-    (uuid "930747d3-579c-4d65-bef5-a1cc0e350641")
-  )
-  (text "ESP32-S3 - WROOM-1-N16R2 (PCB antenna). IO4/6/7 = I2S master -> mux, IO16/IO35 = BT UART, IO46 = LED chain, IO19/20 = USB -> header, UART0 -> Teensy Serial7 + header"
-    (at -310 583 0)
-    (effects (font (size 3 3)))
-    (uuid "5ea7a89c-d933-4b41-a047-3d87620b56cf")
-  )
-  (text "3.3V_DIG BUCK - AP63203 2 A (S3, BT, SRC, mux, isolator) + 5V input decoupling. EN pulled up by R66."
-    (at -320 770 0)
-    (effects (font (size 3 3)))
-    (uuid "8f8daa61-df1e-4ca0-8aaf-ed57ce6efa59")
-  )
-  (text "ISOLATED DMX / RS-485 - ISO7762DW (A,B forward; F reverse; E unused) + THVD1450 + TEA1-0505 isolated 5V. DMX_A/B/GND/5V_ISO go to header J4; XLR on the backplane."
-    (at -290 863 0)
-    (effects (font (size 3 3)))
-    (uuid "e21a09e9-fcfe-4e48-9fc8-aa8907c1eb46")
-  )
-  (text "BLUETOOTH SINK - IDC777-1 (CONSIGNED part). I2S master into mux U21. UART to S3, RST/SYS_CTRL from SRC GPO1/GPO2, R72 = SYS_CTRL pulldown. Antenna end at a 100 mm board edge, copper-free keepout all layers."
-    (at 1295 373 0)
-    (effects (font (size 3 3)))
-    (uuid "633dc3df-e7c4-4215-879c-c04579b5f89e")
-  )
-  (text "SRC4382 ASRC (CONSIGNED part) + 1.8V LDO. Port A <- mux (slave). Port B <-> Teensy I2S2 (4_BCLK2/3_LRCLK2/5_IN2/2_OUT2). GPO1..4 = BT_RST, BT_SYS_CTRL, BT_S3_SEL, AUX_SEL. ~RST = ESP32_EN. RX1-4 / TX pairs -> header J3."
-    (at 1445 436 0)
-    (effects (font (size 3 3)))
-    (uuid "66264185-a624-4c16-aca4-93d97a470cc3")
-  )
-  (text "I2S SOURCE MUX - U21: BT vs S3 (BT_S3_SEL). U23: U21 vs AUX header input (AUX_SEL) -> SRC Port A. One source at a time, no mixing."
-    (at 1598 558 0)
-    (effects (font (size 3 3)))
-    (uuid "c9b15b9b-877c-4b63-81bc-4e2f5c8025ff")
-  )
-  (text "EDGE HEADERS - J1/J2 Teensy domain, J3/J4 S3 domain. Two 2x22 side by side per 60.96 mm edge. Pin map: documentation/core-spin2-change-map.md section 13. RESERVED pins carry no-connect flags."
-    (at 1330 858 0)
-    (effects (font (size 3 3)))
-    (uuid "ae9668ba-c44d-48d1-9455-98fb05c482c7")
-  )
-  (text "MOUNTING HOLES / PANEL TABS"
-    (at 1020 618 0)
-    (effects (font (size 3 3)))
-    (uuid "f0852fd6-9a32-4866-9c33-8c1d5015310d")
-  ))
+)
