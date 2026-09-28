@@ -467,7 +467,7 @@ DRC after placement: no shorts, no clearance errors, 499 unrouted connections (e
 | U24 buck + L1 + C153/154/R66/C130/131 + R57 | row Y 54, X 64-89 | |
 | U15 LT3045 + FL1 + C41-43/C132/133 + R58 | row Y 58.6, X 64-87 | |
 | J9 J_USB3 | X 91.6-94.4, Y 47-60 | |
-| H1-H4 | 3.2 mm NPTH at (3.5, 3.5) (96.5, 3.5) (3.5, 57.46) (96.5, 57.46) | added on the PCB only; the schematic has no H1-H4 |
+| H1-H4 | 3.2 mm NPTH, intended corners (3.5, 3.5) (96.5, 3.5) (3.5, 57.46) (96.5, 57.46) | **not yet on the PCB**: H1-H4 are in the schematic (Mechanical:MountingHole, footprint MountingHole_3.2mm_M3); run *Update PCB from Schematic* and drop them on those corners. Konnect's file-inserted holes were discarded by KiCad on load and its IPC placement was a no-op. |
 
 Known DRC leftovers: 14 courtyard overlaps against U13, all caused by the stock ESP32-S3-WROOM-1
 footprint's 15 mm antenna courtyard (the module body itself is clear); U13/U20 footprint-type

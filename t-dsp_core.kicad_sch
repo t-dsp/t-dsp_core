@@ -28291,6 +28291,78 @@
             (effects
               (font
                 (size 1.27 1.27))))))
+      (embedded_fonts no))
+    (symbol "Mechanical:MountingHole"
+      (pin_names
+        (offset 1.016))
+      (exclude_from_sim no)
+      (in_bom no)
+      (on_board yes)
+      (in_pos_files yes)
+      (duplicate_pin_numbers_are_jumpers no)
+      (property "Reference" "H"
+        (at 0 5.08 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "MountingHole"
+        (at 0 3.175 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Description" "Mounting Hole without connection"
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "ki_keywords" "mounting hole"
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "ki_fp_filters" "MountingHole*"
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (symbol "MountingHole_0_1"
+        (circle
+          (center 0 0)
+          (radius 1.27)
+          (stroke
+            (width 1.27)
+            (type default))
+          (fill
+            (type none))))
       (embedded_fonts no)))
 
   (junction
@@ -44373,6 +44445,27 @@
       (font
         (size 3 3)))
     (uuid "f0852fd6-9a32-4866-9c33-8c1d5015310d"))
+
+  (text "J_ETH: Teensy 4.1 Ethernet pads 60-65 (R+ R- T+ T- LED GND, 2 mm 2x3 on the Teensy bottom).\\nPENDING: change U1 to project_sch:Teensy4.1 in eeschema, label pins 60=ETH_R+ 61=ETH_LED 62=ETH_T- 63=ETH_T+ 64=GND 65=ETH_R-,\\nand restore pads 60-65 in Teensy41_mod3 (they exist in Teensy41.kicad_mod). Magnetics + RJ45 live on the backplane."
+    (at 560.07 300.99 0)
+    (effects
+      (font
+        (size 1.27 1.27)))
+    (uuid "5944f1e9-0a8e-4425-8298-494c9cafeeb6"))
+
+  (text "U13 = ESP32-S3-WROOM-1-N16R8 (16 MB flash + 8 MB OCTAL PSRAM, needed for Spotify/cspot stream buffering).\\nOctal PSRAM owns IO35/IO36/IO37 -> those module pins are NC. BT UART RX therefore uses IO3 (not IO35).\\nDo not substitute an R2 (quad) module without re-checking: R2 frees IO35-37 but 2 MB PSRAM is too small for Spotify."
+    (at -320.04 570.23 0)
+    (effects
+      (font
+        (size 1.27 1.27)))
+    (uuid "85c4ff6b-91ad-46d0-8150-15af47212836"))
+
+  (text "U1 Teensy 4.1 memory: fit 2x APS6404L-3SQR-SN (8 MB PSRAM each, 16 MB total, EXTMEM) on the Teensy's own bottom-side SOIC-8 pads\\nfor loop recording, echo and reverb buffers. Optional W25Q128 QSPI flash on the second pad if 8 MB PSRAM + flash is preferred.\\nPCB rule: no parts or pads on the core top side under the Teensy footprint (SOIC-8 bodies 1.2 mm tall); Teensy sits on 2.54 mm headers."
+    (at 95.25 338.14 0)
+    (effects
+      (font
+        (size 1.27 1.27)))
+    (uuid "b1497f7e-894b-4dcb-a1ac-5ffc9ad38527"))
 
   (label "DMX_RO_ISO"
     (at -224.79 924.56 0)
@@ -67933,6 +68026,150 @@
           (reference "J12")
           (unit 1)))))
 
+  (symbol
+    (lib_id "Mechanical:MountingHole")
+    (at 1029.97 640.08 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "179a311e-d44e-40b7-b3c5-ac134aaa5e1e")
+    (property "Reference" "H1"
+      (at 1029.97 636.27 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "M3 NPTH 3.2mm"
+      (at 1029.97 643.89 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+      (at 1029.97 640.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 1029.97 640.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (instances
+      (project "t-dsp_core"
+        (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
+          (reference "H1")
+          (unit 1)))))
+
+  (symbol
+    (lib_id "Mechanical:MountingHole")
+    (at 1060.45 640.08 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "612705a8-796a-4f25-b533-fee622da3836")
+    (property "Reference" "H2"
+      (at 1060.45 636.27 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "M3 NPTH 3.2mm"
+      (at 1060.45 643.89 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+      (at 1060.45 640.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 1060.45 640.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (instances
+      (project "t-dsp_core"
+        (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
+          (reference "H2")
+          (unit 1)))))
+
+  (symbol
+    (lib_id "Mechanical:MountingHole")
+    (at 1090.93 640.08 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "62002bd3-9d30-4518-8ab2-e54a3820015d")
+    (property "Reference" "H3"
+      (at 1090.93 636.27 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "M3 NPTH 3.2mm"
+      (at 1090.93 643.89 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+      (at 1090.93 640.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 1090.93 640.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (instances
+      (project "t-dsp_core"
+        (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
+          (reference "H3")
+          (unit 1)))))
+
+  (symbol
+    (lib_id "Mechanical:MountingHole")
+    (at 1121.41 640.08 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "b88f9c1a-0224-4ed1-8763-6a7e95fe69cf")
+    (property "Reference" "H4"
+      (at 1121.41 636.27 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "M3 NPTH 3.2mm"
+      (at 1121.41 643.89 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "MountingHole:MountingHole_3.2mm_M3"
+      (at 1121.41 640.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 1121.41 640.08 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (instances
+      (project "t-dsp_core"
+        (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
+          (reference "H4")
+          (unit 1)))))
+
   (rectangle
     (start 1008.38 845.82)
     (end 1228.09 913.13)
@@ -68141,19 +68378,4 @@
   (sheet_instances
     (path "/"
       (page "1")))
-
-  (text "J_ETH: Teensy 4.1 Ethernet pads 60-65 (R+ R- T+ T- LED GND, 2 mm 2x3 on the Teensy bottom).\\nPENDING: change U1 to project_sch:Teensy4.1 in eeschema, label pins 60=ETH_R+ 61=ETH_LED 62=ETH_T- 63=ETH_T+ 64=GND 65=ETH_R-,\\nand restore pads 60-65 in Teensy41_mod3 (they exist in Teensy41.kicad_mod). Magnetics + RJ45 live on the backplane."
-    (at 560.07 300.99 0)
-    (effects (font (size 1.27 1.27)))
-    (uuid "5944f1e9-0a8e-4425-8298-494c9cafeeb6")
-  )
-  (text "U13 = ESP32-S3-WROOM-1-N16R8 (16 MB flash + 8 MB OCTAL PSRAM, needed for Spotify/cspot stream buffering).\\nOctal PSRAM owns IO35/IO36/IO37 -> those module pins are NC. BT UART RX therefore uses IO3 (not IO35).\\nDo not substitute an R2 (quad) module without re-checking: R2 frees IO35-37 but 2 MB PSRAM is too small for Spotify."
-    (at -320.04 570.23 0)
-    (effects (font (size 1.27 1.27)))
-    (uuid "85c4ff6b-91ad-46d0-8150-15af47212836")
-  )
-  (text "U1 Teensy 4.1 memory: fit 2x APS6404L-3SQR-SN (8 MB PSRAM each, 16 MB total, EXTMEM) on the Teensy's own bottom-side SOIC-8 pads\\nfor loop recording, echo and reverb buffers. Optional W25Q128 QSPI flash on the second pad if 8 MB PSRAM + flash is preferred.\\nPCB rule: no parts or pads on the core top side under the Teensy footprint (SOIC-8 bodies 1.2 mm tall); Teensy sits on 2.54 mm headers."
-    (at 95.25 338.14 0)
-    (effects (font (size 1.27 1.27)))
-    (uuid "b1497f7e-894b-4dcb-a1ac-5ffc9ad38527")
-  ))
+)
