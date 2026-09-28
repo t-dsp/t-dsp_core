@@ -734,7 +734,7 @@
 	(footprint "project_fp:SOT-363_SC-70-6"
 		(layer "F.Cu")
 		(uuid "050bba2f-8c5d-441d-8688-26a73b83d5f6")
-		(at 156 181.79)
+		(at 156 181.49)
 		(descr "SOT-363, SC-70-6")
 		(tags "SOT-363 SC-70-6")
 		(property "Reference" "U9"
@@ -17884,7 +17884,7 @@
 	(footprint "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "4fb318d1-b814-4520-9311-e961d36dd2d4")
-		(at 160 184.24)
+		(at 160 183.89)
 		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C21"
@@ -19217,7 +19217,7 @@
 	(footprint "project_fp:IC_H11L1SM"
 		(layer "F.Cu")
 		(uuid "58cf284c-e173-4a4d-b98b-94e8c035edac")
-		(at 158 190.74 90)
+		(at 158 190.39 90)
 		(property "Reference" "U4"
 			(at -5.575 -4.15462 90)
 			(layer "F.SilkS")
@@ -20749,7 +20749,7 @@
 	(footprint "project_fp:SK6812-32228SMD-Reverse-Mount_mod"
 		(layer "F.Cu")
 		(uuid "5e9a3fb6-97a4-46d5-9f15-e24b35f33ec4")
-		(at 161.5 178.44)
+		(at 161.5 178.19)
 		(property "Reference" "D4"
 			(at -0.175 2.885 180)
 			(layer "F.SilkS")
@@ -35618,7 +35618,7 @@
 	(footprint "project_fp:D_SOD-123"
 		(layer "F.Cu")
 		(uuid "a8049b76-6d4d-44eb-9dfd-f37ca0ba6ae8")
-		(at 160 181.79)
+		(at 160 181.49)
 		(descr "SOD-123")
 		(tags "SOD-123")
 		(property "Reference" "D2"
@@ -38763,7 +38763,7 @@
 	(footprint "project_fp:SK6812-32228SMD-Reverse-Mount_mod"
 		(layer "F.Cu")
 		(uuid "c2ba527e-2ed1-46df-a79d-54006ab676a5")
-		(at 156.4 178.44)
+		(at 156.4 178.19)
 		(property "Reference" "D3"
 			(at -0.175 2.885 180)
 			(layer "F.SilkS")
@@ -44218,7 +44218,7 @@
 	(footprint "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
 		(layer "F.Cu")
 		(uuid "e2c7b31f-6cbd-4f9f-baee-668ad4c514f3")
-		(at 156 184.24)
+		(at 156 183.89)
 		(descr "Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal with elongated pad for handsoldering. (Body size source: https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator")
 		(tags "capacitor handsolder")
 		(property "Reference" "C16"
