@@ -718,11 +718,7 @@
       "version": 5
     },
     "net_colors": null,
-    "netclass_assignments": {
-      "5V_THIN": [
-        ".1"
-      ]
-    },
+    "netclass_assignments": null,
     "netclass_patterns": [
       {
         "netclass": ".5MM TRACE",

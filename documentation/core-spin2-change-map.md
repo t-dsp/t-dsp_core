@@ -439,6 +439,41 @@ holes and no header pads**; both are added when the header footprint is built.
 
 ---
 
+### 11.3 PCB placement as executed (2026-09-28, Konnect IPC, single-sided top assembly)
+
+Board-local coordinates (X from the left short edge, Y from the top long edge; KiCad x = 100 + X,
+y = 139.04 + Y). Everything is on F.Cu. Collision-checked against real courtyards and every Teensy pad;
+DRC after placement: no shorts, no clearance errors, 499 unrouted connections (expected).
+
+| Block | Where | Notes |
+|---|---|---|
+| U1 Teensy 4.1 | X 15.7-33.5, full height, USB end at the top edge, rot 180 | mounts on 2.54 mm headers; PSRAM on its underside |
+| Oscillator Y1/FB1/C44-46/R59-61/C129 | under the Teensy, X 23.5-30.7, Y 6-16.5 | next to Teensy pin 23 (MCLK); clear of the D+/D-/VUSB pads |
+| Teensy series Rs, SPI pull-ups, C2-C5 | under the Teensy, three columns X 20/24/28, Y 18.5-44 | clear of the USB-host pads and the PROGRAM/ON-OFF pad row; flip to B.Cu if you prefer nothing under the Teensy |
+| J2 J_TDM + U5-U8/U11 + R40-47/R55/56 + C17-20/C40 | left column X 1.5-13.5 | buffers 3 mm from the header rows |
+| J4 J_USBH, J12 J_ETH, J3 J_T | strip X 33.6-39.3 right of the Teensy, top to bottom | USB host and Ethernet opposite the Teensy's own pads |
+| C27-C30 | X 41, Y 3-17 | 3.3 V rail decoupling |
+| MIDI U4/U9/D2/R31-39/C16/C21 + J5 | X 44-75, Y 0.5-16 | J5 under U4 |
+| DMX U17/U18/U16/D6/R71/C134-139 + J10 | X 44-75, Y 8-28 | isolated side kept together; J10 at X 42-56 |
+| U13 ESP32-S3 | X 75.3-93.8, Y 0-26.5, antenna on the top edge | R67/R68/R73/PU_EN1 row at Y 28 |
+| J8 J_S3 | right edge X 94-99.5, Y 6.6-45 | |
+| U19 SRC4382 + C140-149 + U20 | X 68.7-86.4, Y 30-45 | |
+| U21/U23 mux + C146/C152 | X 87.6-93.6, Y 29-49.5 | |
+| J6 J_SPDIF, J7 J_AUX | X 39.5-68.4 / X 39.5-53.1, Y 28-40 | directly left of the SRC |
+| LED IC1/C1/C33/D3/D4/C22/C23 + J11 | X 40-64, Y 41-47.5 | D3/D4 are reverse-mount: add a 3 mm hole under each (not done) |
+| U22 IDC777 | X 40.3-63.8, bottom edge, antenna out, pads facing up | 61 mm from the S3 antenna |
+| J1 J_PWR | X 64.6-80.1, Y 41.6-46.9 | |
+| U3 TPS2116 + C12-15/C31/32/34/35 + R28-30 | row Y 49.5, X 64.5-91 | |
+| U24 buck + L1 + C153/154/R66/C130/131 + R57 | row Y 54, X 64-89 | |
+| U15 LT3045 + FL1 + C41-43/C132/133 + R58 | row Y 58.6, X 64-87 | |
+| J9 J_USB3 | X 91.6-94.4, Y 47-60 | |
+| H1-H4 | 3.2 mm NPTH at (3.5, 3.5) (96.5, 3.5) (3.5, 57.46) (96.5, 57.46) | added on the PCB only; the schematic has no H1-H4 |
+
+Known DRC leftovers: 14 courtyard overlaps against U13, all caused by the stock ESP32-S3-WROOM-1
+footprint's 15 mm antenna courtyard (the module body itself is clear); U13/U20 footprint-type
+attribute mismatches and the WSON thermal-via 0.2 mm drills, both inherited footprint properties.
+Konnect cannot flip footprints to B.Cu, so the board is single-sided as placed.
+
 ## 12. Edit order and verification
 
 1. Commit the July 27 work as-is (BT/ASRC block + libraries) so it is not only in the
@@ -700,8 +735,8 @@ Not done / next:
    - The SRC accepts either clock; the TDM codecs on the backplane must accept the chosen
      MCLK ratio (512·fs with Y1, 256·fs with the Teensy).
 2. Raw-GPIO renames (legacy names SWITCH/OUTPUTA/CS/… → S3_IOnn, T_nn) — cosmetic, later.
-3. Header footprints for the PCB, board outline holes, antenna keepouts, Konnect
-   `layer_count`, then *Update PCB from Schematic* in KiCad.
+3. ~~Header footprints for the PCB, board outline holes~~ **done 2026-09-28 (section 11.3)**: PCB synced
+   from the schematic and fully placed; next are antenna keep-out zones, GND pours and routing.
 4. Symbol library sync (see residual ERC).
 
 ### 14.1 Stage 9 (2026-09-28, later): function-scoped headers, PSRAM, Ethernet
