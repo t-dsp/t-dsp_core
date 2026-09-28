@@ -28363,6 +28363,138 @@
             (type default))
           (fill
             (type none))))
+      (embedded_fonts no))
+    (symbol "Connector:Conn_Coaxial"
+      (pin_names
+        (offset 1.016)
+        (hide yes))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (in_pos_files yes)
+      (duplicate_pin_numbers_are_jumpers no)
+      (property "Reference" "J"
+        (at 0.254 3.048 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Value" "Conn_Coaxial"
+        (at 2.921 0 90)
+        (show_name no)
+        (do_not_autoplace no)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Footprint" ""
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Datasheet" ""
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "Description" "coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, LEMO, ...)"
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "ki_keywords" "BNC SMA SMB SMC LEMO coaxial connector CINCH RCA MCX MMCX U.FL UMRF"
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (property "ki_fp_filters" "*BNC* *SMA* *SMB* *SMC* *Cinch* *LEMO* *UMRF* *MCX* *U.FL*"
+        (at 0 0 0)
+        (show_name no)
+        (do_not_autoplace no)
+        (hide yes)
+        (effects
+          (font
+            (size 1.27 1.27))))
+      (symbol "Conn_Coaxial_0_1"
+        (polyline
+          (pts
+            (xy -2.54 0)
+            (xy -0.508 0))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none)))
+        (arc
+          (start 1.778 0)
+          (mid 0.222 -1.8079)
+          (end -1.778 -0.508)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none)))
+        (arc
+          (start -1.778 0.508)
+          (mid 0.2221 1.8084)
+          (end 1.778 0)
+          (stroke
+            (width 0.254)
+            (type default))
+          (fill
+            (type none)))
+        (circle
+          (center 0 0)
+          (radius 0.508)
+          (stroke
+            (width 0.2032)
+            (type default))
+          (fill
+            (type none)))
+        (polyline
+          (pts
+            (xy 0 -2.54)
+            (xy 0 -1.778))
+          (stroke
+            (width 0)
+            (type default))
+          (fill
+            (type none))))
+      (symbol "Conn_Coaxial_1_1"
+        (pin passive line
+          (at -5.08 0 0)
+          (length 2.54)
+          (name "In"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "1"
+            (effects
+              (font
+                (size 1.27 1.27)))))
+        (pin passive line
+          (at 0 -5.08 90)
+          (length 2.54)
+          (name "Ext"
+            (effects
+              (font
+                (size 1.27 1.27))))
+          (number "2"
+            (effects
+              (font
+                (size 1.27 1.27))))))
       (embedded_fonts no)))
 
   (junction
@@ -38185,6 +38317,81 @@
     (diameter 0)
     (uuid "01df1895-4667-424b-af98-6292ef7b13cf"))
 
+  (junction
+    (at 118.11 264.16)
+    (diameter 0)
+    (uuid "34abf52e-5ed1-4bd8-825f-813eae5558f2"))
+
+  (junction
+    (at 104.14 266.7)
+    (diameter 0)
+    (uuid "df944ef9-236d-4474-837f-526534d680bc"))
+
+  (junction
+    (at -247.65 822.96)
+    (diameter 0)
+    (uuid "6584ef49-0aa9-4579-82af-e6184e3fda3c"))
+
+  (junction
+    (at -227.33 822.96)
+    (diameter 0)
+    (uuid "597c99c5-1ea2-4395-9f11-7e23c82c5326"))
+
+  (junction
+    (at -210.82 822.96)
+    (diameter 0)
+    (uuid "256e17ed-fdd2-4207-b282-cb97b9114a08"))
+
+  (junction
+    (at 118.11 264.16)
+    (diameter 0)
+    (uuid "82c7b98b-4311-4e51-bbfd-848c0e1b12e7"))
+
+  (junction
+    (at 104.14 266.7)
+    (diameter 0)
+    (uuid "32e5f26d-2e17-4b8a-aeda-d4bc1456c4ae"))
+
+  (junction
+    (at -247.65 822.96)
+    (diameter 0)
+    (uuid "6d0d6a8d-6310-41b7-95b0-21bc78daafff"))
+
+  (junction
+    (at -227.33 822.96)
+    (diameter 0)
+    (uuid "d758c236-5f70-44ab-b1ab-5dda8ac34a41"))
+
+  (junction
+    (at -210.82 822.96)
+    (diameter 0)
+    (uuid "ad42944b-8008-46d1-bcf1-cacc7fcb98f0"))
+
+  (junction
+    (at 118.11 264.16)
+    (diameter 0)
+    (uuid "e412f686-10f5-4cb8-a414-444876b057fc"))
+
+  (junction
+    (at 104.14 266.7)
+    (diameter 0)
+    (uuid "389d6552-9a9d-45a1-886c-03c0aa425588"))
+
+  (junction
+    (at -247.65 822.96)
+    (diameter 0)
+    (uuid "24a1e53a-5a0b-4ad8-b636-8a316578a26d"))
+
+  (junction
+    (at -227.33 822.96)
+    (diameter 0)
+    (uuid "526aec43-9171-4f0b-a58c-56de68bc016a"))
+
+  (junction
+    (at -210.82 822.96)
+    (diameter 0)
+    (uuid "6b578323-073a-4839-95f6-88932a4b6593"))
+
   (no_connect
     (at -229.87 916.94)
     (uuid "38beb287-cd9a-4082-a163-ef94b2f749a2"))
@@ -44253,6 +44460,24 @@
       (xy 547.37 314.96)
       (xy 549.91 314.96))
     (uuid "9886c72e-7315-44d2-ac72-1b159dbaa3f2"))
+
+  (wire
+    (pts
+      (xy 1330.96 582.93)
+      (xy 1328.42 582.93))
+    (uuid "255490ab-dde1-4827-b051-ebedb891d725"))
+
+  (wire
+    (pts
+      (xy 1290.32 603.25)
+      (xy 1287.78 603.25))
+    (uuid "4d33b54d-b8e2-4937-9c1a-0b4e25fb49e6"))
+
+  (wire
+    (pts
+      (xy 1295.4 608.33)
+      (xy 1295.4 610.87))
+    (uuid "795bba44-6cbe-4f9c-a4fd-8e56075726cc"))
 
   (text "https://electronics.stackexchange.com/questions/310899/midi-out-thru-circuit-questions"
     (at 819.15 852.17 0)
@@ -51390,6 +51615,33 @@
         (size 1.27 1.27))
       (justify left))
     (uuid "007c86f3-da38-4284-9dc8-8e2551a9c0b3"))
+
+  (global_label "BT_EXT_RF"
+    (shape bidirectional)
+    (at 1328.42 582.93 180)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify right))
+    (uuid "45a7d9d5-e06a-4014-adb7-35c86aa7b3af"))
+
+  (global_label "BT_EXT_RF"
+    (shape bidirectional)
+    (at 1287.78 603.25 180)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify right))
+    (uuid "be59bd29-5a90-4a09-b83f-986b35ee72a5"))
+
+  (global_label "GND"
+    (shape bidirectional)
+    (at 1295.4 610.87 270)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify right))
+    (uuid "782f4a1d-2b06-4652-9cb6-0de0029e7557"))
 
   (symbol
     (lib_id "Device:R")
@@ -68170,6 +68422,42 @@
           (reference "H4")
           (unit 1)))))
 
+  (symbol
+    (lib_id "Connector:Conn_Coaxial")
+    (at 1295.4 603.25 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "7ba28b02-907f-4ab2-a6de-5747082b5f52")
+    (property "Reference" "J13"
+      (at 1295.4 599.44 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "u.FL DNP (IDC767 ext-antenna build only)"
+      (at 1295.4 607.06 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Connector_Coaxial:U.FL_Hirose_U.FL-R-SMT-1_Vertical"
+      (at 1295.4 603.25 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 1295.4 603.25 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (instances
+      (project "t-dsp_core"
+        (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
+          (reference "J13")
+          (unit 1)))))
+
   (rectangle
     (start 1008.38 845.82)
     (end 1228.09 913.13)
@@ -68378,4 +68666,9 @@
   (sheet_instances
     (path "/"
       (page "1")))
-)
+
+  (text "J13 u.FL: DNP with the IDC777-1 (chip antenna). Fit J13 and populate U22 as IDC767 (same 60-pad LGA, pad 57 = EXT_RF) for an external antenna.\\nPCB: 50 ohm CPW from pad 57 to J13, GND pads 56/58 either side, ground vias every 1-2 mm, keep it short, no matching network (IDC767-DTS-V003 p.8)."
+    (at 1280.16 618.49 0)
+    (effects (font (size 1.27 1.27)))
+    (uuid "da359bd1-499b-488b-9e1e-5490cdb21b8d")
+  ))

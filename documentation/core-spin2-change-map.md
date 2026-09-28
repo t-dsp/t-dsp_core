@@ -328,6 +328,7 @@ Cost is a handful of jumpers.
 | 5 | ~~MIDI logic~~ **[decided 2026-09-28]: stays on the core**, jack-level on the header (user: MIDI and DMX are core features of an audio device) | — |
 | 6 | LP5907 3.3V_A: keep or delete | delete (mics leave) |
 | 7 | `9_OUT1C_INPUT` intent | ask |
+| 8 | ~~External antennas~~ **[decided 2026-09-28]**: BOM options -1U and IDC767, u.FL J13 DNP on pad 57 (see section 11) | — |
 
 ---
 
@@ -431,6 +432,18 @@ and the Teensy mounts on 2.54 mm headers (not soldered flat). Power: about 10 mA
 the core picks them up: pads 60-65 return to the Teensy footprint (they exist in
 `Teensy41.kicad_mod`, were dropped in `_mod3`) and route under 20 mm as two 100 ohm pairs to
 **J12 `J_ETH`** right beside them. Magnetics, RJ45 and the LED resistor live on the backplane.
+
+**[decided 2026-09-28] Antennas: on-board by default, off-board as a BOM option, no layout change.**
+- S3: `ESP32-S3-WROOM-1-N16R8` (PCB antenna, C2913202) or `ESP32-S3-WROOM-1U-N16R8` (u.FL on the
+  module, C3013946). Same pad layout; the -1U is 6 mm shorter. Keep the top-edge copper keep-out in
+  both builds.
+- Bluetooth: `IDC777-1` (chip antenna) or `IDC767` (external antenna). Verified from datasheets
+  IDC767-DTS-V003 and IDC777-DTS-V003: identical 60-pad LGA and pin table; **pad 57 is EXT_RF on
+  both** ("RF to EXT Antenna (Ext ANT SKU - IDC767)"), unused on the IDC777. The core routes pad 57
+  to a DNP u.FL (J13) as a 50 ohm coplanar waveguide with ground pads 56 and 58 on either side,
+  ground vias every 1-2 mm along it, trace as short as possible, continuous ground on the layer
+  below. No matching network. With the IDC777 fitted the stub is simply unused.
+- Off-board antennas also let the two radios be separated further than the 61 mm the board allows.
 
 **[open] Mounting.** Four M3 (or M2.5) holes for standoffs to the backplane, needed for
 header retention. Corners are the natural spot; each corner hole costs ~2 header positions
