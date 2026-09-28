@@ -466,7 +466,7 @@ DRC after placement: no shorts, no clearance errors, 499 unrouted connections (e
 | J2 J_TDM + U5-U8/U11 + R40-47/R55/56 + C17-20/C40 | left column X 1.5-13.5 | buffers 3 mm from the header rows |
 | J4 J_USBH, J12 J_ETH, J3 J_T | strip X 33.6-39.3 right of the Teensy, top to bottom | USB host and Ethernet opposite the Teensy's own pads |
 | C27-C30 | X 41, Y 3-17 | 3.3 V rail decoupling |
-| MIDI U4/U9/D2/C16/C21 | X 53.5-62.5, Y 44.5-60.5, right of the IDC777 | R31-R39 in two rows at X 54.5-63.4, Y 34-41.5; J5 (MIDI header) at the top-middle X 40.7-46.8, Y 1.2-14.5 |
+| MIDI U4/U9/D2/C16/C21 | X 53.5-63, Y 41.3-57.2, right of the IDC777 | R31-R35 in a row at X 54.5-65.7, Y 34-37.7; R36-R39 in spare slots under the Teensy; J5 (MIDI header) at the top-middle X 40.7-46.8, Y 1.2-14.5 |
 | DMX U17/U18/U16/D6/R71 + J10 | X 56-75, Y 8-28; C134-C139 in the strip above U17 (X 54-60.5, Y 0-8) | isolated side kept together; J10 at X 42-56 |
 | U13 ESP32-S3 | X 75.3-93.8, Y 0-26.5, antenna on the top edge | R67/R68/R73/PU_EN1 row at Y 28 |
 | J8 J_S3 | right edge X 94-99.5, Y 6.6-45 | |
@@ -474,8 +474,8 @@ DRC after placement: no shorts, no clearance errors, 499 unrouted connections (e
 | U21/U23 mux + C146/C152 | X 87.6-93.6, Y 29-49.5 | |
 | J6 J_SPDIF | X 39.5-68.4, Y 27.5-34 | directly left of the SRC |
 | J7 J_AUX | top-middle X 47-53.1, Y 1.2-14.5 beside J5 | |
-| LED IC1/C1/C33/C22/C23 + J11 | top-middle: J11 at Y 16-19.3, IC1 and the four caps in a row at Y 21.5, X 41-55 | D3/D4 stay at X 54-64, Y 41.4-43.6; they are reverse-mount: add a 3 mm hole under each (not done) |
-| U22 IDC777 | vertical, X 40-53, Y 37.5-61, rot 90, antenna end on the BOTTOM edge | the IDC777 antenna is at the module's short end (keep-out pads 56/58 side), not along its long edge; antenna zone X 42.5-50.5, Y 55.9-61 must stay copper-free on all layers. Opposite edge from the S3 antenna, ~63 mm apart |
+| LED IC1/C1/C33/C22/C23 + J11 | top-middle: J11 at Y 16-19.3, IC1 and the four caps in a row at Y 21.5, X 41-55 | D3/D4 at X 54-64, Y 38.5-40.7; they are reverse-mount: add a 3 mm hole under each (not done) |
+| U22 IDC777 + J13 u.FL (DNP) | vertical, X 40-53, Y 37.5-61, rot 90, antenna end on the BOTTOM edge; J13 at X 55.7, Y 59.4 with its RF pad toward the module, 3.5 mm from EXT_RF pad 57 (X 52.3, Y 56.8) | the IDC777 antenna is at the module's short end (keep-out pads 56/58 side), not along its long edge; antenna zone X 42.5-50.5, Y 55.9-61 must stay copper-free on all layers. Opposite edge from the S3 antenna, ~63 mm apart |
 | J1 J_PWR | X 64.6-80.1, Y 41.6-46.9 | |
 | U3 TPS2116 + C12-15/C31/32/34/35 + R28-30 | row Y 49.5, X 64.5-91 | |
 | U24 buck + L1 + C153/154/R66/C130/131 + R57 | row Y 54, X 64-89 | |
