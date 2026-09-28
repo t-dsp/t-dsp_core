@@ -442,3 +442,118 @@ holes and no header pads**; both are added when the header footprint is built.
 
 All schematic edits go through Konnect and are verified with
 `kicad-cli sch export netlist`, per the project's write-hazard rules.
+
+## 13. Edge-header pin map (spin 2, as wired 2026-09-28)
+
+Four stock `Connector_Generic:Conn_02x22_Odd_Even` symbols, footprint
+`Connector_PinHeader_2.54mm:PinHeader_2x22_P2.54mm_Vertical`. Odd pins are one row, even pins the
+other. RESERVED pins carry a no-connect flag. Net names are the current schematic names; the
+raw-GPIO rename (T_nn / S3_IOnn) is a later cosmetic pass and does not change connectivity.
+
+### J1 — header A outer (Teensy domain), 2x22
+
+| odd | net | even | net |
+|---|---|---|---|
+| 1 | `5V_IN` | 2 | `5V_IN` |
+| 3 | `GND` | 4 | `GND` |
+| 5 | `5V` | 6 | `5V` |
+| 7 | `GND` | 8 | `GND` |
+| 9 | `3.3V` | 10 | `3.3V` |
+| 11 | `GND` | 12 | `GND` |
+| 13 | `MCLK1+TDM1` | 14 | `GND` |
+| 15 | `BCLK1+TDM1` | 16 | `GND` |
+| 17 | `LRCK1+TDM1` | 18 | `GND` |
+| 19 | `7_OUT1A+` | 20 | `GND` |
+| 21 | `8_IN1` | 22 | `GND` |
+| 23 | `SDA0` | 24 | `SCL0` |
+| 25 | `35_TX8_RESET` | 26 | `34_RX8_RESET2` |
+| 27 | `GND` | 28 | `GND` |
+| 29 | `MCLK1+TDM2` | 30 | `GND` |
+| 31 | `BCLK1+TDM2` | 32 | `GND` |
+| 33 | `LRCK1+TDM2` | 34 | `GND` |
+| 35 | `6_OUT1D+` | 36 | `GND` |
+| 37 | `9_OUT1C_INPUT` | 38 | `GND` |
+| 39 | `SDA1` | 40 | `SCL1` |
+| 41 | `V_BAT` | 42 | `GND` |
+| 43 | `RESERVED` | 44 | `RESERVED` |
+
+### J2 — header A inner (Teensy domain), 2x22
+
+| odd | net | even | net |
+|---|---|---|---|
+| 1 | `GND` | 2 | `HOST_5V` |
+| 3 | `HOST_D1-` | 4 | `GND` |
+| 5 | `HOST_D1+` | 6 | `GND` |
+| 7 | `GND` | 8 | `GND` |
+| 9 | `14_SPDIF_OUT` | 10 | `15_SPDIF_IN` |
+| 11 | `GND` | 12 | `GND` |
+| 13 | `MIDI_IN_4` | 14 | `MIDI_IN_5` |
+| 15 | `MIDI_OUT_4` | 16 | `MIDI_OUT_5` |
+| 17 | `MIDI_THRU_4` | 18 | `MIDI_THRU_5` |
+| 19 | `GND` | 20 | `GND` |
+| 21 | `CRX3` | 22 | `TRX3` |
+| 23 | `53_T_PROG` | 24 | `54_ON_OFF` |
+| 25 | `T_BUTTON1` | 26 | `T_BUTTON2` |
+| 27 | `T_22` | 28 | `T_26` |
+| 29 | `T_27` | 30 | `32_OUT1B` |
+| 31 | `MCLK2` | 32 | `GND` |
+| 33 | `RESERVED` | 34 | `RESERVED` |
+| 35 | `RESERVED` | 36 | `RESERVED` |
+| 37 | `RESERVED` | 38 | `RESERVED` |
+| 39 | `RESERVED` | 40 | `RESERVED` |
+| 41 | `RESERVED` | 42 | `RESERVED` |
+| 43 | `GND` | 44 | `GND` |
+
+### J3 — header B outer (S3 domain), 2x22
+
+| odd | net | even | net |
+|---|---|---|---|
+| 1 | `5V` | 2 | `5V` |
+| 3 | `GND` | 4 | `GND` |
+| 5 | `3.3V_DIG` | 6 | `3.3V_DIG` |
+| 7 | `GND` | 8 | `GND` |
+| 9 | `S3_USB_DN` | 10 | `GND` |
+| 11 | `S3_USB_DP` | 12 | `GND` |
+| 13 | `GND` | 14 | `GND` |
+| 15 | `SPDIF_RX1P` | 16 | `GND` |
+| 17 | `SPDIF_RX1N` | 18 | `GND` |
+| 19 | `GND` | 20 | `GND` |
+| 21 | `SPDIF_RX2P` | 22 | `GND` |
+| 23 | `SPDIF_RX2N` | 24 | `GND` |
+| 25 | `GND` | 26 | `GND` |
+| 27 | `SPDIF_RX3P` | 28 | `GND` |
+| 29 | `SPDIF_RX3N` | 30 | `GND` |
+| 31 | `GND` | 32 | `GND` |
+| 33 | `SPDIF_RX4P` | 34 | `GND` |
+| 35 | `SPDIF_RX4N` | 36 | `GND` |
+| 37 | `GND` | 38 | `GND` |
+| 39 | `SPDIF_TXP` | 40 | `GND` |
+| 41 | `SPDIF_TXN` | 42 | `GND` |
+| 43 | `GND` | 44 | `GND` |
+
+### J4 — header B inner (S3 domain), 2x22
+
+| odd | net | even | net |
+|---|---|---|---|
+| 1 | `GND` | 2 | `GND` |
+| 3 | `ESP32_IO1` | 4 | `ESP32_IO3` |
+| 5 | `ESP32_EN` | 6 | `ESP32_IO0` |
+| 7 | `ESP32_IO21_SDA` | 8 | `ESP32_IO22_SCL` |
+| 9 | `GND` | 10 | `GND` |
+| 11 | `AUX_I2S_BCK` | 12 | `GND` |
+| 13 | `AUX_I2S_LRCK` | 14 | `GND` |
+| 15 | `AUX_I2S_DIN` | 16 | `AUX_I2S_OUT` |
+| 17 | `GND` | 18 | `GND` |
+| 19 | `SCK` | 20 | `SDI` |
+| 21 | `SDO` | 22 | `CS` |
+| 23 | `DC` | 24 | `RESET` |
+| 25 | `T_CS` | 26 | `OUTPUTA` |
+| 27 | `OUTPUTB` | 28 | `SWITCH` |
+| 29 | `GPIO34` | 30 | `GPIO35` |
+| 31 | `S3_IO3` | 32 | `S3_IO36` |
+| 33 | `S3_IO37` | 34 | `S3_IO45` |
+| 35 | `S3_IO46` | 36 | `GND` |
+| 37 | `TEENSY_LED_OUT` | 38 | `ESP32_LED_OUT` |
+| 39 | `DMX_A` | 40 | `DMX_B` |
+| 41 | `DMX_GND` | 42 | `5V_ISO` |
+| 43 | `GND` | 44 | `GND` |
