@@ -1154,7 +1154,7 @@
         "uuid": "6a0ff39d-771d-410f-9e7c-006586d81d16"
       }
     ],
-    "used_designators": "ESP_PROG2,U12-13,C50-51,ESP_I2,ILI_LED3-4,GPI2,ESP_R_ENC2,ILI2,J27,PU_EN1,R62-65,R67-70,SW9-10",
+    "used_designators": "J29,U14,U19-20,U22",
     "variants": []
   },
   "sheets": [
