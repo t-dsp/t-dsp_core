@@ -37913,6 +37913,206 @@
     (diameter 0)
     (uuid "09cd0ba0-bb5c-4a5c-b281-74854b596fe1"))
 
+  (junction
+    (at 118.11 264.16)
+    (diameter 0)
+    (uuid "76525b37-ad40-49e7-95ec-ca4dcadc4093"))
+
+  (junction
+    (at 104.14 266.7)
+    (diameter 0)
+    (uuid "5c610a0d-5140-43fd-9efc-7c545ed74b8c"))
+
+  (junction
+    (at -247.65 822.96)
+    (diameter 0)
+    (uuid "b9989182-1c02-4c8d-a466-db06ebf76c1e"))
+
+  (junction
+    (at -227.33 822.96)
+    (diameter 0)
+    (uuid "adc5e144-04ad-488f-b29b-9ffe010c924e"))
+
+  (junction
+    (at -210.82 822.96)
+    (diameter 0)
+    (uuid "b496aa2b-f441-41f3-b14e-650a6d2f367c"))
+
+  (junction
+    (at 118.11 264.16)
+    (diameter 0)
+    (uuid "168b1b49-ddd0-460e-9334-d9bce8b61bfd"))
+
+  (junction
+    (at 104.14 266.7)
+    (diameter 0)
+    (uuid "93403caf-96a0-4c01-b0cf-c381b147da2a"))
+
+  (junction
+    (at -247.65 822.96)
+    (diameter 0)
+    (uuid "36537e95-e472-44cf-a9ab-0affede71f4e"))
+
+  (junction
+    (at -227.33 822.96)
+    (diameter 0)
+    (uuid "504e8d3a-2ccb-422f-b3e0-dccdddb15173"))
+
+  (junction
+    (at -210.82 822.96)
+    (diameter 0)
+    (uuid "8d12b170-7fab-45fa-a243-bb64f357eeb1"))
+
+  (junction
+    (at 118.11 264.16)
+    (diameter 0)
+    (uuid "9b881647-b23d-4280-b417-d7548f7b5c24"))
+
+  (junction
+    (at 104.14 266.7)
+    (diameter 0)
+    (uuid "8ab77bf0-673c-417d-8744-3d1c3c13f22e"))
+
+  (junction
+    (at -247.65 822.96)
+    (diameter 0)
+    (uuid "6eb7eb30-4511-4398-b679-45e34d5da05f"))
+
+  (junction
+    (at -227.33 822.96)
+    (diameter 0)
+    (uuid "f3e193e3-9d91-45d9-8ba2-6161e6107870"))
+
+  (junction
+    (at -210.82 822.96)
+    (diameter 0)
+    (uuid "8b938e23-a339-440c-8cc5-e9e2cd9bcc91"))
+
+  (junction
+    (at 118.11 264.16)
+    (diameter 0)
+    (uuid "2d725638-7158-4fe4-abbe-a76e24375814"))
+
+  (junction
+    (at 104.14 266.7)
+    (diameter 0)
+    (uuid "1a5b2e5a-e48f-43cc-bf41-7b69f62343d4"))
+
+  (junction
+    (at -247.65 822.96)
+    (diameter 0)
+    (uuid "209a9a6b-9992-411d-8e9f-f400dc5c2093"))
+
+  (junction
+    (at -227.33 822.96)
+    (diameter 0)
+    (uuid "d65f90b2-6a6b-4d6b-ae1f-59a9c6d21787"))
+
+  (junction
+    (at -210.82 822.96)
+    (diameter 0)
+    (uuid "e66d2587-63b6-4786-a9fd-291281475a9e"))
+
+  (junction
+    (at 118.11 264.16)
+    (diameter 0)
+    (uuid "55fadf50-b31a-460a-9e98-013699abcce4"))
+
+  (junction
+    (at 104.14 266.7)
+    (diameter 0)
+    (uuid "528dc768-b5d4-4cd8-8757-de673ce6debd"))
+
+  (junction
+    (at -247.65 822.96)
+    (diameter 0)
+    (uuid "33783601-1acd-4dd9-9c3b-91e2557ecc53"))
+
+  (junction
+    (at -227.33 822.96)
+    (diameter 0)
+    (uuid "8c23838a-d751-404b-80db-ee5383b0dbb2"))
+
+  (junction
+    (at -210.82 822.96)
+    (diameter 0)
+    (uuid "76a052e4-489f-4c3e-9747-1711db03f372"))
+
+  (junction
+    (at 118.11 264.16)
+    (diameter 0)
+    (uuid "cbc273d5-804a-4d92-b9a6-f190b8ba52d1"))
+
+  (junction
+    (at 104.14 266.7)
+    (diameter 0)
+    (uuid "d48c55e3-8445-4591-8597-e3e92cccb99a"))
+
+  (junction
+    (at -247.65 822.96)
+    (diameter 0)
+    (uuid "9cb7df45-493a-41a3-884e-5337f8ffbe9f"))
+
+  (junction
+    (at -227.33 822.96)
+    (diameter 0)
+    (uuid "809b07e4-1eaa-45b5-99a8-ece49f03cce2"))
+
+  (junction
+    (at -210.82 822.96)
+    (diameter 0)
+    (uuid "d0f33695-b0ce-4e10-bde6-5573f51bf8c3"))
+
+  (junction
+    (at 118.11 264.16)
+    (diameter 0)
+    (uuid "54e3ea89-5d48-402e-82d5-1f7c32ff7798"))
+
+  (junction
+    (at 104.14 266.7)
+    (diameter 0)
+    (uuid "c9b1664a-b416-4f48-ab44-2fa66ca5d5eb"))
+
+  (junction
+    (at -247.65 822.96)
+    (diameter 0)
+    (uuid "8308b4a9-328d-4396-9ebc-ae66a080cb50"))
+
+  (junction
+    (at -227.33 822.96)
+    (diameter 0)
+    (uuid "d7487fa6-f510-4223-9dc9-60ae94713d46"))
+
+  (junction
+    (at -210.82 822.96)
+    (diameter 0)
+    (uuid "426d9157-2b3e-4ab7-acdf-7c0abf8bf2da"))
+
+  (junction
+    (at 118.11 264.16)
+    (diameter 0)
+    (uuid "568a96d8-c306-47d0-964a-de16468ffcbf"))
+
+  (junction
+    (at 104.14 266.7)
+    (diameter 0)
+    (uuid "ae12db7b-3b73-4d1c-9edd-e06db910024d"))
+
+  (junction
+    (at -247.65 822.96)
+    (diameter 0)
+    (uuid "76c73bb2-2620-4570-b20c-1217954b0b3b"))
+
+  (junction
+    (at -227.33 822.96)
+    (diameter 0)
+    (uuid "80a08b6a-e456-4e22-a4fe-dd6870bc9085"))
+
+  (junction
+    (at -210.82 822.96)
+    (diameter 0)
+    (uuid "01df1895-4667-424b-af98-6292ef7b13cf"))
+
   (no_connect
     (at -229.87 916.94)
     (uuid "38beb287-cd9a-4082-a163-ef94b2f749a2"))
@@ -43933,6 +44133,54 @@
       (xy 861.06 474.98)
       (xy 858.52 474.98))
     (uuid "2c087bc9-5a3b-4e3c-beb1-9793c8b5bd37"))
+
+  (wire
+    (pts
+      (xy 534.67 307.34)
+      (xy 532.13 307.34))
+    (uuid "4537c2ee-39a1-46e9-b8df-8435cfee92ca"))
+
+  (wire
+    (pts
+      (xy 547.37 307.34)
+      (xy 549.91 307.34))
+    (uuid "19b76e25-e5ed-46db-8a4c-6e7898ae24e1"))
+
+  (wire
+    (pts
+      (xy 534.67 309.88)
+      (xy 532.13 309.88))
+    (uuid "6c64ef1a-d512-495c-bb7a-0aa8148ab582"))
+
+  (wire
+    (pts
+      (xy 547.37 309.88)
+      (xy 549.91 309.88))
+    (uuid "c296898b-a19b-4a31-a4fd-889a3e3520d1"))
+
+  (wire
+    (pts
+      (xy 534.67 312.42)
+      (xy 532.13 312.42))
+    (uuid "30226708-75cb-4ee7-977a-c628c7aeb01f"))
+
+  (wire
+    (pts
+      (xy 547.37 312.42)
+      (xy 549.91 312.42))
+    (uuid "c6ced0aa-1aab-4841-a1cb-a46884cc273f"))
+
+  (wire
+    (pts
+      (xy 534.67 314.96)
+      (xy 532.13 314.96))
+    (uuid "11ba4a69-6060-4460-bea7-37a4eb6fc032"))
+
+  (wire
+    (pts
+      (xy 547.37 314.96)
+      (xy 549.91 314.96))
+    (uuid "9886c72e-7315-44d2-ac72-1b159dbaa3f2"))
 
   (text "https://electronics.stackexchange.com/questions/310899/midi-out-thru-circuit-questions"
     (at 819.15 852.17 0)
@@ -50977,6 +51225,78 @@
         (size 1.27 1.27))
       (justify left))
     (uuid "3e18271f-056f-42f2-8c57-72010f833c39"))
+
+  (global_label "ETH_R+"
+    (shape bidirectional)
+    (at 532.13 307.34 180)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify right))
+    (uuid "07d23bc3-ccc2-4427-af43-d5401c618b29"))
+
+  (global_label "ETH_R-"
+    (shape bidirectional)
+    (at 549.91 307.34 0)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left))
+    (uuid "aa0df159-ff66-452d-bfbe-17e0bd9e5be0"))
+
+  (global_label "GND"
+    (shape bidirectional)
+    (at 532.13 309.88 180)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify right))
+    (uuid "5f4d2924-d06d-4842-ade1-95c80b4c2400"))
+
+  (global_label "GND"
+    (shape bidirectional)
+    (at 549.91 309.88 0)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left))
+    (uuid "963c775d-ca9d-434c-a951-7a033782e782"))
+
+  (global_label "ETH_T+"
+    (shape bidirectional)
+    (at 532.13 312.42 180)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify right))
+    (uuid "9aa1e18b-21a7-4058-b001-6f7ef89acbb5"))
+
+  (global_label "ETH_T-"
+    (shape bidirectional)
+    (at 549.91 312.42 0)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left))
+    (uuid "10aaa228-8770-408a-8cc2-07f4580eb6e3"))
+
+  (global_label "ETH_LED"
+    (shape bidirectional)
+    (at 532.13 314.96 180)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify right))
+    (uuid "1587b71d-1a42-4ae1-8b4e-75eca59860a9"))
+
+  (global_label "GND"
+    (shape bidirectional)
+    (at 549.91 314.96 0)
+    (effects
+      (font
+        (size 1.27 1.27))
+      (justify left))
+    (uuid "007c86f3-da38-4284-9dc8-8e2551a9c0b3"))
 
   (symbol
     (lib_id "Device:R")
@@ -67577,6 +67897,42 @@
           (reference "J11")
           (unit 1)))))
 
+  (symbol
+    (lib_id "Connector_Generic:Conn_02x04_Odd_Even")
+    (at 539.75 309.88 0)
+    (unit 1)
+    (in_bom yes)
+    (on_board yes)
+    (dnp no)
+    (uuid "e5afdf74-e8c5-45fd-a116-95215c7733a9")
+    (property "Reference" "J12"
+      (at 539.75 306.07 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Value" "J_ETH"
+      (at 539.75 313.69 0)
+      (effects
+        (font
+          (size 1.27 1.27))))
+    (property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical"
+      (at 539.75 309.88 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (property "Datasheet" ""
+      (at 539.75 309.88 0)
+      (effects
+        (font
+          (size 1.27 1.27))
+        (hide yes)))
+    (instances
+      (project "t-dsp_core"
+        (path "/6a0ff39d-771d-410f-9e7c-006586d81d16"
+          (reference "J12")
+          (unit 1)))))
+
   (rectangle
     (start 1008.38 845.82)
     (end 1228.09 913.13)
@@ -67785,4 +68141,19 @@
   (sheet_instances
     (path "/"
       (page "1")))
-)
+
+  (text "J_ETH: Teensy 4.1 Ethernet pads 60-65 (R+ R- T+ T- LED GND, 2 mm 2x3 on the Teensy bottom).\\nPENDING: change U1 to project_sch:Teensy4.1 in eeschema, label pins 60=ETH_R+ 61=ETH_LED 62=ETH_T- 63=ETH_T+ 64=GND 65=ETH_R-,\\nand restore pads 60-65 in Teensy41_mod3 (they exist in Teensy41.kicad_mod). Magnetics + RJ45 live on the backplane."
+    (at 560.07 300.99 0)
+    (effects (font (size 1.27 1.27)))
+    (uuid "5944f1e9-0a8e-4425-8298-494c9cafeeb6")
+  )
+  (text "U13 = ESP32-S3-WROOM-1-N16R8 (16 MB flash + 8 MB OCTAL PSRAM, needed for Spotify/cspot stream buffering).\\nOctal PSRAM owns IO35/IO36/IO37 -> those module pins are NC. BT UART RX therefore uses IO3 (not IO35).\\nDo not substitute an R2 (quad) module without re-checking: R2 frees IO35-37 but 2 MB PSRAM is too small for Spotify."
+    (at -320.04 570.23 0)
+    (effects (font (size 1.27 1.27)))
+    (uuid "85c4ff6b-91ad-46d0-8150-15af47212836")
+  )
+  (text "U1 Teensy 4.1 memory: fit 2x APS6404L-3SQR-SN (8 MB PSRAM each, 16 MB total, EXTMEM) on the Teensy's own bottom-side SOIC-8 pads\\nfor loop recording, echo and reverb buffers. Optional W25Q128 QSPI flash on the second pad if 8 MB PSRAM + flash is preferred.\\nPCB rule: no parts or pads on the core top side under the Teensy footprint (SOIC-8 bodies 1.2 mm tall); Teensy sits on 2.54 mm headers."
+    (at 95.25 338.14 0)
+    (effects (font (size 1.27 1.27)))
+    (uuid "b1497f7e-894b-4dcb-a1ac-5ffc9ad38527")
+  ))

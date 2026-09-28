@@ -116,7 +116,7 @@ now owned by the SRC (2, 3, 4, 5).
 |---|---|
 | IO4, IO6, IO7 | I2S master → U21 (DOUT, BCK, LRCK — assign in firmware) |
 | IO16 | BT UART2 RX |
-| IO35 | BT UART2 TX **[open: variant]** — falls back to IO3 on an R8 module |
+| IO3 | BT UART2 (S3 RX side, net `BT_UART_RX`). IO35 is not available on the N16R8 module |
 | IO19, IO20 | **native USB D−/D+ → edge header** (OTG, host or device) |
 | RXD0, TXD0 | Teensy Serial7 (programming + FlasherX tunnel) **and** edge header |
 | IO0, EN | Teensy 36/37 **and** edge header (already pins 60/56) |
@@ -126,13 +126,13 @@ now owned by the SRC (2, 3, 4, 5).
 | IO15, IO38, IO39 | encoder (already on header) |
 | IO40, IO41 | GPI (already on header) |
 | IO21, IO47 | I2C (already on header) |
-| IO3, IO45, IO46 | **→ edge header** (strapping pins; document the boot constraints) |
-| IO36, IO37 | **→ edge header** if not an R8 module |
+| IO45 | **→ J8** (strapping pin; document the boot constraint). IO46 drives the SK6812 chain (`ESP32_LED`), 5 V copy on J11 |
+| IO35, IO36, IO37 | **NC** - owned by the octal PSRAM on the N16R8 module |
 
-**[open]** Module variant. Recommend **ESP32-S3-WROOM-1-N8R2 or -N16R2** (quad PSRAM):
-keeps IO35–IO37 usable. An **R8** (octal PSRAM) variant loses them, which pushes the BT
-UART TX to IO3 and leaves fewer header GPIOs. Also **[open]**: footprint is currently the
-**-1U** (external u.FL antenna); confirm this is intended.
+**[decided 2026-09-28] Module variant: ESP32-S3-WROOM-1-N16R8** (LCSC C2913202). Spotify
+Connect (cspot and the Espressif audio SDK) buffers and decodes the Vorbis stream in PSRAM and
+needs 4-8 MB; the 2 MB quad-PSRAM R2 parts are not enough. Octal PSRAM uses IO35/IO36/IO37,
+so those three module pins are NC and the BT UART RX moved to IO3. PCB antenna (-1, not -1U).
 
 ---
 
@@ -321,7 +321,7 @@ Cost is a handful of jumpers.
 
 | # | Decision | Default if not decided |
 |---|---|---|
-| 1 | S3 module variant (N8R2/N16R2 vs R8) and -1U external antenna | N16R2, keep -1U |
+| 1 | ~~S3 module variant~~ **[decided 2026-09-28]: ESP32-S3-WROOM-1-N16R8** (8 MB octal PSRAM, required for Spotify Connect stream buffering; costs IO35-37). PCB antenna. | - |
 | 2 | ~~Board outline~~ **[decided 2026-09-28]: 100 × 60.96 mm**, see §11 | — |
 | 3 | MCLK1 driver: Y1 or Teensy pin 23 | Y1 (24.576 MHz = 512·fs), Teensy pin 23 via R7 removed |
 | 4 | 12 V: pass-through pin or drop | pass-through pin, no on-core parts |
@@ -419,6 +419,19 @@ signals go to *which* header, set by the placement below.
 Stackup for routing: F.Cu signal, In1.Cu solid GND, In2.Cu signal with 3.3 V / 5 V islands,
 B.Cu signal + bottom-side parts. Every header signal has In1 GND directly beneath it.
 
+**[decided 2026-09-28] Teensy memory.** The Teensy 4.1 carries two bottom-side SOIC-8 pads for
+PSRAM/flash. Fit **2 x APS6404L-3SQR-SN** (16 MB PSRAM, mapped as EXTMEM) for loop recording,
+echo and reverb buffers, or one PSRAM + one W25Q128 flash. The chips are 1.2 mm tall on the
+Teensy's underside, so the core's top side under the Teensy footprint is a **placement keepout**
+and the Teensy mounts on 2.54 mm headers (not soldered flat). Power: about 10 mA per PSRAM at
+3.3 V from the Teensy's own regulator.
+
+**[decided 2026-09-28] Ethernet.** The Teensy's 10/100 PHY pairs are on six 2 mm-pitch pads
+(60-65) on its underside. They are **not** reachable by a cable once the Teensy is mounted, so
+the core picks them up: pads 60-65 return to the Teensy footprint (they exist in
+`Teensy41.kicad_mod`, were dropped in `_mod3`) and route under 20 mm as two 100 ohm pairs to
+**J12 `J_ETH`** right beside them. Magnetics, RJ45 and the LED resistor live on the backplane.
+
 **[open] Mounting.** Four M3 (or M2.5) holes for standoffs to the backplane, needed for
 header retention. Corners are the natural spot; each corner hole costs ~2 header positions
 on that edge, already counted above. The 100x60.96 outline footprint currently has **no
@@ -445,14 +458,38 @@ holes and no header pads**; both are added when the header footprint is built.
 All schematic edits go through Konnect and are verified with
 `kicad-cli sch export netlist`, per the project's write-hazard rules.
 
-## 13. Edge-header pin map (spin 2, as wired 2026-09-28)
+## 13. Header pin map (spin 2, function-scoped headers, as wired 2026-09-28)
 
-Four stock `Connector_Generic:Conn_02x22_Odd_Even` symbols, footprint
-`Connector_PinHeader_2.54mm:PinHeader_2x22_P2.54mm_Vertical`. Odd pins are one row, even pins the
-other. RESERVED pins carry a no-connect flag. Net names are the current schematic names; the
-raw-GPIO rename (T_nn / S3_IOnn) is a later cosmetic pass and does not change connectivity.
+The four 2x22 edge blocks (176 pins) are gone. Each function now has its own stock
+`Connector_Generic` header placed next to the chip that serves it, so the PCB traces are short and
+the backplane only needs to mate the headers it uses. Ground rule applied to every header: at least
+one GND per three signals, a GND row (both rows) on both sides of every clock and every differential
+pair, and GND at both ends of every header.
 
-### J1 — header A outer (Teensy domain), 2x22
+| Ref | Name | Size | Placed next to | Pins | GND |
+|---|---|---|---|---|---|
+| J1 | `J_PWR` | 2x6 | TPS2116 / buck / LT3045 | 12 | 5 |
+| J2 | `J_TDM` | 2x13 | TDM bus buffers U5-U8/U11 | 26 | 12 |
+| J3 | `J_T` | 2x12 | Teensy 4.1 | 24 | 9 |
+| J4 | `J_USBH` | 1x5 | Teensy USB host pads | 5 | 2 |
+| J5 | `J_MIDI` | 2x4 | MIDI opto/buffer U4/U9 | 8 | 2 |
+| J6 | `J_SPDIF` | 2x11 | SRC4382 U19 | 22 | 12 |
+| J7 | `J_AUX` | 2x5 | U23 aux mux | 10 | 6 |
+| J8 | `J_S3` | 2x15 | ESP32-S3 U13 | 30 | 11 |
+| J9 | `J_USB3` | 1x5 | ESP32-S3 U13 | 5 | 2 |
+| J10 | `J_DMX` | 1x5 | ISO7762 / RS-485 U16-U18 | 5 | 0 |
+| J11 | `J_LED` | 1x5 | SK6812 level shifter IC1 | 5 | 2 |
+| J12 | `J_ETH` | 2x4 | Teensy 4.1 Ethernet pads | 8 | 3 |
+| | | | **total** | **160** | **66** |
+
+Footprints: `Connector_PinHeader_2.54mm:PinHeader_<size>_P2.54mm_Vertical`. Odd pins are one row, even
+pins the other (KiCad Odd_Even numbering). `DMX_GND` is the isolated ground, not core GND.
+Net names are the current schematic names; the raw-GPIO rename (T_nn / S3_IOnn) is a later cosmetic
+pass and does not change connectivity.
+
+### J1 - `J_PWR` 2x6, next to TPS2116 / buck / LT3045
+
+Power entry and rails. 5V_IN feeds TPS2116 VIN1; 5V, 3.3V (LT3045, analog), 3.3V_DIG (buck) and V_BAT are outputs.
 
 | odd | net | even | net |
 |---|---|---|---|
@@ -460,105 +497,169 @@ raw-GPIO rename (T_nn / S3_IOnn) is a later cosmetic pass and does not change co
 | 3 | `GND` | 4 | `GND` |
 | 5 | `5V` | 6 | `5V` |
 | 7 | `GND` | 8 | `GND` |
-| 9 | `3.3V` | 10 | `3.3V` |
-| 11 | `GND` | 12 | `GND` |
-| 13 | `MCLK1+TDM1` | 14 | `GND` |
-| 15 | `BCLK1+TDM1` | 16 | `GND` |
-| 17 | `LRCK1+TDM1` | 18 | `GND` |
-| 19 | `7_OUT1A+` | 20 | `GND` |
-| 21 | `8_IN1` | 22 | `GND` |
-| 23 | `SDA0` | 24 | `SCL0` |
-| 25 | `35_TX8_RESET` | 26 | `34_RX8_RESET2` |
-| 27 | `GND` | 28 | `GND` |
-| 29 | `MCLK1+TDM2` | 30 | `GND` |
-| 31 | `BCLK1+TDM2` | 32 | `GND` |
-| 33 | `LRCK1+TDM2` | 34 | `GND` |
-| 35 | `6_OUT1D+` | 36 | `GND` |
-| 37 | `9_OUT1C_INPUT` | 38 | `GND` |
-| 39 | `SDA1` | 40 | `SCL1` |
-| 41 | `V_BAT` | 42 | `GND` |
-| 43 | `RESERVED` | 44 | `RESERVED` |
+| 9 | `3.3V` | 10 | `3.3V_DIG` |
+| 11 | `V_BAT` | 12 | `GND` |
 
-### J2 — header A inner (Teensy domain), 2x22
+### J2 - `J_TDM` 2x13, next to TDM bus buffers U5-U8/U11
+
+Both TDM buses plus the two I2C buses for codec control. GND on both flanks of every clock; TDM1 in the odd row, TDM2 in the even row.
 
 | odd | net | even | net |
 |---|---|---|---|
-| 1 | `GND` | 2 | `HOST_5V` |
-| 3 | `HOST_D1-` | 4 | `GND` |
-| 5 | `HOST_D1+` | 6 | `GND` |
-| 7 | `GND` | 8 | `GND` |
-| 9 | `14_SPDIF_OUT` | 10 | `15_SPDIF_IN` |
-| 11 | `GND` | 12 | `GND` |
-| 13 | `MIDI_IN_4` | 14 | `MIDI_IN_5` |
-| 15 | `MIDI_OUT_4` | 16 | `MIDI_OUT_5` |
-| 17 | `MIDI_THRU_4` | 18 | `MIDI_THRU_5` |
-| 19 | `GND` | 20 | `GND` |
-| 21 | `CRX3` | 22 | `TRX3` |
-| 23 | `53_T_PROG` | 24 | `54_ON_OFF` |
-| 25 | `T_BUTTON1` | 26 | `T_BUTTON2` |
-| 27 | `T_22` | 28 | `T_26` |
-| 29 | `T_27` | 30 | `32_OUT1B` |
-| 31 | `MCLK2` | 32 | `GND` |
-| 33 | `RESERVED` | 34 | `RESERVED` |
-| 35 | `RESERVED` | 36 | `RESERVED` |
-| 37 | `RESERVED` | 38 | `RESERVED` |
-| 39 | `RESERVED` | 40 | `RESERVED` |
-| 41 | `RESERVED` | 42 | `RESERVED` |
-| 43 | `GND` | 44 | `GND` |
-
-### J3 — header B outer (S3 domain), 2x22
-
-| odd | net | even | net |
-|---|---|---|---|
-| 1 | `5V` | 2 | `5V` |
-| 3 | `GND` | 4 | `GND` |
-| 5 | `3.3V_DIG` | 6 | `3.3V_DIG` |
-| 7 | `GND` | 8 | `GND` |
-| 9 | `S3_USB_DN` | 10 | `GND` |
-| 11 | `S3_USB_DP` | 12 | `GND` |
+| 1 | `GND` | 2 | `GND` |
+| 3 | `MCLK1+TDM1` | 4 | `MCLK1+TDM2` |
+| 5 | `GND` | 6 | `GND` |
+| 7 | `BCLK1+TDM1` | 8 | `BCLK1+TDM2` |
+| 9 | `GND` | 10 | `GND` |
+| 11 | `LRCK1+TDM1` | 12 | `LRCK1+TDM2` |
 | 13 | `GND` | 14 | `GND` |
-| 15 | `SPDIF_RX1P` | 16 | `GND` |
-| 17 | `SPDIF_RX1N` | 18 | `GND` |
+| 15 | `7_OUT1A+` | 16 | `6_OUT1D+` |
+| 17 | `8_IN1` | 18 | `9_OUT1C_INPUT` |
 | 19 | `GND` | 20 | `GND` |
-| 21 | `SPDIF_RX2P` | 22 | `GND` |
-| 23 | `SPDIF_RX2N` | 24 | `GND` |
+| 21 | `SDA0` | 22 | `SDA1` |
+| 23 | `SCL0` | 24 | `SCL1` |
 | 25 | `GND` | 26 | `GND` |
-| 27 | `SPDIF_RX3P` | 28 | `GND` |
-| 29 | `SPDIF_RX3N` | 30 | `GND` |
-| 31 | `GND` | 32 | `GND` |
-| 33 | `SPDIF_RX4P` | 34 | `GND` |
-| 35 | `SPDIF_RX4N` | 36 | `GND` |
-| 37 | `GND` | 38 | `GND` |
-| 39 | `SPDIF_TXP` | 40 | `GND` |
-| 41 | `SPDIF_TXN` | 42 | `GND` |
-| 43 | `GND` | 44 | `GND` |
 
-### J4 — header B inner (S3 domain), 2x22
+### J3 - `J_T` 2x12, next to Teensy 4.1
+
+Teensy S/PDIF, CAN3, Serial8, PROGRAM/ON_OFF, buttons, spare GPIO, MCLK2. GND either side of MCLK2.
+
+| odd | net | even | net |
+|---|---|---|---|
+| 1 | `GND` | 2 | `GND` |
+| 3 | `14_SPDIF_OUT` | 4 | `15_SPDIF_IN` |
+| 5 | `GND` | 6 | `GND` |
+| 7 | `CRX3` | 8 | `TRX3` |
+| 9 | `35_TX8_RESET` | 10 | `34_RX8_RESET2` |
+| 11 | `53_T_PROG` | 12 | `54_ON_OFF` |
+| 13 | `T_BUTTON1` | 14 | `T_BUTTON2` |
+| 15 | `GND` | 16 | `GND` |
+| 17 | `T_22` | 18 | `T_26` |
+| 19 | `T_27` | 20 | `32_OUT1B` |
+| 21 | `GND` | 22 | `MCLK2` |
+| 23 | `GND` | 24 | `GND` |
+
+### J4 - `J_USBH` 1x5, next to Teensy USB host pads
+
+Teensy host pair, GND flanked; HOST_5V is the host-port VBUS.
+
+| pin | net |
+|---|---|
+| 1 | `GND` |
+| 2 | `HOST_D1-` |
+| 3 | `HOST_D1+` |
+| 4 | `GND` |
+| 5 | `HOST_5V` |
+
+### J5 - `J_MIDI` 2x4, next to MIDI opto/buffer U4/U9
+
+Jack-level MIDI IN / OUT / THRU (DIN pins 4 and 5 across the rows).
+
+| odd | net | even | net |
+|---|---|---|---|
+| 1 | `MIDI_IN_4` | 2 | `MIDI_IN_5` |
+| 3 | `MIDI_OUT_4` | 4 | `MIDI_OUT_5` |
+| 5 | `MIDI_THRU_4` | 6 | `MIDI_THRU_5` |
+| 7 | `GND` | 8 | `GND` |
+
+### J6 - `J_SPDIF` 2x11, next to SRC4382 U19
+
+Four DIR inputs and the DIT output, raw; pairs across the rows with a GND row between every pair. Termination networks live on the backplane.
+
+| odd | net | even | net |
+|---|---|---|---|
+| 1 | `GND` | 2 | `GND` |
+| 3 | `SPDIF_RX1P` | 4 | `SPDIF_RX1N` |
+| 5 | `GND` | 6 | `GND` |
+| 7 | `SPDIF_RX2P` | 8 | `SPDIF_RX2N` |
+| 9 | `GND` | 10 | `GND` |
+| 11 | `SPDIF_RX3P` | 12 | `SPDIF_RX3N` |
+| 13 | `GND` | 14 | `GND` |
+| 15 | `SPDIF_RX4P` | 16 | `SPDIF_RX4N` |
+| 17 | `GND` | 18 | `GND` |
+| 19 | `SPDIF_TXP` | 20 | `SPDIF_TXN` |
+| 21 | `GND` | 22 | `GND` |
+
+### J7 - `J_AUX` 2x5, next to U23 aux mux
+
+Aux I2S source into the mux (BCK, LRCK, DIN) and the S3-side out; clocks never adjacent.
+
+| odd | net | even | net |
+|---|---|---|---|
+| 1 | `GND` | 2 | `GND` |
+| 3 | `AUX_I2S_BCK` | 4 | `GND` |
+| 5 | `GND` | 6 | `AUX_I2S_LRCK` |
+| 7 | `AUX_I2S_DIN` | 8 | `AUX_I2S_OUT` |
+| 9 | `GND` | 10 | `GND` |
+
+### J8 - `J_S3` 2x15, next to ESP32-S3 U13
+
+S3 UART0 (also Teensy Serial7), EN/IO0, I2C, raw GPIO. IO35-37 are consumed by the octal PSRAM and are not on the header.
 
 | odd | net | even | net |
 |---|---|---|---|
 | 1 | `GND` | 2 | `GND` |
 | 3 | `ESP32_IO1` | 4 | `ESP32_IO3` |
 | 5 | `ESP32_EN` | 6 | `ESP32_IO0` |
-| 7 | `ESP32_IO21_SDA` | 8 | `ESP32_IO22_SCL` |
-| 9 | `GND` | 10 | `GND` |
-| 11 | `AUX_I2S_BCK` | 12 | `GND` |
-| 13 | `AUX_I2S_LRCK` | 14 | `GND` |
-| 15 | `AUX_I2S_DIN` | 16 | `AUX_I2S_OUT` |
-| 17 | `GND` | 18 | `GND` |
-| 19 | `SCK` | 20 | `SDI` |
-| 21 | `SDO` | 22 | `CS` |
-| 23 | `DC` | 24 | `RESET` |
-| 25 | `T_CS` | 26 | `OUTPUTA` |
-| 27 | `OUTPUTB` | 28 | `SWITCH` |
-| 29 | `GPIO34` | 30 | `GPIO35` |
-| 31 | `S3_IO3` | 32 | `S3_IO36` |
-| 33 | `S3_IO37` | 34 | `S3_IO45` |
-| 35 | `S3_IO46` | 36 | `GND` |
-| 37 | `TEENSY_LED_OUT` | 38 | `ESP32_LED_OUT` |
-| 39 | `DMX_A` | 40 | `DMX_B` |
-| 41 | `DMX_GND` | 42 | `5V_ISO` |
-| 43 | `GND` | 44 | `GND` |
+| 7 | `GND` | 8 | `GND` |
+| 9 | `ESP32_IO21_SDA` | 10 | `ESP32_IO22_SCL` |
+| 11 | `SCK` | 12 | `SDI` |
+| 13 | `SDO` | 14 | `CS` |
+| 15 | `GND` | 16 | `GND` |
+| 17 | `DC` | 18 | `RESET` |
+| 19 | `T_CS` | 20 | `OUTPUTA` |
+| 21 | `OUTPUTB` | 22 | `SWITCH` |
+| 23 | `GND` | 24 | `GND` |
+| 25 | `GPIO34` | 26 | `GPIO35` |
+| 27 | `S3_IO45` | 28 | `GND` |
+| 29 | `GND` | 30 | `GND` |
+
+### J9 - `J_USB3` 1x5, next to ESP32-S3 U13
+
+S3 native USB (OTG) pair, GND flanked; 5V for a host-side VBUS.
+
+| pin | net |
+|---|---|
+| 1 | `GND` |
+| 2 | `S3_USB_DN` |
+| 3 | `S3_USB_DP` |
+| 4 | `GND` |
+| 5 | `5V` |
+
+### J10 - `J_DMX` 1x5, next to ISO7762 / RS-485 U16-U18
+
+Isolated side only: DMX_GND and 5V_ISO, never core GND.
+
+| pin | net |
+|---|---|
+| 1 | `DMX_GND` |
+| 2 | `DMX_A` |
+| 3 | `DMX_B` |
+| 4 | `DMX_GND` |
+| 5 | `5V_ISO` |
+
+### J11 - `J_LED` 1x5, next to SK6812 level shifter IC1
+
+5 V SK6812 data outs from the Teensy and the S3, GND between, 5V for the strip.
+
+| pin | net |
+|---|---|
+| 1 | `GND` |
+| 2 | `TEENSY_LED_OUT` |
+| 3 | `GND` |
+| 4 | `ESP32_LED_OUT` |
+| 5 | `5V` |
+
+### J12 - `J_ETH` 2x4, next to Teensy 4.1 Ethernet pads
+
+Teensy 4.1 10/100 PHY pairs and link LED from pads 60-65 (needs the U1 symbol swap, see 14.1). Magnetics and RJ45 on the backplane.
+
+| odd | net | even | net |
+|---|---|---|---|
+| 1 | `ETH_R+` | 2 | `ETH_R-` |
+| 3 | `GND` | 4 | `GND` |
+| 5 | `ETH_T+` | 6 | `ETH_T-` |
+| 7 | `ETH_LED` | 8 | `GND` |
 
 ## 14. Status after the 2026-09-28 edit session
 
@@ -603,6 +704,27 @@ Not done / next:
    `layer_count`, then *Update PCB from Schematic* in KiCad.
 4. Symbol library sync (see residual ERC).
 
+### 14.1 Stage 9 (2026-09-28, later): function-scoped headers, PSRAM, Ethernet
+
+- J1-J4 (4 x 2x22) deleted with all 339 stubs/labels/NC flags; **J1-J12** placed next to their
+  blocks and wired (section 13). Netlist diff against stage 8 = pin moves only; no net lost except
+  `S3_IO3`, `S3_IO36`, `S3_IO37` (PSRAM pins, now NC) and the dead `S3_IO46` header pin.
+- U13 -> **ESP32-S3-WROOM-1-N16R8** (C2913202); `BT_UART_RX` relabelled from IO35 to IO3;
+  NC flags on IO35/IO36/IO37.
+- **J12 `J_ETH` placed and labelled** (`ETH_R+ ETH_R- ETH_T+ ETH_T- ETH_LED`), but the six nets
+  are single-node until the manual step below is done.
+- ERC after stage 9: 0 dangling wires/labels, 0 undriven pins; only the 40 pre-existing
+  cosmetic `unconnected_wire_endpoint` overshoots and the library-sync warnings.
+
+**Manual eeschema steps that Konnect cannot do** (its library search is the KiCad install only,
+so `project_sch` symbols cannot be placed or swapped):
+
+1. U1: *Change Symbol* -> `project_sch:Teensy4.1` (full symbol, adds pins 60-65). Then label
+   60 = `ETH_R+`, 61 = `ETH_LED`, 62 = `ETH_T-`, 63 = `ETH_T+`, 64 = `GND`, 65 = `ETH_R-`
+   (names from the symbol). Konnect can do the six labels once the symbol is in the cache.
+2. Footprint: copy pads 60-65 from `Teensy41.kicad_mod` into `Teensy41_mod3` (or a `_mod4`).
+3. *Update Symbols from Library* for the ISO7762 / TLV757 / ASE cached symbols.
+
 ## 15. Sourcing for JLCPCB assembly (2026-09-28)
 
 Every symbol now carries an `LCSC` field (and `LCSC_MPN` where the manufacturer part
@@ -615,7 +737,7 @@ Substitutions made so the board can be assembled from stock:
 | U17 | ISO7761DW | **ISO7762DW** | C2859648 | ISO7761 not stocked. 7762 = 4 fwd / 2 rev; DMX uses A, B fwd and F rev. Pin 6 (was INE→GND) is now NC; pin 11 becomes INE (unused input, left NC — tie to DMX_GND once the symbol is swapped in eeschema). |
 | U20 | TLV76718DRVR | **TLV75718PDRVR** | C2861386 | TLV767 DRV not stocked; TLV757P DRV pinout is identical (pin 2/5 NC instead of SNS/GND — both harmless as wired). |
 | Y1 | ASDMB-24.576MHZ | **ASE-24.576MHZ-LC-T** | C6159263 | ASDMB not stocked; ASE has the same 4-pin function (1 = standby, 2 GND, 3 OUT, 4 VDD) in 3.2×2.5 mm; footprint updated. |
-| U13 | WROOM-1U (u.FL) | **ESP32-S3-WROOM-1-N16R2** | C2913205 | PCB antenna per the product decision; footprint updated. |
+| U13 | WROOM-1U (u.FL) | **ESP32-S3-WROOM-1-N16R8** | C2913202 | PCB antenna; 8 MB octal PSRAM for Spotify buffering (was N16R2 C2913205 for one commit). |
 | L1 | NR4018T3R3M | **NRS4018T3R3MDGJ** | C92960 | same 4×4 mm 3.3 µH 2 A family, stocked. |
 | U24 | (new) | AP63203WU-7 | C780769 | buck, JLC stock |
 
@@ -623,8 +745,8 @@ Consigned (not at LCSC; supplied to the assembler or hand-placed): **U19 SRC4382
 **U22 IDC777-1**, **U1 Teensy 4.1**. Their `LCSC` field says `CONSIGN`.
 
 No LCSC number (no part or hand assembly): H1–H4 holes, T108–T111 panel tabs, PU_EN1
-solder jumper, **J1–J4 2×22 headers** (LCSC has 2×20 and 2×40 Boomele headers, C50980 /
-C2333; a 2×22 is a cut 2×40 or a hand-soldered THT part).
+solder jumper, **J1-J12 pin headers** (stock 2.54 mm THT headers cut from 2x40 / 1x40 strips such
+as C2333 / C50981; hand-soldered, so no LCSC field).
 
 Passive numbers used: 0805 100 nF C49678, 10 µF C15850, 22 µF C45783, 4.7 µF C1779, 1 µF
 C6119929, 0402 100 nF C1525; 0805 resistors 10k C17414, 100k C17407, 33k C17633, 300 Ω
