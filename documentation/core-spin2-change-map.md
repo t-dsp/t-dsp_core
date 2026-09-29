@@ -608,6 +608,32 @@ removed, C17 is the 541's decoupling cap. Net names between U5 and the resistors
 nets from the netlist; `sync_fields.py` refreshes values, fields and pad nets). U5 sits at the top
 of the column under the Teensy (X 47-54, Y 5-12.7), U11 below it.
 
+### 11.6 Stage 10s (2026-09-29): holistic re-spacing, S3 and IDC777 swapped
+
+User request: keep the flow (power top-left, TDM buffers middle, MIDI/DMX top-right) but give every part
+air, and try the S3 in the wider left slot. Result:
+
+| Row | X (pin 1 column) | Headers top to bottom |
+|---|---|---|
+| A (left edge) | 3.0 | J8 J_S3 2x17 (Y 8.75), next to the S3 |
+| B | 35.5 | J3 J_T 2x12 (Y 3.0), J4 J_USBH 1x5 (Y 34.9), J11 J_LED 1x5 (Y 49.0) |
+| C | 63.0 | J5 J_MIDI 2x4 (Y 3.2), J2 J_TDM 2x13 (Y 14.8), J12 J_ETH 2x4 (Y 49.2) |
+| D (right edge) | 94.46 | J6 J_SPDIF 2x11 (Y 8.75), J7 J_AUX 2x5 (Y 38.1) |
+| horizontal | - | J1 J_PWR top edge of slot 1 (X 8-21.7); J10 J_DMX top edge of slot 3 (X 78.5-92.2) |
+
+| Slot | X range | Contents |
+|---|---|---|
+| 1 | 7.3-33.7 | power row under J1 (U24 X 9, L1 X 15, U3 X 21.8, U15 X 26.6, all Y 7.5-12.3); ESP32-S3 U13 centred X 20, pads Y 35.2-53.2, antenna out the bottom edge (keep-out X 11-29, Y 53.2-61); LED driver IC1 + D3/D4 in the strip X 29.8-32.8 beside the S3, next to J11 |
+| 2 | 39.8-61.2 | Teensy U1 centred X 50.5; under it U5 (SN74LVC541A, Y 5-12.7), U11 (Y 15.2-20.7), muxes U21/U23 (Y 38.5-46.2), SRC4382 U19 (Y 49-59.3) |
+| 3 | 67.3-92.7 | MIDI U4 (X 69.2-80.2, Y 5-14), U9, D2; DMX block U18 horizontal (Y 15.5-22), U17 (X 69.2-81, Y 23.5-34.3), U16/U20 (X 83.6-91); IDC777 U22 (X 69.2-82.3, Y 37-60.5) antenna out the bottom edge (keep-out X 71.7-79.8, Y 55.4-61); J13 u.FL beside pad 57 at X 82.4-86.8 |
+
+Every chip has at least 1.6 mm to the nearest header courtyard and 2 to 3 mm to the next chip; the
+passive placer margin is now 0.35 mm part-to-part (was 0.15). Antennas 45 mm apart on the bottom edge.
+Passive-to-pin median 3.4 mm, 11 of 116 more than 10 mm. DRC: only the stock ESP32 courtyard overlaps
+and the inherited drill warnings; parity clean apart from board_outline2.
+**Open:** the 49.9 ohm series resistors (20x) may move to 0402 or to 4-element 0804 arrays
+(Yageo AF124-FR-0749R9L, LCSC C6463554, extended); no MELF 0204/0206 49.9 ohm is stocked at JLCPCB.
+
 ## 12. Edit order and verification
 
 1. Commit the July 27 work as-is (BT/ASRC block + libraries) so it is not only in the
