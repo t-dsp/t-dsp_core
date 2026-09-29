@@ -643,6 +643,26 @@ stocks no 22-100 ohm MELF (0204/0206); chosen: **33 ohm 0402, Uniroyal 0402WGF33
 (basic part), footprint `Resistor_SMD:R_0402_1005Metric`, on R1-R7, R9, R10, R40-R47, R52, R55, R56
 (twenty parts, were 49.9 ohm 0603). 22 ohm C25092 and 100 ohm C25076 are the basic alternatives.
 
+**Stage 10v (2026-09-29, user request): OUT1B buffered, OUT1B and OUT1C direction-switchable.**
+Before: OUT1A/OUT1D were output-only through the 541, IN1 and OUT1C input-only through U11, and
+OUT1B (Teensy pin 32) reached the backplane only as raw GPIO `T32_OUT1B` on J3 pin 20 through R5.
+Now: **U6** (SN74LVC2G125, C206035) buffers OUT1B in both directions to **J2 pin 27** (`32_OUT1B`;
+J2 is a 2x14, pin 28 GND): half 1 Teensy -> J2 through R75 (33 ohm), half 2 J2 -> Teensy through
+R76. **U7** (2G125) adds the Teensy -> J2 direction for OUT1C through R81 next to the existing U11
+input half; U7's spare half is parked (2A GND, 2OE high, 2Y NC). Direction is chosen with 0 ohm
+0402 jumper pairs (C17477) on the enable pins, one of each pair fitted:
+
+| Line | Enable net | to GND | to 3.3V | Default |
+|---|---|---|---|---|
+| OUT1B output (U6 half 1) | `OUT1B_OE_OUT` | R77 fitted | R78 DNP | output |
+| OUT1B input (U6 half 2) | `OUT1B_OE_IN` | R79 DNP | R80 fitted | disabled |
+| OUT1C output (U7 half 1) | `OUT1C_OE_OUT` | R82 DNP | R83 fitted | disabled |
+| OUT1C input (U11 half 2) | `OUT1C_OE_IN` | R84 fitted | R85 DNP | input |
+
+To turn a line around, move both jumpers of that line. Never fit both enables of one line low.
+`T32_OUT1B` stays on J3 pin 20 as the raw pin (it is the buffer's Teensy-side node). C18/C19 are
+the new decoupling caps. Row C on the board: J5 pin 1 Y 3.2, J2 (2x14) pin 1 Y 14.4, J12 pin 1 Y 51.0.
+
 ## 12. Edit order and verification
 
 1. Commit the July 27 work as-is (BT/ASRC block + libraries) so it is not only in the
@@ -673,7 +693,7 @@ pair, and GND at both ends of every header.
 | Ref | Name | Size | Placed next to | Pins | GND |
 |---|---|---|---|---|---|
 | J1 | `J_PWR` | 2x5 | TPS2116 / buck / LT3045 | 10 | 3 |
-| J2 | `J_TDM` | 2x13 | TDM bus buffers U5-U8/U11 | 26 | 12 |
+| J2 | `J_TDM` | 2x14 | TDM buffers U5/U6/U7/U11 under the Teensy | 28 | 13 |
 | J3 | `J_T` | 2x12 | Teensy 4.1 | 24 | 9 |
 | J4 | `J_USBH` | 1x5 | Teensy USB host pads | 5 | 2 |
 | J5 | `J_MIDI` | 2x4 | MIDI opto/buffer U4/U9 | 8 | 2 |
@@ -683,7 +703,7 @@ pair, and GND at both ends of every header.
 | J10 | `J_DMX` | 1x5 | ISO7762 / RS-485 U16-U18 | 5 | 0 |
 | J11 | `J_LED` | 1x5 | SK6812 level shifter IC1 | 5 | 2 |
 | J12 | `J_ETH` | 2x4 | Teensy 4.1 Ethernet pads | 8 | 3 |
-| | | | **total** | **157** | **63** |
+| | | | **total** | **159** | **64** |
 
 Footprints: `Connector_PinHeader_2.54mm:PinHeader_<size>_P2.54mm_Vertical`. Odd pins are one row, even
 pins the other (KiCad Odd_Even numbering). `DMX_GND` is the isolated ground, not core GND.
@@ -702,9 +722,9 @@ Power entry and rails. 5V_IN feeds TPS2116 VIN1; 5V, 3.3V (LT3045, analog), 3.3V
 | 7 | `3.3V` | 8 | `3.3V_DIG` |
 | 9 | `V_BAT` | 10 | `GND` |
 
-### J2 - `J_TDM` 2x13, next to TDM bus buffers U5-U8/U11
+### J2 - `J_TDM` 2x14, next to TDM buffers U5/U6/U7/U11 under the Teensy
 
-Both TDM buses plus the two I2C buses for codec control. GND on both flanks of every clock; TDM1 in the odd row, TDM2 in the even row.
+Both TDM buses plus the two I2C buses for codec control. GND on both flanks of every clock; TDM1 in the odd row, TDM2 in the even row. Pin 27 (since stage 10v) is the buffered OUT1B line whose direction is set by 0 ohm jumpers.
 
 | odd | net | even | net |
 |---|---|---|---|
@@ -721,6 +741,7 @@ Both TDM buses plus the two I2C buses for codec control. GND on both flanks of e
 | 21 | `SDA0` | 22 | `SDA1` |
 | 23 | `SCL0` | 24 | `SCL1` |
 | 25 | `GND` | 26 | `GND` |
+| 27 | `32_OUT1B` | 28 | `GND` |
 
 ### J3 - `J_T` 2x12, next to Teensy 4.1
 
