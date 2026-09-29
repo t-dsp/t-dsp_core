@@ -582,6 +582,13 @@ Result: passive-to-pin median 2.4 mm, 5 of 118 more than 10 mm; signal ratsnest 
 DRC: only the stock ESP32 courtyard overlaps and inherited drill warnings; parity clean apart from
 board_outline2. Both antennas are on the bottom edge, 53 mm apart (IDC777 X 10-18, S3 X 71-89).
 
+**Stage 10p (2026-09-29, user request):** SRC4382 U19 moved under the Teensy, on the front, below the
+Teensy's interior VBAT/3V3/PROGRAM/ON-OFF pad row (box X 45.3-55.6, Y 49-59.3, between the two pin
+columns at X 42.9 and 58.1). Muxes U21/U23 stay in the left slot at X 7.6 (Y 14-25.5). The Teensy on
+8.5 mm headers leaves room for the 1.2 mm TQFP under it. Cost: the SRC's six 1V8/3V3 caps cannot sit
+beside it (1.6 mm to the pin columns) and land 4.5-11 mm away above the pad row; the S/PDIF pairs from
+J6 (left edge) now run about 40 mm to the SRC. Passive-to-pin median 2.6 mm, 8 of 118 more than 10 mm.
+
 ## 12. Edit order and verification
 
 1. Commit the July 27 work as-is (BT/ASRC block + libraries) so it is not only in the
