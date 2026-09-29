@@ -594,6 +594,20 @@ Teensy, rotated 90, side by side at X 45-50.5 / 51-56.5, Y 38.5-46.2, just above
 the SRC sits below that row (Y 49-59.3). The five TDM buffers moved up to Y 5-34 (5.9 mm pitch) to make
 room. "SRC" in the user's instructions means SRC4382 plus its two muxes. Passive-to-pin median 3.3 mm.
 
+**Stage 10r (2026-09-29, user request): TDM fan-out buffers consolidated.** The four SN74LVC2G125
+(U5-U8, all enables hard-wired low) that copied LRCK1 / MCLK1 / BCLK1 and the two Teensy TDM data
+outputs to J2 are replaced by one **SN74LVC541APWR** (U5, TSSOP-20, LCSC C113281, extended part).
+Group A (OE1, pin 1, grounded) = TDM1 copies: Y0 LRCK1 -> R42, Y1 MCLK1 -> R41, Y2 BCLK1 -> R44,
+Y3 OUT1A -> R46. Group B (OE2, pin 19 = `TDM2_OE`) = TDM2 copies: Y4 LRCK1 -> R43, Y5 MCLK1 -> R40,
+Y6 BCLK1 -> R45, Y7 OUT1D -> R47. `TDM2_OE` is held low by solder jumper **JP1** (bridged,
+`Jumper:SolderJumper-2_P1.3mm_Bridged`) with 10k pull-up **R74** to 3.3V: cut JP1 to tri-state
+the whole TDM2 clock/data set when a backplane device (Pi CM) is the TDM2 clock master. The
+series resistors R40-R47 and U11 (the 2G125 on the Teensy-input lines) are unchanged; C18-C20
+removed, C17 is the 541's decoupling cap. Net names between U5 and the resistors: `TDM1_*_B`,
+`TDM2_*_B`. Board synced with pcbnew (`swap_fp.py` now also adds/removes footprints and sets pad
+nets from the netlist; `sync_fields.py` refreshes values, fields and pad nets). U5 sits at the top
+of the column under the Teensy (X 47-54, Y 5-12.7), U11 below it.
+
 ## 12. Edit order and verification
 
 1. Commit the July 27 work as-is (BT/ASRC block + libraries) so it is not only in the
