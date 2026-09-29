@@ -663,6 +663,10 @@ To turn a line around, move both jumpers of that line. Never fit both enables of
 `T32_OUT1B` stays on J3 pin 20 as the raw pin (it is the buffer's Teensy-side node). C18/C19 are
 the new decoupling caps. Row C on the board: J5 pin 1 Y 3.2, J2 (2x14) pin 1 Y 14.4, J12 pin 1 Y 51.0.
 
+**Stage 10w (2026-09-29, user request):** LED driver IC1 (X 17.8-22.3, Y 21-23.6) with D3/D4 below it
+(Y 25.6-28) moved to the middle of the left column, in the free band between the power row and the S3.
+J11 stays at the bottom of row B.
+
 ## 12. Edit order and verification
 
 1. Commit the July 27 work as-is (BT/ASRC block + libraries) so it is not only in the
