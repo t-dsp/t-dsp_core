@@ -5459,7 +5459,7 @@
 	(footprint "Capacitor_SMD:C_0603_1608Metric"
 		(layer "F.Cu")
 		(uuid "229fdb93-74c6-49c3-afe1-5fd836fc3191")
-		(at 190 189.54 180)
+		(at 190.5 189.54 180)
 		(descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "capacitor")
 		(property "Reference" "C31"
@@ -22302,7 +22302,7 @@
 	(footprint "Capacitor_SMD:C_0603_1608Metric"
 		(layer "F.Cu")
 		(uuid "b7d4ab3e-56d0-484a-97b4-66ff15b877d0")
-		(at 190 191.54 180)
+		(at 190.5 191.54 180)
 		(descr "Capacitor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "capacitor")
 		(property "Reference" "C32"
@@ -29122,7 +29122,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "49.9 ohm"
+		(property "Value" "33 ohm"
 			(at 0 -1.43 90)
 			(layer "B.Fab")
 			(uuid "5be2c5aa-30e8-457c-a66c-a14aa222b2a8")
@@ -29183,7 +29183,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C23185"
+		(property "LCSC" "C25105"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -29207,7 +29207,7 @@
 				)
 			)
 		)
-		(property "LCSC_MPN" "0603WAF499JT5E"
+		(property "LCSC_MPN" "0402WGF330JTCE"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -31296,7 +31296,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "49.9 ohm"
+		(property "Value" "33 ohm"
 			(at 0 -1.43 180)
 			(layer "B.Fab")
 			(uuid "dba63ada-6bb6-4151-a203-a58d64667728")
@@ -31357,7 +31357,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C23185"
+		(property "LCSC" "C25105"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -31381,7 +31381,7 @@
 				)
 			)
 		)
-		(property "LCSC_MPN" "0603WAF499JT5E"
+		(property "LCSC_MPN" "0402WGF330JTCE"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -31520,7 +31520,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "49.9 ohm"
+		(property "Value" "33 ohm"
 			(at 0 -1.43 90)
 			(layer "B.Fab")
 			(uuid "a9b566a2-e819-4166-a0f9-f81eafc19844")
@@ -31581,7 +31581,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C23185"
+		(property "LCSC" "C25105"
 			(at 0 0 270)
 			(layer "B.SilkS")
 			(hide yes)
@@ -31605,7 +31605,7 @@
 				)
 			)
 		)
-		(property "LCSC_MPN" "0603WAF499JT5E"
+		(property "LCSC_MPN" "0402WGF330JTCE"
 			(at 0 0 270)
 			(layer "B.SilkS")
 			(hide yes)
@@ -31968,7 +31968,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "49.9 ohm"
+		(property "Value" "33 ohm"
 			(at 0 -1.43 90)
 			(layer "B.Fab")
 			(uuid "65cfc0af-f7ef-40cc-a790-fcd3a3bcd24d")
@@ -32029,7 +32029,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C23185"
+		(property "LCSC" "C25105"
 			(at 0 0 180)
 			(layer "B.SilkS")
 			(hide yes)
@@ -32053,7 +32053,7 @@
 				)
 			)
 		)
-		(property "LCSC_MPN" "0603WAF499JT5E"
+		(property "LCSC_MPN" "0402WGF330JTCE"
 			(at 0 0 180)
 			(layer "B.SilkS")
 			(hide yes)
@@ -32416,7 +32416,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "49.9 ohm"
+		(property "Value" "33 ohm"
 			(at 0 -1.43 270)
 			(layer "B.Fab")
 			(uuid "0ef0420d-26d9-4a8c-b643-cd0138283527")
@@ -32477,7 +32477,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C23185"
+		(property "LCSC" "C25105"
 			(at 0 0 270)
 			(layer "B.SilkS")
 			(hide yes)
@@ -32501,7 +32501,7 @@
 				)
 			)
 		)
-		(property "LCSC_MPN" "0603WAF499JT5E"
+		(property "LCSC_MPN" "0402WGF330JTCE"
 			(at 0 0 270)
 			(layer "B.SilkS")
 			(hide yes)
@@ -32640,7 +32640,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "49.9 ohm"
+		(property "Value" "33 ohm"
 			(at 0 -1.43 180)
 			(layer "B.Fab")
 			(uuid "a3864f4a-e9c6-4fa1-add2-2c3b3cc41688")
@@ -32701,7 +32701,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C23185"
+		(property "LCSC" "C25105"
 			(at 0 0 270)
 			(layer "B.SilkS")
 			(hide yes)
@@ -32725,7 +32725,7 @@
 				)
 			)
 		)
-		(property "LCSC_MPN" "0603WAF499JT5E"
+		(property "LCSC_MPN" "0402WGF330JTCE"
 			(at 0 0 270)
 			(layer "B.SilkS")
 			(hide yes)
@@ -33546,7 +33546,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "49.9 ohm"
+		(property "Value" "33 ohm"
 			(at 0 -1.43 90)
 			(layer "B.Fab")
 			(uuid "58351d1a-0804-4ca5-8234-da046e07e212")
@@ -33607,7 +33607,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C23185"
+		(property "LCSC" "C25105"
 			(at 0 0 90)
 			(layer "B.SilkS")
 			(hide yes)
@@ -33631,7 +33631,7 @@
 				)
 			)
 		)
-		(property "LCSC_MPN" "0603WAF499JT5E"
+		(property "LCSC_MPN" "0402WGF330JTCE"
 			(at 0 0 90)
 			(layer "B.SilkS")
 			(hide yes)
@@ -33770,7 +33770,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "49.9 ohm"
+		(property "Value" "33 ohm"
 			(at 0 -1.43 270)
 			(layer "B.Fab")
 			(uuid "9ce5f47a-d848-4380-90e5-f80a04307691")
@@ -33831,7 +33831,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C23185"
+		(property "LCSC" "C25105"
 			(at 0 0 90)
 			(layer "B.SilkS")
 			(hide yes)
@@ -33855,7 +33855,7 @@
 				)
 			)
 		)
-		(property "LCSC_MPN" "0603WAF499JT5E"
+		(property "LCSC_MPN" "0402WGF330JTCE"
 			(at 0 0 90)
 			(layer "B.SilkS")
 			(hide yes)
@@ -34442,7 +34442,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "49.9 ohm"
+		(property "Value" "33 ohm"
 			(at 0 -1.43 90)
 			(layer "B.Fab")
 			(uuid "1a25aa0a-f404-4878-b4e4-9ef25748e9de")
@@ -34503,7 +34503,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C23185"
+		(property "LCSC" "C25105"
 			(at 0 0 90)
 			(layer "B.SilkS")
 			(hide yes)
@@ -34527,7 +34527,7 @@
 				)
 			)
 		)
-		(property "LCSC_MPN" "0603WAF499JT5E"
+		(property "LCSC_MPN" "0402WGF330JTCE"
 			(at 0 0 90)
 			(layer "B.SilkS")
 			(hide yes)
@@ -34856,7 +34856,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "49.9 ohm"
+		(property "Value" "33 ohm"
 			(at 0 -1.43 180)
 			(layer "B.Fab")
 			(uuid "aa8e5cf6-43ce-428c-889c-32c89baaea5b")
@@ -34917,7 +34917,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C23185"
+		(property "LCSC" "C25105"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -34941,7 +34941,7 @@
 				)
 			)
 		)
-		(property "LCSC_MPN" "0603WAF499JT5E"
+		(property "LCSC_MPN" "0402WGF330JTCE"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -35080,7 +35080,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "49.9 ohm"
+		(property "Value" "33 ohm"
 			(at 0 -1.43 90)
 			(layer "B.Fab")
 			(uuid "9bb24c39-fc65-44be-8934-5dfeda7ab226")
@@ -35141,7 +35141,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C23185"
+		(property "LCSC" "C25105"
 			(at 0 0 180)
 			(layer "B.SilkS")
 			(hide yes)
@@ -35165,7 +35165,7 @@
 				)
 			)
 		)
-		(property "LCSC_MPN" "0603WAF499JT5E"
+		(property "LCSC_MPN" "0402WGF330JTCE"
 			(at 0 0 180)
 			(layer "B.SilkS")
 			(hide yes)
@@ -35304,7 +35304,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "49.9 ohm"
+		(property "Value" "33 ohm"
 			(at 0 -1.43 270)
 			(layer "B.Fab")
 			(uuid "c324edab-3d65-45d1-9272-8c53905a4838")
@@ -35365,7 +35365,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C23185"
+		(property "LCSC" "C25105"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -35389,7 +35389,7 @@
 				)
 			)
 		)
-		(property "LCSC_MPN" "0603WAF499JT5E"
+		(property "LCSC_MPN" "0402WGF330JTCE"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -35976,7 +35976,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "49.9 ohm"
+		(property "Value" "33 ohm"
 			(at 0 -1.43 270)
 			(layer "B.Fab")
 			(uuid "9bf94816-9948-4bb4-9290-d79fe115cd31")
@@ -36037,7 +36037,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C23185"
+		(property "LCSC" "C25105"
 			(at 0 0 180)
 			(layer "B.SilkS")
 			(hide yes)
@@ -36061,7 +36061,7 @@
 				)
 			)
 		)
-		(property "LCSC_MPN" "0603WAF499JT5E"
+		(property "LCSC_MPN" "0402WGF330JTCE"
 			(at 0 0 180)
 			(layer "B.SilkS")
 			(hide yes)
@@ -36931,7 +36931,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "49.9 ohm"
+		(property "Value" "33 ohm"
 			(at 0 -1.43 90)
 			(layer "B.Fab")
 			(uuid "d661f94c-3074-462b-969a-c35f84b87848")
@@ -36992,7 +36992,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C23185"
+		(property "LCSC" "C25105"
 			(at 0 0 270)
 			(layer "B.SilkS")
 			(hide yes)
@@ -37016,7 +37016,7 @@
 				)
 			)
 		)
-		(property "LCSC_MPN" "0603WAF499JT5E"
+		(property "LCSC_MPN" "0402WGF330JTCE"
 			(at 0 0 270)
 			(layer "B.SilkS")
 			(hide yes)
@@ -38003,7 +38003,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "49.9 ohm"
+		(property "Value" "33 ohm"
 			(at 0 -1.43 90)
 			(layer "B.Fab")
 			(uuid "c62dc309-9248-4fb2-bc5c-147ca5e60f61")
@@ -38064,7 +38064,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C23185"
+		(property "LCSC" "C25105"
 			(at 0 0 180)
 			(layer "B.SilkS")
 			(hide yes)
@@ -38088,7 +38088,7 @@
 				)
 			)
 		)
-		(property "LCSC_MPN" "0603WAF499JT5E"
+		(property "LCSC_MPN" "0402WGF330JTCE"
 			(at 0 0 180)
 			(layer "B.SilkS")
 			(hide yes)
@@ -38486,7 +38486,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "49.9 ohm"
+		(property "Value" "33 ohm"
 			(at 0 -1.43 270)
 			(layer "B.Fab")
 			(uuid "0da33ddb-e508-42b8-b1eb-b30ba176e034")
@@ -38547,7 +38547,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C23185"
+		(property "LCSC" "C25105"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -38571,7 +38571,7 @@
 				)
 			)
 		)
-		(property "LCSC_MPN" "0603WAF499JT5E"
+		(property "LCSC_MPN" "0402WGF330JTCE"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -38710,7 +38710,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "49.9 ohm"
+		(property "Value" "33 ohm"
 			(at 0 -1.43 0)
 			(layer "B.Fab")
 			(uuid "8c5c516b-efe8-4efa-ad4d-c9e7ca2435a0")
@@ -38783,7 +38783,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C23185"
+		(property "LCSC" "C25105"
 			(at 0 0 90)
 			(layer "B.SilkS")
 			(hide yes)
@@ -38795,7 +38795,7 @@
 				)
 			)
 		)
-		(property "LCSC_MPN" "0603WAF499JT5E"
+		(property "LCSC_MPN" "0402WGF330JTCE"
 			(at 0 0 90)
 			(layer "B.SilkS")
 			(hide yes)
@@ -38934,7 +38934,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "49.9 ohm"
+		(property "Value" "33 ohm"
 			(at 0 -1.43 270)
 			(layer "B.Fab")
 			(uuid "9d8c3aab-d16d-497a-832a-9538eeaf5737")
@@ -38995,7 +38995,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C23185"
+		(property "LCSC" "C25105"
 			(at 0 0 180)
 			(layer "B.SilkS")
 			(hide yes)
@@ -39019,7 +39019,7 @@
 				)
 			)
 		)
-		(property "LCSC_MPN" "0603WAF499JT5E"
+		(property "LCSC_MPN" "0402WGF330JTCE"
 			(at 0 0 180)
 			(layer "B.SilkS")
 			(hide yes)
@@ -39797,7 +39797,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "49.9 ohm"
+		(property "Value" "33 ohm"
 			(at 0 -1.43 90)
 			(layer "B.Fab")
 			(uuid "5c038a34-1a09-4d84-8e29-ac0f4af27b6b")
@@ -39858,7 +39858,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C23185"
+		(property "LCSC" "C25105"
 			(at 0 0 180)
 			(layer "B.SilkS")
 			(hide yes)
@@ -39882,7 +39882,7 @@
 				)
 			)
 		)
-		(property "LCSC_MPN" "0603WAF499JT5E"
+		(property "LCSC_MPN" "0402WGF330JTCE"
 			(at 0 0 180)
 			(layer "B.SilkS")
 			(hide yes)
@@ -40197,7 +40197,7 @@
 				(justify mirror)
 			)
 		)
-		(property "Value" "49.9 ohm"
+		(property "Value" "33 ohm"
 			(at 0 -1.43 180)
 			(layer "B.Fab")
 			(uuid "e57967f8-d3e5-4a6e-a36a-ed24f62474f4")
@@ -40258,7 +40258,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C23185"
+		(property "LCSC" "C25105"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
@@ -40282,7 +40282,7 @@
 				)
 			)
 		)
-		(property "LCSC_MPN" "0603WAF499JT5E"
+		(property "LCSC_MPN" "0402WGF330JTCE"
 			(at 0 0 0)
 			(layer "B.SilkS")
 			(hide yes)
