@@ -589,6 +589,11 @@ columns at X 42.9 and 58.1). Muxes U21/U23 stay in the left slot at X 7.6 (Y 14-
 beside it (1.6 mm to the pin columns) and land 4.5-11 mm away above the pad row; the S/PDIF pairs from
 J6 (left edge) now run about 40 mm to the SRC. Passive-to-pin median 2.6 mm, 8 of 118 more than 10 mm.
 
+**Stage 10q (2026-09-29, user request):** the two 74LVC157 muxes U21/U23 go with the SRC: both under the
+Teensy, rotated 90, side by side at X 45-50.5 / 51-56.5, Y 38.5-46.2, just above the interior pad row;
+the SRC sits below that row (Y 49-59.3). The five TDM buffers moved up to Y 5-34 (5.9 mm pitch) to make
+room. "SRC" in the user's instructions means SRC4382 plus its two muxes. Passive-to-pin median 3.3 mm.
+
 ## 12. Edit order and verification
 
 1. Commit the July 27 work as-is (BT/ASRC block + libraries) so it is not only in the
