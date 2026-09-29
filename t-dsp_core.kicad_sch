@@ -46513,14 +46513,14 @@
       (effects
         (font
           (size 0.5 0.5))))
-    (property "Value" "49.9 ohm"
+    (property "Value" "33 ohm"
       (at 112.649 229.108 90)
       (show_name no)
       (do_not_autoplace no)
       (effects
         (font
           (size 0.5 0.5))))
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
       (at 113.03 226.822 90)
       (hide yes)
       (show_name no)
@@ -46552,7 +46552,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C23185"
+    (property "LCSC" "C25105"
       (at 113.03 228.6 90)
       (hide yes)
       (show_name no)
@@ -46568,7 +46568,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0603WAF499JT5E"
+    (property "LCSC_MPN" "0402WGF330JTCE"
       (at 113.03 228.6 90)
       (hide yes)
       (show_name no)
@@ -46751,14 +46751,14 @@
       (effects
         (font
           (size 0.5 0.5))))
-    (property "Value" "49.9 ohm"
+    (property "Value" "33 ohm"
       (at 113.6952 269.551 90)
       (show_name no)
       (do_not_autoplace no)
       (effects
         (font
           (size 0.5 0.5))))
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
       (at 113.03 271.018 90)
       (hide yes)
       (show_name no)
@@ -46790,7 +46790,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C23185"
+    (property "LCSC" "C25105"
       (at 113.03 269.24 90)
       (hide yes)
       (show_name no)
@@ -46806,7 +46806,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0603WAF499JT5E"
+    (property "LCSC_MPN" "0402WGF330JTCE"
       (at 113.03 269.24 90)
       (hide yes)
       (show_name no)
@@ -47475,14 +47475,14 @@
       (effects
         (font
           (size 0.5 0.5))))
-    (property "Value" "49.9 ohm"
+    (property "Value" "33 ohm"
       (at 515.0152 761.041 90)
       (show_name no)
       (do_not_autoplace no)
       (effects
         (font
           (size 0.5 0.5))))
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
       (at 514.35 762.508 90)
       (hide yes)
       (show_name no)
@@ -47514,7 +47514,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C23185"
+    (property "LCSC" "C25105"
       (at 514.35 760.73 90)
       (hide yes)
       (show_name no)
@@ -47530,7 +47530,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0603WAF499JT5E"
+    (property "LCSC_MPN" "0402WGF330JTCE"
       (at 514.35 760.73 90)
       (hide yes)
       (show_name no)
@@ -48175,14 +48175,14 @@
       (effects
         (font
           (size 0.9906 0.9906))))
-    (property "Value" "49.9 ohm"
+    (property "Value" "33 ohm"
       (at 185.42 217.17 90)
       (show_name no)
       (do_not_autoplace no)
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
       (at 190.5 220.218 90)
       (hide yes)
       (show_name no)
@@ -48214,7 +48214,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C23185"
+    (property "LCSC" "C25105"
       (at 190.5 218.44 90)
       (hide yes)
       (show_name no)
@@ -48230,7 +48230,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0603WAF499JT5E"
+    (property "LCSC_MPN" "0402WGF330JTCE"
       (at 190.5 218.44 90)
       (hide yes)
       (show_name no)
@@ -48271,14 +48271,14 @@
       (effects
         (font
           (size 0.5 0.5))))
-    (property "Value" "49.9 ohm"
+    (property "Value" "33 ohm"
       (at 112.649 267.208 90)
       (show_name no)
       (do_not_autoplace no)
       (effects
         (font
           (size 0.5 0.5))))
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
       (at 113.03 264.922 90)
       (hide yes)
       (show_name no)
@@ -48310,7 +48310,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C23185"
+    (property "LCSC" "C25105"
       (at 113.03 266.7 90)
       (hide yes)
       (show_name no)
@@ -48326,7 +48326,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0603WAF499JT5E"
+    (property "LCSC_MPN" "0402WGF330JTCE"
       (at 113.03 266.7 90)
       (hide yes)
       (show_name no)
@@ -48476,14 +48476,14 @@
       (effects
         (font
           (size 0.9906 0.9906))))
-    (property "Value" "49.9 ohm"
+    (property "Value" "33 ohm"
       (at 191.77 228.6 90)
       (show_name no)
       (do_not_autoplace no)
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
       (at 191.77 227.838 90)
       (hide yes)
       (show_name no)
@@ -48515,7 +48515,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C23185"
+    (property "LCSC" "C25105"
       (at 191.77 226.06 90)
       (hide yes)
       (show_name no)
@@ -48531,7 +48531,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0603WAF499JT5E"
+    (property "LCSC_MPN" "0402WGF330JTCE"
       (at 191.77 226.06 90)
       (hide yes)
       (show_name no)
@@ -48743,14 +48743,14 @@
       (effects
         (font
           (size 0.5 0.5))))
-    (property "Value" "49.9 ohm"
+    (property "Value" "33 ohm"
       (at 517.5552 814.381 90)
       (show_name no)
       (do_not_autoplace no)
       (effects
         (font
           (size 0.5 0.5))))
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
       (at 516.89 815.848 90)
       (hide yes)
       (show_name no)
@@ -48782,7 +48782,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C23185"
+    (property "LCSC" "C25105"
       (at 516.89 814.07 90)
       (hide yes)
       (show_name no)
@@ -48798,7 +48798,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0603WAF499JT5E"
+    (property "LCSC_MPN" "0402WGF330JTCE"
       (at 516.89 814.07 90)
       (hide yes)
       (show_name no)
@@ -49530,14 +49530,14 @@
       (effects
         (font
           (size 0.5 0.5))))
-    (property "Value" "49.9 ohm"
+    (property "Value" "33 ohm"
       (at 518.8252 877.881 90)
       (show_name no)
       (do_not_autoplace no)
       (effects
         (font
           (size 0.5 0.5))))
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
       (at 518.16 879.348 90)
       (hide yes)
       (show_name no)
@@ -49569,7 +49569,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C23185"
+    (property "LCSC" "C25105"
       (at 518.16 877.57 90)
       (hide yes)
       (show_name no)
@@ -49585,7 +49585,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0603WAF499JT5E"
+    (property "LCSC_MPN" "0402WGF330JTCE"
       (at 518.16 877.57 90)
       (hide yes)
       (show_name no)
@@ -52234,14 +52234,14 @@
       (effects
         (font
           (size 0.5 0.5))))
-    (property "Value" "49.9 ohm"
+    (property "Value" "33 ohm"
       (at 518.8252 880.421 90)
       (show_name no)
       (do_not_autoplace no)
       (effects
         (font
           (size 0.5 0.5))))
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
       (at 518.16 881.888 90)
       (hide yes)
       (show_name no)
@@ -52273,7 +52273,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C23185"
+    (property "LCSC" "C25105"
       (at 518.16 880.11 90)
       (hide yes)
       (show_name no)
@@ -52289,7 +52289,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0603WAF499JT5E"
+    (property "LCSC_MPN" "0402WGF330JTCE"
       (at 518.16 880.11 90)
       (hide yes)
       (show_name no)
@@ -52417,14 +52417,14 @@
       (effects
         (font
           (size 0.9906 0.9906))))
-    (property "Value" "49.9 ohm"
+    (property "Value" "33 ohm"
       (at 187.96 220.98 90)
       (show_name no)
       (do_not_autoplace no)
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
       (at 189.23 225.298 90)
       (hide yes)
       (show_name no)
@@ -52456,7 +52456,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C23185"
+    (property "LCSC" "C25105"
       (at 189.23 223.52 90)
       (hide yes)
       (show_name no)
@@ -52472,7 +52472,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0603WAF499JT5E"
+    (property "LCSC_MPN" "0402WGF330JTCE"
       (at 189.23 223.52 90)
       (hide yes)
       (show_name no)
@@ -52745,14 +52745,14 @@
       (effects
         (font
           (size 0.5 0.5))))
-    (property "Value" "49.9 ohm"
+    (property "Value" "33 ohm"
       (at 517.5552 816.921 90)
       (show_name no)
       (do_not_autoplace no)
       (effects
         (font
           (size 0.5 0.5))))
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
       (at 516.89 818.388 90)
       (hide yes)
       (show_name no)
@@ -52784,7 +52784,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C23185"
+    (property "LCSC" "C25105"
       (at 516.89 816.61 90)
       (hide yes)
       (show_name no)
@@ -52800,7 +52800,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0603WAF499JT5E"
+    (property "LCSC_MPN" "0402WGF330JTCE"
       (at 516.89 816.61 90)
       (hide yes)
       (show_name no)
@@ -55258,14 +55258,14 @@
       (effects
         (font
           (size 0.5 0.5))))
-    (property "Value" "49.9 ohm"
+    (property "Value" "33 ohm"
       (at 104.8498 223.1544 90)
       (show_name no)
       (do_not_autoplace no)
       (effects
         (font
           (size 0.5 0.5))))
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
       (at 105.41 221.742 90)
       (hide yes)
       (show_name no)
@@ -55297,7 +55297,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C23185"
+    (property "LCSC" "C25105"
       (at 105.41 223.52 90)
       (hide yes)
       (show_name no)
@@ -55313,7 +55313,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0603WAF499JT5E"
+    (property "LCSC_MPN" "0402WGF330JTCE"
       (at 105.41 223.52 90)
       (hide yes)
       (show_name no)
@@ -56035,14 +56035,14 @@
       (effects
         (font
           (size 0.5 0.5))))
-    (property "Value" "49.9 ohm"
+    (property "Value" "33 ohm"
       (at 515.0152 758.501 90)
       (show_name no)
       (do_not_autoplace no)
       (effects
         (font
           (size 0.5 0.5))))
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
       (at 514.35 759.968 90)
       (hide yes)
       (show_name no)
@@ -56074,7 +56074,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C23185"
+    (property "LCSC" "C25105"
       (at 514.35 758.19 90)
       (hide yes)
       (show_name no)
@@ -56090,7 +56090,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0603WAF499JT5E"
+    (property "LCSC_MPN" "0402WGF330JTCE"
       (at 514.35 758.19 90)
       (hide yes)
       (show_name no)
@@ -57209,14 +57209,14 @@
       (effects
         (font
           (size 0.9906 0.9906))))
-    (property "Value" "49.9 ohm"
+    (property "Value" "33 ohm"
       (at 191.77 266.7 90)
       (show_name no)
       (do_not_autoplace no)
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
       (at 191.77 271.018 90)
       (hide yes)
       (show_name no)
@@ -57256,7 +57256,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C23185"
+    (property "LCSC" "C25105"
       (at 191.77 269.24 90)
       (hide yes)
       (show_name no)
@@ -57264,7 +57264,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0603WAF499JT5E"
+    (property "LCSC_MPN" "0402WGF330JTCE"
       (at 191.77 269.24 90)
       (hide yes)
       (show_name no)
@@ -57723,14 +57723,14 @@
       (effects
         (font
           (size 0.5 0.5))))
-    (property "Value" "49.9 ohm"
+    (property "Value" "33 ohm"
       (at 517.5552 695.001 90)
       (show_name no)
       (do_not_autoplace no)
       (effects
         (font
           (size 0.5 0.5))))
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
       (at 516.89 696.468 90)
       (hide yes)
       (show_name no)
@@ -57762,7 +57762,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C23185"
+    (property "LCSC" "C25105"
       (at 516.89 694.69 90)
       (hide yes)
       (show_name no)
@@ -57778,7 +57778,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0603WAF499JT5E"
+    (property "LCSC_MPN" "0402WGF330JTCE"
       (at 516.89 694.69 90)
       (hide yes)
       (show_name no)
@@ -59149,14 +59149,14 @@
       (effects
         (font
           (size 0.5 0.5))))
-    (property "Value" "49.9 ohm"
+    (property "Value" "33 ohm"
       (at 106.0752 221.291 90)
       (show_name no)
       (do_not_autoplace no)
       (effects
         (font
           (size 0.5 0.5))))
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
       (at 105.41 222.758 90)
       (hide yes)
       (show_name no)
@@ -59188,7 +59188,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C23185"
+    (property "LCSC" "C25105"
       (at 105.41 220.98 90)
       (hide yes)
       (show_name no)
@@ -59204,7 +59204,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0603WAF499JT5E"
+    (property "LCSC_MPN" "0402WGF330JTCE"
       (at 105.41 220.98 90)
       (hide yes)
       (show_name no)
@@ -61865,14 +61865,14 @@
       (effects
         (font
           (size 0.5 0.5))))
-    (property "Value" "49.9 ohm"
+    (property "Value" "33 ohm"
       (at 517.5552 692.461 90)
       (show_name no)
       (do_not_autoplace no)
       (effects
         (font
           (size 0.5 0.5))))
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
       (at 516.89 693.928 90)
       (hide yes)
       (show_name no)
@@ -61904,7 +61904,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C23185"
+    (property "LCSC" "C25105"
       (at 516.89 692.15 90)
       (hide yes)
       (show_name no)
@@ -61920,7 +61920,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0603WAF499JT5E"
+    (property "LCSC_MPN" "0402WGF330JTCE"
       (at 516.89 692.15 90)
       (hide yes)
       (show_name no)
@@ -62363,14 +62363,14 @@
       (effects
         (font
           (size 0.5 0.5))))
-    (property "Value" "49.9 ohm"
+    (property "Value" "33 ohm"
       (at 108.839 231.648 90)
       (show_name no)
       (do_not_autoplace no)
       (effects
         (font
           (size 0.5 0.5))))
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
       (at 109.22 229.362 90)
       (hide yes)
       (show_name no)
@@ -62402,7 +62402,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C23185"
+    (property "LCSC" "C25105"
       (at 109.22 231.14 90)
       (hide yes)
       (show_name no)
@@ -62418,7 +62418,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0603WAF499JT5E"
+    (property "LCSC_MPN" "0402WGF330JTCE"
       (at 109.22 231.14 90)
       (hide yes)
       (show_name no)
@@ -62766,14 +62766,14 @@
       (effects
         (font
           (size 0.5 0.5))))
-    (property "Value" "49.9 ohm"
+    (property "Value" "33 ohm"
       (at 638.2052 829.621 90)
       (show_name no)
       (do_not_autoplace no)
       (effects
         (font
           (size 0.5 0.5))))
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
       (at 637.54 831.088 90)
       (hide yes)
       (show_name no)
@@ -62805,7 +62805,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C23185"
+    (property "LCSC" "C25105"
       (at 637.54 829.31 90)
       (hide yes)
       (show_name no)
@@ -62821,7 +62821,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0603WAF499JT5E"
+    (property "LCSC_MPN" "0402WGF330JTCE"
       (at 637.54 829.31 90)
       (hide yes)
       (show_name no)
@@ -63108,14 +63108,14 @@
       (effects
         (font
           (size 0.5 0.5))))
-    (property "Value" "49.9 ohm"
+    (property "Value" "33 ohm"
       (at 638.2052 832.161 90)
       (show_name no)
       (do_not_autoplace no)
       (effects
         (font
           (size 0.5 0.5))))
-    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
+    (property "Footprint" "Resistor_SMD:R_0402_1005Metric"
       (at 637.54 833.628 90)
       (hide yes)
       (show_name no)
@@ -63147,7 +63147,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C23185"
+    (property "LCSC" "C25105"
       (at 637.54 831.85 90)
       (hide yes)
       (show_name no)
@@ -63163,7 +63163,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0603WAF499JT5E"
+    (property "LCSC_MPN" "0402WGF330JTCE"
       (at 637.54 831.85 90)
       (hide yes)
       (show_name no)
