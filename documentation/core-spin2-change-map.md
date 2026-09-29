@@ -560,6 +560,28 @@ DRC: no shorts or clearance errors; only the stock ESP32 courtyard overlaps and 
 warnings. **Open:** C31 (10 uF) and C32 (100 nF) have pin 1 connected only to each other, a leftover
 pair that decouples nothing; delete or assign a rail.
 
+### 11.5 Stage 10o (2026-09-29): Teensy in the middle, MIDI + DMX top right, SRC + IDC777 left
+
+User request. Same four rows and two-sided rule as 11.4; contents re-dealt:
+
+| Row | X (pin 1 column) | Headers top to bottom |
+|---|---|---|
+| A (left edge) | 3.0 | J6 J_SPDIF 2x11 (Y 8.75), J7 J_AUX 2x5 (Y 38.1); between H1 and H3 |
+| B | 35.5 | J3 J_T 2x12 (Y 3.0), J4 J_USBH 1x5 (Y 34.9), J11 J_LED 1x5 (Y 49.0) |
+| C | 63.0 | J5 J_MIDI 2x4 (Y 3.2), J2 J_TDM 2x13 (Y 14.8), J12 J_ETH 2x4 (Y 49.2) |
+| D (right edge) | 94.46 | J8 J_S3 2x17 (Y 8.75); between H2 and H4 |
+| horizontal | - | J1 J_PWR along the top edge of slot 1 (X 8-21.7); J10 J_DMX along the top edge of slot 3 (X 78.5-92.2) |
+
+| Slot | X range | Contents |
+|---|---|---|
+| 1 | 7.3-33.7 | power (U24, L1, U3, U15) top right under J1; SRC4382 U19 (X 7.6, Y 14) with muxes U21/U23 beside it; IDC777 U22 bottom-left (X 7.4-20.5, Y 37-60.5), antenna out the bottom edge (keep-out X 9.9-18, Y 55.4-61); J13 u.FL beside its pad 57; LED driver IC1 + D3/D4 next to J11 |
+| 2 | 39.8-61.2 | Teensy U1 full height centred X 50.5; TDM buffers U5-U8/U11 on the front under it (X 48.7-52.2); Teensy passives on the back |
+| 3 | 67.3-92.7 | MIDI (U4, U9, D2) at the top under J10 and beside J5; DMX isolated block (U18 horizontal Y 14.2, U17, U16, U20) below it; ESP32-S3 U13 at the bottom centred X 80, pads Y 35.2-53.2, antenna out the bottom edge (keep-out X 71-89, Y 53.2-61) |
+
+Result: passive-to-pin median 2.4 mm, 5 of 118 more than 10 mm; signal ratsnest 3.5 m (3.7 m in 10n).
+DRC: only the stock ESP32 courtyard overlaps and inherited drill warnings; parity clean apart from
+board_outline2. Both antennas are on the bottom edge, 53 mm apart (IDC777 X 10-18, S3 X 71-89).
+
 ## 12. Edit order and verification
 
 1. Commit the July 27 work as-is (BT/ASRC block + libraries) so it is not only in the
