@@ -45812,7 +45812,7 @@
       (effects
         (font
           (size 0.5 0.5))))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 113.03 226.822 90)
       (hide yes)
       (show_name no)
@@ -45844,7 +45844,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C17720"
+    (property "LCSC" "C23185"
       (at 113.03 228.6 90)
       (hide yes)
       (show_name no)
@@ -45860,7 +45860,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0805W8F499JT5E"
+    (property "LCSC_MPN" "0603WAF499JT5E"
       (at 113.03 228.6 90)
       (hide yes)
       (show_name no)
@@ -46050,7 +46050,7 @@
       (effects
         (font
           (size 0.5 0.5))))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 113.03 271.018 90)
       (hide yes)
       (show_name no)
@@ -46082,7 +46082,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C17720"
+    (property "LCSC" "C23185"
       (at 113.03 269.24 90)
       (hide yes)
       (show_name no)
@@ -46098,7 +46098,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0805W8F499JT5E"
+    (property "LCSC_MPN" "0603WAF499JT5E"
       (at 113.03 269.24 90)
       (hide yes)
       (show_name no)
@@ -46146,7 +46146,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
       (at 1521.46 703.58 0)
       (hide yes)
       (show_name no)
@@ -46169,7 +46169,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C15850"
+    (property "LCSC" "C19702"
       (at 0 0 0)
       (hide yes)
       (show_name no)
@@ -46202,14 +46202,14 @@
       (effects
         (font
           (size 0.9906 0.9906))))
-    (property "Value" "2.21k ohm"
+    (property "Value" "2.2k ohm"
       (at -197.612 641.096 90)
       (show_name no)
       (do_not_autoplace no)
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at -200.66 645.922 90)
       (hide yes)
       (show_name no)
@@ -46241,7 +46241,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C17520"
+    (property "LCSC" "C4190"
       (at -200.66 647.7 90)
       (hide yes)
       (show_name no)
@@ -46257,7 +46257,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0805W8F2201T5E"
+    (property "LCSC_MPN" "0603WAF2201T5E"
       (at -200.66 647.7 90)
       (hide yes)
       (show_name no)
@@ -46305,7 +46305,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
       (at 1668.78 660.4 0)
       (hide yes)
       (show_name no)
@@ -46328,7 +46328,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C49678"
+    (property "LCSC" "C14663"
       (at 0 0 0)
       (hide yes)
       (show_name no)
@@ -46368,7 +46368,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 857.25 833.882 90)
       (hide yes)
       (show_name no)
@@ -46399,7 +46399,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C17477"
+    (property "LCSC" "C21189"
       (at 857.25 835.66 90)
       (hide yes)
       (show_name no)
@@ -46415,7 +46415,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0805W8F0000T5E"
+    (property "LCSC_MPN" "0603WAF0000T5E"
       (at 857.25 835.66 90)
       (hide yes)
       (show_name no)
@@ -46624,7 +46624,7 @@
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
       (at 1074.42 316.23 0)
       (hide yes)
       (show_name no)
@@ -46655,7 +46655,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C49678"
+    (property "LCSC" "C14663"
       (at 1074.42 316.23 0)
       (hide yes)
       (show_name no)
@@ -46671,7 +46671,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "CC0805KRX7R9BB104"
+    (property "LCSC_MPN" "CC0603KRX7R9BB104"
       (at 1074.42 316.23 0)
       (hide yes)
       (show_name no)
@@ -46774,7 +46774,7 @@
       (effects
         (font
           (size 0.5 0.5))))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 514.35 762.508 90)
       (hide yes)
       (show_name no)
@@ -46806,7 +46806,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C17720"
+    (property "LCSC" "C23185"
       (at 514.35 760.73 90)
       (hide yes)
       (show_name no)
@@ -46822,7 +46822,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0805W8F499JT5E"
+    (property "LCSC_MPN" "0603WAF499JT5E"
       (at 514.35 760.73 90)
       (hide yes)
       (show_name no)
@@ -46979,7 +46979,7 @@
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
       (at 1080.77 406.4 0)
       (hide yes)
       (show_name no)
@@ -47010,7 +47010,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C49678"
+    (property "LCSC" "C14663"
       (at 1080.77 406.4 0)
       (hide yes)
       (show_name no)
@@ -47026,7 +47026,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "CC0805KRX7R9BB104"
+    (property "LCSC_MPN" "CC0603KRX7R9BB104"
       (at 1080.77 406.4 0)
       (hide yes)
       (show_name no)
@@ -47132,7 +47132,7 @@
         (font
           (size 0.508 0.508))
         (justify left)))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 779.78 791.21 0)
       (hide yes)
       (show_name no)
@@ -47163,7 +47163,7 @@
       (effects
         (font
           (size 0.508 0.508))))
-    (property "LCSC" "C17557"
+    (property "LCSC" "C22962"
       (at 779.78 791.21 90)
       (hide yes)
       (show_name no)
@@ -47179,7 +47179,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0805W8F2200T5E"
+    (property "LCSC_MPN" "0603WAF2200T5E"
       (at 779.78 791.21 90)
       (hide yes)
       (show_name no)
@@ -47227,7 +47227,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
       (at -217.17 878.84 0)
       (hide yes)
       (show_name no)
@@ -47250,7 +47250,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C49678"
+    (property "LCSC" "C14663"
       (at 0 0 0)
       (hide yes)
       (show_name no)
@@ -47474,7 +47474,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 190.5 220.218 90)
       (hide yes)
       (show_name no)
@@ -47506,7 +47506,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C17720"
+    (property "LCSC" "C23185"
       (at 190.5 218.44 90)
       (hide yes)
       (show_name no)
@@ -47522,7 +47522,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0805W8F499JT5E"
+    (property "LCSC_MPN" "0603WAF499JT5E"
       (at 190.5 218.44 90)
       (hide yes)
       (show_name no)
@@ -47570,7 +47570,7 @@
       (effects
         (font
           (size 0.5 0.5))))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 113.03 264.922 90)
       (hide yes)
       (show_name no)
@@ -47602,7 +47602,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C17720"
+    (property "LCSC" "C23185"
       (at 113.03 266.7 90)
       (hide yes)
       (show_name no)
@@ -47618,7 +47618,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0805W8F499JT5E"
+    (property "LCSC_MPN" "0603WAF499JT5E"
       (at 113.03 266.7 90)
       (hide yes)
       (show_name no)
@@ -47775,7 +47775,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 191.77 227.838 90)
       (hide yes)
       (show_name no)
@@ -47807,7 +47807,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C17720"
+    (property "LCSC" "C23185"
       (at 191.77 226.06 90)
       (hide yes)
       (show_name no)
@@ -47823,7 +47823,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0805W8F499JT5E"
+    (property "LCSC_MPN" "0603WAF499JT5E"
       (at 191.77 226.06 90)
       (hide yes)
       (show_name no)
@@ -47873,7 +47873,7 @@
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
       (at 1062.99 275.59 0)
       (hide yes)
       (show_name no)
@@ -47904,7 +47904,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C15850"
+    (property "LCSC" "C19702"
       (at 1062.99 275.59 0)
       (hide yes)
       (show_name no)
@@ -47920,7 +47920,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "CL21A106KAYNNNE"
+    (property "LCSC_MPN" "CL10A106KP8NNNC"
       (at 1062.99 275.59 0)
       (hide yes)
       (show_name no)
@@ -48042,7 +48042,7 @@
       (effects
         (font
           (size 0.5 0.5))))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 516.89 815.848 90)
       (hide yes)
       (show_name no)
@@ -48074,7 +48074,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C17720"
+    (property "LCSC" "C23185"
       (at 516.89 814.07 90)
       (hide yes)
       (show_name no)
@@ -48090,7 +48090,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0805W8F499JT5E"
+    (property "LCSC_MPN" "0603WAF499JT5E"
       (at 516.89 814.07 90)
       (hide yes)
       (show_name no)
@@ -48280,7 +48280,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 219.71 271.018 90)
       (hide yes)
       (show_name no)
@@ -48312,7 +48312,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C17414"
+    (property "LCSC" "C25804"
       (at 219.71 269.24 0)
       (hide yes)
       (show_name no)
@@ -48328,7 +48328,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0805W8F1002T5E"
+    (property "LCSC_MPN" "0603WAF1002T5E"
       (at 219.71 269.24 0)
       (hide yes)
       (show_name no)
@@ -48379,7 +48379,7 @@
         (font
           (size 0.8 0.8))
         (justify right)))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 233.68 222.25 0)
       (hide yes)
       (show_name no)
@@ -48411,7 +48411,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C17477"
+    (property "LCSC" "C21189"
       (at 233.68 222.25 90)
       (hide yes)
       (show_name no)
@@ -48427,7 +48427,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0805W8F0000T5E"
+    (property "LCSC_MPN" "0603WAF0000T5E"
       (at 233.68 222.25 90)
       (hide yes)
       (show_name no)
@@ -48477,7 +48477,7 @@
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
       (at 180.34 317.5 0)
       (hide yes)
       (show_name no)
@@ -48508,7 +48508,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C49678"
+    (property "LCSC" "C14663"
       (at 180.34 317.5 0)
       (hide yes)
       (show_name no)
@@ -48524,7 +48524,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "CC0805KRX7R9BB104"
+    (property "LCSC_MPN" "CC0603KRX7R9BB104"
       (at 180.34 317.5 0)
       (hide yes)
       (show_name no)
@@ -48829,7 +48829,7 @@
       (effects
         (font
           (size 0.5 0.5))))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 518.16 879.348 90)
       (hide yes)
       (show_name no)
@@ -48861,7 +48861,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C17720"
+    (property "LCSC" "C23185"
       (at 518.16 877.57 90)
       (hide yes)
       (show_name no)
@@ -48877,7 +48877,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0805W8F499JT5E"
+    (property "LCSC_MPN" "0603WAF499JT5E"
       (at 518.16 877.57 90)
       (hide yes)
       (show_name no)
@@ -48925,7 +48925,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
       (at 356.87 243.84 0)
       (hide yes)
       (show_name no)
@@ -48948,7 +48948,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C49678"
+    (property "LCSC" "C14663"
       (at 0 0 0)
       (hide yes)
       (show_name no)
@@ -49095,7 +49095,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
       (at 1570.99 492.76 0)
       (hide yes)
       (show_name no)
@@ -49118,7 +49118,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C15850"
+    (property "LCSC" "C19702"
       (at 0 0 0)
       (hide yes)
       (show_name no)
@@ -49259,7 +49259,7 @@
         (font
           (size 0.508 0.508))
         (justify left)))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 878.84 816.61 0)
       (hide yes)
       (show_name no)
@@ -49290,7 +49290,7 @@
       (effects
         (font
           (size 0.508 0.508))))
-    (property "LCSC" "C17557"
+    (property "LCSC" "C22962"
       (at 878.84 816.61 90)
       (hide yes)
       (show_name no)
@@ -49306,7 +49306,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0805W8F2200T5E"
+    (property "LCSC_MPN" "0603WAF2200T5E"
       (at 878.84 816.61 90)
       (hide yes)
       (show_name no)
@@ -49354,7 +49354,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
       (at -271.78 1009.65 0)
       (hide yes)
       (show_name no)
@@ -49377,7 +49377,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C15850"
+    (property "LCSC" "C19702"
       (at 0 0 0)
       (hide yes)
       (show_name no)
@@ -49727,7 +49727,7 @@
         (font
           (size 0.8 0.8))
         (justify right)))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 280.67 227.33 0)
       (hide yes)
       (show_name no)
@@ -49759,7 +49759,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C17477"
+    (property "LCSC" "C21189"
       (at 280.67 227.33 90)
       (hide yes)
       (show_name no)
@@ -49775,7 +49775,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0805W8F0000T5E"
+    (property "LCSC_MPN" "0603WAF0000T5E"
       (at 280.67 227.33 90)
       (hide yes)
       (show_name no)
@@ -50044,7 +50044,7 @@
         (font
           (size 0.508 0.508))
         (justify left)))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 811.53 777.24 0)
       (hide yes)
       (show_name no)
@@ -50075,7 +50075,7 @@
       (effects
         (font
           (size 0.508 0.508))))
-    (property "LCSC" "C17557"
+    (property "LCSC" "C22962"
       (at 811.53 777.24 90)
       (hide yes)
       (show_name no)
@@ -50091,7 +50091,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0805W8F2200T5E"
+    (property "LCSC_MPN" "0603WAF2200T5E"
       (at 811.53 777.24 90)
       (hide yes)
       (show_name no)
@@ -50233,7 +50233,7 @@
         (font
           (size 0.8 0.8))
         (justify right)))
-    (property "Value" "2.21k ohm"
+    (property "Value" "2.2k ohm"
       (at 288.798 234.188 90)
       (show_name no)
       (do_not_autoplace no)
@@ -50241,7 +50241,7 @@
         (font
           (size 0.8 0.8))
         (justify right)))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 287.02 229.87 0)
       (hide yes)
       (show_name no)
@@ -50273,7 +50273,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C17520"
+    (property "LCSC" "C4190"
       (at 287.02 229.87 90)
       (hide yes)
       (show_name no)
@@ -50289,7 +50289,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0805W8F2201T5E"
+    (property "LCSC_MPN" "0603WAF2201T5E"
       (at 287.02 229.87 90)
       (hide yes)
       (show_name no)
@@ -50495,7 +50495,7 @@
         (font
           (size 0.8 0.8))
         (justify right)))
-    (property "Value" "2.21k ohm"
+    (property "Value" "2.2k ohm"
       (at 250.698 229.108 90)
       (show_name no)
       (do_not_autoplace no)
@@ -50503,7 +50503,7 @@
         (font
           (size 0.8 0.8))
         (justify right)))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 248.92 224.79 0)
       (hide yes)
       (show_name no)
@@ -50535,7 +50535,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C17520"
+    (property "LCSC" "C4190"
       (at 248.92 224.79 90)
       (hide yes)
       (show_name no)
@@ -50551,7 +50551,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0805W8F2201T5E"
+    (property "LCSC_MPN" "0603WAF2201T5E"
       (at 248.92 224.79 90)
       (hide yes)
       (show_name no)
@@ -50655,7 +50655,7 @@
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
       (at 519.43 802.64 0)
       (hide yes)
       (show_name no)
@@ -50686,7 +50686,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C49678"
+    (property "LCSC" "C14663"
       (at 519.43 802.64 0)
       (hide yes)
       (show_name no)
@@ -50702,7 +50702,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "CC0805KRX7R9BB104"
+    (property "LCSC_MPN" "CC0603KRX7R9BB104"
       (at 519.43 802.64 0)
       (hide yes)
       (show_name no)
@@ -50752,7 +50752,7 @@
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
       (at 516.89 746.76 0)
       (hide yes)
       (show_name no)
@@ -50783,7 +50783,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C49678"
+    (property "LCSC" "C14663"
       (at 516.89 746.76 0)
       (hide yes)
       (show_name no)
@@ -50799,7 +50799,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "CC0805KRX7R9BB104"
+    (property "LCSC_MPN" "CC0603KRX7R9BB104"
       (at 516.89 746.76 0)
       (hide yes)
       (show_name no)
@@ -50849,7 +50849,7 @@
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
       (at 151.13 317.5 0)
       (hide yes)
       (show_name no)
@@ -50880,7 +50880,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C49678"
+    (property "LCSC" "C14663"
       (at 151.13 317.5 0)
       (hide yes)
       (show_name no)
@@ -50896,7 +50896,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "CC0805KRX7R9BB104"
+    (property "LCSC_MPN" "CC0603KRX7R9BB104"
       (at 151.13 317.5 0)
       (hide yes)
       (show_name no)
@@ -51041,7 +51041,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
       (at -198.12 878.84 0)
       (hide yes)
       (show_name no)
@@ -51064,7 +51064,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C15850"
+    (property "LCSC" "C19702"
       (at 0 0 0)
       (hide yes)
       (show_name no)
@@ -51232,7 +51232,7 @@
       (effects
         (font
           (size 0.5 0.5))))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 190.5 250.698 90)
       (hide yes)
       (show_name no)
@@ -51264,7 +51264,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C17557"
+    (property "LCSC" "C22962"
       (at 190.5 248.92 90)
       (hide yes)
       (show_name no)
@@ -51280,7 +51280,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0805W8F2200T5E"
+    (property "LCSC_MPN" "0603WAF2200T5E"
       (at 190.5 248.92 90)
       (hide yes)
       (show_name no)
@@ -51330,7 +51330,7 @@
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
       (at 794.7152 435.61 0)
       (hide yes)
       (show_name no)
@@ -51362,7 +51362,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C6119929"
+    (property "LCSC" "C15849"
       (at 793.75 431.8 0)
       (hide yes)
       (show_name no)
@@ -51378,7 +51378,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "CGA0805X7R105K500MT"
+    (property "LCSC_MPN" "CL10A105KB8NNNC"
       (at 793.75 431.8 0)
       (hide yes)
       (show_name no)
@@ -51630,7 +51630,7 @@
       (effects
         (font
           (size 0.5 0.5))))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 518.16 881.888 90)
       (hide yes)
       (show_name no)
@@ -51662,7 +51662,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C17720"
+    (property "LCSC" "C23185"
       (at 518.16 880.11 90)
       (hide yes)
       (show_name no)
@@ -51678,7 +51678,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0805W8F499JT5E"
+    (property "LCSC_MPN" "0603WAF499JT5E"
       (at 518.16 880.11 90)
       (hide yes)
       (show_name no)
@@ -51813,7 +51813,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 189.23 225.298 90)
       (hide yes)
       (show_name no)
@@ -51845,7 +51845,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C17720"
+    (property "LCSC" "C23185"
       (at 189.23 223.52 90)
       (hide yes)
       (show_name no)
@@ -51861,7 +51861,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0805W8F499JT5E"
+    (property "LCSC_MPN" "0603WAF499JT5E"
       (at 189.23 223.52 90)
       (hide yes)
       (show_name no)
@@ -52141,7 +52141,7 @@
       (effects
         (font
           (size 0.5 0.5))))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 516.89 818.388 90)
       (hide yes)
       (show_name no)
@@ -52173,7 +52173,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C17720"
+    (property "LCSC" "C23185"
       (at 516.89 816.61 90)
       (hide yes)
       (show_name no)
@@ -52189,7 +52189,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0805W8F499JT5E"
+    (property "LCSC_MPN" "0603WAF499JT5E"
       (at 516.89 816.61 90)
       (hide yes)
       (show_name no)
@@ -52288,7 +52288,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 777.24 772.922 90)
       (hide yes)
       (show_name no)
@@ -52319,7 +52319,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C17477"
+    (property "LCSC" "C21189"
       (at 777.24 774.7 90)
       (hide yes)
       (show_name no)
@@ -52335,7 +52335,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0805W8F0000T5E"
+    (property "LCSC_MPN" "0603WAF0000T5E"
       (at 777.24 774.7 90)
       (hide yes)
       (show_name no)
@@ -52385,7 +52385,7 @@
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
       (at 519.43 866.14 0)
       (hide yes)
       (show_name no)
@@ -52416,7 +52416,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C49678"
+    (property "LCSC" "C14663"
       (at 519.43 866.14 0)
       (hide yes)
       (show_name no)
@@ -52432,7 +52432,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "CC0805KRX7R9BB104"
+    (property "LCSC_MPN" "CC0603KRX7R9BB104"
       (at 519.43 866.14 0)
       (hide yes)
       (show_name no)
@@ -52482,7 +52482,7 @@
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
       (at 1145.54 275.59 0)
       (hide yes)
       (show_name no)
@@ -52513,7 +52513,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C49678"
+    (property "LCSC" "C14663"
       (at 1145.54 275.59 0)
       (hide yes)
       (show_name no)
@@ -52529,7 +52529,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "CC0805KRX7R9BB104"
+    (property "LCSC_MPN" "CC0603KRX7R9BB104"
       (at 1145.54 275.59 0)
       (hide yes)
       (show_name no)
@@ -52632,7 +52632,7 @@
         (font
           (size 0.508 0.508))
         (justify left)))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 880.11 786.13 0)
       (hide yes)
       (show_name no)
@@ -52663,7 +52663,7 @@
       (effects
         (font
           (size 0.508 0.508))))
-    (property "LCSC" "C17557"
+    (property "LCSC" "C22962"
       (at 880.11 786.13 90)
       (hide yes)
       (show_name no)
@@ -52679,7 +52679,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0805W8F2200T5E"
+    (property "LCSC_MPN" "0603WAF2200T5E"
       (at 880.11 786.13 90)
       (hide yes)
       (show_name no)
@@ -52936,7 +52936,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
       (at -241.3 833.12 0)
       (hide yes)
       (show_name no)
@@ -52959,7 +52959,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C49678"
+    (property "LCSC" "C14663"
       (at 0 0 0)
       (hide yes)
       (show_name no)
@@ -53001,7 +53001,7 @@
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
       (at 792.48 777.24 0)
       (hide yes)
       (show_name no)
@@ -53032,7 +53032,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C49678"
+    (property "LCSC" "C14663"
       (at 792.48 777.24 0)
       (hide yes)
       (show_name no)
@@ -53048,7 +53048,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "CC0805KRX7R9BB104"
+    (property "LCSC_MPN" "CC0603KRX7R9BB104"
       (at 792.48 777.24 0)
       (hide yes)
       (show_name no)
@@ -53523,7 +53523,7 @@
         (font
           (size 0.8 0.8))
         (justify right)))
-    (property "Value" "2.21k ohm"
+    (property "Value" "2.2k ohm"
       (at 297.688 234.188 90)
       (show_name no)
       (do_not_autoplace no)
@@ -53531,7 +53531,7 @@
         (font
           (size 0.8 0.8))
         (justify right)))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 295.91 229.87 0)
       (hide yes)
       (show_name no)
@@ -53563,7 +53563,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C17520"
+    (property "LCSC" "C4190"
       (at 295.91 229.87 90)
       (hide yes)
       (show_name no)
@@ -53579,7 +53579,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0805W8F2201T5E"
+    (property "LCSC_MPN" "0603WAF2201T5E"
       (at 295.91 229.87 90)
       (hide yes)
       (show_name no)
@@ -53977,7 +53977,7 @@
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
       (at 1028.7 1029.97 0)
       (hide yes)
       (show_name no)
@@ -54009,7 +54009,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C15850"
+    (property "LCSC" "C19702"
       (at 1028.7 1029.97 0)
       (hide yes)
       (show_name no)
@@ -54025,7 +54025,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "CL21A106KAYNNNE"
+    (property "LCSC_MPN" "CL10A106KP8NNNC"
       (at 1028.7 1029.97 0)
       (hide yes)
       (show_name no)
@@ -54129,7 +54129,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
       (at -270.51 890.27 0)
       (hide yes)
       (show_name no)
@@ -54152,7 +54152,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C15850"
+    (property "LCSC" "C19702"
       (at 0 0 0)
       (hide yes)
       (show_name no)
@@ -54282,7 +54282,7 @@
         (font
           (size 0.8 0.8))
         (justify right)))
-    (property "Value" "2.21k ohm"
+    (property "Value" "2.2k ohm"
       (at 241.808 229.108 90)
       (show_name no)
       (do_not_autoplace no)
@@ -54290,7 +54290,7 @@
         (font
           (size 0.8 0.8))
         (justify right)))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 240.03 224.79 0)
       (hide yes)
       (show_name no)
@@ -54322,7 +54322,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C17520"
+    (property "LCSC" "C4190"
       (at 240.03 224.79 90)
       (hide yes)
       (show_name no)
@@ -54338,7 +54338,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0805W8F2201T5E"
+    (property "LCSC_MPN" "0603WAF2201T5E"
       (at 240.03 224.79 90)
       (hide yes)
       (show_name no)
@@ -54386,7 +54386,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
       (at 1360.17 388.62 0)
       (hide yes)
       (show_name no)
@@ -54409,7 +54409,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C15850"
+    (property "LCSC" "C19702"
       (at 0 0 0)
       (hide yes)
       (show_name no)
@@ -54449,7 +54449,7 @@
       (effects
         (font
           (size 0.5 0.5))))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 646.43 1008.888 90)
       (hide yes)
       (show_name no)
@@ -54489,7 +54489,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" ""
+    (property "LCSC_MPN" "0603WAF3000T5E"
       (at 646.43 1007.11 90)
       (hide yes)
       (show_name no)
@@ -54505,7 +54505,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C17617"
+    (property "LCSC" "C23025"
       (at 0 0 0)
       (hide yes)
       (show_name no)
@@ -54751,7 +54751,7 @@
       (effects
         (font
           (size 0.5 0.5))))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 105.41 221.742 90)
       (hide yes)
       (show_name no)
@@ -54783,7 +54783,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C17720"
+    (property "LCSC" "C23185"
       (at 105.41 223.52 90)
       (hide yes)
       (show_name no)
@@ -54799,7 +54799,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0805W8F499JT5E"
+    (property "LCSC_MPN" "0603WAF499JT5E"
       (at 105.41 223.52 90)
       (hide yes)
       (show_name no)
@@ -54956,7 +54956,7 @@
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
       (at 781.05 430.53 0)
       (hide yes)
       (show_name no)
@@ -54987,7 +54987,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C15850"
+    (property "LCSC" "C19702"
       (at 781.05 430.53 0)
       (hide yes)
       (show_name no)
@@ -55003,7 +55003,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "CL21A106KAYNNNE"
+    (property "LCSC_MPN" "CL10A106KP8NNNC"
       (at 781.05 430.53 0)
       (hide yes)
       (show_name no)
@@ -55053,7 +55053,7 @@
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
       (at 624.84 1012.19 0)
       (hide yes)
       (show_name no)
@@ -55092,7 +55092,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" ""
+    (property "LCSC_MPN" "CL10A106KP8NNNC"
       (at 624.84 1012.19 0)
       (hide yes)
       (show_name no)
@@ -55108,7 +55108,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C15850"
+    (property "LCSC" "C19702"
       (at 0 0 0)
       (hide yes)
       (show_name no)
@@ -55141,14 +55141,14 @@
       (effects
         (font
           (size 0.9906 0.9906))))
-    (property "Value" "2.21k ohm"
+    (property "Value" "2.2k ohm"
       (at -200.66 657.86 90)
       (show_name no)
       (do_not_autoplace no)
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at -200.66 653.542 90)
       (hide yes)
       (show_name no)
@@ -55180,7 +55180,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C17520"
+    (property "LCSC" "C4190"
       (at -200.66 655.32 90)
       (hide yes)
       (show_name no)
@@ -55196,7 +55196,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0805W8F2201T5E"
+    (property "LCSC_MPN" "0603WAF2201T5E"
       (at -200.66 655.32 90)
       (hide yes)
       (show_name no)
@@ -55321,7 +55321,7 @@
         (font
           (size 0.508 0.508))
         (justify left)))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 880.11 789.94 0)
       (hide yes)
       (show_name no)
@@ -55352,7 +55352,7 @@
       (effects
         (font
           (size 0.508 0.508))))
-    (property "LCSC" "C17557"
+    (property "LCSC" "C22962"
       (at 880.11 789.94 90)
       (hide yes)
       (show_name no)
@@ -55368,7 +55368,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0805W8F2200T5E"
+    (property "LCSC_MPN" "0603WAF2200T5E"
       (at 880.11 789.94 90)
       (hide yes)
       (show_name no)
@@ -55528,7 +55528,7 @@
       (effects
         (font
           (size 0.5 0.5))))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 514.35 759.968 90)
       (hide yes)
       (show_name no)
@@ -55560,7 +55560,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C17720"
+    (property "LCSC" "C23185"
       (at 514.35 758.19 90)
       (hide yes)
       (show_name no)
@@ -55576,7 +55576,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0805W8F499JT5E"
+    (property "LCSC_MPN" "0603WAF499JT5E"
       (at 514.35 758.19 90)
       (hide yes)
       (show_name no)
@@ -55709,7 +55709,7 @@
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
       (at 491.49 458.47 0)
       (hide yes)
       (show_name no)
@@ -55741,7 +55741,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C49678"
+    (property "LCSC" "C14663"
       (at 491.49 458.47 0)
       (hide yes)
       (show_name no)
@@ -55757,7 +55757,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "CC0805KRX7R9BB104"
+    (property "LCSC_MPN" "CC0603KRX7R9BB104"
       (at 491.49 458.47 0)
       (hide yes)
       (show_name no)
@@ -55805,7 +55805,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
       (at -309.88 784.86 0)
       (hide yes)
       (show_name no)
@@ -55828,7 +55828,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C15850"
+    (property "LCSC" "C19702"
       (at 0 0 0)
       (hide yes)
       (show_name no)
@@ -55966,7 +55966,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at -290.83 596.9 0)
       (hide yes)
       (show_name no)
@@ -55989,7 +55989,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C17414"
+    (property "LCSC" "C25804"
       (at 0 0 0)
       (hide yes)
       (show_name no)
@@ -56031,7 +56031,7 @@
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
       (at 706.12 1004.57 0)
       (hide yes)
       (show_name no)
@@ -56070,7 +56070,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" ""
+    (property "LCSC_MPN" "CL10A106KP8NNNC"
       (at 706.12 1004.57 0)
       (hide yes)
       (show_name no)
@@ -56086,7 +56086,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C15850"
+    (property "LCSC" "C19702"
       (at 0 0 0)
       (hide yes)
       (show_name no)
@@ -56126,7 +56126,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
       (at -279.4 890.27 0)
       (hide yes)
       (show_name no)
@@ -56149,7 +56149,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C49678"
+    (property "LCSC" "C14663"
       (at 0 0 0)
       (hide yes)
       (show_name no)
@@ -56191,7 +56191,7 @@
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
       (at 679.1452 720.09 0)
       (hide yes)
       (show_name no)
@@ -56223,7 +56223,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C6119929"
+    (property "LCSC" "C15849"
       (at 678.18 716.28 0)
       (hide yes)
       (show_name no)
@@ -56239,7 +56239,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "CGA0805X7R105K500MT"
+    (property "LCSC_MPN" "CL10A105KB8NNNC"
       (at 678.18 716.28 0)
       (hide yes)
       (show_name no)
@@ -56287,7 +56287,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
       (at 1457.96 703.58 0)
       (hide yes)
       (show_name no)
@@ -56310,7 +56310,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C49678"
+    (property "LCSC" "C14663"
       (at 0 0 0)
       (hide yes)
       (show_name no)
@@ -56456,7 +56456,7 @@
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
       (at 502.92 458.47 0)
       (hide yes)
       (show_name no)
@@ -56488,7 +56488,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C15850"
+    (property "LCSC" "C19702"
       (at 502.92 458.47 0)
       (hide yes)
       (show_name no)
@@ -56504,7 +56504,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "CL21A106KAYNNNE"
+    (property "LCSC_MPN" "CL10A106KP8NNNC"
       (at 502.92 458.47 0)
       (hide yes)
       (show_name no)
@@ -56606,7 +56606,7 @@
       (effects
         (font
           (size 0.635 0.635))))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 1098.55 1049.528 90)
       (hide yes)
       (show_name no)
@@ -56646,7 +56646,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" ""
+    (property "LCSC_MPN" "0603WAF330JT5E"
       (at 1098.55 1047.75 90)
       (hide yes)
       (show_name no)
@@ -56662,7 +56662,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C17634"
+    (property "LCSC" "C23140"
       (at 0 0 0)
       (hide yes)
       (show_name no)
@@ -56812,7 +56812,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 191.77 271.018 90)
       (hide yes)
       (show_name no)
@@ -56852,7 +56852,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C17720"
+    (property "LCSC" "C23185"
       (at 191.77 269.24 90)
       (hide yes)
       (show_name no)
@@ -56860,7 +56860,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0805W8F499JT5E"
+    (property "LCSC_MPN" "0603WAF499JT5E"
       (at 191.77 269.24 90)
       (hide yes)
       (show_name no)
@@ -56908,7 +56908,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
       (at 1496.06 703.58 0)
       (hide yes)
       (show_name no)
@@ -56931,7 +56931,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C49678"
+    (property "LCSC" "C14663"
       (at 0 0 0)
       (hide yes)
       (show_name no)
@@ -57083,7 +57083,7 @@
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
       (at 638.81 817.88 0)
       (hide yes)
       (show_name no)
@@ -57114,7 +57114,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C49678"
+    (property "LCSC" "C14663"
       (at 638.81 817.88 0)
       (hide yes)
       (show_name no)
@@ -57130,7 +57130,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "CC0805KRX7R9BB104"
+    (property "LCSC_MPN" "CC0603KRX7R9BB104"
       (at 638.81 817.88 0)
       (hide yes)
       (show_name no)
@@ -57306,7 +57306,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at -280.67 797.56 0)
       (hide yes)
       (show_name no)
@@ -57329,7 +57329,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C17407"
+    (property "LCSC" "C25803"
       (at 0 0 0)
       (hide yes)
       (show_name no)
@@ -57436,7 +57436,7 @@
       (effects
         (font
           (size 0.5 0.5))))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 516.89 696.468 90)
       (hide yes)
       (show_name no)
@@ -57468,7 +57468,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C17720"
+    (property "LCSC" "C23185"
       (at 516.89 694.69 90)
       (hide yes)
       (show_name no)
@@ -57484,7 +57484,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0805W8F499JT5E"
+    (property "LCSC_MPN" "0603WAF499JT5E"
       (at 516.89 694.69 90)
       (hide yes)
       (show_name no)
@@ -57586,7 +57586,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
       (at 1508.76 703.58 0)
       (hide yes)
       (show_name no)
@@ -57609,7 +57609,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C15850"
+    (property "LCSC" "C19702"
       (at 0 0 0)
       (hide yes)
       (show_name no)
@@ -57649,7 +57649,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 452.12 247.65 0)
       (hide yes)
       (show_name no)
@@ -57672,7 +57672,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C17414"
+    (property "LCSC" "C25804"
       (at 0 0 0)
       (hide yes)
       (show_name no)
@@ -57769,7 +57769,7 @@
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 1076.198 292.1 90)
       (hide yes)
       (show_name no)
@@ -57801,7 +57801,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C27834"
+    (property "LCSC" "C23186"
       (at 1074.42 292.1 90)
       (hide yes)
       (show_name no)
@@ -57817,7 +57817,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0805W8F5101T5E"
+    (property "LCSC_MPN" "0603WAF5101T5E"
       (at 1074.42 292.1 90)
       (hide yes)
       (show_name no)
@@ -57920,7 +57920,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
       (at -207.01 878.84 0)
       (hide yes)
       (show_name no)
@@ -57943,7 +57943,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C49678"
+    (property "LCSC" "C14663"
       (at 0 0 0)
       (hide yes)
       (show_name no)
@@ -58062,7 +58062,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at -139.7 914.4 0)
       (hide yes)
       (show_name no)
@@ -58085,7 +58085,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C17437"
+    (property "LCSC" "C22787"
       (at 0 0 0)
       (hide yes)
       (show_name no)
@@ -58125,7 +58125,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
       (at 1470.66 703.58 0)
       (hide yes)
       (show_name no)
@@ -58148,7 +58148,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C49678"
+    (property "LCSC" "C14663"
       (at 0 0 0)
       (hide yes)
       (show_name no)
@@ -58543,7 +58543,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
       (at 1583.69 492.76 0)
       (hide yes)
       (show_name no)
@@ -58566,7 +58566,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C49678"
+    (property "LCSC" "C14663"
       (at 0 0 0)
       (hide yes)
       (show_name no)
@@ -58713,7 +58713,7 @@
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
       (at 635 1012.19 0)
       (hide yes)
       (show_name no)
@@ -58752,7 +58752,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" ""
+    (property "LCSC_MPN" "CL10A475KO8NNNC"
       (at 635 1012.19 0)
       (hide yes)
       (show_name no)
@@ -58768,7 +58768,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C1779"
+    (property "LCSC" "C19666"
       (at 0 0 0)
       (hide yes)
       (show_name no)
@@ -58862,7 +58862,7 @@
       (effects
         (font
           (size 0.5 0.5))))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 105.41 222.758 90)
       (hide yes)
       (show_name no)
@@ -58894,7 +58894,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C17720"
+    (property "LCSC" "C23185"
       (at 105.41 220.98 90)
       (hide yes)
       (show_name no)
@@ -58910,7 +58910,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0805W8F499JT5E"
+    (property "LCSC_MPN" "0603WAF499JT5E"
       (at 105.41 220.98 90)
       (hide yes)
       (show_name no)
@@ -58960,7 +58960,7 @@
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
       (at 677.8752 741.68 0)
       (hide yes)
       (show_name no)
@@ -58992,7 +58992,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C6119929"
+    (property "LCSC" "C15849"
       (at 676.91 737.87 0)
       (hide yes)
       (show_name no)
@@ -59008,7 +59008,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "CGA0805X7R105K500MT"
+    (property "LCSC_MPN" "CL10A105KB8NNNC"
       (at 676.91 737.87 0)
       (hide yes)
       (show_name no)
@@ -59273,7 +59273,7 @@
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
       (at 1070.61 406.4 0)
       (hide yes)
       (show_name no)
@@ -59304,7 +59304,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C15850"
+    (property "LCSC" "C19702"
       (at 1070.61 406.4 0)
       (hide yes)
       (show_name no)
@@ -59320,7 +59320,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "CL21A106KAYNNNE"
+    (property "LCSC_MPN" "CL10A106KP8NNNC"
       (at 1070.61 406.4 0)
       (hide yes)
       (show_name no)
@@ -59423,7 +59423,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 218.44 263.398 90)
       (hide yes)
       (show_name no)
@@ -59455,7 +59455,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C17414"
+    (property "LCSC" "C25804"
       (at 218.44 261.62 0)
       (hide yes)
       (show_name no)
@@ -59471,7 +59471,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0805W8F1002T5E"
+    (property "LCSC_MPN" "0603WAF1002T5E"
       (at 218.44 261.62 0)
       (hide yes)
       (show_name no)
@@ -59694,7 +59694,7 @@
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
       (at 1062.99 316.23 0)
       (hide yes)
       (show_name no)
@@ -59725,7 +59725,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C15850"
+    (property "LCSC" "C19702"
       (at 1062.99 316.23 0)
       (hide yes)
       (show_name no)
@@ -59741,7 +59741,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "CL21A106KAYNNNE"
+    (property "LCSC_MPN" "CL10A106KP8NNNC"
       (at 1062.99 316.23 0)
       (hide yes)
       (show_name no)
@@ -59852,7 +59852,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
       (at 1668.78 574.04 0)
       (hide yes)
       (show_name no)
@@ -59875,7 +59875,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C49678"
+    (property "LCSC" "C14663"
       (at 0 0 0)
       (hide yes)
       (show_name no)
@@ -59918,7 +59918,7 @@
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 1113.282 279.4 90)
       (hide yes)
       (show_name no)
@@ -59950,7 +59950,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C27834"
+    (property "LCSC" "C23186"
       (at 1115.06 279.4 90)
       (hide yes)
       (show_name no)
@@ -59966,7 +59966,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0805W8F5101T5E"
+    (property "LCSC_MPN" "0603WAF5101T5E"
       (at 1115.06 279.4 90)
       (hide yes)
       (show_name no)
@@ -60166,7 +60166,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
       (at 1558.29 492.76 0)
       (hide yes)
       (show_name no)
@@ -60189,7 +60189,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C6119929"
+    (property "LCSC" "C15849"
       (at 0 0 0)
       (hide yes)
       (show_name no)
@@ -60286,7 +60286,7 @@
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
       (at 519.43 680.72 0)
       (hide yes)
       (show_name no)
@@ -60317,7 +60317,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C49678"
+    (property "LCSC" "C14663"
       (at 519.43 680.72 0)
       (hide yes)
       (show_name no)
@@ -60333,7 +60333,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "CC0805KRX7R9BB104"
+    (property "LCSC_MPN" "CC0603KRX7R9BB104"
       (at 519.43 680.72 0)
       (hide yes)
       (show_name no)
@@ -60383,7 +60383,7 @@
         (font
           (size 0.508 0.508))
         (justify left)))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 873.76 811.53 0)
       (hide yes)
       (show_name no)
@@ -60414,7 +60414,7 @@
       (effects
         (font
           (size 0.508 0.508))))
-    (property "LCSC" "C17557"
+    (property "LCSC" "C22962"
       (at 873.76 811.53 90)
       (hide yes)
       (show_name no)
@@ -60430,7 +60430,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0805W8F2200T5E"
+    (property "LCSC_MPN" "0603WAF2200T5E"
       (at 873.76 811.53 90)
       (hide yes)
       (show_name no)
@@ -60664,7 +60664,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
       (at 1347.47 388.62 0)
       (hide yes)
       (show_name no)
@@ -60687,7 +60687,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C49678"
+    (property "LCSC" "C14663"
       (at 0 0 0)
       (hide yes)
       (show_name no)
@@ -60782,7 +60782,7 @@
         (font
           (size 0.508 0.508))
         (justify left)))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 807.72 801.37 0)
       (hide yes)
       (show_name no)
@@ -60813,7 +60813,7 @@
       (effects
         (font
           (size 0.508 0.508))))
-    (property "LCSC" "C4310"
+    (property "LCSC" "C22843"
       (at 807.72 801.37 90)
       (hide yes)
       (show_name no)
@@ -60829,7 +60829,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0805W8F1501T5E"
+    (property "LCSC_MPN" "0603WAF1501T5E"
       (at 807.72 801.37 90)
       (hide yes)
       (show_name no)
@@ -60931,7 +60931,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
       (at 1483.36 703.58 0)
       (hide yes)
       (show_name no)
@@ -60954,7 +60954,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C49678"
+    (property "LCSC" "C14663"
       (at 0 0 0)
       (hide yes)
       (show_name no)
@@ -60996,7 +60996,7 @@
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
       (at 1134.11 275.59 0)
       (hide yes)
       (show_name no)
@@ -61027,7 +61027,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C15850"
+    (property "LCSC" "C19702"
       (at 1134.11 275.59 0)
       (hide yes)
       (show_name no)
@@ -61043,7 +61043,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "CL21A106KAYNNNE"
+    (property "LCSC_MPN" "CL10A106KP8NNNC"
       (at 1134.11 275.59 0)
       (hide yes)
       (show_name no)
@@ -61262,7 +61262,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 1305.56 614.68 0)
       (hide yes)
       (show_name no)
@@ -61285,7 +61285,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C17407"
+    (property "LCSC" "C25803"
       (at 0 0 0)
       (hide yes)
       (show_name no)
@@ -61549,7 +61549,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
       (at -299.72 784.86 0)
       (hide yes)
       (show_name no)
@@ -61572,7 +61572,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C49678"
+    (property "LCSC" "C14663"
       (at 0 0 0)
       (hide yes)
       (show_name no)
@@ -61612,7 +61612,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
       (at 356.87 210.82 0)
       (hide yes)
       (show_name no)
@@ -61635,7 +61635,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C49678"
+    (property "LCSC" "C14663"
       (at 0 0 0)
       (hide yes)
       (show_name no)
@@ -61675,7 +61675,7 @@
       (effects
         (font
           (size 0.5 0.5))))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 516.89 693.928 90)
       (hide yes)
       (show_name no)
@@ -61707,7 +61707,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C17720"
+    (property "LCSC" "C23185"
       (at 516.89 692.15 90)
       (hide yes)
       (show_name no)
@@ -61723,7 +61723,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0805W8F499JT5E"
+    (property "LCSC_MPN" "0603WAF499JT5E"
       (at 516.89 692.15 90)
       (hide yes)
       (show_name no)
@@ -61773,7 +61773,7 @@
         (font
           (size 1.27 1.27))
         (justify left)))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
       (at 864.87 838.2 0)
       (hide yes)
       (show_name no)
@@ -61804,7 +61804,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C49678"
+    (property "LCSC" "C14663"
       (at 864.87 838.2 0)
       (hide yes)
       (show_name no)
@@ -61820,7 +61820,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "CC0805KRX7R9BB104"
+    (property "LCSC_MPN" "CC0603KRX7R9BB104"
       (at 864.87 838.2 0)
       (hide yes)
       (show_name no)
@@ -61868,7 +61868,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "project_fp:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
       (at -223.52 787.4 0)
       (hide yes)
       (show_name no)
@@ -61891,7 +61891,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C49678"
+    (property "LCSC" "C14663"
       (at 0 0 0)
       (hide yes)
       (show_name no)
@@ -62173,7 +62173,7 @@
       (effects
         (font
           (size 0.5 0.5))))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 109.22 229.362 90)
       (hide yes)
       (show_name no)
@@ -62205,7 +62205,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C17720"
+    (property "LCSC" "C23185"
       (at 109.22 231.14 90)
       (hide yes)
       (show_name no)
@@ -62221,7 +62221,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0805W8F499JT5E"
+    (property "LCSC_MPN" "0603WAF499JT5E"
       (at 109.22 231.14 90)
       (hide yes)
       (show_name no)
@@ -62700,7 +62700,7 @@
       (effects
         (font
           (size 0.5 0.5))))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 648.208 1013.46 90)
       (hide yes)
       (show_name no)
@@ -62740,7 +62740,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" ""
+    (property "LCSC_MPN" "0603WAF3302T5E"
       (at 646.43 1013.46 90)
       (hide yes)
       (show_name no)
@@ -62756,7 +62756,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C17633"
+    (property "LCSC" "C4216"
       (at 0 0 0)
       (hide yes)
       (show_name no)
@@ -62796,7 +62796,7 @@
       (effects
         (font
           (size 0.5 0.5))))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 637.54 831.088 90)
       (hide yes)
       (show_name no)
@@ -62828,7 +62828,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C17720"
+    (property "LCSC" "C23185"
       (at 637.54 829.31 90)
       (hide yes)
       (show_name no)
@@ -62844,7 +62844,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0805W8F499JT5E"
+    (property "LCSC_MPN" "0603WAF499JT5E"
       (at 637.54 829.31 90)
       (hide yes)
       (show_name no)
@@ -63138,7 +63138,7 @@
       (effects
         (font
           (size 0.5 0.5))))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 637.54 833.628 90)
       (hide yes)
       (show_name no)
@@ -63170,7 +63170,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C17720"
+    (property "LCSC" "C23185"
       (at 637.54 831.85 90)
       (hide yes)
       (show_name no)
@@ -63186,7 +63186,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC_MPN" "0805W8F499JT5E"
+    (property "LCSC_MPN" "0603WAF499JT5E"
       (at 637.54 831.85 90)
       (hide yes)
       (show_name no)
@@ -63234,7 +63234,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "Footprint" "project_fp:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+    (property "Footprint" "Resistor_SMD:R_0603_1608Metric"
       (at 472.44 234.95 0)
       (hide yes)
       (show_name no)
@@ -63257,7 +63257,7 @@
       (effects
         (font
           (size 1.27 1.27))))
-    (property "LCSC" "C17414"
+    (property "LCSC" "C25804"
       (at 0 0 0)
       (hide yes)
       (show_name no)

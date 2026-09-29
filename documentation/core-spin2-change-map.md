@@ -521,23 +521,44 @@ top side was 80 % courtyard. Decisions:
   slot it serves, so the backplane mates four straight connector rows instead of twelve scattered
   headers. J9 was folded into J8 (2x17) and J1 trimmed to 2x5 to make the rows fit the 61 mm height.
 
-| Row | X | Headers top to bottom |
+| Row | X (pin 1 column) | Headers top to bottom |
 |---|---|---|
-| A (left) | 9.0 | J3 J_T 2x12, J12 J_ETH 2x4, J4 J_USBH 1x5 |
-| B | 35.5 | J2 J_TDM 2x13, J5 J_MIDI 2x4, J11 J_LED 1x5 |
-| C | 63.0 | J6 J_SPDIF 2x11, J10 J_DMX 1x5, J7 J_AUX 2x5 |
-| D (right) | 88.5 | J1 J_PWR 2x5, J8 J_S3 2x17 (S3 GPIO, UART0, EN/IO0, I2C, USB pair, 5V) |
+| A (left edge) | 3.0 | J3 J_T 2x12 (Y 8.75), J12 J_ETH 2x4 (Y 40.6); sits between H1 and H3 |
+| B | 35.5 | J2 J_TDM 2x13, J5 J_MIDI 2x4, J4 J_USBH 1x5 |
+| C | 63.0 | J6 J_SPDIF 2x11, J1 J_PWR 2x5, J7 J_AUX 2x5 |
+| D (right edge) | 94.46 | J8 J_S3 2x17 (Y 8.75; S3 GPIO, UART0, EN/IO0, I2C, USB pair, 5V); sits between H2 and H4 |
+| horizontal | - | J10 J_DMX 1x5 along the bottom edge of slot 2 (X 40.5-54.2, Y 57-60.5); J11 J_LED 1x5 vertical at X 41.77 in the strip left of the IDC777 |
+
+Revised 2026-09-28 (stage 10n) at the user's request: the two outer rows are at the board edges and
+fit between the corner holes (47 mm usable), so J4 moved to row B, J1 to row C, J10 and J11 to slot 2.
 
 | Slot | X range | Contents |
 |---|---|---|
 | 1 | 13.3-33.7 | Teensy U1 full height; TDM buffers U5-U8/U11 on the front under it; Teensy passives on the back |
-| 2 | 39.8-61.2 | IDC777 U22 at the top, antenna out the top edge (ground-clearance keep-out X 42.5-50.5, Y 0-4.4); J13 u.FL beside its pad 57; DMX isolated block (U18, U17, U16, U20) in the middle next to J10; MIDI (U4, U9, D2) and LED (IC1, D3, D4) at the bottom next to J5/J11 |
-| 3 | 67.3-86.7 | power (U24 + L1, U15, U3, bulk caps) at the top next to J1; SRC4382 U19 and muxes U21/U23 in the middle; ESP32-S3 U13 at the bottom, antenna out the bottom edge (keep-out X 67-87, Y 54.7-61) |
+| 2 | 39.8-61.2 | IDC777 U22 on the right (X 48.1-61.2, Y 0.4-23.9), antenna out the top edge (ground-clearance keep-out X 50.6-58.6, Y 0-5.5); in the strip to its left: J11, J13 u.FL beside pad 57, LED driver IC1 with D3/D4; DMX isolated block (U18 horizontal, U17, U16, U20) in the middle; MIDI (U4, U9, D2) at the bottom above the horizontal J10 |
+| 3 | 67.3-86.7 | power (U24 + L1, U3 in the top row, U15 below) at the top; SRC4382 U19 (Y 15.5) and muxes U21/U23 (Y 28.5) in the middle; ESP32-S3 U13 at the bottom with its pads at Y 35.2-53.2 and the antenna out the bottom edge (keep-out X 68-86, Y 53.2-61) |
 
 Antenna-to-antenna distance is about 45 mm on opposite edges. Passive placement is net-driven
 (scratchpad `placer2.py`): decoupling caps at the supply pin of the chip drawn next to them in
 the schematic, pull-ups and series parts at the IC pin, chains through their neighbour; accepted
 only with the passive-to-pin metric reported (target median < 3 mm, nothing > 6 mm).
+
+
+**Passive footprints (stage 10n, 2026-09-28):** the hand-solder 0805 footprints (3.7 x 1.9 mm courtyard)
+made it impossible to seat decoupling caps at the pins, so every 0805 resistor and every capacitor up
+to 10 uF is now a plain 0603 (`Capacitor_SMD:C_0603_1608Metric`, `Resistor_SMD:R_0603_1608Metric`)
+with JLCPCB basic parts: 100 nF C14663, 1 uF C15849, 10 uF C19702 (10 V, X5R), 4.7 uF C19666,
+resistors UNI-ROYAL 0603WAF: 0R C21189, 33R C23140, 49.9R C23185, 120R C22787, 220R C22962,
+300R C23025, 1.5k C22843, 2.2k C4190 (R13/R14/R16/R17/R67/R68 were 2.21k), 5.1k C23186, 10k C25804,
+33k C4216, 100k C25803. Kept: R28 16.9k 0805 (C17484, no 0603 basic part), the 22 uF / 47 uF 0805 and
+the 100 uF 1206 bulk caps, the three 0402 parts. Board footprints, values and fields were synced from
+the schematic with pcbnew (`swap_fp.py`, `sync_fields.py`), so a plain *Update PCB from Schematic*
+reports no changes.
+**Result on the board (stage 10n):** passive-to-pin median 2.2 mm (was 9.9), 6 of 118 more than 10 mm
+(R1/R2 Teensy TDM2 series resistors, R11, R52, 3.3V_DIG caps in the crowded DMX / power blocks).
+DRC: no shorts or clearance errors; only the stock ESP32 courtyard overlaps and inherited drill
+warnings. **Open:** C31 (10 uF) and C32 (100 nF) have pin 1 connected only to each other, a leftover
+pair that decouples nothing; delete or assign a rail.
 
 ## 12. Edit order and verification
 
