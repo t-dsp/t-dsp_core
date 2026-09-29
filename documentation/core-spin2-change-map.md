@@ -634,6 +634,14 @@ and the inherited drill warnings; parity clean apart from board_outline2.
 **Open:** the 49.9 ohm series resistors (20x) may move to 0402 or to 4-element 0804 arrays
 (Yageo AF124-FR-0749R9L, LCSC C6463554, extended); no MELF 0204/0206 49.9 ohm is stocked at JLCPCB.
 
+**Stage 10t (2026-09-29, user request):** IDC777 moved as far right as its u.FL allows (U22 X 74.6-87.7,
+J13 X 87.8-92.2, antenna keep-out X 77.1-85.2, Y 55.4-61; 45.6 mm clear between the S3 body and the
+IDC777 body). J8 lowered to Y 9.7-53.9 so it sits beside the S3; row B is now J4 J_USBH (Y 1.2-14.9,
+beside the Teensy host pads) / J3 J_T (Y 15.3-46.8) / J11 J_LED (Y 47.2-60.9). Nothing else moved.
+**49.9 ohm terminations:** user accepts 50 ohm. JLCPCB stocks no 50/51 ohm MELF (0204/0206) and no
+50/51 ohm 0804 array; chosen part: Yageo RT0402BRE0750RL 50 ohm 0.1 % thin film 0402, LCSC C853312
+(extended, 159k stock), footprint `Resistor_SMD:R_0402_1005Metric`, on R1-R10, R40-R47, R52, R55, R56.
+
 ## 12. Edit order and verification
 
 1. Commit the July 27 work as-is (BT/ASRC block + libraries) so it is not only in the
