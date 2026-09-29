@@ -508,6 +508,37 @@ footprint's 15 mm antenna courtyard (the module body itself is clear); U13/U20 f
 attribute mismatches and the WSON thermal-via 0.2 mm drills, both inherited footprint properties.
 Konnect cannot flip footprints to B.Cu, so the board is single-sided as placed.
 
+### 11.4 Layout rework (2026-09-28, stage 10m): four header rows, three slots, two-sided assembly
+
+The single-sided placement of 11.3 was rejected: it fitted, but the passives were dropped into
+generic columns (median 9.9 mm from the pin they serve, 59 of 118 more than 10 mm away) and the
+top side was 80 % courtyard. Decisions:
+
+- **Two-sided assembly, 4-layer stack**: F.Cu signal, In1.Cu GND plane, In2.Cu power plane, B.Cu
+  signal. Chips, modules, headers and every capacitor stay on the front; resistors, ferrites,
+  diodes and the EN solder jumper go on the back, directly under the pin they serve.
+- **Headers in four vertical rows** (X = pin-1 column, mm from the left edge), each next to the
+  slot it serves, so the backplane mates four straight connector rows instead of twelve scattered
+  headers. J9 was folded into J8 (2x17) and J1 trimmed to 2x5 to make the rows fit the 61 mm height.
+
+| Row | X | Headers top to bottom |
+|---|---|---|
+| A (left) | 9.0 | J3 J_T 2x12, J12 J_ETH 2x4, J4 J_USBH 1x5 |
+| B | 35.5 | J2 J_TDM 2x13, J5 J_MIDI 2x4, J11 J_LED 1x5 |
+| C | 63.0 | J6 J_SPDIF 2x11, J10 J_DMX 1x5, J7 J_AUX 2x5 |
+| D (right) | 88.5 | J1 J_PWR 2x5, J8 J_S3 2x17 (S3 GPIO, UART0, EN/IO0, I2C, USB pair, 5V) |
+
+| Slot | X range | Contents |
+|---|---|---|
+| 1 | 13.3-33.7 | Teensy U1 full height; TDM buffers U5-U8/U11 on the front under it; Teensy passives on the back |
+| 2 | 39.8-61.2 | IDC777 U22 at the top, antenna out the top edge (ground-clearance keep-out X 42.5-50.5, Y 0-4.4); J13 u.FL beside its pad 57; DMX isolated block (U18, U17, U16, U20) in the middle next to J10; MIDI (U4, U9, D2) and LED (IC1, D3, D4) at the bottom next to J5/J11 |
+| 3 | 67.3-86.7 | power (U24 + L1, U15, U3, bulk caps) at the top next to J1; SRC4382 U19 and muxes U21/U23 in the middle; ESP32-S3 U13 at the bottom, antenna out the bottom edge (keep-out X 67-87, Y 54.7-61) |
+
+Antenna-to-antenna distance is about 45 mm on opposite edges. Passive placement is net-driven
+(scratchpad `placer2.py`): decoupling caps at the supply pin of the chip drawn next to them in
+the schematic, pull-ups and series parts at the IC pin, chains through their neighbour; accepted
+only with the passive-to-pin metric reported (target median < 3 mm, nothing > 6 mm).
+
 ## 12. Edit order and verification
 
 1. Commit the July 27 work as-is (BT/ASRC block + libraries) so it is not only in the
@@ -529,7 +560,7 @@ All schematic edits go through Konnect and are verified with
 
 ## 13. Header pin map (spin 2, function-scoped headers, as wired 2026-09-28)
 
-The four 2x22 edge blocks (176 pins) are gone. Each function now has its own stock
+The four 2x22 edge blocks (176 pins) are gone. J9 (S3 USB) was folded into J8 and J1 trimmed to 2x5 on 2026-09-28 (stage 10m) so the eleven headers fit four vertical rows (section 11.4). Each function now has its own stock
 `Connector_Generic` header placed next to the chip that serves it, so the PCB traces are short and
 the backplane only needs to mate the headers it uses. Ground rule applied to every header: at least
 one GND per three signals, a GND row (both rows) on both sides of every clock and every differential
@@ -537,26 +568,25 @@ pair, and GND at both ends of every header.
 
 | Ref | Name | Size | Placed next to | Pins | GND |
 |---|---|---|---|---|---|
-| J1 | `J_PWR` | 2x6 | TPS2116 / buck / LT3045 | 12 | 5 |
+| J1 | `J_PWR` | 2x5 | TPS2116 / buck / LT3045 | 10 | 3 |
 | J2 | `J_TDM` | 2x13 | TDM bus buffers U5-U8/U11 | 26 | 12 |
 | J3 | `J_T` | 2x12 | Teensy 4.1 | 24 | 9 |
 | J4 | `J_USBH` | 1x5 | Teensy USB host pads | 5 | 2 |
 | J5 | `J_MIDI` | 2x4 | MIDI opto/buffer U4/U9 | 8 | 2 |
 | J6 | `J_SPDIF` | 2x11 | SRC4382 U19 | 22 | 12 |
 | J7 | `J_AUX` | 2x5 | U23 aux mux | 10 | 6 |
-| J8 | `J_S3` | 2x15 | ESP32-S3 U13 | 30 | 8 |
-| J9 | `J_USB3` | 1x5 | ESP32-S3 U13 | 5 | 2 |
+| J8 | `J_S3` | 2x17 | ESP32-S3 U13 | 34 | 12 |
 | J10 | `J_DMX` | 1x5 | ISO7762 / RS-485 U16-U18 | 5 | 0 |
 | J11 | `J_LED` | 1x5 | SK6812 level shifter IC1 | 5 | 2 |
 | J12 | `J_ETH` | 2x4 | Teensy 4.1 Ethernet pads | 8 | 3 |
-| | | | **total** | **160** | **66** |
+| | | | **total** | **157** | **63** |
 
 Footprints: `Connector_PinHeader_2.54mm:PinHeader_<size>_P2.54mm_Vertical`. Odd pins are one row, even
 pins the other (KiCad Odd_Even numbering). `DMX_GND` is the isolated ground, not core GND.
 Net names are the current schematic names; the raw-GPIO rename (T_nn / S3_IOnn) is a later cosmetic
 pass and does not change connectivity.
 
-### J1 - `J_PWR` 2x6, next to TPS2116 / buck / LT3045
+### J1 - `J_PWR` 2x5, next to TPS2116 / buck / LT3045
 
 Power entry and rails. 5V_IN feeds TPS2116 VIN1; 5V, 3.3V (LT3045, analog), 3.3V_DIG (buck) and V_BAT are outputs.
 
@@ -565,9 +595,8 @@ Power entry and rails. 5V_IN feeds TPS2116 VIN1; 5V, 3.3V (LT3045, analog), 3.3V
 | 1 | `5V_IN` | 2 | `5V_IN` |
 | 3 | `GND` | 4 | `GND` |
 | 5 | `5V` | 6 | `5V` |
-| 7 | `GND` | 8 | `GND` |
-| 9 | `3.3V` | 10 | `3.3V_DIG` |
-| 11 | `V_BAT` | 12 | `GND` |
+| 7 | `3.3V` | 8 | `3.3V_DIG` |
+| 9 | `V_BAT` | 10 | `GND` |
 
 ### J2 - `J_TDM` 2x13, next to TDM bus buffers U5-U8/U11
 
@@ -585,8 +614,8 @@ Both TDM buses plus the two I2C buses for codec control. GND on both flanks of e
 | 15 | `7_OUT1A+` | 16 | `6_OUT1D+` |
 | 17 | `8_IN1` | 18 | `9_OUT1C_INPUT` |
 | 19 | `GND` | 20 | `GND` |
-| 21 | `T18_SDA0` | 22 | `T17_SDA1` |
-| 23 | `T19_SCL0` | 24 | `T16_SCL1` |
+| 21 | `SDA0` | 22 | `SDA1` |
+| 23 | `SCL0` | 24 | `SCL1` |
 | 25 | `GND` | 26 | `GND` |
 
 ### J3 - `J_T` 2x12, next to Teensy 4.1
@@ -596,16 +625,16 @@ Teensy S/PDIF, CAN3, Serial8, PROGRAM/ON_OFF, buttons, spare GPIO, MCLK2. GND ei
 | odd | net | even | net |
 |---|---|---|---|
 | 1 | `GND` | 2 | `GND` |
-| 3 | `T14_SPDIF_OUT` | 4 | `T15_SPDIF_IN` |
+| 3 | `14_SPDIF_OUT` | 4 | `15_SPDIF_IN` |
 | 5 | `GND` | 6 | `GND` |
-| 7 | `T30_CRX3` | 8 | `T31_CTX3` |
-| 9 | `T35_TX8` | 10 | `T34_RX8` |
-| 11 | `T_PROGRAM` | 12 | `T_ON_OFF` |
-| 13 | `T24` | 14 | `T25` |
+| 7 | `CRX3` | 8 | `TRX3` |
+| 9 | `35_TX8_RESET` | 10 | `34_RX8_RESET2` |
+| 11 | `53_T_PROG` | 12 | `54_ON_OFF` |
+| 13 | `T_BUTTON1` | 14 | `T_BUTTON2` |
 | 15 | `GND` | 16 | `GND` |
-| 17 | `T22` | 18 | `T26` |
-| 19 | `T27` | 20 | `T32_OUT1B` |
-| 21 | `GND` | 22 | `T33_MCLK2` |
+| 17 | `T_22` | 18 | `T_26` |
+| 19 | `T_27` | 20 | `32_OUT1B` |
+| 21 | `GND` | 22 | `MCLK2` |
 | 23 | `GND` | 24 | `GND` |
 
 ### J4 - `J_USBH` 1x5, next to Teensy USB host pads
@@ -661,39 +690,29 @@ Aux I2S source into the mux (BCK, LRCK, DIN) and the S3-side out; clocks never a
 | 7 | `AUX_I2S_DIN` | 8 | `AUX_I2S_OUT` |
 | 9 | `GND` | 10 | `GND` |
 
-### J8 - `J_S3` 2x15, next to ESP32-S3 U13
+### J8 - `J_S3` 2x17, next to ESP32-S3 U13
 
-S3 UART0 (also Teensy Serial7), EN/IO0, I2C, raw GPIO. IO35-37 are consumed by the octal PSRAM and are not on the header. Pins 20/21/22 (`T40`, `T39`, `T38`) are **Teensy** pins 40/39/38 (A16/A15/A14); pins 23/24/28 (`S3_IO15`, `S3_IO38`, `S3_IO39`) are the S3 pins that used to share those nets. Split on 2026-09-28 so either MCU can own a control; a backplane may wire a Teensy pin and an S3 pin together if it wants the old shared behaviour.
+S3 UART0 (also Teensy Serial7), EN/IO0, I2C, raw GPIO, and (since 2026-09-28, stage 10m) the S3 native USB pair with 5V, absorbed from the former J9. IO35-37 are consumed by the octal PSRAM and are not on the header.
 
 | odd | net | even | net |
 |---|---|---|---|
 | 1 | `GND` | 2 | `GND` |
-| 3 | `S3_IO43_TXD0` | 4 | `S3_IO44_RXD0` |
-| 5 | `S3_EN` | 6 | `S3_IO0_BOOT` |
+| 3 | `ESP32_IO1` | 4 | `ESP32_IO3` |
+| 5 | `ESP32_EN` | 6 | `ESP32_IO0` |
 | 7 | `GND` | 8 | `GND` |
-| 9 | `S3_IO21_SDA` | 10 | `S3_IO47_SCL` |
-| 11 | `S3_IO18` | 12 | `S3_IO9` |
-| 13 | `S3_IO10` | 14 | `S3_IO11` |
+| 9 | `ESP32_IO21_SDA` | 10 | `ESP32_IO22_SCL` |
+| 11 | `SCK` | 12 | `SDI` |
+| 13 | `SDO` | 14 | `CS` |
 | 15 | `GND` | 16 | `GND` |
-| 17 | `S3_IO2` | 18 | `S3_IO42` |
-| 19 | `S3_IO8` | 20 | `T40` |
-| 21 | `T39` | 22 | `T38` |
-| 23 | `S3_IO15` | 24 | `S3_IO38` |
-| 25 | `S3_IO40` | 26 | `S3_IO41` |
-| 27 | `S3_IO45` | 28 | `S3_IO39` |
+| 17 | `DC` | 18 | `RESET` |
+| 19 | `T_CS` | 20 | `OUTPUTA` |
+| 21 | `OUTPUTB` | 22 | `SWITCH` |
+| 23 | `GND` | 24 | `GND` |
+| 25 | `GPIO34` | 26 | `GPIO35` |
+| 27 | `S3_IO45` | 28 | `GND` |
 | 29 | `GND` | 30 | `GND` |
-
-### J9 - `J_USB3` 1x5, next to ESP32-S3 U13
-
-S3 native USB (OTG) pair, GND flanked; 5V for a host-side VBUS.
-
-| pin | net |
-|---|---|
-| 1 | `GND` |
-| 2 | `S3_USB_DN` |
-| 3 | `S3_USB_DP` |
-| 4 | `GND` |
-| 5 | `5V` |
+| 31 | `S3_USB_DN` | 32 | `S3_USB_DP` |
+| 33 | `GND` | 34 | `5V` |
 
 ### J10 - `J_DMX` 1x5, next to ISO7762 / RS-485 U16-U18
 
@@ -729,29 +748,6 @@ Teensy 4.1 10/100 PHY pairs and link LED from pads 60-65 (needs the U1 symbol sw
 | 3 | `GND` | 4 | `GND` |
 | 5 | `ETH_T+` | 6 | `ETH_T-` |
 | 7 | `ETH_LED` | 8 | `GND` |
-
-### 13.1 Backplane controls and the GPIO budget (2026-09-28)
-
-Direct pins reachable from a backplane: Teensy 14, 15, 22, 24, 25, 26, 27, 30, 34, 35, 38, 39, 40
-(ten of them analog: A0, A1, A8, A10, A11, A12, A13, A14, A15, A16) plus the two I2C pairs; S3
-IO2, IO8, IO9, IO10, IO11, IO18, IO40, IO41, IO42, IO45 plus EN, IO0 and its I2C pair. A volume
-knob is a 10k pot from 3.3V (J1) to GND with the wiper on any Teensy analog pin (T14, T15, T22, T24, T25, T26, T27, T38, T39, T40) and 100 nF to
-GND; a switch is any pin to GND with `INPUT_PULLUP`. Beyond ~20 controls use the panel-bus
-pattern: 74HC4067 analog muxes on the analog pins (16 pots each), MCP23017 or TCA8418 on
-T17_SDA1/T16_SCL1, SK6812 LEDs on J11. Links to a Pi: Serial8 UART (J3.9/10), I2C Wire/Wire1 (J2),
-S3 I2C (J8), Teensy USB host (J4), S3 USB OTG (J9), the Teensy's own USB jack (Pi as host),
-MIDI (J5), TDM2 (J2) for audio, Ethernet (J12) once the U1 symbol swap is done.
-
-### 13.2 Net-naming rule (2026-09-28)
-
-Functions keep function names (TDM buses, SPDIF, USB, MIDI, DMX, LED outs, power, ETH). Raw GPIO is
-named by MCU pin so a user with the MCU pinout in hand cannot mis-wire it: `T<n>` = Teensy 4.1 pin
-n, `S3_IO<n>` = ESP32-S3 GPIO n. A pin with an optional core-side function carries it as a suffix:
-`T14_SPDIF_OUT`, `T35_TX8`, `T18_SDA0`, `T33_MCLK2`, `S3_IO43_TXD0`, `S3_IO47_SCL`, `S3_IO0_BOOT`.
-Special Teensy pads are `T_PROGRAM`, `T_ON_OFF`, `V_BAT`. Renamed on 2026-09-28 (100 labels,
-netlist topology unchanged). The old DevKitC-era names were wrong in three places: `ESP32_IO1/IO3`
-were GPIO43/44, `ESP32_IO22_SCL` was IO47, `GPIO34/35` were IO40/41; the internal SPI CS is
-IO17, not IO33. The t-dsp_software pin tables must be updated to match.
 
 ## 14. Status after the 2026-09-28 edit session
 
