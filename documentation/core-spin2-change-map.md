@@ -19,7 +19,8 @@ Every item is tagged **[decided]**, **[consequence]** (follows from a decision),
 backplane. 2.54 mm headers on two board edges expose the Teensy 4.1, the ESP32-S3, the
 audio buses, and the SRC. Users design a backplane that carries codecs, amps, jacks,
 connectors, and power entry. The core accepts **5 V** and generates its own rails. The
-backplane may carry the bulk of the system current (core ≈ 400 mA of a ≈ 2 A system).
+backplane may carry the bulk of the system current (core ≈ 0.6 A typical, ≈ 1.3 A peak; see the
+current budget in §7).
 
 **[decided]** The **isolated DMX / RS-485 block stays on the core** (U16, U17, U18, J28,
 D6). It keeps S3 pins IO1, IO5, IO48.
@@ -267,9 +268,23 @@ Teensy VUSB (pin 49) ► TPS2116 VIN2 (secondary) ┴──► 5V rail ──►
 | USB-C PD | none | **not on the core.** Backplane/submodule PD sink (STUSB4500 or CH224K) when >15 W is needed; backplane bucks to 5 V for 5V_IN. |
 | MCLK1 | Y1 via R61 **and** Teensy pin 23 via R7 | **[open]** two drivers on one net. Y1 standby jumpers R59/R60 exist. Decide which populates. |
 
-Current budget (peak): Teensy ~100 mA, S3 ≤500 mA (WiFi TX), IDC777 ~100 mA, SRC ~100 mA,
-buffers/ISO ~50 mA → ≈0.9 A on 5 V for the core alone. A PC USB port (500 mA) programs
-both MCUs but browns out under WiFi bursts; standalone radio use wants a 2 A adapter.
+Current budget on the 5 V rail, core alone (revised 2026-09-30):
+
+| Load | Typical | Peak | Note |
+|---|---|---|---|
+| Teensy 4.1 at 600 MHz + 2x PSRAM | 150 mA | 200 mA | +100 mA more with the Ethernet PHY linked |
+| ESP32-S3 (via the 3.3V_DIG buck, ~90 %) | 200 mA | 450 mA | WiFi TX bursts; ~40 mA idle, ~100 mA BLE only |
+| IDC777 BT audio | 50 mA | 100 mA | A2DP streaming |
+| SRC4382 + 1V8 LDO | 60 mA | 80 mA | |
+| DMX: TRACO TEA1-0505 + ISO7762 + RS-485 | 100 mA | 250 mA | 1 W converter at full isolated load |
+| SK6812 D3/D4 | 40 mA | 120 mA | full white |
+| Buffers, muxes, LDO quiescent | 15 mA | 20 mA | |
+| **Core total** | **≈ 0.6 A** | **≈ 1.3 A** | plus Ethernet: ≈ 1.4 A peak |
+
+Plan **1.5 A for the core** and a 2.5-3 A external supply once a backplane with codecs and small
+amps hangs off `5V` and `3.3V`. The TPS2116 mux is rated 2.5 A. A PC USB port (500 mA) on the
+Teensy jack programs both MCUs and runs the board with the radios idle, but browns out under
+WiFi bursts or DMX + LEDs; a USB-C port at 1.5 A is fine for bench use.
 
 ---
 
