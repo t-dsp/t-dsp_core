@@ -34,4 +34,6 @@
 	(lib (name "TLV76718DRVR") (type "KiCad") (uri "${KIPRJMOD}/lib_sch/TLV76718DRVR.kicad_sym") (options "") (descr ""))
 	(lib (name "IDC747-1") (type "KiCad") (uri "${KIPRJMOD}/lib/IDC747-1.kicad_sym") (options "") (descr ""))
 	(lib (name "IDC777-1") (type "KiCad") (uri "${KIPRJMOD}/lib_sch/IDC777-1.kicad_sym") (options "") (descr ""))
+
+  (lib (name "ISOUSB211DPR") (type "KiCad") (uri "C:\github\kicad\t-dsp_core\lib_sch\ISOUSB211DPR.kicad_sym") (options "") (descr ""))
 )

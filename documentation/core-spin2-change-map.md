@@ -682,6 +682,36 @@ the new decoupling caps. Row C on the board: J5 pin 1 Y 3.2, J2 (2x14) pin 1 Y 1
 (Y 25.6-28) moved to the middle of the left column, in the free band between the power row and the S3.
 J11 stays at the bottom of row B.
 
+### 11.7 Stage 10x (2026-09-30): mandatory external supply, protected input, isolated USB device ports
+
+**Power entry.** The TPS2116 mux (U3), its PR1 divider R28/R29/R30 and the Teensy-USB bulk caps
+C13/C14 are gone; Teensy VUSB (pin 49) is NC (the VUSB-VIN pad is cut on every Teensy, so the
+Teensy jack is a data-only service port). `5V_IN` (J1 pins 1/2) -> **D7** SMAJ5.0A TVS to GND
+(C78401) -> **Q1** AO3401A P-MOSFET reverse-polarity protection (C15127; drain 5V_IN, source
+`5V`, gate GND) -> `5V` rail (PWR_FLAG #FLG10). The core needs the external supply to run; a PC
+USB port no longer powers it. J1 pins 5/6 stay 5V outputs. Current budget: change map section 7.
+
+**USB isolation on the core (decision: both device ports, host port stays direct).** Two
+**ISOUSB211DPR** (TI, high-speed USB isolator, LCSC C5772877, extended, ~$11), one per port:
+- S3 port: module side `S3_USB_DN_M`/`S3_USB_DP_M` (U13 pins 13/14) -> isolator side 2 (DD-/DD+,
+  VCC2/VBUS2 from `5V`, GND2 = GND); laptop side -> J8 pins 31 `S3_USB_DN`, 32 `S3_USB_DP`,
+  33 `S3_USB_GND`, 34 `S3_VBUS` (was GND / 5V). Side 1 is powered from the laptop's VBUS.
+- Teensy device port: Teensy pads 66/67 (`T_USB_DN_M`/`T_USB_DP_M`) -> isolator side 2; laptop
+  side -> **J4 J_USB 2x5** even row: 2 `T_USB_GND`, 4 `T_USB_DN`, 6 `T_USB_DP`, 8 `T_USB_GND`,
+  10 `T_VBUS`. The odd row keeps the unisolated host port: 1 GND, 3 HOST_D1-, 5 HOST_D1+, 7 GND,
+  9 HOST_5V.
+- `S3_USB_GND` and `T_USB_GND` are isolated grounds: never tie them to core GND or to each other,
+  on the core or on a backplane. A backplane wires each jack straight to its four pins; VBUS must
+  be brought in (it powers the isolator's laptop side).
+- Symbol `ISOUSB211DPR:ISOUSB211DPR` (lib_sch/ISOUSB211DPR.kicad_sym, made from the datasheet pin
+  table) and footprint `project_fp:SSOP-28_7.5x10.3mm_P0.65mm_ISO` (IPC land pattern, 8.2 mm
+  clearance between the pad rows) were created with Konnect. **Manual step:** place two instances
+  (U25 for the S3 port, U26 for the Teensy port) in eeschema; Konnect cannot place project-library
+  symbols. Wiring after placement: EQxx to GND (default equalisation), CDPENZx to the local 3.3 V
+  (CDP off), V1OK/V2OK NC, caps per datasheet 8.3 (1 uF on VBUSx, 0.1 uF on V3P3Vx, 2 uF + 0.1 uF
+  + 10 nF on V1P8Vx; pins 4-11 and 18-25 tied), 45 ohm-ish 90 ohm differential routing, no vias
+  on D+/D- (datasheet 8.4).
+
 ## 12. Edit order and verification
 
 1. Commit the July 27 work as-is (BT/ASRC block + libraries) so it is not only in the
