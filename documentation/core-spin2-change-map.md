@@ -52,6 +52,11 @@ and every one of these adds ERC noise and confuses the header map.
 
 ## 2. Wireless audio block (BT + S3 → mux → ASRC → Teensy)
 
+> **Superseded on 2026-10-01 (stage 10y, section 11.8).** The SRC4382, both 74LVC157 muxes and the
+> S/PDIF header are gone. IDC777 and S3 now reach the Teensy's SAI2 port through a 74LVC257 mux,
+> sample-rate conversion is done in Teensy software, and a buffered J_SAI2 header offers the same
+> port to an external I2S master or slave. The text below is kept as the history of the decision.
+
 Architecture: IDC777 (U22) and the S3 are both **I2S masters** into a hardware mux, the
 mux feeds SRC4382 Port A (slave), the SRC resamples onto the Teensy's clock and outputs on
 Port B (slave to the Teensy). One source at a time.
@@ -141,12 +146,13 @@ so those three module pins are NC and the BT UART RX moved to IO3. PCB antenna (
 
 | Pin | Today | New |
 |---|---|---|
-| 2 OUT2 | → S3 IO4 | → SRC SDINB (reverse path) |
-| 3 LRCLK2, 4 BCLK2 | → S3 (via 49.9 Ω) | → SRC LRCKB / BCKB |
-| 5 IN2 | ← S3 IO7 | ← SRC SDOUTB |
-| 22, 26, 27 | NC | → edge header |
+| 2 OUT2 | → S3 IO4 | `SAI2_OUT` → U21 buffer → J_SAI2 DOUT (stage 10y; was SRC SDINB) |
+| 3 LRCLK2, 4 BCLK2 | → S3 (via 49.9 Ω) | `SAI2_LRCLK` / `SAI2_BCLK`: from the U19 257 mux (IDC777 or S3) or J_SAI2 via U21, or driven out to J_SAI2 (stage 10y) |
+| 5 IN2 | ← S3 IO7 | `SAI2_IN`: from the U19 mux or J_SAI2 DIN via U20 (stage 10y) |
+| 22 | NC | `SAI2_SEL` (U19 select: 0 = IDC777, 1 = S3; 10 k pull-down) — stage 10y, no longer on J3 |
+| 26, 27 | NC | `SAI2_MODE0` / `SAI2_MODE1` (U23 interlock, 10 k pull-ups = all off) — stage 10y, no longer on J3 |
 | 32 OUT1B | J15 (1-pin) | → edge header |
-| 33 MCLK2 | J19 (1-pin) | → edge header |
+| 33 MCLK2 | J19 (1-pin) | `SAI2_MCLK` → U21 buffer → J_SAI2 MCLK in both header modes (stage 10y; J3 pin 22 is GND now) |
 | 49 VUSB | NC | → **TPS2116 VIN2** (see §7) |
 | 46 3V3 | on the 3.3V rail | **disconnected from the rail, not exposed** (see §7) |
 | 55–57 host USB | USBA1 / USB_HOST_1 | → edge header (D+, D−, HOST_5V) |
@@ -228,6 +234,16 @@ for the Teensy on a product is a short extension from the Teensy jack.
 **[decided]** Teensy **host** pair and S3 **OTG** pair go to the header. Backplane provides
 connectors, ESD, VBUS switching (Teensy HOST_5V is just VIN; the host library has no
 power-enable pin).
+
+**[revised 2026-10-01, stage 10y]** All three USB ports are on headers and **none is isolated**
+(the ISOUSB211 plan of stage 10x was dropped with the SAI2 rework): Teensy host pair on J4 odd
+row (1 GND, 3 HOST_D1-, 5 HOST_D1+, 7 GND, 9 HOST_5V), Teensy device pads 66/67 on J4 even row
+(2 GND, 4 T_USB_DN, 6 T_USB_DP, 8 GND, 10 GND), S3 OTG pair on J8 (31 S3_USB_DN, 32 S3_USB_DP,
+33 GND, 34 5V). The S3 port is host or device by firmware; J8 pin 34 is the core's 5 V rail, so a
+backplane wires it to a jack's VBUS only for a host-mode jack (or through a load switch); a
+device-mode jack leaves VBUS unconnected. The Teensy device row has no VBUS pin: the Teensy's
+VUSB is NC on the core (stage 10x). Ground-loop hum between a laptop and the externally powered
+core is handled on the backplane (isolator or audio-side ground lift) if it shows up.
 
 **[decided]** EN and IO0 on the edge connector (already). On-core prog headers and EN/IO0
 buttons leave. **Add a 10 k pull-up on ESP32_EN** — required by the software repo's
@@ -712,6 +728,72 @@ USB port no longer powers it. J1 pins 5/6 stay 5V outputs. Current budget: chang
   + 10 nF on V1P8Vx; pins 4-11 and 18-25 tied), 45 ohm-ish 90 ohm differential routing, no vias
   on D+/D- (datasheet 8.4).
 
+> The USB-isolation half of stage 10x was **reversed in stage 10y** (below): no isolators, all
+> three ports unisolated on the headers. The ISOUSB211DPR symbol library, its SSOP-28 footprint
+> and the sym-lib-table entry are still in the repo, unused; remove them in the KiCad library
+> manager when convenient.
+
+### 11.8 Stage 10y (2026-10-01): SAI2 aux input block replaces the SRC4382 + muxes + S/PDIF header
+
+**Why.** The SRC4382 was the only consigned, non-stock IC on the core, it has no TDM mode, and the
+Teensy can resample in software. The user's design note "SAI2 input routing + expansion header"
+replaced the hardware ASRC path with a plain, interlocked SAI2 port. S/PDIF is served by the
+Teensy's own pins 14/15 on J3 (J6 removed).
+
+**Architecture (schematic commit 026acc0, board 0dd4533).** One asynchronous I2S source at a time
+enters the Teensy's SAI2 (pins 4 BCLK2, 3 LRCLK2, 5 IN2, 2 OUT2, 33 MCLK2); SAI1 stays the TDM
+engine for the codec backplane. Every driver reaches the shared `SAI2_*` / `AUX_I2S_*` nets through
+its own 33 R 0402 (C25105), and a 74LVC138 interlock guarantees that only one driver group is ever
+enabled:
+
+| Part | Function | Enable |
+|---|---|---|
+| U19 SN74LVC257APWR (TSSOP-16, C205921) | 2:1 mux, A = IDC777 `BT_BCK/BT_LRCK/BT_SDATA`, B = S3 `S3_I2S_BCK/LRCK/DOUT`; S = `SAI2_SEL` (Teensy 22 = T22, 10 k pull-down: 0 = IDC777, 1 = S3). Outputs -> 33 R -> `SAI2_BCLK/LRCLK/IN`. Channel 4 inputs grounded, 4Y NC. | `SAI2_nOE_INT` = U23 Y0 (mode 00) |
+| U21 SN74LVC244APWR (TSSOP-20, C7668) | Group 1 (core slave, header master): `AUX_I2S_BCK/LRCK` -> 33 R -> `SAI2_BCLK/LRCLK`; `SAI2_MCLK` -> 33 R -> `AUX_I2S_MCLK`; `SAI2_OUT` -> 33 R -> `AUX_I2S_DOUT`. Group 2 (core master): `SAI2_BCLK/LRCLK/MCLK/OUT` -> 33 R -> `AUX_I2S_BCK/LRCK/MCLK/DOUT`. | group 1 `SAI2_nOE_HDR` = Y1 (mode 01); group 2 `SAI2_nOE_OUT` = Y2 (mode 10) |
+| U20 SN74LVC2G125DCTR (SOP-8, C206035) | `AUX_I2S_DIN` -> gate 1 and gate 2 (inputs tied) -> 33 R each -> `SAI2_IN` | gate 1 Y1, gate 2 Y2 (either header mode) |
+| U23 SN74LVC138APWR (TSSOP-16, C485077) | A1:A0 = `SAI2_MODE1:MODE0` (Teensy 27/26 = T27/T26, 10 k pull-ups C25744), A2/E1/E2 GND, E3 3.3V_DIG; Y3-Y7 NC | - |
+
+Mode table (firmware contract; the power-on default is 11 = everything tri-stated):
+
+| MODE1:0 | Core role | Clock source | Enabled | Teensy SAI2 |
+|---|---|---|---|---|
+| 00 | internal | IDC777 or S3 (by `SAI2_SEL`) is I2S master | U19 | slave (BCLK2/LRCLK2 inputs), MCLK2 unused |
+| 01 | header **slave** | external device on J_SAI2 is master | U21 group 1, U20 gate 1 | slave; MCLK2 still output to the header (buffered) |
+| 10 | header **master** | Teensy is master | U21 group 2, U20 gate 2 | master (BCLK2/LRCLK2/MCLK2 outputs) |
+| 11 | off | - | nothing | idle |
+
+The firmware must set MODE and SEL **before** starting SAI2 and must never leave a Teensy-driven
+clock enabled while switching to 00 or 01 (the 33 R resistors limit, but do not prevent, contention
+during a bad sequence). Decoupling: 100 nF 0603 (C14663) C140 (U19), C141 (U21), C142 (U23),
+C143 (U20). All four ICs run from `3.3V_DIG`.
+
+**J_SAI2 = J7 (2x6, right edge, row D).** 1 GND, 2 GND, 3 `AUX_I2S_MCLK`, 4 GND, 5 `AUX_I2S_BCK`,
+6 GND, 7 `AUX_I2S_LRCK`, 8 GND, 9 `AUX_I2S_DIN` (into the core), 10 `AUX_I2S_DOUT` (out of the
+core), 11 `3.3V_DIG`, 12 `5V`. A GND flanks every clock in the even row. The old J_AUX 2x5
+assignment and J6 J_SPDIF 2x11 are gone.
+
+**Other pin moves.** J3 pins 17/18/19/22 (were T22/T26/T27/MCLK2) are GND. BT_RST and
+BT_SYS_CTRL, previously SRC GPOs, now come from S3 IO40 / IO41; J8 pins 25/26 (were IO40/IO41)
+are GND. USB: see section 6 (revised) and the note above 11.8.
+
+**Removed.** U19 SRC4382 + C144-C149/C152 + R1/R2/R10, U20 TLV75718 1V8 LDO, U21/U23 74LVC157,
+J6, the `+1V8` rail, the `SPDIF_RX*/TX*`, `SRC_A_*`, `MUX1_*`, `AUX_SEL`, `BT_S3_SEL` nets.
+
+**Board.** U19/U23 sit under the Teensy at Y 38.5 (slot 2, where the two 157 muxes were); U21 in the
+right column under U16 at (83.6, 29.3) and U20 beside the IDC777 at (88.4, 38.5, 90), both next to
+J7; D7/Q1 (stage 10x) in the power row where the TPS2116 was. 131 passives re-placed two-sided
+(median 2.4 mm, mean 3.4 mm to their pin; 8 beyond 10 mm). Three stray `/OUT1B_MCU` track
+fragments from the old design were removed; the board has no routing. DRC with schematic parity:
+only the pre-existing U13 courtyard (the module's antenna keep-out) against H3/J11, the U13 0.2 mm
+thermal-via holes and the `board_outline2` outline footprint remain.
+
+**Verification.** `kicad-cli sch export netlist` diffed against the stage 10x netlist: only the
+nets listed above changed; ERC adds no violation versus commit 1c8bd6e (one pre-existing error:
+D3 GND is a power-input pin on the project LED symbol). Hazard found on the way: Konnect
+`add_schematic_text` writes literal newlines into the text string, which KiCad refuses to load;
+multi-line notes must be separate single-line texts. Konnect `batch_delete` with a symbol's pin
+uuid deletes the whole symbol (D3 had to be re-placed from the committed file).
+
 ## 12. Edit order and verification
 
 1. Commit the July 27 work as-is (BT/ASRC block + libraries) so it is not only in the
@@ -731,9 +813,9 @@ USB port no longer powers it. J1 pins 5/6 stay 5V outputs. Current budget: chang
 All schematic edits go through Konnect and are verified with
 `kicad-cli sch export netlist`, per the project's write-hazard rules.
 
-## 13. Header pin map (spin 2, function-scoped headers, as wired 2026-09-28)
+## 13. Header pin map (spin 2, function-scoped headers, as wired 2026-10-01)
 
-The four 2x22 edge blocks (176 pins) are gone. J9 (S3 USB) was folded into J8 and J1 trimmed to 2x5 on 2026-09-28 (stage 10m) so the eleven headers fit four vertical rows (section 11.4). Each function now has its own stock
+Generated from the kicad-cli netlist of schematic commit 026acc0 (stage 10y). The four 2x22 edge blocks (176 pins) are gone. J9 (S3 USB) was folded into J8 and J1 trimmed to 2x5 on 2026-09-28 (stage 10m); J6 (S/PDIF) was removed and J7 became the 2x6 J_SAI2 port on 2026-10-01 (stage 10y), so the ten headers fit four vertical rows (section 11.4). Each function has its own stock
 `Connector_Generic` header placed next to the chip that serves it, so the PCB traces are short and
 the backplane only needs to mate the headers it uses. Ground rule applied to every header: at least
 one GND per three signals, a GND row (both rows) on both sides of every clock and every differential
@@ -741,27 +823,26 @@ pair, and GND at both ends of every header.
 
 | Ref | Name | Size | Placed next to | Pins | GND |
 |---|---|---|---|---|---|
-| J1 | `J_PWR` | 2x5 | TPS2116 / buck / LT3045 | 10 | 3 |
+| J1 | `J_PWR` | 2x5 | TVS D7 / P-FET Q1 / buck U24 / LT3045 U15 | 10 | 3 |
 | J2 | `J_TDM` | 2x14 | TDM buffers U5/U6/U7/U11 under the Teensy | 28 | 13 |
-| J3 | `J_T` | 2x12 | Teensy 4.1 | 24 | 9 |
-| J4 | `J_USBH` | 1x5 | Teensy USB host pads | 5 | 2 |
+| J3 | `J_T` | 2x12 | Teensy 4.1 | 24 | 13 |
+| J4 | `J_USB` | 2x5 | Teensy USB host pads and device pads 66/67 | 10 | 5 |
 | J5 | `J_MIDI` | 2x4 | MIDI opto/buffer U4/U9 | 8 | 2 |
-| J6 | `J_SPDIF` | 2x11 | SRC4382 U19 | 22 | 12 |
-| J7 | `J_AUX` | 2x5 | U23 aux mux | 10 | 6 |
-| J8 | `J_S3` | 2x17 | ESP32-S3 U13 | 34 | 12 |
+| J7 | `J_SAI2` | 2x6 | U21 244 buffer / U20 2G125 gate | 12 | 5 |
+| J8 | `J_S3` | 2x17 | ESP32-S3 U13 | 34 | 11 |
 | J10 | `J_DMX` | 1x5 | ISO7762 / RS-485 U16-U18 | 5 | 0 |
 | J11 | `J_LED` | 1x5 | SK6812 level shifter IC1 | 5 | 2 |
 | J12 | `J_ETH` | 2x4 | Teensy 4.1 Ethernet pads | 8 | 3 |
-| | | | **total** | **159** | **64** |
+| | | | **total** | **144** | **57** |
 
 Footprints: `Connector_PinHeader_2.54mm:PinHeader_<size>_P2.54mm_Vertical`. Odd pins are one row, even
 pins the other (KiCad Odd_Even numbering). `DMX_GND` is the isolated ground, not core GND.
 Net names are the current schematic names; the raw-GPIO rename (T_nn / S3_IOnn) is a later cosmetic
 pass and does not change connectivity.
 
-### J1 - `J_PWR` 2x5, next to TPS2116 / buck / LT3045
+### J1 - `J_PWR` 2x5, next to TVS D7 / P-FET Q1 / buck U24 / LT3045 U15
 
-Power entry and rails. 5V_IN feeds TPS2116 VIN1; 5V, 3.3V (LT3045, analog), 3.3V_DIG (buck) and V_BAT are outputs.
+Power entry and rails. 5V_IN (mandatory external 5 V since stage 10x) feeds the TVS + reverse-polarity P-FET; 5V, 3.3V (LT3045, analog), 3.3V_DIG (buck) and V_BAT are outputs.
 
 | odd | net | even | net |
 |---|---|---|---|
@@ -787,41 +868,41 @@ Both TDM buses plus the two I2C buses for codec control. GND on both flanks of e
 | 15 | `7_OUT1A+` | 16 | `6_OUT1D+` |
 | 17 | `8_IN1` | 18 | `9_OUT1C_INPUT` |
 | 19 | `GND` | 20 | `GND` |
-| 21 | `SDA0` | 22 | `SDA1` |
-| 23 | `SCL0` | 24 | `SCL1` |
+| 21 | `T18_SDA0` | 22 | `T17_SDA1` |
+| 23 | `T19_SCL0` | 24 | `T16_SCL1` |
 | 25 | `GND` | 26 | `GND` |
 | 27 | `32_OUT1B` | 28 | `GND` |
 
 ### J3 - `J_T` 2x12, next to Teensy 4.1
 
-Teensy S/PDIF, CAN3, Serial8, PROGRAM/ON_OFF, buttons, spare GPIO, MCLK2. GND either side of MCLK2.
+Teensy S/PDIF (the only S/PDIF path since stage 10y), CAN3, Serial8, PROGRAM/ON_OFF, buttons, OUT1B. Pins 17/18/19/22 are GND since stage 10y (T22/T26/T27/MCLK2 now serve the SAI2 block).
 
 | odd | net | even | net |
 |---|---|---|---|
 | 1 | `GND` | 2 | `GND` |
-| 3 | `14_SPDIF_OUT` | 4 | `15_SPDIF_IN` |
+| 3 | `T14_SPDIF_OUT` | 4 | `T15_SPDIF_IN` |
 | 5 | `GND` | 6 | `GND` |
-| 7 | `CRX3` | 8 | `TRX3` |
-| 9 | `35_TX8_RESET` | 10 | `34_RX8_RESET2` |
-| 11 | `53_T_PROG` | 12 | `54_ON_OFF` |
-| 13 | `T_BUTTON1` | 14 | `T_BUTTON2` |
+| 7 | `T30_CRX3` | 8 | `T31_CTX3` |
+| 9 | `T35_TX8` | 10 | `T34_RX8` |
+| 11 | `T_PROGRAM` | 12 | `T_ON_OFF` |
+| 13 | `T24` | 14 | `T25` |
 | 15 | `GND` | 16 | `GND` |
-| 17 | `T_22` | 18 | `T_26` |
-| 19 | `T_27` | 20 | `32_OUT1B` |
-| 21 | `GND` | 22 | `MCLK2` |
+| 17 | `GND` | 18 | `GND` |
+| 19 | `GND` | 20 | `T32_OUT1B` |
+| 21 | `GND` | 22 | `GND` |
 | 23 | `GND` | 24 | `GND` |
 
-### J4 - `J_USBH` 1x5, next to Teensy USB host pads
+### J4 - `J_USB` 2x5, next to Teensy USB host pads and device pads 66/67
 
-Teensy host pair, GND flanked; HOST_5V is the host-port VBUS.
+Odd row: Teensy host pair, GND flanked, HOST_5V is the host-port VBUS. Even row: Teensy device pair (pads 66/67) with GND on 2/8/10; no VBUS pin, the Teensy VUSB is NC. Neither port is isolated (stage 10y).
 
-| pin | net |
-|---|---|
-| 1 | `GND` |
-| 2 | `HOST_D1-` |
-| 3 | `HOST_D1+` |
-| 4 | `GND` |
-| 5 | `HOST_5V` |
+| odd | net | even | net |
+|---|---|---|---|
+| 1 | `GND` | 2 | `GND` |
+| 3 | `HOST_D1-` | 4 | `T_USB_DN` |
+| 5 | `HOST_D1+` | 6 | `T_USB_DP` |
+| 7 | `GND` | 8 | `GND` |
+| 9 | `HOST_5V` | 10 | `GND` |
 
 ### J5 - `J_MIDI` 2x4, next to MIDI opto/buffer U4/U9
 
@@ -834,56 +915,39 @@ Jack-level MIDI IN / OUT / THRU (DIN pins 4 and 5 across the rows).
 | 5 | `MIDI_THRU_4` | 6 | `MIDI_THRU_5` |
 | 7 | `GND` | 8 | `GND` |
 
-### J6 - `J_SPDIF` 2x11, next to SRC4382 U19
+### J7 - `J_SAI2` 2x6, next to U21 244 buffer / U20 2G125 gate
 
-Four DIR inputs and the DIT output, raw; pairs across the rows with a GND row between every pair. Termination networks live on the backplane.
-
-| odd | net | even | net |
-|---|---|---|---|
-| 1 | `GND` | 2 | `GND` |
-| 3 | `SPDIF_RX1P` | 4 | `SPDIF_RX1N` |
-| 5 | `GND` | 6 | `GND` |
-| 7 | `SPDIF_RX2P` | 8 | `SPDIF_RX2N` |
-| 9 | `GND` | 10 | `GND` |
-| 11 | `SPDIF_RX3P` | 12 | `SPDIF_RX3N` |
-| 13 | `GND` | 14 | `GND` |
-| 15 | `SPDIF_RX4P` | 16 | `SPDIF_RX4N` |
-| 17 | `GND` | 18 | `GND` |
-| 19 | `SPDIF_TXP` | 20 | `SPDIF_TXN` |
-| 21 | `GND` | 22 | `GND` |
-
-### J7 - `J_AUX` 2x5, next to U23 aux mux
-
-Aux I2S source into the mux (BCK, LRCK, DIN) and the S3-side out; clocks never adjacent.
+Teensy SAI2 as an expansion I2S port (stage 10y, section 11.8). Core is header master (MODE 10) or header slave (MODE 01) by firmware; MCLK is always sourced by the core. DIN is into the core, DOUT out of it. GND flanks every clock.
 
 | odd | net | even | net |
 |---|---|---|---|
 | 1 | `GND` | 2 | `GND` |
-| 3 | `AUX_I2S_BCK` | 4 | `GND` |
-| 5 | `GND` | 6 | `AUX_I2S_LRCK` |
-| 7 | `AUX_I2S_DIN` | 8 | `AUX_I2S_OUT` |
-| 9 | `GND` | 10 | `GND` |
+| 3 | `AUX_I2S_MCLK` | 4 | `GND` |
+| 5 | `AUX_I2S_BCK` | 6 | `GND` |
+| 7 | `AUX_I2S_LRCK` | 8 | `GND` |
+| 9 | `AUX_I2S_DIN` | 10 | `AUX_I2S_DOUT` |
+| 11 | `3.3V_DIG` | 12 | `5V` |
 
 ### J8 - `J_S3` 2x17, next to ESP32-S3 U13
 
-S3 UART0 (also Teensy Serial7), EN/IO0, I2C, raw GPIO, and (since 2026-09-28, stage 10m) the S3 native USB pair with 5V, absorbed from the former J9. IO35-37 are consumed by the octal PSRAM and are not on the header.
+S3 UART0 (also Teensy Serial7), EN/IO0, I2C, raw GPIO, and the S3 native USB (OTG) pair with 5V (pin 34 = core 5 V rail: wire to a jack VBUS only for host use). IO40/IO41 left the header in stage 10y (BT_RST / BT_SYS_CTRL); pins 25/26 are GND. IO35-37 are consumed by the octal PSRAM.
 
 | odd | net | even | net |
 |---|---|---|---|
 | 1 | `GND` | 2 | `GND` |
-| 3 | `ESP32_IO1` | 4 | `ESP32_IO3` |
-| 5 | `ESP32_EN` | 6 | `ESP32_IO0` |
+| 3 | `/S3_IO43_TXD0` | 4 | `/S3_IO44_RXD0` |
+| 5 | `S3_EN` | 6 | `S3_IO0_BOOT` |
 | 7 | `GND` | 8 | `GND` |
-| 9 | `ESP32_IO21_SDA` | 10 | `ESP32_IO22_SCL` |
-| 11 | `SCK` | 12 | `SDI` |
-| 13 | `SDO` | 14 | `CS` |
+| 9 | `S3_IO21_SDA` | 10 | `S3_IO47_SCL` |
+| 11 | `S3_IO18` | 12 | `S3_IO9` |
+| 13 | `S3_IO10` | 14 | `S3_IO11` |
 | 15 | `GND` | 16 | `GND` |
-| 17 | `DC` | 18 | `RESET` |
-| 19 | `T_CS` | 20 | `OUTPUTA` |
-| 21 | `OUTPUTB` | 22 | `SWITCH` |
-| 23 | `GND` | 24 | `GND` |
-| 25 | `GPIO34` | 26 | `GPIO35` |
-| 27 | `S3_IO45` | 28 | `GND` |
+| 17 | `S3_IO2` | 18 | `S3_IO42` |
+| 19 | `S3_IO8` | 20 | `T40` |
+| 21 | `T39` | 22 | `T38` |
+| 23 | `S3_IO15` | 24 | `S3_IO38` |
+| 25 | `GND` | 26 | `GND` |
+| 27 | `S3_IO45` | 28 | `S3_IO39` |
 | 29 | `GND` | 30 | `GND` |
 | 31 | `S3_USB_DN` | 32 | `S3_USB_DP` |
 | 33 | `GND` | 34 | `5V` |
@@ -895,8 +959,8 @@ Isolated side only: DMX_GND and 5V_ISO, never core GND.
 | pin | net |
 |---|---|
 | 1 | `DMX_GND` |
-| 2 | `DMX_A` |
-| 3 | `DMX_B` |
+| 2 | `/DMX_A` |
+| 3 | `/DMX_B` |
 | 4 | `DMX_GND` |
 | 5 | `5V_ISO` |
 
@@ -997,15 +1061,19 @@ Substitutions made so the board can be assembled from stock:
 | Ref | Was | Now | LCSC | Why |
 |---|---|---|---|---|
 | U17 | ISO7761DW | **ISO7762DW** | C2859648 | ISO7761 not stocked. 7762 = 4 fwd / 2 rev; DMX uses A, B fwd and F rev. Pin 6 (was INE→GND) is now NC; pin 11 becomes INE (unused input, left NC — tie to DMX_GND once the symbol is swapped in eeschema). |
-| U20 | TLV76718DRVR | **TLV75718PDRVR** | C2861386 | TLV767 DRV not stocked; TLV757P DRV pinout is identical (pin 2/5 NC instead of SNS/GND — both harmless as wired). |
+| U20 | TLV76718DRVR | ~~TLV75718PDRVR~~ **SN74LVC2G125DCTR** | C206035 | Stage 10y: the 1V8 LDO left with the SRC4382; U20 is now the J_SAI2 DIN gate (project `SOP65P400X130-8N`). |
+| U19 | SRC4382IPFBR (consigned) | **SN74LVC257APWR** | C205921 | Stage 10y: SAI2 source mux, TSSOP-16, stock. |
+| U21, U23 | 74LVC157APW | **SN74LVC244APWR** (U21), **SN74LVC138APWR** (U23) | C7668, C485077 | Stage 10y: J_SAI2 header buffer and the mode interlock, TSSOP-20 / TSSOP-16, stock. |
+| R86-R88 | (new) | 10 k 0402 | C25744 | SAI2_MODE0/1 pull-ups, SAI2_SEL pull-down. |
+| R89-R101 | (new) | 33 R 0402 | C25105 | series resistors on every SAI2 / AUX_I2S driver. |
 | Y1 | ASDMB-24.576MHZ | **ASE-24.576MHZ-LC-T** | C6159263 | ASDMB not stocked; ASE has the same 4-pin function (1 = standby, 2 GND, 3 OUT, 4 VDD) in 3.2×2.5 mm; footprint updated. |
 | U13 | WROOM-1U (u.FL) | **ESP32-S3-WROOM-1-N16R8** | C2913202 | PCB antenna; 8 MB octal PSRAM for Spotify buffering (was N16R2 C2913205 for one commit). |
 | L1 | NR4018T3R3M | **NRS4018T3R3MDGJ** | C92960 | same 4×4 mm 3.3 µH 2 A family, stocked. |
 | U24 | (new) | AP63203WU-7 | C780769 | buck, JLC stock |
 | D3, D4 | SK6812 3.2x2.8 reverse-mount (MINI-E) | **SK6812-EC20** 2.0x2.0 top-emitting | C2909058 | Decided 2026-09-28: the LEDs sit mid-board, so a top emitter is visible without board windows. Footprint `project_fp:LED_SK6812-EC20_2.0x2.0mm` built from datasheet SPC/SK68XX-EC20 rev 04 (pads 0.8x0.7 on 1.3x1.2); pad numbers follow the project symbol (1 DIN, 2 VDD, 3 DOUT, 4 GND), which differs from the datasheet numbering (1 VDD, 2 DOUT, 3 GND, 4 DIN). SK6805-EC15 (C2890035) is the drop-in smaller/dimmer alternative with `LED_SK6812_EC15_1.5x1.5mm`. |
 
-Consigned (not at LCSC; supplied to the assembler or hand-placed): **U19 SRC4382IPFBR**,
-**U22 IDC777-1**, **U1 Teensy 4.1**. Their `LCSC` field says `CONSIGN`.
+Consigned (not at LCSC; supplied to the assembler or hand-placed): **U22 IDC777-1**,
+**U1 Teensy 4.1**. Their `LCSC` field says `CONSIGN`. (The SRC4382 left the design in stage 10y.)
 
 No LCSC number (no part or hand assembly): H1–H4 holes, T108–T111 panel tabs, PU_EN1
 solder jumper, **J1-J12 pin headers** (stock 2.54 mm THT headers cut from 2x40 / 1x40 strips such
