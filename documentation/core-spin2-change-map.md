@@ -794,6 +794,36 @@ D3 GND is a power-input pin on the project LED symbol). Hazard found on the way:
 multi-line notes must be separate single-line texts. Konnect `batch_delete` with a symbol's pin
 uuid deletes the whole symbol (D3 had to be re-placed from the committed file).
 
+### 11.9 Stage 10z (2026-10-02): DMX leaves the core
+
+**Decision.** The isolated DMX block moves to its own board, `t-dsp_dmx_module` (sibling project
+folder). MIDI stays on the core. Reasons: isolation belongs at the XLR jack (with the isolator on
+the core, every backplane had to continue the barrier around J10), the isolated corner and its
+plane split were the main obstacle to routing the core, and it cost about 9 USD per core plus
+four Extended parts and the only tall through-hole component.
+
+**Core schematic (commit f956de6).** Removed U16 THVD1450, U17 ISO7762, U18 TRACO TEA1-0505HI,
+D6 SM712, R71, C134-C139 and the nets `5V_ISO`, `DMX_GND`, `DMX_A/B`, `DMX_*_ISO`. J10 `J_DMX`
+is a 2x4 logic-level header: 1 GND, 2 GND, 3 `DMX_TX`, 4 `DMX_RX`, 5 `DMX_DE`, 6 `3.3V_DIG`,
+7 `5V`, 8 GND. The three signals are ESP32-S3 pins (U13 5, 39, 25), so the port also serves any
+other UART or RS-485 device.
+
+**Core board (commit cfb9e5e).** J10 sits on row B at Y 49 beside the S3. Slot 3 is MIDI at the
+top, U21 at (83.0, 27.5) beside J_SAI2 and the IDC777 at the bottom, with the area between
+MIDI and U21 free. No isolation barrier and no plane split remain. New rule area `IDC777_ANT`
+(all four copper layers, X 77.1-85.2, Y 55.4 to the edge) keeps copper out from under the BT
+antenna; the stock footprint only had a silkscreen keep-out. 123 passives re-placed (median
+2.4 mm, mean 3.3 mm, 7 beyond 10 mm). DRC with parity: only the S3 antenna courtyard (vs H3 and
+J10), its 0.2 mm via holes and the outline footprint.
+
+**The module.** ISO7731DWR (C524804) + B0505S-1WR3 (C7465178) + THVD1450DR + SM712, Neutrik
+NC5FAH 5-pin XLR plus a 3-pin header, 63.9 x 31 mm, 2 layers, routed, about 3.10 USD of
+semiconductors. Its J1 mates 1:1 with J10. Details in that project's README.
+
+**Still open before routing the core:** the Ethernet decision (J12 nets are single-node until
+the U1 symbol and footprint swap, or J12 is dropped), the In2 power-plane split (5V, 3.3V,
+3.3V_DIG, V_BAT) and a differential-pair net class for the two USB pairs.
+
 ## 12. Edit order and verification
 
 1. Commit the July 27 work as-is (BT/ASRC block + libraries) so it is not only in the
@@ -813,9 +843,9 @@ uuid deletes the whole symbol (D3 had to be re-placed from the committed file).
 All schematic edits go through Konnect and are verified with
 `kicad-cli sch export netlist`, per the project's write-hazard rules.
 
-## 13. Header pin map (spin 2, function-scoped headers, as wired 2026-10-01)
+## 13. Header pin map (spin 2, function-scoped headers, as wired 2026-10-02)
 
-Generated from the kicad-cli netlist of schematic commit 026acc0 (stage 10y). The four 2x22 edge blocks (176 pins) are gone. J9 (S3 USB) was folded into J8 and J1 trimmed to 2x5 on 2026-09-28 (stage 10m); J6 (S/PDIF) was removed and J7 became the 2x6 J_SAI2 port on 2026-10-01 (stage 10y), so the ten headers fit four vertical rows (section 11.4). Each function has its own stock
+Generated from the kicad-cli netlist of schematic commit f956de6 (stage 10z). The four 2x22 edge blocks (176 pins) are gone. J9 (S3 USB) was folded into J8 and J1 trimmed to 2x5 on 2026-09-28 (stage 10m); J6 (S/PDIF) was removed and J7 became the 2x6 J_SAI2 port on 2026-10-01 (stage 10y); J10 became a 2x4 logic-level DMX port on 2026-10-02 (stage 10z), so the ten headers fit four vertical rows (section 11.4). Each function has its own stock
 `Connector_Generic` header placed next to the chip that serves it, so the PCB traces are short and
 the backplane only needs to mate the headers it uses. Ground rule applied to every header: at least
 one GND per three signals, a GND row (both rows) on both sides of every clock and every differential
@@ -830,10 +860,10 @@ pair, and GND at both ends of every header.
 | J5 | `J_MIDI` | 2x4 | MIDI opto/buffer U4/U9 | 8 | 2 |
 | J7 | `J_SAI2` | 2x6 | U21 244 buffer / U20 2G125 gate | 12 | 5 |
 | J8 | `J_S3` | 2x17 | ESP32-S3 U13 | 34 | 11 |
-| J10 | `J_DMX` | 1x5 | ISO7762 / RS-485 U16-U18 | 5 | 0 |
+| J10 | `J_DMX` | 2x4 | ESP32-S3 U13 (row B, bottom) | 8 | 3 |
 | J11 | `J_LED` | 1x5 | SK6812 level shifter IC1 | 5 | 2 |
 | J12 | `J_ETH` | 2x4 | Teensy 4.1 Ethernet pads | 8 | 3 |
-| | | | **total** | **144** | **57** |
+| | | | **total** | **147** | **60** |
 
 Footprints: `Connector_PinHeader_2.54mm:PinHeader_<size>_P2.54mm_Vertical`. Odd pins are one row, even
 pins the other (KiCad Odd_Even numbering). `DMX_GND` is the isolated ground, not core GND.
@@ -952,17 +982,16 @@ S3 UART0 (also Teensy Serial7), EN/IO0, I2C, raw GPIO, and the S3 native USB (OT
 | 31 | `S3_USB_DN` | 32 | `S3_USB_DP` |
 | 33 | `GND` | 34 | `5V` |
 
-### J10 - `J_DMX` 1x5, next to ISO7762 / RS-485 U16-U18
+### J10 - `J_DMX` 2x4, next to ESP32-S3 U13 (row B, bottom)
 
-Isolated side only: DMX_GND and 5V_ISO, never core GND.
+Logic-level DMX / RS-485 port since stage 10z: S3 UART TX, RX and driver enable with 3.3V_DIG, 5V and GND. Not isolated. Mates 1:1 with J1 of t-dsp_dmx_module, which carries the isolator, isolated supply, transceiver and XLR.
 
-| pin | net |
-|---|---|
-| 1 | `DMX_GND` |
-| 2 | `/DMX_A` |
-| 3 | `/DMX_B` |
-| 4 | `DMX_GND` |
-| 5 | `5V_ISO` |
+| odd | net | even | net |
+|---|---|---|---|
+| 1 | `GND` | 2 | `GND` |
+| 3 | `DMX_TX` | 4 | `DMX_RX` |
+| 5 | `DMX_DE` | 6 | `3.3V_DIG` |
+| 7 | `5V` | 8 | `GND` |
 
 ### J11 - `J_LED` 1x5, next to SK6812 level shifter IC1
 
