@@ -824,6 +824,34 @@ semiconductors. Its J1 mates 1:1 with J10. Details in that project's README.
 the U1 symbol and footprint swap, or J12 is dropped), the In2 power-plane split (5V, 3.3V,
 3.3V_DIG, V_BAT) and a differential-pair net class for the two USB pairs.
 
+### 11.10 Stage 11a (2026-10-02): four GPIO columns
+
+User requirement: every header in one of four columns so a backplane is easy to route, with pins
+in the order of the chip pads they come from.
+
+| Column | X (mm) | Headers, top to bottom | Content |
+|---|---|---|---|
+| A, left edge | 3.0 | J8 2x17 | ESP32-S3 IO, in module pad order |
+| B, left of Teensy | 35.5 | J2 2x14, J7 2x6 | TDM1/TDM2 + I2C, SAI2 aux I2S |
+| C, right of Teensy | 63.0 | J4 2x5, J3 2x12, J12 2x4 | Teensy USB host + device, Teensy GPIO, Ethernet |
+| D, right edge | 94.46 | J5 2x4, J11 1x5 | MIDI, LED |
+
+J1 (power) stays horizontal on the top edge. J10 is gone: with DMX on its own module the three S3
+pins are plain GPIO on J8 as `S3_IO5`, `S3_IO1`, `S3_IO48`. T38-T40 moved from J8 to J3 pins
+17-19, so column A carries only S3 pins and column C only Teensy pins.
+
+**J8 pin order** follows the module perimeter as seen from the header, so traces leave the module
+without crossing: far-side pads (EN, IO5, IO15, IO18, IO8, USB D-/D+ with GND and 5V) at the top,
+the pad row facing the Teensy side next (IO9, IO10, IO11, SDA, SCL, IO48, IO45), then the pads
+that face the header (IO0, IO38, IO39, IO42, RXD0, TXD0, IO2, IO1). Pin table in section 13.
+
+**Board (schematic 59258c2).** LED driver IC1 and the LEDs D3/D4 sit beside J11 in the right
+slot; MIDI parts at the top right beside J5; the SAI2 header buffer U21 and gate U20 moved under
+the Teensy at the bottom beside J7. The Teensy footprint is now `project_fp:Teensy41` (user
+change, Ethernet pads 60-65 present), so U11/U6/U7 start at Y 19.5 below those pads. MST ratsnest
+length fell from 4415 mm to 3900 mm; 123 passives at median 2.2 mm / mean 3.1 mm from their pin.
+DRC with parity: only the S3 antenna courtyard (vs H3, J7), its via holes and the outline footprint.
+
 ## 12. Edit order and verification
 
 1. Commit the July 27 work as-is (BT/ASRC block + libraries) so it is not only in the
@@ -845,7 +873,7 @@ All schematic edits go through Konnect and are verified with
 
 ## 13. Header pin map (spin 2, function-scoped headers, as wired 2026-10-02)
 
-Generated from the kicad-cli netlist of schematic commit f956de6 (stage 10z). The four 2x22 edge blocks (176 pins) are gone. J9 (S3 USB) was folded into J8 and J1 trimmed to 2x5 on 2026-09-28 (stage 10m); J6 (S/PDIF) was removed and J7 became the 2x6 J_SAI2 port on 2026-10-01 (stage 10y); J10 became a 2x4 logic-level DMX port on 2026-10-02 (stage 10z), so the ten headers fit four vertical rows (section 11.4). Each function has its own stock
+Generated from the kicad-cli netlist of schematic commit 59258c2 (stage 11a). The four 2x22 edge blocks (176 pins) are gone. J9 (S3 USB) was folded into J8 and J1 trimmed to 2x5 on 2026-09-28 (stage 10m); J6 (S/PDIF) was removed and J7 became the 2x6 J_SAI2 port on 2026-10-01 (stage 10y); J10 (DMX) was removed on 2026-10-02 and its S3 pins became plain GPIO on J8 (stage 11a). The nine headers sit in four columns (section 11.10): J8 on the left edge (ESP32-S3 IO, pins in module pad order), J2 + J7 left of the Teensy (audio buses), J4 + J3 + J12 right of the Teensy (Teensy USB, GPIO, Ethernet), J5 + J11 on the right edge (MIDI, LED); J1 power lies along the top edge. Each function has its own stock
 `Connector_Generic` header placed next to the chip that serves it, so the PCB traces are short and
 the backplane only needs to mate the headers it uses. Ground rule applied to every header: at least
 one GND per three signals, a GND row (both rows) on both sides of every clock and every differential
@@ -853,34 +881,45 @@ pair, and GND at both ends of every header.
 
 | Ref | Name | Size | Placed next to | Pins | GND |
 |---|---|---|---|---|---|
-| J1 | `J_PWR` | 2x5 | TVS D7 / P-FET Q1 / buck U24 / LT3045 U15 | 10 | 3 |
-| J2 | `J_TDM` | 2x14 | TDM buffers U5/U6/U7/U11 under the Teensy | 28 | 13 |
-| J3 | `J_T` | 2x12 | Teensy 4.1 | 24 | 13 |
-| J4 | `J_USB` | 2x5 | Teensy USB host pads and device pads 66/67 | 10 | 5 |
-| J5 | `J_MIDI` | 2x4 | MIDI opto/buffer U4/U9 | 8 | 2 |
-| J7 | `J_SAI2` | 2x6 | U21 244 buffer / U20 2G125 gate | 12 | 5 |
 | J8 | `J_S3` | 2x17 | ESP32-S3 U13 | 34 | 11 |
-| J10 | `J_DMX` | 2x4 | ESP32-S3 U13 (row B, bottom) | 8 | 3 |
-| J11 | `J_LED` | 1x5 | SK6812 level shifter IC1 | 5 | 2 |
+| J2 | `J_TDM` | 2x14 | TDM buffers U5/U6/U7/U11 under the Teensy | 28 | 13 |
+| J7 | `J_SAI2` | 2x6 | U21 244 buffer / U20 2G125 gate | 12 | 5 |
+| J4 | `J_USB` | 2x5 | Teensy USB host pads and device pads 66/67 | 10 | 5 |
+| J3 | `J_T` | 2x12 | Teensy 4.1 | 24 | 10 |
 | J12 | `J_ETH` | 2x4 | Teensy 4.1 Ethernet pads | 8 | 3 |
-| | | | **total** | **147** | **60** |
+| J5 | `J_MIDI` | 2x4 | MIDI opto/buffer U4/U9 | 8 | 2 |
+| J11 | `J_LED` | 1x5 | SK6812 level shifter IC1 | 5 | 2 |
+| J1 | `J_PWR` | 2x5 | TVS D7 / P-FET Q1 / buck U24 / LT3045 U15 | 10 | 3 |
+| | | | **total** | **139** | **54** |
 
 Footprints: `Connector_PinHeader_2.54mm:PinHeader_<size>_P2.54mm_Vertical`. Odd pins are one row, even
 pins the other (KiCad Odd_Even numbering). `DMX_GND` is the isolated ground, not core GND.
 Net names are the current schematic names; the raw-GPIO rename (T_nn / S3_IOnn) is a later cosmetic
 pass and does not change connectivity.
 
-### J1 - `J_PWR` 2x5, next to TVS D7 / P-FET Q1 / buck U24 / LT3045 U15
+### J8 - `J_S3` 2x17, next to ESP32-S3 U13
 
-Power entry and rails. 5V_IN (mandatory external 5 V since stage 10x) feeds the TVS + reverse-polarity P-FET; 5V, 3.3V (LT3045, analog), 3.3V_DIG (buck) and V_BAT are outputs.
+S3 UART0 (also Teensy Serial7), EN/IO0, I2C, raw GPIO, and the S3 native USB (OTG) pair with 5V (pin 34 = core 5 V rail: wire to a jack VBUS only for host use). IO40/IO41 left the header in stage 10y (BT_RST / BT_SYS_CTRL); pins 25/26 are GND. IO35-37 are consumed by the octal PSRAM.
 
 | odd | net | even | net |
 |---|---|---|---|
-| 1 | `5V_IN` | 2 | `5V_IN` |
-| 3 | `GND` | 4 | `GND` |
-| 5 | `5V` | 6 | `5V` |
-| 7 | `3.3V` | 8 | `3.3V_DIG` |
-| 9 | `V_BAT` | 10 | `GND` |
+| 1 | `GND` | 2 | `GND` |
+| 3 | `S3_EN` | 4 | `S3_IO5` |
+| 5 | `S3_IO15` | 6 | `S3_IO18` |
+| 7 | `S3_IO8` | 8 | `GND` |
+| 9 | `S3_USB_DN` | 10 | `S3_USB_DP` |
+| 11 | `GND` | 12 | `5V` |
+| 13 | `S3_IO9` | 14 | `S3_IO10` |
+| 15 | `S3_IO11` | 16 | `GND` |
+| 17 | `S3_IO21_SDA` | 18 | `S3_IO47_SCL` |
+| 19 | `S3_IO48` | 20 | `S3_IO45` |
+| 21 | `GND` | 22 | `GND` |
+| 23 | `S3_IO0_BOOT` | 24 | `S3_IO38` |
+| 25 | `S3_IO39` | 26 | `S3_IO42` |
+| 27 | `GND` | 28 | `GND` |
+| 29 | `/S3_IO44_RXD0` | 30 | `/S3_IO43_TXD0` |
+| 31 | `S3_IO2` | 32 | `S3_IO1` |
+| 33 | `GND` | 34 | `GND` |
 
 ### J2 - `J_TDM` 2x14, next to TDM buffers U5/U6/U7/U11 under the Teensy
 
@@ -903,6 +942,31 @@ Both TDM buses plus the two I2C buses for codec control. GND on both flanks of e
 | 25 | `GND` | 26 | `GND` |
 | 27 | `32_OUT1B` | 28 | `GND` |
 
+### J7 - `J_SAI2` 2x6, next to U21 244 buffer / U20 2G125 gate
+
+Teensy SAI2 as an expansion I2S port (stage 10y, section 11.8). Core is header master (MODE 10) or header slave (MODE 01) by firmware; MCLK is always sourced by the core. DIN is into the core, DOUT out of it. GND flanks every clock.
+
+| odd | net | even | net |
+|---|---|---|---|
+| 1 | `GND` | 2 | `GND` |
+| 3 | `AUX_I2S_MCLK` | 4 | `GND` |
+| 5 | `AUX_I2S_BCK` | 6 | `GND` |
+| 7 | `AUX_I2S_LRCK` | 8 | `GND` |
+| 9 | `AUX_I2S_DIN` | 10 | `AUX_I2S_DOUT` |
+| 11 | `3.3V_DIG` | 12 | `5V` |
+
+### J4 - `J_USB` 2x5, next to Teensy USB host pads and device pads 66/67
+
+Odd row: Teensy host pair, GND flanked, HOST_5V is the host-port VBUS. Even row: Teensy device pair (pads 66/67) with GND on 2/8/10; no VBUS pin, the Teensy VUSB is NC. Neither port is isolated (stage 10y).
+
+| odd | net | even | net |
+|---|---|---|---|
+| 1 | `GND` | 2 | `GND` |
+| 3 | `HOST_D1-` | 4 | `T_USB_DN` |
+| 5 | `HOST_D1+` | 6 | `T_USB_DP` |
+| 7 | `GND` | 8 | `GND` |
+| 9 | `HOST_5V` | 10 | `GND` |
+
 ### J3 - `J_T` 2x12, next to Teensy 4.1
 
 Teensy S/PDIF (the only S/PDIF path since stage 10y), CAN3, Serial8, PROGRAM/ON_OFF, buttons, OUT1B. Pins 17/18/19/22 are GND since stage 10y (T22/T26/T27/MCLK2 now serve the SAI2 block).
@@ -917,22 +981,21 @@ Teensy S/PDIF (the only S/PDIF path since stage 10y), CAN3, Serial8, PROGRAM/ON_
 | 11 | `T_PROGRAM` | 12 | `T_ON_OFF` |
 | 13 | `T24` | 14 | `T25` |
 | 15 | `GND` | 16 | `GND` |
-| 17 | `GND` | 18 | `GND` |
-| 19 | `GND` | 20 | `T32_OUT1B` |
+| 17 | `T38` | 18 | `T39` |
+| 19 | `T40` | 20 | `T32_OUT1B` |
 | 21 | `GND` | 22 | `GND` |
 | 23 | `GND` | 24 | `GND` |
 
-### J4 - `J_USB` 2x5, next to Teensy USB host pads and device pads 66/67
+### J12 - `J_ETH` 2x4, next to Teensy 4.1 Ethernet pads
 
-Odd row: Teensy host pair, GND flanked, HOST_5V is the host-port VBUS. Even row: Teensy device pair (pads 66/67) with GND on 2/8/10; no VBUS pin, the Teensy VUSB is NC. Neither port is isolated (stage 10y).
+Teensy 4.1 10/100 PHY pairs and link LED from pads 60-65 (needs the U1 symbol swap, see 14.1). Magnetics and RJ45 on the backplane.
 
 | odd | net | even | net |
 |---|---|---|---|
-| 1 | `GND` | 2 | `GND` |
-| 3 | `HOST_D1-` | 4 | `T_USB_DN` |
-| 5 | `HOST_D1+` | 6 | `T_USB_DP` |
-| 7 | `GND` | 8 | `GND` |
-| 9 | `HOST_5V` | 10 | `GND` |
+| 1 | `ETH_R+` | 2 | `ETH_R-` |
+| 3 | `GND` | 4 | `GND` |
+| 5 | `ETH_T+` | 6 | `ETH_T-` |
+| 7 | `ETH_LED` | 8 | `GND` |
 
 ### J5 - `J_MIDI` 2x4, next to MIDI opto/buffer U4/U9
 
@@ -944,54 +1007,6 @@ Jack-level MIDI IN / OUT / THRU (DIN pins 4 and 5 across the rows).
 | 3 | `MIDI_OUT_4` | 4 | `MIDI_OUT_5` |
 | 5 | `MIDI_THRU_4` | 6 | `MIDI_THRU_5` |
 | 7 | `GND` | 8 | `GND` |
-
-### J7 - `J_SAI2` 2x6, next to U21 244 buffer / U20 2G125 gate
-
-Teensy SAI2 as an expansion I2S port (stage 10y, section 11.8). Core is header master (MODE 10) or header slave (MODE 01) by firmware; MCLK is always sourced by the core. DIN is into the core, DOUT out of it. GND flanks every clock.
-
-| odd | net | even | net |
-|---|---|---|---|
-| 1 | `GND` | 2 | `GND` |
-| 3 | `AUX_I2S_MCLK` | 4 | `GND` |
-| 5 | `AUX_I2S_BCK` | 6 | `GND` |
-| 7 | `AUX_I2S_LRCK` | 8 | `GND` |
-| 9 | `AUX_I2S_DIN` | 10 | `AUX_I2S_DOUT` |
-| 11 | `3.3V_DIG` | 12 | `5V` |
-
-### J8 - `J_S3` 2x17, next to ESP32-S3 U13
-
-S3 UART0 (also Teensy Serial7), EN/IO0, I2C, raw GPIO, and the S3 native USB (OTG) pair with 5V (pin 34 = core 5 V rail: wire to a jack VBUS only for host use). IO40/IO41 left the header in stage 10y (BT_RST / BT_SYS_CTRL); pins 25/26 are GND. IO35-37 are consumed by the octal PSRAM.
-
-| odd | net | even | net |
-|---|---|---|---|
-| 1 | `GND` | 2 | `GND` |
-| 3 | `/S3_IO43_TXD0` | 4 | `/S3_IO44_RXD0` |
-| 5 | `S3_EN` | 6 | `S3_IO0_BOOT` |
-| 7 | `GND` | 8 | `GND` |
-| 9 | `S3_IO21_SDA` | 10 | `S3_IO47_SCL` |
-| 11 | `S3_IO18` | 12 | `S3_IO9` |
-| 13 | `S3_IO10` | 14 | `S3_IO11` |
-| 15 | `GND` | 16 | `GND` |
-| 17 | `S3_IO2` | 18 | `S3_IO42` |
-| 19 | `S3_IO8` | 20 | `T40` |
-| 21 | `T39` | 22 | `T38` |
-| 23 | `S3_IO15` | 24 | `S3_IO38` |
-| 25 | `GND` | 26 | `GND` |
-| 27 | `S3_IO45` | 28 | `S3_IO39` |
-| 29 | `GND` | 30 | `GND` |
-| 31 | `S3_USB_DN` | 32 | `S3_USB_DP` |
-| 33 | `GND` | 34 | `5V` |
-
-### J10 - `J_DMX` 2x4, next to ESP32-S3 U13 (row B, bottom)
-
-Logic-level DMX / RS-485 port since stage 10z: S3 UART TX, RX and driver enable with 3.3V_DIG, 5V and GND. Not isolated. Mates 1:1 with J1 of t-dsp_dmx_module, which carries the isolator, isolated supply, transceiver and XLR.
-
-| odd | net | even | net |
-|---|---|---|---|
-| 1 | `GND` | 2 | `GND` |
-| 3 | `DMX_TX` | 4 | `DMX_RX` |
-| 5 | `DMX_DE` | 6 | `3.3V_DIG` |
-| 7 | `5V` | 8 | `GND` |
 
 ### J11 - `J_LED` 1x5, next to SK6812 level shifter IC1
 
@@ -1005,16 +1020,17 @@ Logic-level DMX / RS-485 port since stage 10z: S3 UART TX, RX and driver enable 
 | 4 | `ESP32_LED_OUT` |
 | 5 | `5V` |
 
-### J12 - `J_ETH` 2x4, next to Teensy 4.1 Ethernet pads
+### J1 - `J_PWR` 2x5, next to TVS D7 / P-FET Q1 / buck U24 / LT3045 U15
 
-Teensy 4.1 10/100 PHY pairs and link LED from pads 60-65 (needs the U1 symbol swap, see 14.1). Magnetics and RJ45 on the backplane.
+Power entry and rails. 5V_IN (mandatory external 5 V since stage 10x) feeds the TVS + reverse-polarity P-FET; 5V, 3.3V (LT3045, analog), 3.3V_DIG (buck) and V_BAT are outputs.
 
 | odd | net | even | net |
 |---|---|---|---|
-| 1 | `ETH_R+` | 2 | `ETH_R-` |
+| 1 | `5V_IN` | 2 | `5V_IN` |
 | 3 | `GND` | 4 | `GND` |
-| 5 | `ETH_T+` | 6 | `ETH_T-` |
-| 7 | `ETH_LED` | 8 | `GND` |
+| 5 | `5V` | 6 | `5V` |
+| 7 | `3.3V` | 8 | `3.3V_DIG` |
+| 9 | `V_BAT` | 10 | `GND` |
 
 ## 14. Status after the 2026-09-28 edit session
 
