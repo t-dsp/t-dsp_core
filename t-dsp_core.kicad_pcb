@@ -7600,7 +7600,7 @@
 	(footprint "RF_Module:ESP32-S3-WROOM-1"
 		(layer "F.Cu")
 		(uuid "4a699b40-ffda-4a39-b41d-0cd4c5b7b4d5")
-		(at 120 187.04 180)
+		(at 117.7 186.36 180)
 		(descr "2.4 GHz Wi-Fi and Bluetooth module  https://www.espressif.com/sites/default/files/documentation/esp32-s3-wroom-1_wroom-1u_datasheet_en.pdf")
 		(tags "2.4 GHz Wi-Fi and Bluetooth module")
 		(property "Reference" "U13"
@@ -8547,7 +8547,7 @@
 			)
 			(polygon
 				(pts
-					(xy 144 193.79) (xy 96 193.79) (xy 96 214.79) (xy 144 214.79)
+					(xy 141.7 193.11) (xy 93.7 193.11) (xy 93.7 214.11) (xy 141.7 214.11)
 				)
 			)
 		)
@@ -15930,7 +15930,7 @@
 	(footprint "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical"
 		(layer "F.Cu")
 		(uuid "882d5d58-7a91-4ef0-a028-8817c0e12c4b")
-		(at 135.5 188.04)
+		(at 112 159.5)
 		(descr "Through hole straight pin header, 1x05, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x05 2.54mm single row")
 		(property "Reference" "J11"
